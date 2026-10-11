@@ -1,0 +1,136 @@
+import type { ExamQuestion } from "../types/question";
+
+export const testmukodesQuestions: ExamQuestion[] = [
+  {
+    id: "testmukodes-001",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik állítás igaz az artériás vérre?",
+    options: [
+      { id: "a", text: "Általában oxigéndúsabb, mint a vénás vér" },
+      { id: "b", text: "Mindig sötétebb színű, mint a vénás vér" },
+      { id: "c", text: "Csak a májban található" },
+      { id: "d", text: "Nem vesz részt az oxigénszállításban" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-002",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik szerv feladata a vér pumpálása a keringési rendszerben?",
+    options: [
+      { id: "a", text: "Tüdő" },
+      { id: "b", text: "Szív" },
+      { id: "c", text: "Máj" },
+      { id: "d", text: "Vese" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "testmukodes-003",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt:
+      "Melyik szervrendszer fő feladata az oxigén felvétele és a szén-dioxid leadása?",
+    options: [
+      { id: "a", text: "Légzőrendszer" },
+      { id: "b", text: "Emésztőrendszer" },
+      { id: "c", text: "Mozgásrendszer" },
+      { id: "d", text: "Kiválasztórendszer" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-004",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik szerv termeli az epét?",
+    options: [
+      { id: "a", text: "Gyomor" },
+      { id: "b", text: "Máj" },
+      { id: "c", text: "Vese" },
+      { id: "d", text: "Lép" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "testmukodes-005",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Mi a vörösvértestek egyik fő feladata?",
+    options: [
+      { id: "a", text: "Oxigén szállítása" },
+      { id: "b", text: "Csontképzés" },
+      { id: "c", text: "Hormontermelés minden esetben" },
+      { id: "d", text: "Vizelet tárolása" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-006",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik szerv vesz részt a vizelet képzésében?",
+    options: [
+      { id: "a", text: "Vese" },
+      { id: "b", text: "Gyomor" },
+      { id: "c", text: "Tüdő" },
+      { id: "d", text: "Nyelőcső" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-007",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt:
+      "Melyik rendszer irányítja és hangolja össze a szervezet működését gyors idegi szabályozással?",
+    options: [
+      { id: "a", text: "Idegrendszer" },
+      { id: "b", text: "Emésztőrendszer" },
+      { id: "c", text: "Bőrrendszer" },
+      { id: "d", text: "Nyirokrendszer" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-008",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Mi a gyomor egyik alapvető feladata?",
+    options: [
+      { id: "a", text: "A táplálék keverése és emésztésének megkezdése" },
+      { id: "b", text: "A vér oxigénnel való telítése" },
+      { id: "c", text: "A vizelet tárolása" },
+      { id: "d", text: "A csontok mozgatása" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-009",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik alkotórész tartozik a mozgásrendszerhez?",
+    options: [
+      { id: "a", text: "Csont és izom" },
+      { id: "b", text: "Tüdő és hörgő" },
+      { id: "c", text: "Gyomor és belek" },
+      { id: "d", text: "Vese és húgyvezeték" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "testmukodes-010",
+    topicId: "testmukodes",
+    type: "single_choice",
+    prompt: "Melyik állítás igaz a bőrre?",
+    options: [
+      { id: "a", text: "Védelmet nyújt a külső hatásokkal szemben" },
+      { id: "b", text: "Csak esztétikai szerepe van" },
+      { id: "c", text: "Nem vesz részt a hőszabályozásba" },
+      { id: "d", text: "Nem tartozik a szervezet védelmi rendszerei közé" },
+    ],
+    correctOptionIds: ["a"],
+  },
+];
