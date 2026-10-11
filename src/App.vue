@@ -12,10 +12,17 @@ import type { ChoiceQuestion } from "./types/question";
 
 const QUESTIONS_PER_PRACTICE = 5;
 const PRACTICE_TIME_LIMIT_SECONDS = 60;
+type PracticeMode = "exam" | "module";
+
+const practiceModes = [
+  { id: "exam" as const, name: "Vizsga gyakorlása" },
+  { id: "module" as const, name: "Egy modul gyakorlása" },
+];
 
 const currentIndex = ref(0);
 const isFinished = ref(false);
 const isStarted = ref(false);
+const selectedMode = ref<PracticeMode | null>(null);
 const selectedTopicId = ref<string | null>(null);
 const shuffledQuestionIds = ref<string[]>([]);
 const shuffledOptionIds = ref<Record<string, string[]>>({});
@@ -25,20 +32,23 @@ let timerId: ReturnType<typeof setInterval> | null = null;
 const answers = reactive<Record<string, string | null>>({});
 
 const questions = computed<ChoiceQuestion[]>(() => {
-  if (!selectedTopicId.value) return [];
-
-  const topicQuestions = sampleQuestions.filter(
+  const availableQuestions = sampleQuestions.filter(
     (question): question is ChoiceQuestion =>
-      question.type === "single_choice" &&
-      question.topicId === selectedTopicId.value,
+      question.type === "single_choice",
   );
 
   if (shuffledQuestionIds.value.length === 0) {
-    return topicQuestions;
+    if (selectedMode.value === "exam") return availableQuestions;
+
+    return selectedTopicId.value
+      ? availableQuestions.filter(
+          (question) => question.topicId === selectedTopicId.value,
+        )
+      : [];
   }
 
   const questionsById = new Map(
-    topicQuestions.map((question) => [question.id, question]),
+    availableQuestions.map((question) => [question.id, question]),
   );
 
   return shuffledQuestionIds.value
@@ -97,14 +107,24 @@ function goToNextQuestion() {
 }
 
 function startExam() {
-  if (!selectedTopicId.value || questions.value.length === 0) return;
+  if (!selectedMode.value || questions.value.length === 0) return;
+  if (selectedMode.value === "module" && !selectedTopicId.value) return;
 
-  const questionIds = shuffle(
-    questions.value.map((question) => question.id),
-  ).slice(0, QUESTIONS_PER_PRACTICE);
-  const selectedQuestions = questions.value.filter((question) =>
-    questionIds.includes(question.id),
-  );
+  const selectedQuestions =
+    selectedMode.value === "exam"
+      ? shuffle(
+          topics
+            .map((topic) =>
+              shuffle(
+                questions.value.filter(
+                  (question) => question.topicId === topic.id,
+                ),
+              )[0],
+            )
+            .filter((question): question is ChoiceQuestion => question !== undefined),
+        )
+      : shuffle(questions.value).slice(0, QUESTIONS_PER_PRACTICE);
+  const questionIds = selectedQuestions.map((question) => question.id);
 
   shuffledQuestionIds.value = questionIds;
   shuffledOptionIds.value = Object.fromEntries(
@@ -117,6 +137,12 @@ function startExam() {
   isFinished.value = false;
   isStarted.value = true;
   startTimer();
+}
+
+function handleModeChange() {
+  if (selectedMode.value === "exam") {
+    selectedTopicId.value = null;
+  }
 }
 
 function startTimer() {
@@ -186,6 +212,7 @@ function restartPractice() {
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = false;
+  selectedMode.value = null;
   selectedTopicId.value = null;
   shuffledQuestionIds.value = [];
   shuffledOptionIds.value = {};
@@ -258,6 +285,51 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
       </header>
 
       <Card v-if="!isStarted">
+        <template #title> Gyakorlási mód </template>
+
+        <template #content>
+          <div class="flex flex-col gap-5">
+            <Select
+              v-model="selectedMode"
+              :options="practiceModes"
+              option-label="name"
+              option-value="id"
+              placeholder="Válassz gyakorlási módot"
+              class="w-full"
+              @change="handleModeChange"
+            />
+
+            <Select
+              v-if="selectedMode === 'module'"
+              v-model="selectedTopicId"
+              :options="topics"
+              option-label="name"
+              option-value="id"
+              placeholder="Válassz egy modult"
+              class="w-full"
+            />
+
+            <p v-if="selectedMode === 'exam'" class="text-sm text-slate-500">
+              A vizsgakör minden témakörből egy kérdést választ.
+            </p>
+
+            <Button
+              label="Gyakorlás indítása"
+              icon="pi pi-play"
+              class="self-start"
+              :disabled="
+                !selectedMode ||
+                (selectedMode === 'module' && !selectedTopicId) ||
+                questions.length === 0
+              "
+              @click="startExam"
+            />
+          </div>
+        </template>
+
+        </Card>
+
+        <!--
         <template #title> Témakör kiválasztása </template>
 
         <template #content>
@@ -289,6 +361,8 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
           </div>
         </template>
       </Card>
+
+        -->
 
       <Card v-else-if="!isFinished">
         <template #title>
