@@ -10,8 +10,15 @@ import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
 import type { ChoiceQuestion } from "./types/question";
 
-const QUESTIONS_PER_PRACTICE = 5;
-const PRACTICE_TIME_LIMIT_SECONDS = 60;
+const MODULE_QUESTIONS_PER_PRACTICE = 10;
+const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
+const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
+  testmukodes: 9,
+  vitalis: 6,
+  gyogyszerelesi_ismeretek: 3,
+  apolastan: 9,
+  tarsadalomtudomanyi_ismeretek: 3,
+};
 type PracticeMode = "exam" | "module";
 
 const practiceModes = [
@@ -113,17 +120,16 @@ function startExam() {
   const selectedQuestions =
     selectedMode.value === "exam"
       ? shuffle(
-          topics
-            .map((topic) =>
+          Object.entries(EXAM_QUESTIONS_PER_TOPIC).flatMap(
+            ([topicId, questionCount]) =>
               shuffle(
                 questions.value.filter(
-                  (question) => question.topicId === topic.id,
+                  (question) => question.topicId === topicId,
                 ),
-              )[0],
-            )
-            .filter((question): question is ChoiceQuestion => question !== undefined),
+              ).slice(0, questionCount),
+          ),
         )
-      : shuffle(questions.value).slice(0, QUESTIONS_PER_PRACTICE);
+      : shuffle(questions.value).slice(0, MODULE_QUESTIONS_PER_PRACTICE);
   const questionIds = selectedQuestions.map((question) => question.id);
 
   shuffledQuestionIds.value = questionIds;
