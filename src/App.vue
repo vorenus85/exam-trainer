@@ -10,6 +10,8 @@ import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
 import type { ChoiceQuestion } from "./types/question";
 
+const QUESTIONS_PER_PRACTICE = 5;
+
 const currentIndex = ref(0);
 const isFinished = ref(false);
 const isStarted = ref(false);
@@ -28,17 +30,17 @@ const questions = computed<ChoiceQuestion[]>(() => {
       question.topicId === selectedTopicId.value,
   );
 
-  if (shuffledQuestionIds.value.length !== topicQuestions.length) {
+  if (shuffledQuestionIds.value.length === 0) {
     return topicQuestions;
   }
 
-  const order = new Map(
-    shuffledQuestionIds.value.map((questionId, index) => [questionId, index]),
+  const questionsById = new Map(
+    topicQuestions.map((question) => [question.id, question]),
   );
 
-  return [...topicQuestions].sort(
-    (a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0),
-  );
+  return shuffledQuestionIds.value
+    .map((questionId) => questionsById.get(questionId))
+    .filter((question): question is ChoiceQuestion => question !== undefined);
 });
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
@@ -87,9 +89,16 @@ function goToNextQuestion() {
 function startExam() {
   if (!selectedTopicId.value || questions.value.length === 0) return;
 
-  shuffledQuestionIds.value = shuffle(questions.value.map((question) => question.id));
+  const questionIds = shuffle(
+    questions.value.map((question) => question.id),
+  ).slice(0, QUESTIONS_PER_PRACTICE);
+  const selectedQuestions = questions.value.filter((question) =>
+    questionIds.includes(question.id),
+  );
+
+  shuffledQuestionIds.value = questionIds;
   shuffledOptionIds.value = Object.fromEntries(
-    questions.value.map((question) => [
+    selectedQuestions.map((question) => [
       question.id,
       shuffle(question.options.map((option) => option.id)),
     ]),
