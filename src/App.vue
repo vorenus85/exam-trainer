@@ -40,8 +40,7 @@ const answers = reactive<Record<string, string | null>>({});
 
 const questions = computed<ChoiceQuestion[]>(() => {
   const availableQuestions = sampleQuestions.filter(
-    (question): question is ChoiceQuestion =>
-      question.type === "single_choice",
+    (question): question is ChoiceQuestion => question.type === "single_choice",
   );
 
   if (shuffledQuestionIds.value.length === 0) {
@@ -90,6 +89,40 @@ const incorrectQuestions = computed(() => {
   return questions.value.filter((question) => {
     return answers[question.id] !== question.correctOptionIds[0];
   });
+});
+
+const scorePercent = computed(() => {
+  if (questions.value.length === 0) return 0;
+
+  return Math.round((correctCount.value / questions.value.length) * 100);
+});
+
+const grade = computed(() => {
+  if (scorePercent.value >= 88) return "jeles";
+  if (scorePercent.value >= 75) return "jó";
+  if (scorePercent.value >= 62) return "közepes";
+  if (scorePercent.value >= 51) return "elégséges";
+  return "elégtelen";
+});
+
+const gradeClass = computed(() => {
+  if (grade.value === "jeles") {
+    return "border-green-200 bg-green-50 text-green-800";
+  }
+
+  if (grade.value === "jó") {
+    return "border-blue-200 bg-blue-50 text-blue-800";
+  }
+
+  if (grade.value === "közepes") {
+    return "border-yellow-200 bg-yellow-50 text-yellow-800";
+  }
+
+  if (grade.value === "elégséges") {
+    return "border-orange-200 bg-orange-50 text-orange-800";
+  }
+
+  return "border-red-200 bg-red-50 text-red-800";
 });
 
 function getTopicName(topicId: string) {
@@ -332,10 +365,9 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
             />
           </div>
         </template>
+      </Card>
 
-        </Card>
-
-        <!--
+      <!--
         <template #title> Témakör kiválasztása </template>
 
         <template #content>
@@ -438,18 +470,43 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
       </Card>
 
       <Card v-else>
-        <template #title> Eredmény </template>
-
         <template #content>
           <div class="flex flex-col gap-5">
+            <div
+              v-if="selectedMode === 'exam'"
+              class="rounded-lg border p-4"
+              :class="gradeClass"
+            >
+              <h2 class="text-xl font-bold">Értékelés</h2>
+              <p class="mt-2 text-lg font-semibold text-slate-900">
+                Eredmény: {{ scorePercent }}% — {{ grade }}
+              </p>
+
+              <ul class="mt-3 grid gap-1 text-sm text-slate-700">
+                <li>100–88% — jeles (30–26 pont)</li>
+                <li>87–75% — jó (25–23 pont)</li>
+                <li>74–62% — közepes (22–19 pont)</li>
+                <li>61–51% — elégséges (18–16 pont)</li>
+                <li>50–0% — elégtelen (15–0 pont)</li>
+              </ul>
+            </div>
+            <template v-if="selectedMode === 'module'">
+              <h2 class="text-xl font-bold">Értékelés</h2>
+              <Message
+                :severity="
+                  correctCount === questions.length ? 'success' : 'warn'
+                "
+                :closable="false"
+              >
+                {{ correctCount }} / {{ questions.length }} helyes válasz
+              </Message>
+            </template>
+
             <Message
-              :severity="correctCount === questions.length ? 'success' : 'warn'"
+              v-if="timeRemaining === 0"
+              severity="warn"
               :closable="false"
             >
-              {{ correctCount }} / {{ questions.length }} helyes válasz
-            </Message>
-
-            <Message v-if="timeRemaining === 0" severity="warn" :closable="false">
               Az idő lejárt, a meg nem válaszolt kérdések hiányosnak számítanak.
             </Message>
 
@@ -469,7 +526,9 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
                     severity="info"
                   />
                   <Tag
-                    :value="answers[question.id] ? 'Hibás válasz' : 'Hiányos válasz'"
+                    :value="
+                      answers[question.id] ? 'Hibás válasz' : 'Hiányos válasz'
+                    "
                     severity="warn"
                   />
                 </div>
