@@ -5,34 +5,46 @@ import Card from "primevue/card";
 import Message from "primevue/message";
 import ProgressBar from "primevue/progressbar";
 import RadioButton from "primevue/radiobutton";
+import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
+import type { ChoiceQuestion } from "./types/question";
 
 const currentIndex = ref(0);
 const isFinished = ref(false);
+const isStarted = ref(false);
+const selectedTopicId = ref<string | null>(null);
 
 const answers = reactive<Record<string, string | null>>({});
 
-const questions = sampleQuestions;
+const questions = computed<ChoiceQuestion[]>(() => {
+  if (!selectedTopicId.value) return [];
 
-const currentQuestion = computed(() => questions[currentIndex.value]);
+  return sampleQuestions.filter(
+    (question): question is ChoiceQuestion =>
+      question.type === "single_choice" &&
+      question.topicId === selectedTopicId.value,
+  );
+});
+
+const currentQuestion = computed(() => questions.value[currentIndex.value]);
 
 const answeredCount = computed(() => {
-  return questions.filter((question) => answers[question.id]).length;
+  return questions.value.filter((question) => answers[question.id]).length;
 });
 
 const progressPercent = computed(() => {
-  return Math.round((answeredCount.value / questions.length) * 100);
+  return Math.round((answeredCount.value / questions.value.length) * 100);
 });
 
 const correctCount = computed(() => {
-  return questions.filter((question) => {
+  return questions.value.filter((question) => {
     return answers[question.id] === question.correctOptionIds[0];
   }).length;
 });
 
 const incorrectQuestions = computed(() => {
-  return questions.filter((question) => {
+  return questions.value.filter((question) => {
     return answers[question.id] !== question.correctOptionIds[0];
   });
 });
@@ -50,12 +62,20 @@ function goToPreviousQuestion() {
 }
 
 function goToNextQuestion() {
-  if (currentIndex.value < questions.length - 1) {
+  if (currentIndex.value < questions.value.length - 1) {
     currentIndex.value += 1;
     return;
   }
 
   isFinished.value = true;
+}
+
+function startExam() {
+  if (!selectedTopicId.value || questions.value.length === 0) return;
+
+  currentIndex.value = 0;
+  isFinished.value = false;
+  isStarted.value = true;
 }
 
 function restartPractice() {
@@ -65,9 +85,11 @@ function restartPractice() {
 
   currentIndex.value = 0;
   isFinished.value = false;
+  isStarted.value = false;
+  selectedTopicId.value = null;
 }
 
-function getCorrectAnswerText(question: (typeof questions)[number]) {
+function getCorrectAnswerText(question: ChoiceQuestion) {
   const correctOptionId = question.correctOptionIds[0];
   return (
     question.options.find((option) => option.id === correctOptionId)?.text ?? ""
@@ -101,6 +123,7 @@ function getCorrectAnswerText(question: (typeof questions)[number]) {
           </div>
 
           <Button
+            v-if="isStarted"
             label="Újrakezdés"
             icon="pi pi-refresh"
             severity="secondary"
@@ -109,7 +132,10 @@ function getCorrectAnswerText(question: (typeof questions)[number]) {
           />
         </div>
 
-        <div class="mt-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-center">
+        <div
+          v-if="isStarted"
+          class="mt-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-center"
+        >
           <ProgressBar :value="progressPercent" class="h-3" />
 
           <span class="text-sm font-medium text-slate-600">
@@ -118,7 +144,40 @@ function getCorrectAnswerText(question: (typeof questions)[number]) {
         </div>
       </header>
 
-      <Card v-if="!isFinished">
+      <Card v-if="!isStarted">
+        <template #title> Témakör kiválasztása </template>
+
+        <template #content>
+          <div class="flex flex-col gap-5">
+            <p class="text-slate-600">
+              Válaszd ki, melyik témakör kérdéseiből szeretnél vizsgázni.
+            </p>
+
+            <Select
+              v-model="selectedTopicId"
+              :options="topics"
+              option-label="name"
+              option-value="id"
+              placeholder="Válassz egy témakört"
+              class="w-full"
+            />
+
+            <p v-if="selectedTopicId" class="text-sm text-slate-500">
+              {{ questions.length }} kérdés érhető el ebben a témakörben.
+            </p>
+
+            <Button
+              label="Vizsga indítása"
+              icon="pi pi-play"
+              class="self-start"
+              :disabled="!selectedTopicId || questions.length === 0"
+              @click="startExam"
+            />
+          </div>
+        </template>
+      </Card>
+
+      <Card v-else-if="!isFinished">
         <template #title>
           <div
             class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
