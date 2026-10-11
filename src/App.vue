@@ -14,16 +14,29 @@ const currentIndex = ref(0);
 const isFinished = ref(false);
 const isStarted = ref(false);
 const selectedTopicId = ref<string | null>(null);
+const shuffledQuestionIds = ref<string[]>([]);
 
 const answers = reactive<Record<string, string | null>>({});
 
 const questions = computed<ChoiceQuestion[]>(() => {
   if (!selectedTopicId.value) return [];
 
-  return sampleQuestions.filter(
+  const topicQuestions = sampleQuestions.filter(
     (question): question is ChoiceQuestion =>
       question.type === "single_choice" &&
       question.topicId === selectedTopicId.value,
+  );
+
+  if (shuffledQuestionIds.value.length !== topicQuestions.length) {
+    return topicQuestions;
+  }
+
+  const order = new Map(
+    shuffledQuestionIds.value.map((questionId, index) => [questionId, index]),
+  );
+
+  return [...topicQuestions].sort(
+    (a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0),
   );
 });
 
@@ -73,9 +86,24 @@ function goToNextQuestion() {
 function startExam() {
   if (!selectedTopicId.value || questions.value.length === 0) return;
 
+  shuffledQuestionIds.value = shuffle(questions.value.map((question) => question.id));
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = true;
+}
+
+function shuffle<T>(items: T[]) {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+
+  return shuffled;
 }
 
 function restartPractice() {
@@ -87,6 +115,7 @@ function restartPractice() {
   isFinished.value = false;
   isStarted.value = false;
   selectedTopicId.value = null;
+  shuffledQuestionIds.value = [];
 }
 
 function getCorrectAnswerText(question: ChoiceQuestion) {
