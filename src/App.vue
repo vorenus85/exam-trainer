@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, ref } from "vue";
+import { computed, onUnmounted, reactive, ref } from "vue";
 import Button from "primevue/button";
 import Card from "primevue/card";
 import Message from "primevue/message";
@@ -11,6 +11,7 @@ import { sampleQuestions, topics } from "./data/sampleQuestions";
 import type { ChoiceQuestion } from "./types/question";
 
 const QUESTIONS_PER_PRACTICE = 5;
+const PRACTICE_TIME_LIMIT_SECONDS = 60;
 
 const currentIndex = ref(0);
 const isFinished = ref(false);
@@ -18,6 +19,8 @@ const isStarted = ref(false);
 const selectedTopicId = ref<string | null>(null);
 const shuffledQuestionIds = ref<string[]>([]);
 const shuffledOptionIds = ref<Record<string, string[]>>({});
+const timeRemaining = ref(PRACTICE_TIME_LIMIT_SECONDS);
+let timerId: ReturnType<typeof setInterval> | null = null;
 
 const answers = reactive<Record<string, string | null>>({});
 
@@ -53,6 +56,13 @@ const progressPercent = computed(() => {
   return Math.round((answeredCount.value / questions.value.length) * 100);
 });
 
+const formattedTimeRemaining = computed(() => {
+  const minutes = Math.floor(timeRemaining.value / 60);
+  const seconds = timeRemaining.value % 60;
+
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+});
+
 const correctCount = computed(() => {
   return questions.value.filter((question) => {
     return answers[question.id] === question.correctOptionIds[0];
@@ -83,7 +93,7 @@ function goToNextQuestion() {
     return;
   }
 
-  isFinished.value = true;
+  finishExam();
 }
 
 function startExam() {
@@ -106,6 +116,34 @@ function startExam() {
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = true;
+  startTimer();
+}
+
+function startTimer() {
+  stopTimer();
+  timeRemaining.value = PRACTICE_TIME_LIMIT_SECONDS;
+
+  timerId = setInterval(() => {
+    if (timeRemaining.value <= 1) {
+      timeRemaining.value = 0;
+      finishExam();
+      return;
+    }
+
+    timeRemaining.value -= 1;
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerId === null) return;
+
+  clearInterval(timerId);
+  timerId = null;
+}
+
+function finishExam() {
+  isFinished.value = true;
+  stopTimer();
 }
 
 function shuffle<T>(items: T[]) {
@@ -139,6 +177,8 @@ function getQuestionOptions(question: ChoiceQuestion) {
 }
 
 function restartPractice() {
+  stopTimer();
+
   Object.keys(answers).forEach((questionId) => {
     delete answers[questionId];
   });
@@ -149,7 +189,10 @@ function restartPractice() {
   selectedTopicId.value = null;
   shuffledQuestionIds.value = [];
   shuffledOptionIds.value = {};
+  timeRemaining.value = PRACTICE_TIME_LIMIT_SECONDS;
 }
+
+onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: ChoiceQuestion) {
   const correctOptionId = question.correctOptionIds[0];
@@ -196,9 +239,17 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
 
         <div
           v-if="isStarted"
-          class="mt-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-center"
+          class="mt-5 grid gap-3 md:grid-cols-[1fr_auto_auto] md:items-center"
         >
           <ProgressBar :value="progressPercent" class="h-3" />
+
+          <span
+            class="text-sm font-semibold tabular-nums"
+            :class="timeRemaining <= 10 ? 'text-red-600' : 'text-slate-600'"
+            aria-live="polite"
+          >
+            Idő: {{ formattedTimeRemaining }}
+          </span>
 
           <span class="text-sm font-medium text-slate-600">
             {{ answeredCount }} / {{ questions.length }} megválaszolva
@@ -318,6 +369,10 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
               {{ correctCount }} / {{ questions.length }} helyes válasz
             </Message>
 
+            <Message v-if="timeRemaining === 0" severity="warn" :closable="false">
+              Az idő lejárt, a meg nem válaszolt kérdések hiányosnak számítanak.
+            </Message>
+
             <div v-if="incorrectQuestions.length" class="grid gap-4">
               <h2 class="text-xl font-bold text-slate-950">
                 Hibás válaszok áttekintése
@@ -333,7 +388,10 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
                     :value="getTopicName(question.topicId)"
                     severity="info"
                   />
-                  <Tag value="Csak egy helyes" severity="warn" />
+                  <Tag
+                    :value="answers[question.id] ? 'Hibás válasz' : 'Hiányos válasz'"
+                    severity="warn"
+                  />
                 </div>
 
                 <h3 class="font-semibold text-slate-950">
