@@ -15,6 +15,7 @@ const isFinished = ref(false);
 const isStarted = ref(false);
 const selectedTopicId = ref<string | null>(null);
 const shuffledQuestionIds = ref<string[]>([]);
+const shuffledOptionIds = ref<Record<string, string[]>>({});
 
 const answers = reactive<Record<string, string | null>>({});
 
@@ -87,6 +88,12 @@ function startExam() {
   if (!selectedTopicId.value || questions.value.length === 0) return;
 
   shuffledQuestionIds.value = shuffle(questions.value.map((question) => question.id));
+  shuffledOptionIds.value = Object.fromEntries(
+    questions.value.map((question) => [
+      question.id,
+      shuffle(question.options.map((option) => option.id)),
+    ]),
+  );
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = true;
@@ -106,6 +113,22 @@ function shuffle<T>(items: T[]) {
   return shuffled;
 }
 
+function getQuestionOptions(question: ChoiceQuestion) {
+  const optionOrder = shuffledOptionIds.value[question.id];
+  if (!optionOrder) return question.options;
+
+  const optionsById = new Map(
+    question.options.map((option) => [option.id, option]),
+  );
+
+  return optionOrder
+    .map((optionId) => optionsById.get(optionId))
+    .filter(
+      (option): option is ChoiceQuestion["options"][number] =>
+        option !== undefined,
+    );
+}
+
 function restartPractice() {
   Object.keys(answers).forEach((questionId) => {
     delete answers[questionId];
@@ -116,6 +139,7 @@ function restartPractice() {
   isStarted.value = false;
   selectedTopicId.value = null;
   shuffledQuestionIds.value = [];
+  shuffledOptionIds.value = {};
 }
 
 function getCorrectAnswerText(question: ChoiceQuestion) {
@@ -231,7 +255,7 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
 
             <div class="grid gap-3">
               <label
-                v-for="option in currentQuestion.options"
+                v-for="option in getQuestionOptions(currentQuestion)"
                 :key="option.id"
                 class="flex cursor-pointer items-center gap-3 rounded-md border border-slate-200 p-3 hover:border-blue-300"
               >
