@@ -283,4 +283,47 @@ export const vitalisQuestions: ExamQuestion[] = [
     explanation:
       "A jelentős eltérést ellenőrizni, dokumentálni és a beteg állapotával együtt értékelni kell.",
   },
+  {
+    id: "vitalis-mc-006",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mely tényezők befolyásolhatják a testhőmérsékletet? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Fertőzés vagy gyulladás" },
+      { id: "b", text: "Fizikai aktivitás" },
+      { id: "c", text: "A környezet hőmérséklete" },
+      { id: "d", text: "A beteg kedvenc színe önmagában" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "vitalis-mc-007",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Milyen adatokat célszerű rögzíteni a vitális paraméterek mérésekor? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A mért értéket és a mért paramétert" },
+      { id: "b", text: "A mérés időpontját" },
+      { id: "c", text: "A beteg állapotával kapcsolatos lényeges megfigyeléseket" },
+      { id: "d", text: "Csak azt, hogy történt-e mérés" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A pontos dokumentáció lehetővé teszi az értékek nyomon követését és az állapotváltozások felismerését.",
+  },
+  {
+    id: "vitalis-mc-008",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mely jelek utalhatnak a beteg állapotának romlására? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Hirtelen nehezített légzés" },
+      { id: "b", text: "Szokatlan tudatzavar vagy zavartság" },
+      { id: "c", text: "Jelentősen eltérő vérnyomás vagy pulzus" },
+      { id: "d", text: "A beteg panaszmentes, változatlan állapota" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "Az ilyen eltéréseket komolyan kell venni, a beteget megfigyelni és az illetékes szakembernek jelezni kell.",
+  },
 ];

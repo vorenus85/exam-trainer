@@ -269,4 +269,47 @@ export const testmukodesQuestions: ExamQuestion[] = [
     explanation:
       "A vese a kiválasztásban és a belső egyensúly fenntartásában is fontos szerepet játszik.",
   },
+  {
+    id: "testmukodes-mc-006",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Melyek a csontvázrendszer fontos feladatai? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A test megtámasztása" },
+      { id: "b", text: "A belső szervek egy részének védelme" },
+      { id: "c", text: "A mozgásban való részvétel" },
+      { id: "d", text: "A vér oxigéntartalmának közvetlen szabályozása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A csontváz támaszt, védelmet és az izmokkal együtt a mozgás alapját biztosítja.",
+  },
+  {
+    id: "testmukodes-mc-007",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Mely szervek tartoznak a hormonális szabályozásban részt vevő szervek közé? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Pajzsmirigy" },
+      { id: "b", text: "Hasnyálmirigy" },
+      { id: "c", text: "Mellékvese" },
+      { id: "d", text: "Húgyvezeték" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "testmukodes-mc-008",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Melyek a bőr fontos feladatai? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A szervezet külső védelme" },
+      { id: "b", text: "A hőszabályozás segítése" },
+      { id: "c", text: "Az érzékelésben való részvétel" },
+      { id: "d", text: "A vér mechanikus pumpálása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A bőr védelmi, hőszabályozó és érzékelő szervként is működik.",
+  },
 ];

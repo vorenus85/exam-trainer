@@ -310,4 +310,47 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     explanation:
       "A gyógyszerformától függ, hogy a tabletta felezhető vagy összetörhető-e.",
   },
+  {
+    id: "gyogyszerelesi-mc-006",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek a gyógyszer beadásának biztonságát szolgáló ellenőrzések? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A megfelelő beteg azonosítása" },
+      { id: "b", text: "A gyógyszer és az adag ellenőrzése" },
+      { id: "c", text: "A beadás módjának és időpontjának ellenőrzése" },
+      { id: "d", text: "A gyógyszer ellenőrzés nélküli beadása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A beadás előtti ellenőrzések csökkentik a gyógyszerelési hibák kockázatát.",
+  },
+  {
+    id: "gyogyszerelesi-mc-007",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mit kell tenni, ha a beteg gyógyszer beadása után szokatlan tünetet jelez? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A tünetet és a beteg állapotát meg kell figyelni" },
+      { id: "b", text: "Az eseményt jelezni kell az illetékes szakembernek" },
+      { id: "c", text: "A történteket a szabályok szerint dokumentálni kell" },
+      { id: "d", text: "A panaszt automatikusan figyelmen kívül kell hagyni" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "gyogyszerelesi-mc-008",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely gyógyszerelési hibákat kell jelezni és dokumentálni? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Téves betegnek előkészített gyógyszer" },
+      { id: "b", text: "Eltérés az előírt adaghoz képest" },
+      { id: "c", text: "Elmaradt vagy késedelmes beadás" },
+      { id: "d", text: "A szabályosan, eltérés nélkül beadott gyógyszer" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A gyógyszerelési hibákat és a majdnem bekövetkezett hibákat is a helyi szabályok szerint jelezni kell.",
+  },
 ];

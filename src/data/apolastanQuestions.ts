@@ -289,4 +289,47 @@ export const apolastanQuestions: ExamQuestion[] = [
     explanation:
       "A dokumentációnak pontosan, tényszerűen és időrendben kell tükröznie az ellátást.",
   },
+  {
+    id: "apolastan-mc-006",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Mely intézkedések segítik a felfekvés megelőzését? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg rendszeres helyzetváltoztatása" },
+      { id: "b", text: "A bőr rendszeres megfigyelése" },
+      { id: "c", text: "A bőr tisztán és szárazon tartása" },
+      { id: "d", text: "A kipirosodott terület erős dörzsölése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A rendszeres tehermentesítés, a bőr megfigyelése és a megfelelő bőrápolás csökkenti a felfekvés kockázatát.",
+  },
+  {
+    id: "apolastan-mc-007",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Melyek tartoznak a beteg állapotának folyamatos megfigyeléséhez? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg panaszainak meghallgatása" },
+      { id: "b", text: "Az általános állapot változásainak észlelése" },
+      { id: "c", text: "A vitális paraméterek szükség szerinti ellenőrzése" },
+      { id: "d", text: "A változások szándékos figyelmen kívül hagyása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "apolastan-mc-008",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Mely alapelvek fontosak a beteg személyes higiénéjének segítésekor? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg intimitásának védelme" },
+      { id: "b", text: "A beteg önállóságának támogatása" },
+      { id: "c", text: "A beteg szükségleteinek és kívánságainak figyelembevétele" },
+      { id: "d", text: "A beteget minden esetben teljesen passzívvá tenni" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A személyes higiéné segítésekor a méltóság, az intimitás és a lehető legnagyobb önállóság megőrzése a cél.",
+  },
 ];

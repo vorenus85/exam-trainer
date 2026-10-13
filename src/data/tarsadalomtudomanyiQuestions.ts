@@ -302,4 +302,47 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     explanation:
       "Az empátia a beteg érzéseinek megértését, elfogadását és tiszteletteljes kommunikációt jelent.",
   },
+  {
+    id: "tarsadalomtudomanyi-mc-006",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek segítik a konfliktusok konstruktív kezelését az egészségügyi ellátásban? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A felek álláspontjának nyugodt meghallgatása" },
+      { id: "b", text: "A probléma tényszerű tisztázása" },
+      { id: "c", text: "Közös, elfogadható megoldás keresése" },
+      { id: "d", text: "A másik fél személyének sértegetése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A nyugodt kommunikáció és a probléma közös, tényszerű kezelése segíti a konfliktus megoldását.",
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-007",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek a szakmai titoktartás alapvető szabályai? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg adatainak illetéktelenekkel való megosztásának kerülése" },
+      { id: "b", text: "A dokumentáció biztonságos kezelése" },
+      { id: "c", text: "Az információk továbbadása csak indokolt és jogosult személynek" },
+      { id: "d", text: "A beteg állapotának nyilvános megbeszélése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-008",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely magatartások támogatják a beteg együttműködését? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg bevonása az ellátással kapcsolatos döntésekbe" },
+      { id: "b", text: "Az érthető tájékoztatás és a kérdések ösztönzése" },
+      { id: "c", text: "A beteg félelmeinek és véleményének figyelembevétele" },
+      { id: "d", text: "A beteg tájékoztatás nélküli utasítása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A partnerség, az érthető tájékoztatás és a beteg meghallgatása erősíti az együttműködést.",
+  },
 ];
