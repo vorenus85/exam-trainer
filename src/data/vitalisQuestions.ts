@@ -212,4 +212,75 @@ export const vitalisQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a"],
   },
+  {
+    id: "vitalis-mc-001",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mely tényezők befolyásolhatják a pulzust? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Fizikai aktivitás" },
+      { id: "b", text: "Láz" },
+      { id: "c", text: "Érzelmi stressz" },
+      { id: "d", text: "A beteg cipőmérete önmagában" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A terhelés, a láz és a stressz is módosíthatja a pulzus frekvenciáját.",
+  },
+  {
+    id: "vitalis-mc-002",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Melyek szükségesek a pontos vérnyomásméréshez? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg néhány percig nyugalomban legyen" },
+      { id: "b", text: "A mandzsetta mérete illeszkedjen a karhoz" },
+      { id: "c", text: "A kar legyen megfelelően megtámasztva" },
+      { id: "d", text: "A mandzsettát mindig vastag ruhára kell helyezni" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "vitalis-mc-003",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mely jellemzőket kell megfigyelni a légzés vizsgálatakor? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A légzésszámot" },
+      { id: "b", text: "A légzés ritmusát" },
+      { id: "c", text: "A légzés mélységét és jellegét" },
+      { id: "d", text: "Kizárólag a beteg testmagasságát" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A légzés megfigyelésekor a gyakoriság, a ritmus, a mélység és a jelleg egyaránt fontos.",
+  },
+  {
+    id: "vitalis-mc-004",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mely tényezők okozhatnak pontatlan pulzoximéteres mérést? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Hideg végtag" },
+      { id: "b", text: "Körömlakk vagy műköröm" },
+      { id: "c", text: "Mozgás mérés közben" },
+      { id: "d", text: "A beteg csendben, mozdulatlanul ül" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "vitalis-mc-005",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Mit kell tenni jelentősen eltérő vitális paraméter észlelésekor? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Ellenőrizni kell a mérés körülményeit és szükség esetén megismételni" },
+      { id: "b", text: "Meg kell figyelni a beteg általános állapotát" },
+      { id: "c", text: "Jelezni kell az illetékes egészségügyi szakembernek" },
+      { id: "d", text: "Az eredményt dokumentálás nélkül figyelmen kívül kell hagyni" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A jelentős eltérést ellenőrizni, dokumentálni és a beteg állapotával együtt értékelni kell.",
+  },
 ];

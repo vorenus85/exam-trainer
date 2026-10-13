@@ -233,4 +233,73 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a"],
   },
+  {
+    id: "tarsadalomtudomanyi-mc-001",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek segítik a hatékony kommunikációt a beteggel? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Aktív figyelem" },
+      { id: "b", text: "Érthető, egyszerű fogalmazás" },
+      { id: "c", text: "Visszakérdezés és visszajelzés lehetősége" },
+      { id: "d", text: "A beteg rendszeres félbeszakítása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-002",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek a beteg önrendelkezési jogának fontos elemei? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Megfelelő tájékoztatás a döntés előtt" },
+      { id: "b", text: "A beavatkozás elfogadásának vagy visszautasításának lehetősége" },
+      { id: "c", text: "A beteg véleményének tiszteletben tartása" },
+      { id: "d", text: "A beteg döntéseinek automatikus figyelmen kívül hagyása" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "Az önrendelkezéshez a beteg érthető tájékoztatása és szabad, befolyásolástól mentes döntése szükséges.",
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-003",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek tartoznak a beteg személyiségi jogainak védelméhez? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A magánélet és az intimitás tisztelete" },
+      { id: "b", text: "A személyes adatok bizalmas kezelése" },
+      { id: "c", text: "A méltóságteljes bánásmód" },
+      { id: "d", text: "A beteg adatainak nyilvános megbeszélése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-004",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Hogyan támogatható a kulturálisan érzékeny betegellátás? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg kulturális szokásainak tiszteletben tartásával" },
+      { id: "b", text: "A nyelvi akadályok felismerésével és szükség esetén tolmács bevonásával" },
+      { id: "c", text: "A beteg egyéni igényeinek megismerésével" },
+      { id: "d", text: "A saját szokások minden betegre való ráerőltetésével" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-mc-005",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely magatartások jellemzik az empatikus kommunikációt? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg érzéseinek észlelése és elfogadása" },
+      { id: "b", text: "Ítélkezésmentes odafordulás" },
+      { id: "c", text: "A beteg meghallgatása" },
+      { id: "d", text: "A beteg érzéseinek lekicsinylése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "Az empátia a beteg érzéseinek megértését, elfogadását és tiszteletteljes kommunikációt jelent.",
+  },
 ];

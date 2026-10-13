@@ -239,4 +239,75 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a"],
   },
+  {
+    id: "gyogyszerelesi-mc-001",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely adatokat kell ellenőrizni gyógyszer beadása előtt? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg azonosságát" },
+      { id: "b", text: "A gyógyszer nevét és adagját" },
+      { id: "c", text: "A beadás időpontját és módját" },
+      { id: "d", text: "A gyógyszer reklámértékét" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A betegbiztonság érdekében a beadás előtt a gyógyszerelés minden lényeges adatát ellenőrizni kell.",
+  },
+  {
+    id: "gyogyszerelesi-mc-002",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Melyek a gyógyszerek biztonságos tárolásának alapelvei? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Az előírt hőmérsékleten való tárolás" },
+      { id: "b", text: "Az eredeti, feliratozott csomagolás megőrzése" },
+      { id: "c", text: "A lejárati idő rendszeres ellenőrzése" },
+      { id: "d", text: "A különböző gyógyszerek címke nélküli összeöntése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "gyogyszerelesi-mc-003",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely tünetek jelezhetnek gyógyszer okozta allergiás reakciót? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Csalánkiütés vagy kiterjedt bőrkiütés" },
+      { id: "b", text: "Arc- vagy ajakduzzanat" },
+      { id: "c", text: "Nehézlégzés" },
+      { id: "d", text: "Javuló közérzet" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "Allergiás reakció gyanúja esetén azonnal értesíteni kell az illetékes egészségügyi szakembert.",
+  },
+  {
+    id: "gyogyszerelesi-mc-004",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mit kell dokumentálni a gyógyszer beadása után? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beadott gyógyszer nevét és adagját" },
+      { id: "b", text: "A beadás időpontját" },
+      { id: "c", text: "A beteg megfigyelt reakcióját" },
+      { id: "d", text: "A dokumentációt szándékosan üresen hagyni" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "gyogyszerelesi-mc-005",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Mely szabályok vonatkoznak a tabletták alkalmazására? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A tablettát csak az előírásnak megfelelően szabad felezni vagy összetörni" },
+      { id: "b", text: "A retard vagy speciális bevonatú tablettát nem szabad önállóan összetörni" },
+      { id: "c", text: "Lenyelési nehézség esetén egyeztetni kell az illetékes szakemberrel" },
+      { id: "d", text: "Minden tabletta tetszőlegesen porítható" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A gyógyszerformától függ, hogy a tabletta felezhető vagy összetörhető-e.",
+  },
 ];

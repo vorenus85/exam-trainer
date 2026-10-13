@@ -198,4 +198,75 @@ export const testmukodesQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a"],
   },
+  {
+    id: "testmukodes-mc-001",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Melyek a keringési rendszer főbb részei? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Szív" },
+      { id: "b", text: "Vérerek" },
+      { id: "c", text: "Vér" },
+      { id: "d", text: "Tüdőalveolusok" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A keringési rendszer a szívből, a vérerekből és a vérből áll.",
+  },
+  {
+    id: "testmukodes-mc-002",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Mely folyamatok kapcsolódnak a légzőrendszer működéséhez? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Oxigén felvétele" },
+      { id: "b", text: "Szén-dioxid leadása" },
+      { id: "c", text: "Gázcsere a léghólyagocskák és a vér között" },
+      { id: "d", text: "A vizelet szűrése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "testmukodes-mc-003",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Mely szervek vesznek részt az emésztésben? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Szájüreg" },
+      { id: "b", text: "Gyomor" },
+      { id: "c", text: "Vékonybél" },
+      { id: "d", text: "Húgyhólyag" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "testmukodes-mc-004",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Melyek az idegrendszer alapvető feladatai? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Ingerületek fogadása és feldolgozása" },
+      { id: "b", text: "A szervek működésének összehangolása" },
+      { id: "c", text: "Mozgások szabályozása" },
+      { id: "d", text: "Az oxigén közvetlen előállítása a vérben" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "Az idegrendszer információt fogad, dolgoz fel és koordinálja a szervezet működését.",
+  },
+  {
+    id: "testmukodes-mc-005",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Melyek a vese fontos feladatai? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A vér szűrése" },
+      { id: "b", text: "A vizelet képzése" },
+      { id: "c", text: "A folyadék- és elektrolit-háztartás szabályozásának segítése" },
+      { id: "d", text: "A levegő felmelegítése" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A vese a kiválasztásban és a belső egyensúly fenntartásában is fontos szerepet játszik.",
+  },
 ];

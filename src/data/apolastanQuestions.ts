@@ -218,4 +218,75 @@ export const apolastanQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a"],
   },
+  {
+    id: "apolastan-mc-001",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Melyek tartoznak a beteg alapvető életjelenségei közé? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Pulzus" },
+      { id: "b", text: "Vérnyomás" },
+      { id: "c", text: "Testhőmérséklet" },
+      { id: "d", text: "Hajszín" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A pulzus, a vérnyomás és a testhőmérséklet a beteg megfigyelésének alapvető paraméterei.",
+  },
+  {
+    id: "apolastan-mc-002",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Mely intézkedések segítik a fertőzések megelőzését az ellátás során? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Megfelelő kézhigiéné" },
+      { id: "b", text: "Az egyéni védőeszközök helyes használata" },
+      { id: "c", text: "A használt eszközök szabályos kezelése" },
+      { id: "d", text: "A kézfertőtlenítés elhagyása kesztyűviseléskor" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "apolastan-mc-003",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Melyek tartoznak a beteg azonosításának biztonságos gyakorlatához? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Legalább két azonosító adat ellenőrzése" },
+      { id: "b", text: "Az adatokat a beteg dokumentációjával összevetni" },
+      { id: "c", text: "Csak a beteg ágyszáma alapján dönteni" },
+      { id: "d", text: "Az azonosítást minden releváns beavatkozás előtt elvégezni" },
+    ],
+    correctOptionIds: ["a", "b", "d"],
+    explanation:
+      "A megfelelő azonosítás csökkenti a téves betegnek adott ellátás kockázatát.",
+  },
+  {
+    id: "apolastan-mc-004",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Mely szempontokat kell figyelembe venni a beteg mozgatásakor? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "A beteg aktuális állapotát és terhelhetőségét" },
+      { id: "b", text: "A beteg előzetes tájékoztatását" },
+      { id: "c", text: "A megfelelő segédeszköz használatát" },
+      { id: "d", text: "A beteg fájdalmának figyelmen kívül hagyását" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "apolastan-mc-005",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt: "Melyek a szakszerű ápolási dokumentáció jellemzői? (Több válasz is helyes.)",
+    options: [
+      { id: "a", text: "Tényszerű és pontos" },
+      { id: "b", text: "Időben vezetett" },
+      { id: "c", text: "A beteg állapotának változásait is rögzíti" },
+      { id: "d", text: "Utólag emlékezetből, időpont nélkül készül" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+    explanation:
+      "A dokumentációnak pontosan, tényszerűen és időrendben kell tükröznie az ellátást.",
+  },
 ];

@@ -2,6 +2,7 @@
 import { computed, onUnmounted, reactive, ref } from "vue";
 import Button from "primevue/button";
 import Card from "primevue/card";
+import Checkbox from "primevue/checkbox";
 import Message from "primevue/message";
 import ProgressBar from "primevue/progressbar";
 import RadioButton from "primevue/radiobutton";
@@ -36,11 +37,12 @@ const shuffledOptionIds = ref<Record<string, string[]>>({});
 const timeRemaining = ref(PRACTICE_TIME_LIMIT_SECONDS);
 let timerId: ReturnType<typeof setInterval> | null = null;
 
-const answers = reactive<Record<string, string | null>>({});
+const answers = reactive<Record<string, string | string[] | null>>({});
 
 const questions = computed<ChoiceQuestion[]>(() => {
   const availableQuestions = sampleQuestions.filter(
-    (question): question is ChoiceQuestion => question.type === "single_choice",
+    (question): question is ChoiceQuestion =>
+      question.type === "single_choice" || question.type === "multiple_choice",
   );
 
   if (shuffledQuestionIds.value.length === 0) {
@@ -65,7 +67,7 @@ const questions = computed<ChoiceQuestion[]>(() => {
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
 
 const answeredCount = computed(() => {
-  return questions.value.filter((question) => answers[question.id]).length;
+  return questions.value.filter((question) => hasAnswer(question)).length;
 });
 
 const progressPercent = computed(() => {
@@ -81,13 +83,13 @@ const formattedTimeRemaining = computed(() => {
 
 const correctCount = computed(() => {
   return questions.value.filter((question) => {
-    return answers[question.id] === question.correctOptionIds[0];
+    return areAnswersCorrect(question);
   }).length;
 });
 
 const incorrectQuestions = computed(() => {
   return questions.value.filter((question) => {
-    return answers[question.id] !== question.correctOptionIds[0];
+    return !areAnswersCorrect(question);
   });
 });
 
@@ -241,6 +243,26 @@ function getQuestionOptions(question: ChoiceQuestion) {
     );
 }
 
+function hasAnswer(question: ChoiceQuestion) {
+  const answer = answers[question.id];
+  return Array.isArray(answer) ? answer.length > 0 : Boolean(answer);
+}
+
+function getSelectedOptionIds(question: ChoiceQuestion) {
+  const answer = answers[question.id];
+  return Array.isArray(answer) ? answer : answer ? [answer] : [];
+}
+
+function areAnswersCorrect(question: ChoiceQuestion) {
+  const selected = getSelectedOptionIds(question).sort();
+  const correct = [...question.correctOptionIds].sort();
+
+  return (
+    selected.length === correct.length &&
+    selected.every((optionId, index) => optionId === correct[index])
+  );
+}
+
 function restartPractice() {
   stopTimer();
 
@@ -261,10 +283,10 @@ function restartPractice() {
 onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: ChoiceQuestion) {
-  const correctOptionId = question.correctOptionIds[0];
-  return (
-    question.options.find((option) => option.id === correctOptionId)?.text ?? ""
-  );
+  return question.options
+    .filter((option) => question.correctOptionIds.includes(option.id))
+    .map((option) => option.text)
+    .join(", ");
 }
 </script>
 
@@ -414,7 +436,14 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
                 :value="getTopicName(currentQuestion.topicId)"
                 severity="info"
               />
-              <Tag value="Csak egy helyes" severity="secondary" />
+              <Tag
+                :value="
+                  currentQuestion.type === 'multiple_choice'
+                    ? 'Több helyes válasz'
+                    : 'Egy helyes válasz'
+                "
+                severity="secondary"
+              />
             </div>
           </div>
         </template>
@@ -432,10 +461,18 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
                 class="flex cursor-pointer items-center gap-3 rounded-md border border-slate-200 p-3 hover:border-blue-300"
               >
                 <RadioButton
+                  v-if="currentQuestion.type === 'single_choice'"
                   v-model="answers[currentQuestion.id]"
                   :input-id="`${currentQuestion.id}-${option.id}`"
                   :value="option.id"
                   name="single-choice"
+                />
+
+                <Checkbox
+                  v-else
+                  v-model="answers[currentQuestion.id]"
+                  :input-id="`${currentQuestion.id}-${option.id}`"
+                  :value="option.id"
                 />
 
                 <span>{{ option.text }}</span>
@@ -461,7 +498,7 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
                 "
                 icon="pi pi-arrow-right"
                 icon-pos="right"
-                :disabled="!answers[currentQuestion.id]"
+                :disabled="!hasAnswer(currentQuestion)"
                 @click="goToNextQuestion"
               />
             </div>
