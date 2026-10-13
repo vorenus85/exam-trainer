@@ -345,4 +345,92 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     explanation:
       "A partnerség, az érthető tájékoztatás és a beteg meghallgatása erősíti az együttműködést.",
   },
+  {
+    id: "tarsadalomtudomanyi-tf-001",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A beteggel folytatott kommunikációban fontos az aktív figyelem.", correct: true },
+      { id: "b", text: "A beteget minden beszélgetés során félbe kell szakítani.", correct: false },
+      { id: "c", text: "Az érthető fogalmazás segíti a beteg tájékoztatását.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-002",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A beteg személyes adatait bizalmasan kell kezelni.", correct: true },
+      { id: "b", text: "A beteg egészségi állapotáról bárki előtt szabadon lehet beszélni.", correct: false },
+      { id: "c", text: "A dokumentációhoz csak jogosult személyek férhetnek hozzá.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-003",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A beteg önrendelkezési jogát tiszteletben kell tartani.", correct: true },
+      { id: "b", text: "A beteg megfelelő tájékoztatás nélkül is minden beavatkozásra kötelezhető.", correct: false },
+      { id: "c", text: "A betegnek lehetőséget kell adni a kérdések feltevésére.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-004",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Az egyenlő bánásmód minden beteg számára fontos.", correct: true },
+      { id: "b", text: "A beteg anyagi helyzete alapján meg lehet tagadni az ellátást.", correct: false },
+      { id: "c", text: "A beteg méltóságát az ellátás során tiszteletben kell tartani.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-005",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A kulturális különbségeket tisztelettel kell kezelni az ellátás során.", correct: true },
+      { id: "b", text: "A nyelvi akadályokat minden esetben figyelmen kívül kell hagyni.", correct: false },
+      { id: "c", text: "Szükség esetén tolmács bevonása segítheti a kommunikációt.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-006",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Az empatikus kommunikáció során figyelembe kell venni a beteg érzéseit.", correct: true },
+      { id: "b", text: "A beteg félelmeit és panaszait le kell kicsinyelni.", correct: false },
+      { id: "c", text: "Az ítélkezésmentes kommunikáció segítheti a bizalom kialakulását.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-007",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Konfliktus esetén fontos a másik fél álláspontjának meghallgatása.", correct: true },
+      { id: "b", text: "A konfliktus megoldását a másik fél sértegetése segíti.", correct: false },
+      { id: "c", text: "A tényszerű, nyugodt kommunikáció támogathatja a közös megoldást.", correct: true },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-tf-008",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A beteg együttműködését segíti, ha bevonják az ellátással kapcsolatos döntésekbe.", correct: true },
+      { id: "b", text: "A beteget tájékoztatás nélkül kell utasítani az együttműködésre.", correct: false },
+      { id: "c", text: "A beteg véleményének figyelembevétele erősítheti a partnerséget.", correct: true },
+    ],
+  },
 ];

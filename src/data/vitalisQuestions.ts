@@ -326,4 +326,92 @@ export const vitalisQuestions: ExamQuestion[] = [
     explanation:
       "Az ilyen eltéréseket komolyan kell venni, a beteget megfigyelni és az illetékes szakembernek jelezni kell.",
   },
+  {
+    id: "vitalis-tf-001",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A pulzus frekvenciája nyugalomban is mérhető.", correct: true },
+      { id: "b", text: "A pulzus ritmusát nem szükséges megfigyelni.", correct: false },
+      { id: "c", text: "A pulzus tapintásakor a teltség is értékelhető.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-002",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A vérnyomásmérés előtt célszerű a beteget nyugalomban hagyni.", correct: true },
+      { id: "b", text: "A mandzsetta mérete nem befolyásolhatja a mérés eredményét.", correct: false },
+      { id: "c", text: "A vérnyomásméréskor a kart megfelelően meg kell támasztani.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-003",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Szabálytalan légzés esetén célszerű egy teljes percig számolni a légzésszámot.", correct: true },
+      { id: "b", text: "A légzés ritmusát és mélységét nem kell megfigyelni.", correct: false },
+      { id: "c", text: "A hirtelen nehezített légzést jelezni kell az illetékes szakembernek.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-004",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A pulzoximéter a vér oxigéntelítettségének becslésére használható.", correct: true },
+      { id: "b", text: "Mozgás közben minden pulzoximéteres mérés biztosan pontos.", correct: false },
+      { id: "c", text: "A hideg végtag befolyásolhatja a pulzoximéteres mérés eredményét.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-005",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A testhőmérséklet mérési helye hatással lehet a mért értékre.", correct: true },
+      { id: "b", text: "A láz minden esetben a mérőeszköz hibáját jelenti.", correct: false },
+      { id: "c", text: "A testhőmérséklet változását a beteg általános állapotával együtt kell értékelni.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-006",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A vitális paraméterek mérési eredményeit dokumentálni kell.", correct: true },
+      { id: "b", text: "A mérés időpontja nem fontos adat a dokumentációban.", correct: false },
+      { id: "c", text: "Jelentős eltérés esetén a beteg állapotát és a mérés körülményeit is ellenőrizni kell.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-007",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A fizikai aktivitás befolyásolhatja a pulzus értékét.", correct: true },
+      { id: "b", text: "A stressz semmilyen körülmények között nem hat a pulzusra.", correct: false },
+      { id: "c", text: "A láz is okozhat pulzusszám-emelkedést.", correct: true },
+    ],
+  },
+  {
+    id: "vitalis-tf-008",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A vitális paraméterek változásait a beteg panaszaival együtt kell értékelni.", correct: true },
+      { id: "b", text: "A jelentősen eltérő értéket dokumentálás nélkül figyelmen kívül lehet hagyni.", correct: false },
+      { id: "c", text: "Állapotromlás gyanúja esetén értesíteni kell az illetékes szakembert.", correct: true },
+    ],
+  },
 ];

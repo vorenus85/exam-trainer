@@ -160,7 +160,10 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt: "Miért fontos a beteg azonosítása ellátás előtt?",
     options: [
       { id: "a", text: "A megfelelő beteg biztonságos ellátása érdekében" },
-      { id: "b", text: "Csak adminisztrációs okokból, az ellátás szempontjából nem fontos" },
+      {
+        id: "b",
+        text: "Csak adminisztrációs okokból, az ellátás szempontjából nem fontos",
+      },
       { id: "c", text: "Hogy a betegnek ne kelljen kérdéseket feltenni" },
       { id: "d", text: "Csak lázas beteg esetén szükséges" },
     ],
@@ -172,7 +175,10 @@ export const apolastanQuestions: ExamQuestion[] = [
     type: "single_choice",
     prompt: "Mi segíthet a felfekvés megelőzésében?",
     options: [
-      { id: "a", text: "A beteg rendszeres helyzetváltoztatása és a bőr megfigyelése" },
+      {
+        id: "a",
+        text: "A beteg rendszeres helyzetváltoztatása és a bőr megfigyelése",
+      },
       { id: "b", text: "A beteg mozdulatlanul tartása" },
       { id: "c", text: "A bőr kipirosodott területének erős dörzsölése" },
       { id: "d", text: "A folyadékbevitel teljes megvonása" },
@@ -183,11 +189,18 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-013",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Mit kell figyelembe venni a beteg személyes higiénéjének segítésekor?",
+    prompt:
+      "Mit kell figyelembe venni a beteg személyes higiénéjének segítésekor?",
     options: [
-      { id: "a", text: "A beteg intimitását, személyes szükségleteit és önállóságát" },
+      {
+        id: "a",
+        text: "A beteg intimitását, személyes szükségleteit és önállóságát",
+      },
       { id: "b", text: "Csak az ellátás gyorsaságát" },
-      { id: "c", text: "A beteg kéréseit minden esetben figyelmen kívül kell hagyni" },
+      {
+        id: "c",
+        text: "A beteg kéréseit minden esetben figyelmen kívül kell hagyni",
+      },
       { id: "d", text: "Csak a hozzátartozók véleményét" },
     ],
     correctOptionIds: ["a"],
@@ -198,7 +211,10 @@ export const apolastanQuestions: ExamQuestion[] = [
     type: "single_choice",
     prompt: "Mikor kell az ápolási beavatkozást dokumentálni?",
     options: [
-      { id: "a", text: "A beavatkozás után a lehető leghamarabb, a tényeknek megfelelően" },
+      {
+        id: "a",
+        text: "A beavatkozás után a lehető leghamarabb, a tényeknek megfelelően",
+      },
       { id: "b", text: "Csak a hónap végén" },
       { id: "c", text: "Csak akkor, ha komplikáció történt" },
       { id: "d", text: "Soha, ha a beteg állapota nem változott" },
@@ -222,7 +238,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-001",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Melyek tartoznak a beteg alapvető életjelenségei közé? (Több válasz is helyes.)",
+    prompt:
+      "Melyek tartoznak a beteg alapvető életjelenségei közé? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "Pulzus" },
       { id: "b", text: "Vérnyomás" },
@@ -237,7 +254,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-002",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Mely intézkedések segítik a fertőzések megelőzését az ellátás során? (Több válasz is helyes.)",
+    prompt:
+      "Mely intézkedések segítik a fertőzések megelőzését az ellátás során? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "Megfelelő kézhigiéné" },
       { id: "b", text: "Az egyéni védőeszközök helyes használata" },
@@ -250,12 +268,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-003",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Melyek tartoznak a beteg azonosításának biztonságos gyakorlatához? (Több válasz is helyes.)",
+    prompt:
+      "Melyek tartoznak a beteg azonosításának biztonságos gyakorlatához? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "Legalább két azonosító adat ellenőrzése" },
       { id: "b", text: "Az adatokat a beteg dokumentációjával összevetni" },
       { id: "c", text: "Csak a beteg ágyszáma alapján dönteni" },
-      { id: "d", text: "Az azonosítást minden releváns beavatkozás előtt elvégezni" },
+      {
+        id: "d",
+        text: "Az azonosítást minden releváns beavatkozás előtt elvégezni",
+      },
     ],
     correctOptionIds: ["a", "b", "d"],
     explanation:
@@ -265,7 +287,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-004",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Mely szempontokat kell figyelembe venni a beteg mozgatásakor? (Több válasz is helyes.)",
+    prompt:
+      "Mely szempontokat kell figyelembe venni a beteg mozgatásakor? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "A beteg aktuális állapotát és terhelhetőségét" },
       { id: "b", text: "A beteg előzetes tájékoztatását" },
@@ -278,7 +301,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-005",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Melyek a szakszerű ápolási dokumentáció jellemzői? (Több válasz is helyes.)",
+    prompt:
+      "Melyek a szakszerű ápolási dokumentáció jellemzői? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "Tényszerű és pontos" },
       { id: "b", text: "Időben vezetett" },
@@ -293,7 +317,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-006",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Mely intézkedések segítik a felfekvés megelőzését? (Több válasz is helyes.)",
+    prompt:
+      "Mely intézkedések segítik a felfekvés megelőzését? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "A beteg rendszeres helyzetváltoztatása" },
       { id: "b", text: "A bőr rendszeres megfigyelése" },
@@ -308,7 +333,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-007",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Melyek tartoznak a beteg állapotának folyamatos megfigyeléséhez? (Több válasz is helyes.)",
+    prompt:
+      "Melyek tartoznak a beteg állapotának folyamatos megfigyeléséhez? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "A beteg panaszainak meghallgatása" },
       { id: "b", text: "Az általános állapot változásainak észlelése" },
@@ -321,15 +347,209 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-mc-008",
     topicId: "apolastan",
     type: "multiple_choice",
-    prompt: "Mely alapelvek fontosak a beteg személyes higiénéjének segítésekor? (Több válasz is helyes.)",
+    prompt:
+      "Mely alapelvek fontosak a beteg személyes higiénéjének segítésekor? (Több válasz is helyes.)",
     options: [
       { id: "a", text: "A beteg intimitásának védelme" },
       { id: "b", text: "A beteg önállóságának támogatása" },
-      { id: "c", text: "A beteg szükségleteinek és kívánságainak figyelembevétele" },
+      {
+        id: "c",
+        text: "A beteg szükségleteinek és kívánságainak figyelembevétele",
+      },
       { id: "d", text: "A beteget minden esetben teljesen passzívvá tenni" },
     ],
     correctOptionIds: ["a", "b", "c"],
     explanation:
       "A személyes higiéné segítésekor a méltóság, az intimitás és a lehető legnagyobb önállóság megőrzése a cél.",
+  },
+  {
+    id: "apolastan-tf-001",
+    topicId: "apolastan",
+    type: "true_false",
+    statements: [
+      {
+        id: "a",
+        text: "A kézhigiéné fontos szerepet játszik a fertőzések megelőzésében.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A beteg alapvető higiénés szükségleteit nem kell figyelembe venni.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "Az ápolási beavatkozásokat tényszerűen dokumentálni kell.",
+        correct: true,
+      },
+    ],
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    explanation:
+      "A megfelelő kézhigiéné csökkenti a kórokozók továbbadásának kockázatát.",
+  },
+  {
+    id: "apolastan-tf-002",
+    topicId: "apolastan",
+    type: "true_false",
+    statements: [
+      {
+        id: "a",
+        text: "A beteg személyes adatait az egészségügyi dolgozó bárkivel megoszthatja.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A beteg adatait bizalmasan kell kezelni.",
+        correct: true,
+      },
+      {
+        id: "c",
+        text: "A beteget az ellátás előtt megfelelően azonosítani kell.",
+        correct: true,
+      },
+    ],
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    explanation:
+      "A beteg személyes adatait bizalmasan kell kezelni, és csak jogosult személynek adhatók át.",
+  },
+  {
+    id: "apolastan-tf-003",
+    topicId: "apolastan",
+    type: "true_false",
+    statements: [
+      {
+        id: "a",
+        text: "A beteg méltóságát és intimitását az ápolási beavatkozások során is tiszteletben kell tartani.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A beteg intimitása ápolási feladatok közben nem számít.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "A beteg helyzetét a felfekvés megelőzése érdekében szükség szerint változtatni kell.",
+        correct: true,
+      },
+    ],
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+  },
+  {
+    id: "apolastan-tf-004",
+    topicId: "apolastan",
+    type: "true_false",
+    statements: [
+      {
+        id: "a",
+        text: "Hirtelen állapotromlás esetén elegendő megvárni a következő műszakot.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A hirtelen állapotromlást azonnal jelezni kell az illetékes szakembernek.",
+        correct: true,
+      },
+      {
+        id: "c",
+        text: "A beteg vitális paramétereit az állapotának megfelelően ellenőrizni kell.",
+        correct: true,
+      },
+    ],
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    explanation:
+      "A hirtelen állapotromlást azonnal jelezni kell az illetékes egészségügyi szakembernek.",
+  },
+  {
+    id: "apolastan-tf-005",
+    topicId: "apolastan",
+    type: "true_false",
+    statements: [
+      {
+        id: "a",
+        text: "Az ápolási beavatkozásokat a lehető leghamarabb, tényszerűen dokumentálni kell.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Az ápolási dokumentációt csak a hónap végén kell elkészíteni.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "A beteg panaszait és állapotváltozásait az ápolás során figyelembe kell venni.",
+        correct: true,
+      },
+    ],
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+  },
+  {
+    id: "apolastan-tf-006",
+    topicId: "apolastan",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      {
+        id: "a",
+        text: "A beteg mozgatása előtt tájékoztatni kell a beteget a tervezett műveletről.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A beteg mozgatásakor nem kell figyelembe venni az aktuális állapotát.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "Mozgatáskor a beteg és az ápoló testi épségét egyaránt védeni kell.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "apolastan-tf-007",
+    topicId: "apolastan",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      {
+        id: "a",
+        text: "A beteg állapotának hirtelen változását dokumentálni kell.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A beteg panaszait minden esetben figyelmen kívül kell hagyni.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "A kézhigiéné az ellátás biztonságának fontos része.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "apolastan-tf-008",
+    topicId: "apolastan",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      {
+        id: "a",
+        text: "A beteg önállóságát az ápolás során a lehetőségekhez mérten támogatni kell.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Az ápoló minden feladatot automatikusan elvégez a beteg helyett.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "A beteg állapotának hirtelen romlását azonnal jelezni kell.",
+        correct: true,
+      },
+    ],
   },
 ];

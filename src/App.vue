@@ -9,7 +9,7 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion } from "./types/question";
+import type { ChoiceQuestion, TrueFalseQuestion } from "./types/question";
 
 const MODULE_QUESTIONS_PER_PRACTICE = 10;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
@@ -21,6 +21,7 @@ const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   tarsadalomtudomanyi_ismeretek: 3,
 };
 type PracticeMode = "exam" | "module";
+type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
@@ -37,12 +38,16 @@ const shuffledOptionIds = ref<Record<string, string[]>>({});
 const timeRemaining = ref(PRACTICE_TIME_LIMIT_SECONDS);
 let timerId: ReturnType<typeof setInterval> | null = null;
 
-const answers = reactive<Record<string, string | string[] | null>>({});
+const answers = reactive<Record<string, string | string[] | boolean | null>>(
+  {},
+);
 
-const questions = computed<ChoiceQuestion[]>(() => {
+const questions = computed<PracticeQuestion[]>(() => {
   const availableQuestions = sampleQuestions.filter(
-    (question): question is ChoiceQuestion =>
-      question.type === "single_choice" || question.type === "multiple_choice",
+    (question): question is PracticeQuestion =>
+      question.type === "single_choice" ||
+      question.type === "multiple_choice" ||
+      question.type === "true_false",
   );
 
   if (shuffledQuestionIds.value.length === 0) {
@@ -61,7 +66,7 @@ const questions = computed<ChoiceQuestion[]>(() => {
 
   return shuffledQuestionIds.value
     .map((questionId) => questionsById.get(questionId))
-    .filter((question): question is ChoiceQuestion => question !== undefined);
+    .filter((question): question is PracticeQuestion => question !== undefined);
 });
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
@@ -169,10 +174,12 @@ function startExam() {
 
   shuffledQuestionIds.value = questionIds;
   shuffledOptionIds.value = Object.fromEntries(
-    selectedQuestions.map((question) => [
-      question.id,
-      shuffle(question.options.map((option) => option.id)),
-    ]),
+    selectedQuestions
+      .filter((question): question is ChoiceQuestion => "options" in question)
+      .map((question) => [
+        question.id,
+        shuffle(question.options.map((option) => option.id)),
+      ]),
   );
   currentIndex.value = 0;
   isFinished.value = false;
@@ -243,8 +250,18 @@ function getQuestionOptions(question: ChoiceQuestion) {
     );
 }
 
-function hasAnswer(question: ChoiceQuestion) {
+function hasAnswer(question: PracticeQuestion) {
+  if (question.type === "true_false") {
+    return question.statements.every(
+      (statement) =>
+        typeof answers[getTrueFalseAnswerKey(question, statement.id)] ===
+        "boolean",
+    );
+  }
+
   const answer = answers[question.id];
+  if (typeof answer === "boolean") return true;
+
   return Array.isArray(answer) ? answer.length > 0 : Boolean(answer);
 }
 
@@ -253,7 +270,15 @@ function getSelectedOptionIds(question: ChoiceQuestion) {
   return Array.isArray(answer) ? answer : answer ? [answer] : [];
 }
 
-function areAnswersCorrect(question: ChoiceQuestion) {
+function areAnswersCorrect(question: PracticeQuestion) {
+  if (question.type === "true_false") {
+    return question.statements.every(
+      (statement) =>
+        answers[getTrueFalseAnswerKey(question, statement.id)] ===
+        statement.correct,
+    );
+  }
+
   const selected = getSelectedOptionIds(question).sort();
   const correct = [...question.correctOptionIds].sort();
 
@@ -282,11 +307,27 @@ function restartPractice() {
 
 onUnmounted(stopTimer);
 
-function getCorrectAnswerText(question: ChoiceQuestion) {
+function getCorrectAnswerText(question: PracticeQuestion) {
+  if (question.type === "true_false") {
+    return question.statements
+      .map(
+        (statement) =>
+          `${statement.text} — ${statement.correct ? "Igaz" : "Hamis"}`,
+      )
+      .join("; ");
+  }
+
   return question.options
     .filter((option) => question.correctOptionIds.includes(option.id))
     .map((option) => option.text)
     .join(", ");
+}
+
+function getTrueFalseAnswerKey(
+  question: TrueFalseQuestion,
+  statementId: string,
+) {
+  return `${question.id}:${statementId}`;
 }
 </script>
 
@@ -438,9 +479,11 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
               />
               <Tag
                 :value="
-                  currentQuestion.type === 'multiple_choice'
-                    ? 'Több helyes válasz'
-                    : 'Egy helyes válasz'
+                  currentQuestion.type === 'true_false'
+                    ? 'Igaz / hamis'
+                    : currentQuestion.type === 'multiple_choice'
+                      ? 'Több helyes válasz'
+                      : 'Egy helyes válasz'
                 "
                 severity="secondary"
               />
@@ -454,7 +497,10 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
               {{ currentQuestion.prompt }}
             </p>
 
-            <div class="grid gap-3">
+            <div
+              v-if="currentQuestion.type !== 'true_false'"
+              class="grid gap-3"
+            >
               <label
                 v-for="option in getQuestionOptions(currentQuestion)"
                 :key="option.id"
@@ -477,6 +523,39 @@ function getCorrectAnswerText(question: ChoiceQuestion) {
 
                 <span>{{ option.text }}</span>
               </label>
+            </div>
+
+            <div v-else class="grid gap-3">
+              <div
+                v-for="statement in currentQuestion.statements"
+                :key="statement.id"
+                class="rounded-md border border-slate-200 p-3"
+              >
+                <p class="mb-3 font-medium text-slate-900">
+                  {{ statement.text }}
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                  <label
+                    v-for="value in [true, false]"
+                    :key="String(value)"
+                    class="flex cursor-pointer items-center gap-2"
+                  >
+                    <RadioButton
+                      v-model="
+                        answers[
+                          getTrueFalseAnswerKey(currentQuestion, statement.id)
+                        ]
+                      "
+                      :input-id="`${currentQuestion.id}-${statement.id}-${value}`"
+                      :value="value"
+                      :name="`${currentQuestion.id}-${statement.id}`"
+                    />
+
+                    <span>{{ value ? "Igaz" : "Hamis" }}</span>
+                  </label>
+                </div>
+              </div>
             </div>
 
             <div

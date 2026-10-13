@@ -312,4 +312,92 @@ export const testmukodesQuestions: ExamQuestion[] = [
     explanation:
       "A bőr védelmi, hőszabályozó és érzékelő szervként is működik.",
   },
+  {
+    id: "testmukodes-tf-001",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A szív a keringési rendszer központi szerve.", correct: true },
+      { id: "b", text: "A vérerek feladata kizárólag a levegő szállítása.", correct: false },
+      { id: "c", text: "A vér szállító szerepet tölt be a szervezetben.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-002",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A tüdő részt vesz a gázcserében.", correct: true },
+      { id: "b", text: "A légzőrendszer feladata a vizelet képzése.", correct: false },
+      { id: "c", text: "A légzés során oxigén jut a szervezetbe.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-003",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A gyomor részt vesz a táplálék emésztésében.", correct: true },
+      { id: "b", text: "A vékonybélben nem történik tápanyag-felszívódás.", correct: false },
+      { id: "c", text: "Az emésztőrendszer feladata a táplálék feldolgozása.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-004",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A vese részt vesz a vizelet képzésében.", correct: true },
+      { id: "b", text: "A vese feladata a levegő felmelegítése.", correct: false },
+      { id: "c", text: "A vese segíti a folyadék- és elektrolit-háztartás szabályozását.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-005",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Az idegrendszer részt vesz az ingerek feldolgozásában.", correct: true },
+      { id: "b", text: "Az idegrendszer működésének nincs kapcsolata a mozgások szabályozásával.", correct: false },
+      { id: "c", text: "Az idegrendszer összehangolja a szervezet több működését.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-006",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A csontváz megtámasztja a testet.", correct: true },
+      { id: "b", text: "A csontoknak nincs szerepük a belső szervek védelmében.", correct: false },
+      { id: "c", text: "A vázrendszer az izmokkal együtt részt vesz a mozgásban.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-007",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A bőr részt vesz a szervezet külső védelmében.", correct: true },
+      { id: "b", text: "A bőrnek nincs szerepe a hőszabályozásban.", correct: false },
+      { id: "c", text: "A bőr érzékelő funkciót is betölt.", correct: true },
+    ],
+  },
+  {
+    id: "testmukodes-tf-008",
+    topicId: "testmukodes",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A hormonok a szervezet működésének szabályozásában vesznek részt.", correct: true },
+      { id: "b", text: "A hormonális rendszer kizárólag a csontok mozgatását végzi.", correct: false },
+      { id: "c", text: "A hasnyálmirigy hormonális működésben is részt vehet.", correct: true },
+    ],
+  },
 ];

@@ -353,4 +353,92 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     explanation:
       "A gyógyszerelési hibákat és a majdnem bekövetkezett hibákat is a helyi szabályok szerint jelezni kell.",
   },
+  {
+    id: "gyogyszerelesi-tf-001",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Gyógyszer beadása előtt ellenőrizni kell a beteg azonosságát.", correct: true },
+      { id: "b", text: "A gyógyszer adagját nem szükséges összevetni az előírással.", correct: false },
+      { id: "c", text: "A beadás időpontját dokumentálni kell.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-002",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A gyógyszereket az előírt tárolási körülmények között kell tartani.", correct: true },
+      { id: "b", text: "A lejárt gyógyszer is beadható, ha a csomagolása sértetlen.", correct: false },
+      { id: "c", text: "A gyógyszereket lehetőség szerint eredeti, feliratozott csomagolásban kell tárolni.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-003",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A retard tablettát önállóan mindig össze lehet törni.", correct: false },
+      { id: "b", text: "Lenyelési nehézség esetén egyeztetni kell az illetékes szakemberrel.", correct: true },
+      { id: "c", text: "A gyógyszerformát a beadás előtt figyelembe kell venni.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-004",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Allergiás tünet észlelésekor azonnal jelezni kell az illetékes szakembernek.", correct: true },
+      { id: "b", text: "A nehézlégzés gyógyszer beadása után mindig jelentéktelen tünet.", correct: false },
+      { id: "c", text: "A beteg gyógyszerre adott reakcióját meg kell figyelni.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-005",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A gyógyszer beadását és a beteg reakcióját dokumentálni kell.", correct: true },
+      { id: "b", text: "A dokumentációt csak akkor kell elkészíteni, ha szövődmény történt.", correct: false },
+      { id: "c", text: "A dokumentációban a beadás időpontjának is szerepelnie kell.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-006",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "Nem egyértelmű gyógyszerrendelés esetén tisztázni kell az előírást.", correct: true },
+      { id: "b", text: "Bizonytalan rendelés esetén találomra kell kiválasztani az adagot.", correct: false },
+      { id: "c", text: "A gyógyszerelési hibát a szabályok szerint jelezni és dokumentálni kell.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-007",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A gyógyszer beadási módját az előírásnak megfelelően kell megválasztani.", correct: true },
+      { id: "b", text: "Minden gyógyszer tetszőleges beadási módon alkalmazható.", correct: false },
+      { id: "c", text: "A beadás előtt ellenőrizni kell, hogy a gyógyszer csomagolása sértetlen-e.", correct: true },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-tf-008",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    statements: [
+      { id: "a", text: "A gyógyszereket úgy kell elhelyezni, hogy illetéktelen személy ne férhessen hozzájuk.", correct: true },
+      { id: "b", text: "A különböző gyógyszereket felirat nélkül össze lehet önteni.", correct: false },
+      { id: "c", text: "A gyógyszerek lejárati idejét rendszeresen ellenőrizni kell.", correct: true },
+    ],
+  },
 ];

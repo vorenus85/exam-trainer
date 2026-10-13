@@ -33,6 +33,13 @@ export type ChoiceQuestion = BaseQuestion & {
 
 export type TrueFalseQuestion = BaseQuestion & {
   type: "true_false";
+  statements: TrueFalseStatement[];
+  correct?: boolean;
+};
+
+export type TrueFalseStatement = {
+  id: string;
+  text: string;
   correct: boolean;
 };
 
