@@ -4,16 +4,17 @@ Vue 3, TypeScript és PrimeVue alapú vizsgagyakorló.
 
 ## Futtatás és ellenőrzés
 
-A tesztek futtatásához Node.js 24 használható; a TypeScript fájlokat a Node közvetlenül futtatja. A tesztfuttató a Node beépített `node:test` modulja, külön tesztfüggőség nincs.
+A parancsok futtatásához Node.js 24 használható; a kérdésbank-ellenőrző és a tesztek TypeScript fájljait a Node közvetlenül futtatja. A tesztfuttató a Node beépített `node:test` modulja, külön tesztfüggőség nincs.
 
 ```sh
 npm install
 npm run dev
+npm run validate:data
 npm test
 npm run build
 ```
 
-Az `npm test` először típusellenőrzi a teszteket és az üzleti modulokat, majd lefuttatja a `tests/*.test.ts` fájlokat. A build a Vue-komponenseket is típusellenőrzi.
+Az `npm test` először típusellenőrzi a teszteket, az ellenőrző szkriptet és az üzleti modulokat, majd lefuttatja a `tests/*.test.ts` fájlokat. A build ellenőrzi a kérdésbankot, és a Vue-komponenseket is típusellenőrzi.
 
 ## Üzleti logika
 
@@ -22,6 +23,7 @@ Az `npm test` először típusellenőrzi a teszteket és az üzleti modulokat, m
 - `src/domain/grading.ts`: összesített eredmények, kerekített százalékok és osztályzatok.
 - `src/domain/answerFormatting.ts`: helyes válaszok szöveges megjelenítése, párosításnál a megjelenítési sorrend figyelembevételével.
 - `src/domain/answers.ts`: kérdésenkénti, típusos válaszobjektumok létrehozása. Az igaz–hamis válaszok állításonként, a mondatkiegészítések állításonként és mezőnként tárolódnak. A tárolás nem használ összefűzött kulcsokat, a HTML-azonosítók külön maradnak.
+- `src/domain/questionValidation.ts`: a TypeScriptben tárolt kérdésbank tartalmi ellenőrzése, pontos mezőútvonalakat tartalmazó hibajelentésekkel.
 - `src/utils/shuffle.ts`: a bemenetet megőrző keverés, paraméterezhető véletlenszám-forrással.
 
 Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdéseket, válaszokat és beállításokat paraméterként kapják.
@@ -46,5 +48,9 @@ A tesztek lefedik mind a hét kérdéstípus helyes, hibás és hiányos válasz
 A válaszmodell tesztjei ellenőrzik az inicializálást, az új körök és az ismétlődő mezőazonosítók függetlenségét, a reaktív válaszok megőrzését navigációkor, valamint a típusidegen válaszok elutasítását. A `tests/answerTypes.ts` fordítási ellenőrzésekkel védi a válaszobjektumok alakját.
 
 A munkamenet és az időzítő tesztjei mesterséges időléptetéssel ellenőrzik a lejáratot, a navigációt, az újrakezdést, a rögzített kérdéssor megőrzését és az időzítők felszabadítását.
+
+A kérdésbank-validátor ellenőrzi az egyedi azonosítókat, a témakörhivatkozásokat, a kötelező szövegeket, az elemszámokat és a helyes válaszok hivatkozásait. A sorbarendezési megoldásban minden elemnek pontosan egyszer kell szerepelnie; mondatkiegészítésnél az egy állításon belüli mezőazonosítók nem ismétlődhetnek. A tesztek a teljes kérdésbankot és szándékosan hibás adatpéldákat is vizsgálnak.
+
+Az `npm run validate:data` külön is futtatható. A build és az alkalmazás indulása ugyanezt az ellenőrzést használja; hibás adatnál a jelentés megnevezi a kérdést és a hibás mezőt.
 
 A refaktor megőrzi a korábbi százalékos osztályozást: például 26/30 pont 87%-ra kerekítve „jó”. A felületen szereplő ponthatártáblázat ugyanebből a szabályból, az aktuális kérdésszámhoz készül; 30 kérdésnél a „jeles” így 27 ponttól kezdődik.

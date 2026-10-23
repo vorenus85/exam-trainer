@@ -1,4 +1,4 @@
-import type { ExamQuestion } from "../types/question";
+import type { ExamQuestion } from "../types/question.ts";
 
 export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
   {

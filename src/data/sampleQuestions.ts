@@ -1,10 +1,10 @@
-import type { ExamQuestion, Topic } from "../types/question";
+import type { ExamQuestion, Topic } from "../types/question.ts";
 
-import { apolastanQuestions } from "./apolastanQuestions";
-import { gyogyszerelesiQuestions } from "./gyogyszerelesiQuestions";
-import { testmukodesQuestions } from "./testmukodesQuestions";
-import { vitalisQuestions } from "./vitalisQuestions";
-import { tarsadalomtudomanyiQuestions } from "./tarsadalomtudomanyiQuestions";
+import { apolastanQuestions } from "./apolastanQuestions.ts";
+import { gyogyszerelesiQuestions } from "./gyogyszerelesiQuestions.ts";
+import { testmukodesQuestions } from "./testmukodesQuestions.ts";
+import { vitalisQuestions } from "./vitalisQuestions.ts";
+import { tarsadalomtudomanyiQuestions } from "./tarsadalomtudomanyiQuestions.ts";
 
 export const topics: Topic[] = [
   { id: "apolastan", name: "Ápolástani ismeretek" },
