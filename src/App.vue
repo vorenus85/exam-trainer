@@ -9,19 +9,16 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion, FillInQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion, TrueFalseQuestion } from "./types/question";
+import type { ChoiceQuestion, ExamQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion } from "./types/question";
+import { getFillInAnswerKey, getGroupingAnswerKey, getMatchingAnswerKey, getTrueFalseAnswerKey } from "./domain/answers";
+import { hasAnswer as evaluateHasAnswer } from "./domain/questionEvaluation";
+import { getCorrectAnswerText as formatCorrectAnswer } from "./domain/answerFormatting";
+import { calculatePercent, getPracticeResult } from "./domain/grading";
+import { createOptionOrders, filterQuestions, selectQuestions } from "./domain/questionSelection";
+import type { PracticeMode, PracticeSettings } from "./domain/questionSelection";
 
-const MODULE_QUESTIONS_PER_PRACTICE = 30;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
-const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
-  testmukodes: 9,
-  vitalis: 6,
-  gyogyszerelesi_ismeretek: 3,
-  apolastan: 9,
-  tarsadalomtudomanyi_ismeretek: 3,
-};
-type PracticeMode = "exam" | "module";
-type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion | OrderingQuestion | FillInQuestion;
+type PracticeQuestion = ExamQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
@@ -59,47 +56,27 @@ const answers = reactive<Record<string, string | string[] | boolean | null>>(
   {},
 );
 
+const practiceSettings = computed<PracticeSettings>(() => ({
+  mode: selectedMode.value,
+  topicId: selectedTopicId.value,
+  questionTypes: selectedQuestionTypes.value,
+}));
+
 const questions = computed<PracticeQuestion[]>(() => {
-  const availableQuestions = sampleQuestions.filter(
-    (question): question is PracticeQuestion =>
-      (question.type === "single_choice" ||
-      question.type === "multiple_choice" ||
-      question.type === "true_false" ||
-      question.type === "matching" ||
-      question.type === "grouping" ||
-      question.type === "ordering" ||
-      question.type === "fill_in") &&
-      selectedQuestionTypes.value.includes(question.type),
-  );
-
   if (shuffledQuestionIds.value.length === 0) {
-    if (selectedMode.value === "exam") return availableQuestions;
-
-    return selectedTopicId.value
-      ? availableQuestions.filter(
-          (question) => question.topicId === selectedTopicId.value,
-        )
-      : [];
+    return filterQuestions(sampleQuestions, practiceSettings.value);
   }
-
-  const questionsById = new Map(
-    availableQuestions.map((question) => [question.id, question]),
-  );
-
+  const questionsById = new Map(sampleQuestions.map((question) => [question.id, question]));
   return shuffledQuestionIds.value
-    .map((questionId) => questionsById.get(questionId))
+    .map((id) => questionsById.get(id))
     .filter((question): question is PracticeQuestion => question !== undefined);
 });
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
 
-const answeredCount = computed(() => {
-  return questions.value.filter((question) => hasAnswer(question)).length;
-});
-
-const progressPercent = computed(() => {
-  return Math.round((answeredCount.value / questions.value.length) * 100);
-});
+const result = computed(() => getPracticeResult(questions.value, answers));
+const answeredCount = computed(() => result.value.answeredCount);
+const progressPercent = computed(() => calculatePercent(answeredCount.value, questions.value.length));
 
 const formattedTimeRemaining = computed(() => {
   const minutes = Math.floor(timeRemaining.value / 60);
@@ -108,31 +85,10 @@ const formattedTimeRemaining = computed(() => {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 });
 
-const correctCount = computed(() => {
-  return questions.value.filter((question) => {
-    return areAnswersCorrect(question);
-  }).length;
-});
-
-const incorrectQuestions = computed(() => {
-  return questions.value.filter((question) => {
-    return !areAnswersCorrect(question);
-  });
-});
-
-const scorePercent = computed(() => {
-  if (questions.value.length === 0) return 0;
-
-  return Math.round((correctCount.value / questions.value.length) * 100);
-});
-
-const grade = computed(() => {
-  if (scorePercent.value >= 88) return "jeles";
-  if (scorePercent.value >= 75) return "jó";
-  if (scorePercent.value >= 62) return "közepes";
-  if (scorePercent.value >= 51) return "elégséges";
-  return "elégtelen";
-});
+const correctCount = computed(() => result.value.correctCount);
+const incorrectQuestions = computed(() => result.value.incorrectQuestions);
+const scorePercent = computed(() => result.value.scorePercent);
+const grade = computed(() => result.value.grade);
 
 const gradeClass = computed(() => {
   if (grade.value === "jeles") {
@@ -179,38 +135,10 @@ function startExam() {
   if (!selectedMode.value || questions.value.length === 0) return;
   if (selectedMode.value === "module" && !selectedTopicId.value) return;
 
-  const selectedQuestions =
-    selectedMode.value === "exam"
-      ? shuffle(
-          Object.entries(EXAM_QUESTIONS_PER_TOPIC).flatMap(
-            ([topicId, questionCount]) =>
-              shuffle(
-                questions.value.filter(
-                  (question) => question.topicId === topicId,
-                ),
-              ).slice(0, questionCount),
-          ),
-        )
-      : shuffle(questions.value).slice(0, MODULE_QUESTIONS_PER_PRACTICE);
-  const questionIds = selectedQuestions.map((question) => question.id);
-
-  shuffledQuestionIds.value = questionIds;
-  shuffledOptionIds.value = Object.fromEntries(
-    selectedQuestions
-      .filter((question): question is ChoiceQuestion => "options" in question)
-      .map((question) => [
-        question.id,
-        shuffle(question.options.map((option) => option.id)),
-      ]),
-  );
-  for (const question of selectedQuestions) {
-    if (question.type === "matching") {
-      shuffledOptionIds.value[question.id] = shuffle(question.pairs.map((pair) => pair.id));
-    }
-    if (question.type === "grouping" || question.type === "ordering") {
-      shuffledOptionIds.value[question.id] = shuffle(question.items.map((item) => item.id));
-    }
-  }
+  const selectedQuestions = selectQuestions(sampleQuestions, practiceSettings.value);
+  if (selectedQuestions.length === 0) return;
+  shuffledQuestionIds.value = selectedQuestions.map((question) => question.id);
+  shuffledOptionIds.value = createOptionOrders(selectedQuestions);
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = true;
@@ -250,18 +178,12 @@ function finishExam() {
   stopTimer();
 }
 
-function shuffle<T>(items: T[]) {
-  const shuffled = [...items];
+function hasAnswer(question: PracticeQuestion) {
+  return evaluateHasAnswer(question, answers);
+}
 
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[randomIndex]] = [
-      shuffled[randomIndex],
-      shuffled[index],
-    ];
-  }
-
-  return shuffled;
+function getCorrectAnswerText(question: PracticeQuestion) {
+  return formatCorrectAnswer(question, shuffledOptionIds.value[question.id]);
 }
 
 function getQuestionOptions(question: ChoiceQuestion) {
@@ -278,83 +200,6 @@ function getQuestionOptions(question: ChoiceQuestion) {
       (option): option is ChoiceQuestion["options"][number] =>
         option !== undefined,
     );
-}
-
-function hasAnswer(question: PracticeQuestion) {
-  if (question.type === "fill_in") {
-    return question.statements.every((statement) => statement.parts.every((part) =>
-      typeof part === "string" || part.options.some((option) =>
-        option.id === answers[getFillInAnswerKey(question, statement.id, part.id)],
-      ),
-    ));
-  }
-  if (question.type === "ordering") {
-    const answer = answers[question.id];
-    return Array.isArray(answer) && answer.length === question.items.length
-      && new Set(answer).size === question.items.length
-      && answer.every((id) => question.items.some((item) => item.id === id));
-  }
-  if (question.type === "grouping") {
-    return question.items.every((item) => question.groups.some(
-      (group) => group.id === answers[getGroupingAnswerKey(question, item.id)],
-    ));
-  }
-  if (question.type === "matching") {
-    const selected = question.pairs.map((pair) => answers[getMatchingAnswerKey(question, pair.id)]);
-    return selected.every((id) => typeof id === "string" && question.pairs.some((pair) => pair.id === id))
-      && new Set(selected).size === question.pairs.length;
-  }
-  if (question.type === "true_false") {
-    return question.statements.every(
-      (statement) =>
-        typeof answers[getTrueFalseAnswerKey(question, statement.id)] ===
-        "boolean",
-    );
-  }
-
-  const answer = answers[question.id];
-  if (typeof answer === "boolean") return true;
-
-  return Array.isArray(answer) ? answer.length > 0 : Boolean(answer);
-}
-
-function getSelectedOptionIds(question: ChoiceQuestion) {
-  const answer = answers[question.id];
-  return Array.isArray(answer) ? answer : answer ? [answer] : [];
-}
-
-function areAnswersCorrect(question: PracticeQuestion) {
-  if (question.type === "fill_in") {
-    return question.statements.every((statement) => statement.parts.every((part) =>
-      typeof part === "string" || answers[getFillInAnswerKey(question, statement.id, part.id)] === part.correctOptionId,
-    ));
-  }
-  if (question.type === "ordering") {
-    const answer = answers[question.id];
-    return hasAnswer(question) && Array.isArray(answer)
-      && answer.every((id, index) => id === question.correctOrderIds[index]);
-  }
-  if (question.type === "grouping") {
-    return question.items.every((item) => answers[getGroupingAnswerKey(question, item.id)] === item.correctGroupId);
-  }
-  if (question.type === "matching") {
-    return question.pairs.every((pair) => answers[getMatchingAnswerKey(question, pair.id)] === pair.id);
-  }
-  if (question.type === "true_false") {
-    return question.statements.every(
-      (statement) =>
-        answers[getTrueFalseAnswerKey(question, statement.id)] ===
-        statement.correct,
-    );
-  }
-
-  const selected = getSelectedOptionIds(question).sort();
-  const correct = [...question.correctOptionIds].sort();
-
-  return (
-    selected.length === correct.length &&
-    selected.every((optionId, index) => optionId === correct[index])
-  );
 }
 
 function restartPractice() {
@@ -377,47 +222,6 @@ function restartPractice() {
 
 onUnmounted(stopTimer);
 
-function getCorrectAnswerText(question: PracticeQuestion) {
-  if (question.type === "fill_in") {
-    return question.statements.map((statement) => statement.parts.map((part) =>
-      typeof part === "string" ? part : part.options.find((option) => option.id === part.correctOptionId)?.text,
-    ).join("")).join(" ");
-  }
-  if (question.type === "ordering") {
-    return question.correctOrderIds.map((id, index) =>
-      `${index + 1}. ${question.items.find((item) => item.id === id)?.text}`,
-    ).join(" → ");
-  }
-  if (question.type === "grouping") {
-    return question.groups.map((group) =>
-      `${group.text}: ${question.items.filter((item) => item.correctGroupId === group.id).map((item) => item.text).join(", ")}`,
-    ).join("; ");
-  }
-  if (question.type === "matching") {
-    const options = getMatchingOptions(question);
-    return question.pairs.map((pair, index) =>
-      `${index + 1}–${options.find((option) => option.id === pair.id)?.label}: ${pair.left} — ${pair.right}`,
-    ).join("; ");
-  }
-  if (question.type === "true_false") {
-    return question.statements
-      .map(
-        (statement) =>
-          `${statement.text} — ${statement.correct ? "Igaz" : "Hamis"}`,
-      )
-      .join("; ");
-  }
-
-  return question.options
-    .filter((option) => question.correctOptionIds.includes(option.id))
-    .map((option) => option.text)
-    .join(", ");
-}
-
-function getFillInAnswerKey(question: FillInQuestion, statementId: string, blankId: string) {
-  return JSON.stringify([question.id, "fill_in", statementId, blankId]);
-}
-
 function getOrderingItems(question: OrderingQuestion) {
   const answer = answers[question.id];
   const order = Array.isArray(answer) ? answer : shuffledOptionIds.value[question.id];
@@ -434,18 +238,10 @@ function moveOrderingItem(question: OrderingQuestion, index: number, direction: 
   answers[question.id] = order;
 }
 
-function getGroupingAnswerKey(question: GroupingQuestion, itemId: string) {
-  return JSON.stringify([question.id, "grouping", itemId]);
-}
-
 function getGroupingItems(question: GroupingQuestion) {
   const order = shuffledOptionIds.value[question.id];
   if (!order) return question.items;
   return [...question.items].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
-}
-
-function getMatchingAnswerKey(question: MatchingQuestion, pairId: string) {
-  return JSON.stringify([question.id, "matching", pairId]);
 }
 
 function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) {
@@ -459,12 +255,6 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
   }));
 }
 
-function getTrueFalseAnswerKey(
-  question: TrueFalseQuestion,
-  statementId: string,
-) {
-  return `${question.id}:${statementId}`;
-}
 </script>
 
 <template>

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --open",
     "build": "vue-tsc -b && vite build",
+    "test": "tsc -p tsconfig.test.json && node --test tests/*.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {
