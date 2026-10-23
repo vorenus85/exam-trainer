@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, useId } from "vue";
 import Button from "primevue/button";
 import Card from "primevue/card";
 import Checkbox from "primevue/checkbox";
 import Message from "primevue/message";
 import Select from "primevue/select";
 import type { QuestionType, Topic } from "../types/question";
-import { practiceModes } from "../config/practice";
+import { moduleQuestionCounts, practiceModes } from "../config/practice";
 import type { PracticeMode } from "../config/practice";
 import { getAllQuestionTypes, questionTypes } from "../config/questionTypes";
 
@@ -14,6 +14,8 @@ defineProps<{ topics: Topic[]; availableCount: number; canStart: boolean }>();
 const selectedMode = defineModel<PracticeMode | null>("selectedMode", { required: true });
 const selectedTopicId = defineModel<string | null>("selectedTopicId", { required: true });
 const selectedQuestionTypes = defineModel<QuestionType[]>("selectedQuestionTypes", { required: true });
+const selectedQuestionCount = defineModel<number>("selectedQuestionCount", { required: true });
+const questionCountInputId = useId();
 const emit = defineEmits<{ start: [] }>();
 const allQuestionTypesSelected = computed({
   get: () => getAllQuestionTypes().every((type) => selectedQuestionTypes.value.includes(type)),
@@ -45,6 +47,16 @@ const allQuestionTypesSelected = computed({
           placeholder="Válassz egy modult"
           class="w-full"
         />
+
+        <div v-if="selectedMode === 'module'" class="flex flex-col gap-2">
+          <label :for="questionCountInputId" class="font-semibold">Kérdések száma</label>
+          <Select v-model="selectedQuestionCount" :input-id="questionCountInputId" :options="moduleQuestionCounts"
+            option-label="label" option-value="value" class="w-full" />
+          <p v-if="selectedTopicId && availableCount > 0" class="text-sm text-slate-500">
+            A teszt {{ Math.min(selectedQuestionCount, availableCount) }} kérdést tartalmaz majd
+            ({{ availableCount }} kérdés érhető el a kiválasztott szűréssel).
+          </p>
+        </div>
 
         <fieldset class="rounded-md border border-slate-200 p-4">
           <legend class="px-1 font-semibold">Kérdésfajták</legend>

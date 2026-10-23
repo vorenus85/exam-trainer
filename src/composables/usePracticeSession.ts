@@ -1,6 +1,6 @@
 import { computed, ref, shallowRef, watch } from "vue";
 import type { ExamQuestion, QuestionAnswer, QuestionType } from "../types/question.ts";
-import { PRACTICE_TIME_LIMIT_SECONDS } from "../config/practice.ts";
+import { MODULE_QUESTIONS_PER_PRACTICE, PRACTICE_TIME_LIMIT_SECONDS, SECONDS_PER_QUESTION } from "../config/practice.ts";
 import type { PracticeMode, PracticeSettings } from "../config/practice.ts";
 import { getAllQuestionTypes } from "../config/questionTypes.ts";
 import { createAnswers } from "../domain/answers.ts";
@@ -15,6 +15,7 @@ export function usePracticeSession(questionBank: readonly ExamQuestion[], random
   const selectedMode = ref<PracticeMode | null>(null);
   const selectedTopicId = ref<string | null>(null);
   const selectedQuestionTypes = ref<QuestionType[]>(getAllQuestionTypes());
+  const selectedQuestionCount = ref(MODULE_QUESTIONS_PER_PRACTICE);
   const activeMode = ref<PracticeMode | null>(null);
   const questions = shallowRef<ExamQuestion[]>([]);
   const currentIndex = ref(0);
@@ -24,6 +25,7 @@ export function usePracticeSession(questionBank: readonly ExamQuestion[], random
 
   const settings = computed<PracticeSettings>(() => ({
     mode: selectedMode.value, topicId: selectedTopicId.value, questionTypes: selectedQuestionTypes.value,
+    moduleQuestionCount: selectedQuestionCount.value,
   }));
   const availableCount = computed(() => filterQuestions(questionBank, settings.value).length);
   const canStart = computed(() => stage.value === "setup" && availableCount.value > 0);
@@ -46,7 +48,7 @@ export function usePracticeSession(questionBank: readonly ExamQuestion[], random
     activeMode.value = selectedMode.value;
     currentIndex.value = 0;
     stage.value = "practice";
-    countdown.start();
+    countdown.start(selected.length * SECONDS_PER_QUESTION);
   }
 
   function updateAnswer(answer: QuestionAnswer) {
@@ -83,11 +85,12 @@ export function usePracticeSession(questionBank: readonly ExamQuestion[], random
     selectedMode.value = null;
     selectedTopicId.value = null;
     selectedQuestionTypes.value = getAllQuestionTypes();
+    selectedQuestionCount.value = MODULE_QUESTIONS_PER_PRACTICE;
     stage.value = "setup";
   }
 
   return {
-    stage, selectedMode, selectedTopicId, selectedQuestionTypes, activeMode, questions, currentIndex,
+    stage, selectedMode, selectedTopicId, selectedQuestionTypes, selectedQuestionCount, activeMode, questions, currentIndex,
     answers, currentQuestion, currentAnswer, optionOrders, availableCount, canStart, result, progressPercent,
     timeRemaining: countdown.timeRemaining, formattedTimeRemaining: countdown.formattedTimeRemaining,
     startPractice, updateAnswer, previousQuestion, nextQuestion, restartPractice,

@@ -15,9 +15,10 @@ export function useCountdown(durationSeconds: number, onExpire: () => void) {
     timeRemaining.value = durationSeconds;
   }
 
-  function start() {
+  function start(seconds: number = durationSeconds) {
     reset();
-    deadline = Date.now() + durationSeconds * 1000;
+    timeRemaining.value = seconds;
+    deadline = Date.now() + seconds * 1000;
     timerId = setInterval(() => {
       timeRemaining.value = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
       if (timeRemaining.value === 0) {

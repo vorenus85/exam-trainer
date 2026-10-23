@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { effectScope, toRaw } from "vue";
 import { usePracticeSession } from "../src/composables/usePracticeSession.ts";
 import { getAllQuestionTypes } from "../src/config/questionTypes.ts";
-import { PRACTICE_TIME_LIMIT_SECONDS } from "../src/config/practice.ts";
+import { PRACTICE_TIME_LIMIT_SECONDS, SECONDS_PER_QUESTION } from "../src/config/practice.ts";
 import type { ExamQuestion } from "../src/types/question.ts";
 import { cases, single } from "./fixtures.ts";
 
@@ -75,6 +75,55 @@ test("exam mode clears the module selection and module practice selects 30 quest
   assert.equal(new Set(session.questions.value.map(q => q.id)).size, 30);
 });
 
+test("chosen module count is used at start, remains fixed during practice and resets for a new round", (t) => {
+  const bank = Array.from({ length: 40 }, (_, i) => ({ ...single, id: `q-${i}` }));
+  const { session } = setup(t, bank);
+  assert.equal(session.selectedQuestionCount.value, 30);
+  session.selectedQuestionCount.value = 10;
+  startModule(session);
+  assert.equal(session.questions.value.length, 10);
+  assert.equal(session.timeRemaining.value, 10 * 60);
+  session.selectedQuestionCount.value = 5;
+  assert.equal(session.questions.value.length, 10);
+  assert.equal(session.timeRemaining.value, 10 * 60);
+  session.restartPractice();
+  assert.equal(session.selectedQuestionCount.value, 30);
+  startModule(session);
+  assert.equal(session.questions.value.length, 30);
+  assert.equal(session.timeRemaining.value, 30 * 60);
+});
+
+for (const count of [10, 20, 30]) {
+  test(`${count} module questions receive ${count} minutes`, (t) => {
+    const bank = Array.from({ length: 40 }, (_, i) => ({ ...single, id: `q-${i}` }));
+    const { session } = setup(t, bank);
+    session.selectedQuestionCount.value = count;
+    startModule(session);
+    assert.equal(session.questions.value.length, count);
+    assert.equal(session.timeRemaining.value, count * 60);
+    assert.equal(session.formattedTimeRemaining.value, `${count}:00`);
+  });
+}
+
+test("time limit follows the actual number of questions after filtering", (t) => {
+  const { session } = setup(t);
+  session.selectedQuestionTypes.value = ["fill_in"];
+  startModule(session);
+  assert.equal(session.questions.value.length, 1);
+  assert.equal(session.timeRemaining.value, 60);
+});
+
+test("a full exam receives 30 minutes independently of the module count", (t) => {
+  const bank = ["testmukodes", "vitalis", "gyogyszerelesi_ismeretek", "apolastan", "tarsadalomtudomanyi_ismeretek"]
+    .flatMap(topicId => Array.from({ length: 10 }, (_, i) => ({ ...single, id: `${topicId}-${i}`, topicId })));
+  const { session } = setup(t, bank);
+  session.selectedMode.value = "exam";
+  session.selectedQuestionCount.value = 10;
+  session.startPractice();
+  assert.equal(session.questions.value.length, 30);
+  assert.equal(session.timeRemaining.value, 30 * 60);
+});
+
 test("navigation requires a complete answer and preserves the previous answer", (t) => {
   const { session } = setup(t);
   startModule(session);
@@ -125,7 +174,10 @@ test("expiry finishes incomplete work and prevents later answer edits", (t) => {
   const { session } = setup(t);
   startModule(session);
   correctCurrent(session);
-  t.mock.timers.tick(PRACTICE_TIME_LIMIT_SECONDS * 1000);
+  t.mock.timers.tick((session.questions.value.length * SECONDS_PER_QUESTION - 1) * 1000);
+  assert.equal(session.stage.value, "practice");
+  assert.equal(session.timeRemaining.value, 1);
+  t.mock.timers.tick(1000);
   assert.equal(session.stage.value, "results");
   assert.equal(session.timeRemaining.value, 0);
   assert.equal(session.result.value.correctCount, 1);
@@ -157,8 +209,9 @@ test("restart clears answers, navigation, filters and the previous timer", (t) =
 test("disposing a session releases its timer", (t) => {
   const { session, scope } = setup(t);
   startModule(session);
+  const initialTime = session.timeRemaining.value;
   scope.stop();
   t.mock.timers.tick(PRACTICE_TIME_LIMIT_SECONDS * 1000);
-  assert.equal(session.timeRemaining.value, PRACTICE_TIME_LIMIT_SECONDS);
+  assert.equal(session.timeRemaining.value, initialTime);
   assert.equal(session.stage.value, "practice");
 });

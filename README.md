@@ -19,7 +19,7 @@ Az `npm test` először típusellenőrzi a teszteket, az ellenőrző szkriptet �
 ## Üzleti logika
 
 - `src/domain/questionEvaluation.ts`: kitöltöttség és helyesség az összes kérdéstípushoz.
-- `src/domain/questionSelection.ts`: szűrés, modulonként legfeljebb 30 kérdés, vizsgakvóták és megjelenítési sorrendek.
+- `src/domain/questionSelection.ts`: szűrés, modulonként választható kérdésszám (alapértelmezetten 30), vizsgakvóták és megjelenítési sorrendek. Ha kevesebb kérdés érhető el, az összes elérhető kérdés kerül a tesztbe.
 - `src/domain/grading.ts`: összesített eredmények, kerekített százalékok és osztályzatok.
 - `src/domain/answerFormatting.ts`: helyes válaszok szöveges megjelenítése, párosításnál a megjelenítési sorrend figyelembevételével.
 - `src/domain/answers.ts`: kérdésenkénti, típusos válaszobjektumok létrehozása. Az igaz–hamis válaszok állításonként, a mondatkiegészítések állításonként és mezőnként tárolódnak. A tárolás nem használ összefűzött kulcsokat, a HTML-azonosítók külön maradnak.
@@ -40,6 +40,8 @@ Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdés
 - `src/composables/useCountdown.ts`: határidőhöz igazított visszaszámlálás, lejárati esemény és takarítás a Vue-scope megszűnésekor.
 - `src/config/practice.ts`: kérdésszámok, időkeret, gyakorlási módok és osztályzathatárok.
 - `src/config/questionTypes.ts`: a kérdéstípusok közös nevei a szűrőhöz és a kérdéscímkékhez.
+
+Az időkeret a teszt tényleges kérdésszáma alapján, kérdésenként 1 perc: 10 kérdéshez 10, 20 kérdéshez 20, 30 kérdéshez 30 perc. Ha a szűrés miatt kevesebb kérdés kerül a tesztbe, az időkeret is ehhez igazodik.
 
 ## Tesztek
 

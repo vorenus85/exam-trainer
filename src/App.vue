@@ -7,7 +7,7 @@ import { sampleQuestions, topics } from "./data/sampleQuestions";
 import { usePracticeSession } from "./composables/usePracticeSession";
 
 const {
-  stage, selectedMode, selectedTopicId, selectedQuestionTypes, activeMode, questions, currentIndex,
+  stage, selectedMode, selectedTopicId, selectedQuestionTypes, selectedQuestionCount, activeMode, questions, currentIndex,
   answers, currentQuestion, currentAnswer, optionOrders, availableCount, canStart, result, progressPercent,
   timeRemaining, formattedTimeRemaining, startPractice, updateAnswer, previousQuestion, nextQuestion, restartPractice,
 } = usePracticeSession(sampleQuestions);
@@ -20,7 +20,8 @@ const {
         :formatted-time-remaining="formattedTimeRemaining" :answered-count="result.answeredCount" :total-count="questions.length"
         @restart="restartPractice" />
       <PracticeSetup v-if="stage === 'setup'" v-model:selected-mode="selectedMode" v-model:selected-topic-id="selectedTopicId"
-        v-model:selected-question-types="selectedQuestionTypes" :topics="topics" :available-count="availableCount" :can-start="canStart"
+        v-model:selected-question-types="selectedQuestionTypes" v-model:selected-question-count="selectedQuestionCount"
+        :topics="topics" :available-count="availableCount" :can-start="canStart"
         @start="startPractice" />
       <QuestionCard v-else-if="stage === 'practice' && currentQuestion && currentAnswer" :key="currentQuestion.id"
         :question="currentQuestion" :model-value="currentAnswer" :index="currentIndex" :total-count="questions.length"

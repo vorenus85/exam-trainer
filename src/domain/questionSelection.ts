@@ -20,7 +20,11 @@ export function selectQuestions(
   random: () => number = Math.random,
 ): ExamQuestion[] {
   const available = filterQuestions(questions, settings);
-  if (settings.mode === "module") return shuffle(available, random).slice(0, MODULE_QUESTIONS_PER_PRACTICE);
+  if (settings.mode === "module") {
+    const requestedCount = settings.moduleQuestionCount ?? MODULE_QUESTIONS_PER_PRACTICE;
+    const count = Number.isInteger(requestedCount) && requestedCount > 0 ? requestedCount : MODULE_QUESTIONS_PER_PRACTICE;
+    return shuffle(available, random).slice(0, count);
+  }
   return shuffle(Object.entries(EXAM_QUESTIONS_PER_TOPIC).flatMap(([topicId, count]) =>
     shuffle(available.filter((question) => question.topicId === topicId), random).slice(0, count),
   ), random);

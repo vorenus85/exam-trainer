@@ -60,6 +60,23 @@ test("starting twice replaces the old timer", (t) => {
   assert.equal(expired.mock.callCount(), 1);
 });
 
+test("starting with a new duration replaces the deadline and reset restores the default", (t) => {
+  const { countdown, expired } = setup(t, 30);
+  countdown.start(10);
+  assert.equal(countdown.timeRemaining.value, 10);
+  t.mock.timers.tick(9000);
+  assert.equal(expired.mock.callCount(), 0);
+  countdown.start(20);
+  assert.equal(countdown.timeRemaining.value, 20);
+  t.mock.timers.tick(19000);
+  assert.equal(countdown.timeRemaining.value, 1);
+  assert.equal(expired.mock.callCount(), 0);
+  t.mock.timers.tick(1000);
+  assert.equal(expired.mock.callCount(), 1);
+  countdown.reset();
+  assert.equal(countdown.timeRemaining.value, 30);
+});
+
 test("disposing the Vue scope cancels the timer", (t) => {
   const { countdown, expired, scope } = setup(t, 2);
   countdown.start();

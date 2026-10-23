@@ -18,6 +18,32 @@ test("module practice selects 30 distinct questions from only the selected topic
   assert.ok(selected.every(q => q.topicId === "apolastan"));
 });
 
+test("module practice respects the requested count, capped by the available questions", () => {
+  for (const count of [5, 10, 15, 20, 25, 30, 40, 50]) {
+    const selected = selectQuestions(bank, { ...moduleSettings, moduleQuestionCount: count }, () => 0);
+    assert.equal(selected.length, Math.min(count, 40));
+    assert.equal(new Set(selected.map(q => q.id)).size, selected.length);
+    assert.ok(selected.every(q => q.topicId === moduleSettings.topicId));
+  }
+});
+
+test("invalid module counts fall back to the default instead of slicing incorrectly", () => {
+  for (const count of [0, -5, 2.5, NaN, Infinity]) {
+    assert.equal(selectQuestions(bank, { ...moduleSettings, moduleQuestionCount: count }, () => 0).length, 30);
+  }
+});
+
+test("module count applies after type filtering and never changes exam quotas", () => {
+  assert.equal(selectQuestions(cases.map(c => c.question), {
+    ...moduleSettings, questionTypes: ["fill_in"], moduleQuestionCount: 10,
+  }, () => 0).length, 1);
+  const selected = selectQuestions(bank, { ...exam, moduleQuestionCount: 5 }, () => 0);
+  assert.equal(selected.length, 30);
+  for (const [topic, count] of Object.entries(EXAM_QUESTIONS_PER_TOPIC)) {
+    assert.equal(selected.filter(q => q.topicId === topic).length, count);
+  }
+});
+
 test("exam selection respects every topic quota and totals 30 questions", () => {
   const selected = selectQuestions(bank, exam, () => 0);
   assert.equal(selected.length, 30);

@@ -1,7 +1,11 @@
 import type { QuestionType } from "../types/question.ts";
 
 export const MODULE_QUESTIONS_PER_PRACTICE = 30;
-export const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
+export const moduleQuestionCounts = [10, 20, 30].map((value) => ({
+  value, label: `${value} kérdés`,
+}));
+export const SECONDS_PER_QUESTION = 60;
+export const PRACTICE_TIME_LIMIT_SECONDS = MODULE_QUESTIONS_PER_PRACTICE * SECONDS_PER_QUESTION;
 export const EXAM_QUESTIONS_PER_TOPIC: Readonly<Record<string, number>> = {
   testmukodes: 9,
   vitalis: 6,
@@ -15,6 +19,7 @@ export type PracticeSettings = {
   mode: PracticeMode | null;
   topicId: string | null;
   questionTypes?: readonly QuestionType[];
+  moduleQuestionCount?: number;
 };
 
 export const practiceModes = [
