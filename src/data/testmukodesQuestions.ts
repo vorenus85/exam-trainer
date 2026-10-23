@@ -681,24 +681,6 @@ export const testmukodesQuestions: ExamQuestion[] = [
     ],
   },
   {
-    id: "testmukodes-089",
-    topicId: "testmukodes",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A hangszalagok a gégefedő és a gyűrűporc között feszülnek.",
-        correct: false,
-      },
-      {
-        id: "b",
-        text: "A hangszalagok között hangrés található.",
-        correct: true,
-      },
-    ],
-  },
-  {
     id: "testmukodes-090",
     topicId: "testmukodes",
     type: "true_false",
@@ -1435,24 +1417,6 @@ export const testmukodesQuestions: ExamQuestion[] = [
       {
         id: "b",
         text: "A hormontermelés az idegrendszer közvetlen irányítása alatt áll.",
-        correct: true,
-      },
-    ],
-  },
-  {
-    id: "testmukodes-191",
-    topicId: "testmukodes",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A hormonok csak a nyirokrendszer útján jutnak el a szervekhez.",
-        correct: false,
-      },
-      {
-        id: "b",
-        text: "A hormonelválasztást egy rendkívül pontosan működő önszabályozó (regulációs) rendszer biztosítja.",
         correct: true,
       },
     ],
