@@ -21,7 +21,7 @@ Az `npm test` először típusellenőrzi a teszteket és az üzleti modulokat, m
 - `src/domain/questionSelection.ts`: szűrés, modulonként legfeljebb 30 kérdés, vizsgakvóták és megjelenítési sorrendek.
 - `src/domain/grading.ts`: összesített eredmények, kerekített százalékok és osztályzatok.
 - `src/domain/answerFormatting.ts`: helyes válaszok szöveges megjelenítése, párosításnál a megjelenítési sorrend figyelembevételével.
-- `src/domain/answers.ts`: a meglévő válaszformátum típusa és tárolási kulcsai. A kulcsok nem HTML-azonosítók.
+- `src/domain/answers.ts`: kérdésenkénti, típusos válaszobjektumok létrehozása. Az igaz–hamis válaszok állításonként, a mondatkiegészítések állításonként és mezőnként tárolódnak. A tárolás nem használ összefűzött kulcsokat, a HTML-azonosítók külön maradnak.
 - `src/utils/shuffle.ts`: a bemenetet megőrző keverés, paraméterezhető véletlenszám-forrással.
 
 Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdéseket, válaszokat és beállításokat paraméterként kapják; az `App.vue` kapcsolja őket a felülethez.
@@ -29,5 +29,7 @@ Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdés
 ## Tesztek
 
 A tesztek lefedik mind a hét kérdéstípus helyes, hibás és hiányos válaszait, a párosítás egyediségét, a csoportok ismételt használatát, a mondatkiegészítő mezők elkülönítését, a szűrést és kvótákat, az osztályzathatárokat, a válaszformázást és a keverést. A többválasztós kiértékelést befagyasztott tömbbel is ellenőrzik, hogy az értékelés ne módosíthassa a tárolt választ.
+
+A válaszmodell tesztjei ellenőrzik az inicializálást, az új körök és az ismétlődő mezőazonosítók függetlenségét, a reaktív válaszok megőrzését navigációkor, valamint a típusidegen válaszok elutasítását. A `tests/answerTypes.ts` fordítási ellenőrzésekkel védi a válaszobjektumok alakját.
 
 A refaktor megőrzi a korábbi százalékos osztályozást: például 26/30 pont 87%-ra kerekítve „jó”. A felületen szereplő statikus ponthatártáblázat ettől eltér; annak egységesítése külön feladat.

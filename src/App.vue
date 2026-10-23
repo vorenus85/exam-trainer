@@ -10,7 +10,8 @@ import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
 import type { ChoiceQuestion, ExamQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion } from "./types/question";
-import { getFillInAnswerKey, getGroupingAnswerKey, getMatchingAnswerKey, getTrueFalseAnswerKey } from "./domain/answers";
+import { createAnswers } from "./domain/answers";
+import type { Answers } from "./domain/answers";
 import { hasAnswer as evaluateHasAnswer } from "./domain/questionEvaluation";
 import { getCorrectAnswerText as formatCorrectAnswer } from "./domain/answerFormatting";
 import { calculatePercent, getPracticeResult } from "./domain/grading";
@@ -18,14 +19,13 @@ import { createOptionOrders, filterQuestions, selectQuestions } from "./domain/q
 import type { PracticeMode, PracticeSettings } from "./domain/questionSelection";
 
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
-type PracticeQuestion = ExamQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
   { id: "module" as const, name: "Egy modul gyakorlása" },
 ];
 
-const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
+const questionTypes: { id: ExamQuestion["type"]; name: string }[] = [
   { id: "single_choice", name: "Egy helyes válasz" },
   { id: "multiple_choice", name: "Több helyes válasz" },
   { id: "true_false", name: "Igaz / hamis" },
@@ -34,7 +34,7 @@ const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
   { id: "ordering", name: "Sorbarendezés" },
   { id: "fill_in", name: "Mondatkiegészítés (választás)" },
 ];
-const selectedQuestionTypes = ref<PracticeQuestion["type"][]>(questionTypes.map((type) => type.id));
+const selectedQuestionTypes = ref<ExamQuestion["type"][]>(questionTypes.map((type) => type.id));
 const allQuestionTypesSelected = computed({
   get: () => questionTypes.every((type) => selectedQuestionTypes.value.includes(type.id)),
   set: (selected: boolean) => {
@@ -52,9 +52,7 @@ const shuffledOptionIds = ref<Record<string, string[]>>({});
 const timeRemaining = ref(PRACTICE_TIME_LIMIT_SECONDS);
 let timerId: ReturnType<typeof setInterval> | null = null;
 
-const answers = reactive<Record<string, string | string[] | boolean | null>>(
-  {},
-);
+const answers = reactive<Answers>({});
 
 const practiceSettings = computed<PracticeSettings>(() => ({
   mode: selectedMode.value,
@@ -62,17 +60,18 @@ const practiceSettings = computed<PracticeSettings>(() => ({
   questionTypes: selectedQuestionTypes.value,
 }));
 
-const questions = computed<PracticeQuestion[]>(() => {
+const questions = computed<ExamQuestion[]>(() => {
   if (shuffledQuestionIds.value.length === 0) {
     return filterQuestions(sampleQuestions, practiceSettings.value);
   }
   const questionsById = new Map(sampleQuestions.map((question) => [question.id, question]));
   return shuffledQuestionIds.value
     .map((id) => questionsById.get(id))
-    .filter((question): question is PracticeQuestion => question !== undefined);
+    .filter((question): question is ExamQuestion => question !== undefined);
 });
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
+const currentAnswer = computed(() => currentQuestion.value ? answers[currentQuestion.value.id] : undefined);
 
 const result = computed(() => getPracticeResult(questions.value, answers));
 const answeredCount = computed(() => result.value.answeredCount);
@@ -137,6 +136,7 @@ function startExam() {
 
   const selectedQuestions = selectQuestions(sampleQuestions, practiceSettings.value);
   if (selectedQuestions.length === 0) return;
+  Object.assign(answers, createAnswers(selectedQuestions));
   shuffledQuestionIds.value = selectedQuestions.map((question) => question.id);
   shuffledOptionIds.value = createOptionOrders(selectedQuestions);
   currentIndex.value = 0;
@@ -178,11 +178,11 @@ function finishExam() {
   stopTimer();
 }
 
-function hasAnswer(question: PracticeQuestion) {
+function hasAnswer(question: ExamQuestion) {
   return evaluateHasAnswer(question, answers);
 }
 
-function getCorrectAnswerText(question: PracticeQuestion) {
+function getCorrectAnswerText(question: ExamQuestion) {
   return formatCorrectAnswer(question, shuffledOptionIds.value[question.id]);
 }
 
@@ -224,7 +224,7 @@ onUnmounted(stopTimer);
 
 function getOrderingItems(question: OrderingQuestion) {
   const answer = answers[question.id];
-  const order = Array.isArray(answer) ? answer : shuffledOptionIds.value[question.id];
+  const order = answer?.type === "ordering" && answer.orderIds.length > 0 ? answer.orderIds : shuffledOptionIds.value[question.id];
   if (!order) return question.items;
   const itemsById = new Map(question.items.map((item) => [item.id, item]));
   return order.map((id) => itemsById.get(id)!).filter(Boolean);
@@ -235,7 +235,7 @@ function moveOrderingItem(question: OrderingQuestion, index: number, direction: 
   const targetIndex = index + direction;
   if (index < 0 || index >= order.length || targetIndex < 0 || targetIndex >= order.length) return;
   [order[index], order[targetIndex]] = [order[targetIndex]!, order[index]!];
-  answers[question.id] = order;
+  answers[question.id] = { type: "ordering", orderIds: order };
 }
 
 function getGroupingItems(question: GroupingQuestion) {
@@ -245,13 +245,14 @@ function getGroupingItems(question: GroupingQuestion) {
 }
 
 function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) {
+  const answer = answers[question.id];
   const order = shuffledOptionIds.value[question.id] ?? question.pairs.map((pair) => pair.id);
   return order.map((id, index) => ({
     id,
     label: String.fromCharCode(65 + index),
     text: question.pairs.find((pair) => pair.id === id)!.right,
     disabled: question.pairs.some((pair) => pair.id !== currentPairId
-      && answers[getMatchingAnswerKey(question, pair.id)] === id),
+      && answer?.type === "matching" && answer.pairs[pair.id] === id),
   }));
 }
 
@@ -451,7 +452,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
             </p>
 
             <div
-              v-if="currentQuestion.type === 'single_choice' || currentQuestion.type === 'multiple_choice'"
+              v-if="(currentQuestion.type === 'single_choice' || currentQuestion.type === 'multiple_choice') && (currentAnswer?.type === 'single_choice' || currentAnswer?.type === 'multiple_choice')"
               class="grid gap-3"
             >
               <label
@@ -460,8 +461,8 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
                 class="flex cursor-pointer items-center gap-3 rounded-md border border-slate-200 p-3 hover:border-blue-300"
               >
                 <RadioButton
-                  v-if="currentQuestion.type === 'single_choice'"
-                  v-model="answers[currentQuestion.id]"
+                  v-if="currentAnswer.type === 'single_choice'"
+                  v-model="currentAnswer.selectedOptionId"
                   :input-id="`${currentQuestion.id}-${option.id}`"
                   :value="option.id"
                   name="single-choice"
@@ -469,7 +470,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
 
                 <Checkbox
                   v-else
-                  v-model="answers[currentQuestion.id]"
+                  v-model="currentAnswer.selectedOptionIds"
                   :input-id="`${currentQuestion.id}-${option.id}`"
                   :value="option.id"
                 />
@@ -478,7 +479,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
               </label>
             </div>
 
-            <div v-else-if="currentQuestion.type === 'matching'" class="grid gap-4">
+            <div v-else-if="currentQuestion.type === 'matching' && currentAnswer?.type === 'matching'" class="grid gap-4">
               <p class="text-sm text-slate-600">
                 Párosítsd a számozott elemeket a betűjelű válaszokkal! Minden betűt egyszer használhatsz fel.
               </p>
@@ -494,7 +495,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
                   {{ index + 1 }}. {{ pair.left }}
                 </label>
                 <Select
-                  v-model="answers[getMatchingAnswerKey(currentQuestion, pair.id)]"
+                  v-model="currentAnswer.pairs[pair.id]"
                   :input-id="`matching-pair-${index}`"
                   :options="getMatchingOptions(currentQuestion, pair.id)"
                   option-label="label" option-value="id" option-disabled="disabled"
@@ -503,14 +504,14 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
               </div>
             </div>
 
-            <div v-else-if="currentQuestion.type === 'fill_in'" class="grid gap-4">
+            <div v-else-if="currentQuestion.type === 'fill_in' && currentAnswer?.type === 'fill_in'" class="grid gap-4">
               <p class="text-sm text-slate-600">Egészítsd ki az összes mondatot a megfelelő válaszok kiválasztásával!</p>
               <div v-for="(statement, statementIndex) in currentQuestion.statements" :key="statement.id"
                 class="rounded-md border border-slate-200 p-4 leading-loose">
                 <template v-for="(part, partIndex) in statement.parts" :key="typeof part === 'string' ? `text-${partIndex}` : part.id">
                   <span v-if="typeof part === 'string'" class="whitespace-pre-wrap">{{ part }}</span>
                   <Select v-else
-                    v-model="answers[getFillInAnswerKey(currentQuestion, statement.id, part.id)]"
+                    v-model="currentAnswer.values[statement.id]![part.id]"
                     :input-id="`fill-in-${statementIndex}-${partIndex}`"
                     :aria-label="`${statementIndex + 1}. állítás: ${part.label}`"
                     :options="part.options" option-label="text" option-value="id"
@@ -520,7 +521,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
               </div>
             </div>
 
-            <div v-else-if="currentQuestion.type === 'ordering'" class="grid gap-4">
+            <div v-else-if="currentQuestion.type === 'ordering' && currentAnswer?.type === 'ordering'" class="grid gap-4">
               <p class="text-sm text-slate-600">
                 A nyilakkal mozgasd az elemeket a kért sorrendbe! Ha a kezdeti sorrendet szeretnéd megtartani, hagyd jóvá.
               </p>
@@ -538,10 +539,10 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
                 </li>
               </ol>
               <Button v-if="!hasAnswer(currentQuestion)" label="Sorrend jóváhagyása" severity="secondary" outlined class="self-start"
-                @click="answers[currentQuestion.id] = getOrderingItems(currentQuestion).map((item) => item.id)" />
+                @click="currentAnswer.orderIds = getOrderingItems(currentQuestion).map((item) => item.id)" />
             </div>
 
-            <div v-else-if="currentQuestion.type === 'grouping'" class="grid gap-4">
+            <div v-else-if="currentQuestion.type === 'grouping' && currentAnswer?.type === 'grouping'" class="grid gap-4">
               <p class="text-sm text-slate-600">
                 Válaszd ki minden elem csoportját! Egy csoportba több elem is kerülhet.
               </p>
@@ -551,7 +552,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
                   {{ index + 1 }}. {{ item.text }}
                 </label>
                 <Select
-                  v-model="answers[getGroupingAnswerKey(currentQuestion, item.id)]"
+                  v-model="currentAnswer.groups[item.id]"
                   :input-id="`grouping-item-${index}`"
                   :options="currentQuestion.groups" option-label="text" option-value="id"
                   placeholder="Válassz csoportot" show-clear class="w-full sm:w-64"
@@ -559,7 +560,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
               </div>
             </div>
 
-            <div v-else-if="currentQuestion.type === 'true_false'" class="grid gap-3">
+            <div v-else-if="currentQuestion.type === 'true_false' && currentAnswer?.type === 'true_false'" class="grid gap-3">
               <div
                 v-for="statement in currentQuestion.statements"
                 :key="statement.id"
@@ -576,11 +577,7 @@ function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) 
                     class="flex cursor-pointer items-center gap-2"
                   >
                     <RadioButton
-                      v-model="
-                        answers[
-                          getTrueFalseAnswerKey(currentQuestion, statement.id)
-                        ]
-                      "
+                      v-model="currentAnswer.statements[statement.id]"
                       :input-id="`${currentQuestion.id}-${statement.id}-${value}`"
                       :value="value"
                       :name="`${currentQuestion.id}-${statement.id}`"

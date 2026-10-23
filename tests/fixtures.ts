@@ -1,6 +1,5 @@
 import type { ChoiceQuestion, FillInQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion, TrueFalseQuestion } from "../src/types/question.ts";
 import type { AnswerStore } from "../src/domain/answers.ts";
-import { getFillInAnswerKey, getGroupingAnswerKey, getMatchingAnswerKey, getTrueFalseAnswerKey } from "../src/domain/answers.ts";
 
 const base = { topicId: "apolastan", prompt: "Test question" };
 export const single: ChoiceQuestion = {
@@ -43,23 +42,32 @@ export const fillIn: FillInQuestion = {
 };
 
 export const cases: { question: typeof single | typeof trueFalse | typeof matching | typeof grouping | typeof ordering | typeof fillIn; correct: AnswerStore; wrong: AnswerStore; incomplete: AnswerStore }[] = [
-  { question: single, correct: { single: "b" }, wrong: { single: "a" }, incomplete: { single: null } },
-  { question: multiple, correct: { multiple: ["c", "a"] }, wrong: { multiple: ["a", "b"] }, incomplete: { multiple: [] } },
+  { question: single,
+    correct: { single: { type: "single_choice", selectedOptionId: "b" } },
+    wrong: { single: { type: "single_choice", selectedOptionId: "a" } },
+    incomplete: { single: { type: "single_choice", selectedOptionId: null } } },
+  { question: multiple,
+    correct: { multiple: { type: "multiple_choice", selectedOptionIds: ["c", "a"] } },
+    wrong: { multiple: { type: "multiple_choice", selectedOptionIds: ["a", "b"] } },
+    incomplete: { multiple: { type: "multiple_choice", selectedOptionIds: [] } } },
   { question: trueFalse,
-    correct: { [getTrueFalseAnswerKey(trueFalse, "a")]: false, [getTrueFalseAnswerKey(trueFalse, "b")]: true },
-    wrong: { [getTrueFalseAnswerKey(trueFalse, "a")]: true, [getTrueFalseAnswerKey(trueFalse, "b")]: true },
-    incomplete: { [getTrueFalseAnswerKey(trueFalse, "a")]: false } },
+    correct: { "true-false": { type: "true_false", statements: { a: false, b: true } } },
+    wrong: { "true-false": { type: "true_false", statements: { a: true, b: true } } },
+    incomplete: { "true-false": { type: "true_false", statements: { a: false } } } },
   { question: matching,
-    correct: { [getMatchingAnswerKey(matching, "a")]: "a", [getMatchingAnswerKey(matching, "b")]: "b" },
-    wrong: { [getMatchingAnswerKey(matching, "a")]: "b", [getMatchingAnswerKey(matching, "b")]: "a" },
-    incomplete: { [getMatchingAnswerKey(matching, "a")]: "a" } },
+    correct: { matching: { type: "matching", pairs: { a: "a", b: "b" } } },
+    wrong: { matching: { type: "matching", pairs: { a: "b", b: "a" } } },
+    incomplete: { matching: { type: "matching", pairs: { a: "a" } } } },
   { question: grouping,
-    correct: { [getGroupingAnswerKey(grouping, "one")]: "a", [getGroupingAnswerKey(grouping, "two")]: "a", [getGroupingAnswerKey(grouping, "three")]: "b" },
-    wrong: { [getGroupingAnswerKey(grouping, "one")]: "b", [getGroupingAnswerKey(grouping, "two")]: "a", [getGroupingAnswerKey(grouping, "three")]: "b" },
-    incomplete: { [getGroupingAnswerKey(grouping, "one")]: "a" } },
-  { question: ordering, correct: { ordering: ["a", "b", "c"] }, wrong: { ordering: ["b", "a", "c"] }, incomplete: { ordering: ["a", "b"] } },
+    correct: { grouping: { type: "grouping", groups: { one: "a", two: "a", three: "b" } } },
+    wrong: { grouping: { type: "grouping", groups: { one: "b", two: "a", three: "b" } } },
+    incomplete: { grouping: { type: "grouping", groups: { one: "a" } } } },
+  { question: ordering,
+    correct: { ordering: { type: "ordering", orderIds: ["a", "b", "c"] } },
+    wrong: { ordering: { type: "ordering", orderIds: ["b", "a", "c"] } },
+    incomplete: { ordering: { type: "ordering", orderIds: ["a", "b"] } } },
   { question: fillIn,
-    correct: { [getFillInAnswerKey(fillIn, "first", "blank")]: "a", [getFillInAnswerKey(fillIn, "first", "other")]: "c", [getFillInAnswerKey(fillIn, "second", "blank")]: "b" },
-    wrong: { [getFillInAnswerKey(fillIn, "first", "blank")]: "b", [getFillInAnswerKey(fillIn, "first", "other")]: "c", [getFillInAnswerKey(fillIn, "second", "blank")]: "b" },
-    incomplete: { [getFillInAnswerKey(fillIn, "first", "blank")]: "a", [getFillInAnswerKey(fillIn, "first", "other")]: "c" } },
+    correct: { "fill-in": { type: "fill_in", values: { first: { blank: "a", other: "c" }, second: { blank: "b" } } } },
+    wrong: { "fill-in": { type: "fill_in", values: { first: { blank: "b", other: "c" }, second: { blank: "b" } } } },
+    incomplete: { "fill-in": { type: "fill_in", values: { first: { blank: "a", other: "c" } } } } },
 ];

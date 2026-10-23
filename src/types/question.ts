@@ -103,8 +103,8 @@ export type ExamQuestion =
 export type QuestionAnswer =
   | { type: "single_choice"; selectedOptionId: string | null }
   | { type: "multiple_choice"; selectedOptionIds: string[] }
-  | { type: "true_false"; value: boolean | null }
+  | { type: "true_false"; statements: Record<string, boolean | null> }
   | { type: "matching"; pairs: Record<string, string | null> }
   | { type: "grouping"; groups: Record<string, string | null> }
   | { type: "ordering"; orderIds: string[] }
-  | { type: "fill_in"; values: Record<string, string | null> };
+  | { type: "fill_in"; values: Record<string, Record<string, string | null>> };

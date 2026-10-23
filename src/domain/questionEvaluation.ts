@@ -1,80 +1,68 @@
-import type { ChoiceQuestion, ExamQuestion } from "../types/question.ts";
-import { getFillInAnswerKey, getGroupingAnswerKey, getMatchingAnswerKey, getTrueFalseAnswerKey } from "./answers.ts";
+import type { ExamQuestion } from "../types/question.ts";
 import type { AnswerStore } from "./answers.ts";
 
-export function hasAnswer(question: ExamQuestion, answers: AnswerStore) {
-  if (question.type === "fill_in") {
-    return question.statements.every((statement) => statement.parts.every((part) =>
-      typeof part === "string" || part.options.some((option) =>
-        option.id === answers[getFillInAnswerKey(question, statement.id, part.id)],
-      ),
-    ));
-  }
-  if (question.type === "ordering") {
-    const answer = answers[question.id];
-    return Array.isArray(answer) && answer.length === question.items.length
-      && new Set(answer).size === question.items.length
-      && answer.every((id) => question.items.some((item) => item.id === id));
-  }
-  if (question.type === "grouping") {
-    return question.items.every((item) => question.groups.some(
-      (group) => group.id === answers[getGroupingAnswerKey(question, item.id)],
-    ));
-  }
-  if (question.type === "matching") {
-    const selected = question.pairs.map((pair) => answers[getMatchingAnswerKey(question, pair.id)]);
-    return selected.every((id) => typeof id === "string" && question.pairs.some((pair) => pair.id === id))
-      && new Set(selected).size === question.pairs.length;
-  }
-  if (question.type === "true_false") {
-    return question.statements.every(
-      (statement) =>
-        typeof answers[getTrueFalseAnswerKey(question, statement.id)] ===
-        "boolean",
-    );
-  }
-
+export function hasAnswer(question: ExamQuestion, answers: AnswerStore): boolean {
   const answer = answers[question.id];
-  if (typeof answer === "boolean") return true;
+  if (!answer) return false;
 
-  return Array.isArray(answer) ? answer.length > 0 : Boolean(answer);
+  switch (question.type) {
+    case "single_choice":
+      return answer.type === "single_choice"
+        && question.options.some((option) => option.id === answer.selectedOptionId);
+    case "multiple_choice":
+      return answer.type === "multiple_choice" && answer.selectedOptionIds.length > 0
+        && new Set(answer.selectedOptionIds).size === answer.selectedOptionIds.length
+        && answer.selectedOptionIds.every((id) => question.options.some((option) => option.id === id));
+    case "true_false":
+      return answer.type === "true_false"
+        && question.statements.every((statement) => typeof answer.statements[statement.id] === "boolean");
+    case "matching": {
+      if (answer.type !== "matching") return false;
+      const selected = question.pairs.map((pair) => answer.pairs[pair.id]);
+      return selected.every((id) => question.pairs.some((pair) => pair.id === id))
+        && new Set(selected).size === question.pairs.length;
+    }
+    case "grouping":
+      return answer.type === "grouping" && question.items.every((item) =>
+        question.groups.some((group) => group.id === answer.groups[item.id]),
+      );
+    case "ordering":
+      return answer.type === "ordering" && answer.orderIds.length === question.items.length
+        && new Set(answer.orderIds).size === question.items.length
+        && answer.orderIds.every((id) => question.items.some((item) => item.id === id));
+    case "fill_in":
+      return answer.type === "fill_in" && question.statements.every((statement) =>
+        statement.parts.every((part) => typeof part === "string"
+          || part.options.some((option) => option.id === answer.values[statement.id]?.[part.id])),
+      );
+  }
 }
 
-export function getSelectedOptionIds(question: ChoiceQuestion, answers: AnswerStore) {
+export function areAnswersCorrect(question: ExamQuestion, answers: AnswerStore): boolean {
   const answer = answers[question.id];
-  return Array.isArray(answer) ? [...answer] : typeof answer === "string" ? [answer] : [];
-}
+  if (!answer || !hasAnswer(question, answers)) return false;
 
-export function areAnswersCorrect(question: ExamQuestion, answers: AnswerStore) {
-  if (question.type === "fill_in") {
-    return question.statements.every((statement) => statement.parts.every((part) =>
-      typeof part === "string" || answers[getFillInAnswerKey(question, statement.id, part.id)] === part.correctOptionId,
-    ));
+  switch (question.type) {
+    case "single_choice":
+      return answer.type === "single_choice" && question.correctOptionIds.length === 1
+        && answer.selectedOptionId === question.correctOptionIds[0];
+    case "multiple_choice":
+      return answer.type === "multiple_choice"
+        && answer.selectedOptionIds.length === question.correctOptionIds.length
+        && question.correctOptionIds.every((id) => answer.selectedOptionIds.includes(id));
+    case "true_false":
+      return answer.type === "true_false"
+        && question.statements.every((statement) => answer.statements[statement.id] === statement.correct);
+    case "matching":
+      return answer.type === "matching" && question.pairs.every((pair) => answer.pairs[pair.id] === pair.id);
+    case "grouping":
+      return answer.type === "grouping" && question.items.every((item) => answer.groups[item.id] === item.correctGroupId);
+    case "ordering":
+      return answer.type === "ordering" && answer.orderIds.every((id, index) => id === question.correctOrderIds[index]);
+    case "fill_in":
+      return answer.type === "fill_in" && question.statements.every((statement) =>
+        statement.parts.every((part) => typeof part === "string"
+          || answer.values[statement.id]?.[part.id] === part.correctOptionId),
+      );
   }
-  if (question.type === "ordering") {
-    const answer = answers[question.id];
-    return hasAnswer(question, answers) && Array.isArray(answer)
-      && answer.every((id, index) => id === question.correctOrderIds[index]);
-  }
-  if (question.type === "grouping") {
-    return question.items.every((item) => answers[getGroupingAnswerKey(question, item.id)] === item.correctGroupId);
-  }
-  if (question.type === "matching") {
-    return question.pairs.every((pair) => answers[getMatchingAnswerKey(question, pair.id)] === pair.id);
-  }
-  if (question.type === "true_false") {
-    return question.statements.every(
-      (statement) =>
-        answers[getTrueFalseAnswerKey(question, statement.id)] ===
-        statement.correct,
-    );
-  }
-
-  const selected = getSelectedOptionIds(question, answers).sort();
-  const correct = [...question.correctOptionIds].sort();
-
-  return (
-    selected.length === correct.length &&
-    selected.every((optionId, index) => optionId === correct[index])
-  );
 }
