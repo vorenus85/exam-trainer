@@ -2,6 +2,44 @@ import type { ExamQuestion } from "../types/question";
 
 export const apolastanQuestions: ExamQuestion[] = [
   {
+    id: "apolastan-grouping-observation",
+    topicId: "apolastan",
+    type: "grouping",
+    prompt: "Csoportosítsa a beteg állapotáról gyűjtött adatokat!",
+    groups: [
+      { id: "szubjektiv", text: "Szubjektív adat (a beteg közlése)" },
+      { id: "objektiv", text: "Objektív adat (mérés, megfigyelés)" },
+    ],
+    items: [
+      { id: "fajdalom", text: "A beteg azt mondja: fáj a fejem.", correctGroupId: "szubjektiv" },
+      { id: "homerseklet", text: "A mért testhőmérséklet 38,2 °C.", correctGroupId: "objektiv" },
+      { id: "hanyinger", text: "A beteg hányingerről számol be.", correctGroupId: "szubjektiv" },
+      { id: "pulzus", text: "A mért pulzusszám 84/perc.", correctGroupId: "objektiv" },
+      { id: "szedules", text: "A beteg elmondása szerint felálláskor szédül.", correctGroupId: "szubjektiv" },
+      { id: "borelv", text: "Az ápoló bőrpírt lát a beteg sarkán.", correctGroupId: "objektiv" },
+    ],
+    explanation: "A szubjektív adat a beteg saját élményét, panaszát tükrözi. Az objektív adat mérésből vagy közvetlen megfigyelésből származik.",
+  },
+  {
+    id: "apolastan-grouping-equipment",
+    topicId: "apolastan",
+    type: "grouping",
+    prompt: "Csoportosítsa az ápolási eszközöket elsődleges rendeltetésük alapján!",
+    groups: [
+      { id: "meres", text: "Mérés, betegmegfigyelés" },
+      { id: "mozgas", text: "Mozgás, helyváltoztatás segítése" },
+      { id: "higiene", text: "Személyi higiéné" },
+    ],
+    items: [
+      { id: "homero", text: "Lázmérő", correctGroupId: "meres" },
+      { id: "jarokeret", text: "Járókeret", correctGroupId: "mozgas" },
+      { id: "fogkefe", text: "Fogkefe", correctGroupId: "higiene" },
+      { id: "vernyomasmero", text: "Vérnyomásmérő", correctGroupId: "meres" },
+      { id: "kerekesszek", text: "Kerekesszék", correctGroupId: "mozgas" },
+      { id: "fesu", text: "Fésű", correctGroupId: "higiene" },
+    ],
+  },
+  {
     id: "apolastan-matching-care-process",
     topicId: "apolastan",
     type: "matching",

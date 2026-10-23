@@ -3,6 +3,7 @@ export type QuestionType =
   | "multiple_choice"
   | "true_false"
   | "matching"
+  | "grouping"
   | "ordering"
   | "fill_in";
 
@@ -58,6 +59,16 @@ export type OrderingItem = {
   text: string;
 };
 
+export type GroupingQuestion = BaseQuestion & {
+  type: "grouping";
+  groups: ChoiceOption[];
+  items: {
+    id: string;
+    text: string;
+    correctGroupId: string;
+  }[];
+};
+
 export type OrderingQuestion = BaseQuestion & {
   type: "ordering";
   items: OrderingItem[];
@@ -81,6 +92,7 @@ export type ExamQuestion =
   | ChoiceQuestion
   | TrueFalseQuestion
   | MatchingQuestion
+  | GroupingQuestion
   | OrderingQuestion
   | FillInQuestion;
 
@@ -89,5 +101,6 @@ export type QuestionAnswer =
   | { type: "multiple_choice"; selectedOptionIds: string[] }
   | { type: "true_false"; value: boolean | null }
   | { type: "matching"; pairs: Record<string, string | null> }
+  | { type: "grouping"; groups: Record<string, string | null> }
   | { type: "ordering"; orderIds: string[] }
   | { type: "fill_in"; values: Record<string, string> };

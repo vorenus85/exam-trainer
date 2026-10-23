@@ -9,7 +9,7 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion, MatchingQuestion, TrueFalseQuestion } from "./types/question";
+import type { ChoiceQuestion, GroupingQuestion, MatchingQuestion, TrueFalseQuestion } from "./types/question";
 
 const MODULE_QUESTIONS_PER_PRACTICE = 30;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
@@ -21,7 +21,7 @@ const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   tarsadalomtudomanyi_ismeretek: 3,
 };
 type PracticeMode = "exam" | "module";
-type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion;
+type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
@@ -33,6 +33,7 @@ const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
   { id: "multiple_choice", name: "Több helyes válasz" },
   { id: "true_false", name: "Igaz / hamis" },
   { id: "matching", name: "Párosítás" },
+  { id: "grouping", name: "Csoportosítás" },
 ];
 const selectedQuestionTypes = ref<PracticeQuestion["type"][]>(questionTypes.map((type) => type.id));
 const allQuestionTypesSelected = computed({
@@ -62,7 +63,8 @@ const questions = computed<PracticeQuestion[]>(() => {
       (question.type === "single_choice" ||
       question.type === "multiple_choice" ||
       question.type === "true_false" ||
-      question.type === "matching") &&
+      question.type === "matching" ||
+      question.type === "grouping") &&
       selectedQuestionTypes.value.includes(question.type),
   );
 
@@ -201,6 +203,9 @@ function startExam() {
     if (question.type === "matching") {
       shuffledOptionIds.value[question.id] = shuffle(question.pairs.map((pair) => pair.id));
     }
+    if (question.type === "grouping") {
+      shuffledOptionIds.value[question.id] = shuffle(question.items.map((item) => item.id));
+    }
   }
   currentIndex.value = 0;
   isFinished.value = false;
@@ -272,6 +277,11 @@ function getQuestionOptions(question: ChoiceQuestion) {
 }
 
 function hasAnswer(question: PracticeQuestion) {
+  if (question.type === "grouping") {
+    return question.items.every((item) => question.groups.some(
+      (group) => group.id === answers[getGroupingAnswerKey(question, item.id)],
+    ));
+  }
   if (question.type === "matching") {
     const selected = question.pairs.map((pair) => answers[getMatchingAnswerKey(question, pair.id)]);
     return selected.every((id) => typeof id === "string" && question.pairs.some((pair) => pair.id === id))
@@ -297,6 +307,9 @@ function getSelectedOptionIds(question: ChoiceQuestion) {
 }
 
 function areAnswersCorrect(question: PracticeQuestion) {
+  if (question.type === "grouping") {
+    return question.items.every((item) => answers[getGroupingAnswerKey(question, item.id)] === item.correctGroupId);
+  }
   if (question.type === "matching") {
     return question.pairs.every((pair) => answers[getMatchingAnswerKey(question, pair.id)] === pair.id);
   }
@@ -338,6 +351,11 @@ function restartPractice() {
 onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: PracticeQuestion) {
+  if (question.type === "grouping") {
+    return question.groups.map((group) =>
+      `${group.text}: ${question.items.filter((item) => item.correctGroupId === group.id).map((item) => item.text).join(", ")}`,
+    ).join("; ");
+  }
   if (question.type === "matching") {
     const options = getMatchingOptions(question);
     return question.pairs.map((pair, index) =>
@@ -357,6 +375,16 @@ function getCorrectAnswerText(question: PracticeQuestion) {
     .filter((option) => question.correctOptionIds.includes(option.id))
     .map((option) => option.text)
     .join(", ");
+}
+
+function getGroupingAnswerKey(question: GroupingQuestion, itemId: string) {
+  return JSON.stringify([question.id, "grouping", itemId]);
+}
+
+function getGroupingItems(question: GroupingQuestion) {
+  const order = shuffledOptionIds.value[question.id];
+  if (!order) return question.items;
+  return [...question.items].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
 }
 
 function getMatchingAnswerKey(question: MatchingQuestion, pairId: string) {
@@ -403,7 +431,7 @@ function getTrueFalseAnswerKey(
             </h1>
 
             <p class="mt-2 max-w-2xl text-slate-600">
-              Egy és több helyes válaszos, igaz–hamis és párosító feladatok.
+              Egy és több helyes válaszos, igaz–hamis, párosító és csoportosító feladatok.
             </p>
           </div>
 
@@ -553,6 +581,8 @@ function getTrueFalseAnswerKey(
                     ? 'Igaz / hamis'
                     : currentQuestion.type === 'matching'
                       ? 'Párosítás'
+                    : currentQuestion.type === 'grouping'
+                      ? 'Csoportosítás'
                     : currentQuestion.type === 'multiple_choice'
                       ? 'Több helyes válasz'
                       : 'Egy helyes válasz'
@@ -618,6 +648,24 @@ function getTrueFalseAnswerKey(
                   :options="getMatchingOptions(currentQuestion, pair.id)"
                   option-label="label" option-value="id" option-disabled="disabled"
                   placeholder="Válassz betűt" show-clear class="w-44"
+                />
+              </div>
+            </div>
+
+            <div v-else-if="currentQuestion.type === 'grouping'" class="grid gap-4">
+              <p class="text-sm text-slate-600">
+                Válaszd ki minden elem csoportját! Egy csoportba több elem is kerülhet.
+              </p>
+              <div v-for="(item, index) in getGroupingItems(currentQuestion)" :key="item.id"
+                class="flex flex-col gap-3 rounded-md border border-slate-200 p-3 sm:flex-row sm:items-center sm:justify-between">
+                <label :for="`grouping-item-${index}`" class="flex-1 font-medium">
+                  {{ index + 1 }}. {{ item.text }}
+                </label>
+                <Select
+                  v-model="answers[getGroupingAnswerKey(currentQuestion, item.id)]"
+                  :input-id="`grouping-item-${index}`"
+                  :options="currentQuestion.groups" option-label="text" option-value="id"
+                  placeholder="Válassz csoportot" show-clear class="w-full sm:w-64"
                 />
               </div>
             </div>
