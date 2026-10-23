@@ -2,6 +2,87 @@ import type { ExamQuestion } from "../types/question";
 
 export const testmukodesQuestions: ExamQuestion[] = [
   {
+    id: "testmukodes-fill-in-muscle-stimuli",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az izomösszehúzódást kiváltó ingerekkel kapcsolatos mondatokat!",
+    statements: [
+      {
+        id: "gyenge-inger",
+        parts: [
+          "Azt a gyenge ingert, amely nem vált ki összehúzódást, ",
+          {
+            id: "inger", label: "Az összehúzódást nem kiváltó inger neve",
+            options: [
+              { id: "kuszob-alatti", text: "küszöb alatti" },
+              { id: "kuszob", text: "küszöb" },
+              { id: "maximalis", text: "maximális" },
+            ],
+            correctOptionId: "kuszob-alatti",
+          },
+          " ingernek nevezzük.",
+        ],
+      },
+      {
+        id: "minimalis-inger",
+        parts: [
+          "A minimális ingererősség, amelyre az izom összehúzódással válaszol, a ",
+          {
+            id: "inger", label: "Az összehúzódást már kiváltó minimális inger neve",
+            options: [
+              { id: "kuszob-alatti", text: "küszöb alatti" },
+              { id: "kuszob", text: "küszöb" },
+              { id: "maximalis", text: "maximális" },
+            ],
+            correctOptionId: "kuszob",
+          },
+          "inger.",
+        ],
+      },
+    ],
+    explanation: "A küszöb alatti inger nem vált ki összehúzódást; a küszöbinger a válasz kiváltásához szükséges legkisebb ingererősség.",
+  },
+  {
+    id: "testmukodes-fill-in-cardiac-pacemakers",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a keringés szervrendszerére vonatkozó mondatot!",
+    // Forrás: https://www.ncbi.nlm.nih.gov/books/NBK526089/
+    statements: [
+      {
+        id: "ingerkepzes",
+        parts: [
+          "A szív ",
+          {
+            id: "elso-pitvar", label: "Az elsődleges ingerképző központ pitvara",
+            options: [{ id: "jobb", text: "jobb" }, { id: "bal", text: "bal" }],
+            correctOptionId: "jobb",
+          },
+          " pitvarának falában található az elsődleges ingerképző központ, a ",
+          {
+            id: "elso-csomo", label: "Az elsődleges ingerképző központ neve",
+            options: [{ id: "sinus", text: "sinuscsomó" }, { id: "av", text: "pitvarkamrai csomó" }],
+            correctOptionId: "sinus",
+          },
+          "; a ",
+          {
+            id: "masodik-pitvar", label: "A másodlagos ingerképző központ pitvara",
+            options: [{ id: "bal", text: "bal" }, { id: "jobb", text: "jobb" }],
+            correctOptionId: "jobb",
+          },
+          " pitvar sövényi részén, a pitvar-kamrai határ közelében található a másodlagos ingerképző központ, a ",
+          {
+            id: "masodik-csomo", label: "A másodlagos ingerképző központ neve",
+            options: [{ id: "sinus", text: "sinuscsomó" }, { id: "av", text: "pitvarkamrai csomó" }],
+            correctOptionId: "av",
+          },
+          ".",
+        ],
+      },
+    ],
+    explanation: "Az elsődleges ingerképző a sinuscsomó; a pitvarkamrai (AV-) csomó a jobb pitvar sövényi részén helyezkedik el.",
+  },
+  {
     id: "testmukodes-ordering-bones",
     topicId: "testmukodes",
     type: "ordering",

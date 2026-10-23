@@ -78,14 +78,18 @@ export type OrderingQuestion = BaseQuestion & {
 export type FillInBlank = {
   id: string;
   label: string;
-  acceptedAnswers: string[];
+  options: ChoiceOption[];
+  correctOptionId: string;
+};
+
+export type FillInStatement = {
+  id: string;
+  parts: (string | FillInBlank)[];
 };
 
 export type FillInQuestion = BaseQuestion & {
   type: "fill_in";
-  textBefore: string;
-  blanks: FillInBlank[];
-  textAfter?: string;
+  statements: FillInStatement[];
 };
 
 export type ExamQuestion =
@@ -103,4 +107,4 @@ export type QuestionAnswer =
   | { type: "matching"; pairs: Record<string, string | null> }
   | { type: "grouping"; groups: Record<string, string | null> }
   | { type: "ordering"; orderIds: string[] }
-  | { type: "fill_in"; values: Record<string, string> };
+  | { type: "fill_in"; values: Record<string, string | null> };

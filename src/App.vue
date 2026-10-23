@@ -9,7 +9,7 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion, TrueFalseQuestion } from "./types/question";
+import type { ChoiceQuestion, FillInQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion, TrueFalseQuestion } from "./types/question";
 
 const MODULE_QUESTIONS_PER_PRACTICE = 30;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
@@ -21,7 +21,7 @@ const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   tarsadalomtudomanyi_ismeretek: 3,
 };
 type PracticeMode = "exam" | "module";
-type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion | OrderingQuestion;
+type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion | OrderingQuestion | FillInQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
@@ -35,6 +35,7 @@ const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
   { id: "matching", name: "Párosítás" },
   { id: "grouping", name: "Csoportosítás" },
   { id: "ordering", name: "Sorbarendezés" },
+  { id: "fill_in", name: "Mondatkiegészítés (választás)" },
 ];
 const selectedQuestionTypes = ref<PracticeQuestion["type"][]>(questionTypes.map((type) => type.id));
 const allQuestionTypesSelected = computed({
@@ -66,7 +67,8 @@ const questions = computed<PracticeQuestion[]>(() => {
       question.type === "true_false" ||
       question.type === "matching" ||
       question.type === "grouping" ||
-      question.type === "ordering") &&
+      question.type === "ordering" ||
+      question.type === "fill_in") &&
       selectedQuestionTypes.value.includes(question.type),
   );
 
@@ -279,6 +281,13 @@ function getQuestionOptions(question: ChoiceQuestion) {
 }
 
 function hasAnswer(question: PracticeQuestion) {
+  if (question.type === "fill_in") {
+    return question.statements.every((statement) => statement.parts.every((part) =>
+      typeof part === "string" || part.options.some((option) =>
+        option.id === answers[getFillInAnswerKey(question, statement.id, part.id)],
+      ),
+    ));
+  }
   if (question.type === "ordering") {
     const answer = answers[question.id];
     return Array.isArray(answer) && answer.length === question.items.length
@@ -315,6 +324,11 @@ function getSelectedOptionIds(question: ChoiceQuestion) {
 }
 
 function areAnswersCorrect(question: PracticeQuestion) {
+  if (question.type === "fill_in") {
+    return question.statements.every((statement) => statement.parts.every((part) =>
+      typeof part === "string" || answers[getFillInAnswerKey(question, statement.id, part.id)] === part.correctOptionId,
+    ));
+  }
   if (question.type === "ordering") {
     const answer = answers[question.id];
     return hasAnswer(question) && Array.isArray(answer)
@@ -364,6 +378,11 @@ function restartPractice() {
 onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: PracticeQuestion) {
+  if (question.type === "fill_in") {
+    return question.statements.map((statement) => statement.parts.map((part) =>
+      typeof part === "string" ? part : part.options.find((option) => option.id === part.correctOptionId)?.text,
+    ).join("")).join(" ");
+  }
   if (question.type === "ordering") {
     return question.correctOrderIds.map((id, index) =>
       `${index + 1}. ${question.items.find((item) => item.id === id)?.text}`,
@@ -393,6 +412,10 @@ function getCorrectAnswerText(question: PracticeQuestion) {
     .filter((option) => question.correctOptionIds.includes(option.id))
     .map((option) => option.text)
     .join(", ");
+}
+
+function getFillInAnswerKey(question: FillInQuestion, statementId: string, blankId: string) {
+  return JSON.stringify([question.id, "fill_in", statementId, blankId]);
 }
 
 function getOrderingItems(question: OrderingQuestion) {
@@ -465,7 +488,7 @@ function getTrueFalseAnswerKey(
             </h1>
 
             <p class="mt-2 max-w-2xl text-slate-600">
-              Egy és több helyes válaszos, igaz–hamis, párosító, csoportosító és sorbarendező feladatok.
+              Választós, igaz–hamis, párosító, csoportosító, sorbarendező és mondatkiegészítő feladatok.
             </p>
           </div>
 
@@ -619,6 +642,8 @@ function getTrueFalseAnswerKey(
                       ? 'Csoportosítás'
                     : currentQuestion.type === 'ordering'
                       ? 'Sorbarendezés'
+                    : currentQuestion.type === 'fill_in'
+                      ? 'Mondatkiegészítés'
                     : currentQuestion.type === 'multiple_choice'
                       ? 'Több helyes válasz'
                       : 'Egy helyes válasz'
@@ -685,6 +710,23 @@ function getTrueFalseAnswerKey(
                   option-label="label" option-value="id" option-disabled="disabled"
                   placeholder="Válassz betűt" show-clear class="w-44"
                 />
+              </div>
+            </div>
+
+            <div v-else-if="currentQuestion.type === 'fill_in'" class="grid gap-4">
+              <p class="text-sm text-slate-600">Egészítsd ki az összes mondatot a megfelelő válaszok kiválasztásával!</p>
+              <div v-for="(statement, statementIndex) in currentQuestion.statements" :key="statement.id"
+                class="rounded-md border border-slate-200 p-4 leading-loose">
+                <template v-for="(part, partIndex) in statement.parts" :key="typeof part === 'string' ? `text-${partIndex}` : part.id">
+                  <span v-if="typeof part === 'string'" class="whitespace-pre-wrap">{{ part }}</span>
+                  <Select v-else
+                    v-model="answers[getFillInAnswerKey(currentQuestion, statement.id, part.id)]"
+                    :input-id="`fill-in-${statementIndex}-${partIndex}`"
+                    :aria-label="`${statementIndex + 1}. állítás: ${part.label}`"
+                    :options="part.options" option-label="text" option-value="id"
+                    placeholder="Válassz…" show-clear class="mx-1 inline-flex max-w-full align-middle"
+                  />
+                </template>
               </div>
             </div>
 
