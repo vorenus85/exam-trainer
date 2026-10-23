@@ -11,7 +11,7 @@ import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
 import type { ChoiceQuestion, MatchingQuestion, TrueFalseQuestion } from "./types/question";
 
-const MODULE_QUESTIONS_PER_PRACTICE = 10;
+const MODULE_QUESTIONS_PER_PRACTICE = 30;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
 const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   testmukodes: 9,
