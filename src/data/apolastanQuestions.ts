@@ -2,6 +2,38 @@ import type { ExamQuestion } from "../types/question";
 
 export const apolastanQuestions: ExamQuestion[] = [
   {
+    id: "apolastan-matching-oxygen",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az oxigénellátás eszközeit a hozzájuk tartozó leírással!",
+    pairs: [
+      {
+        id: "palack",
+        left: "Oxigénpalack",
+        right: "A beteg nyomáscsökkentő közbeiktatásával tudja belélegezni a szükséges mennyiségű oxigént, áramlásmérő és párásító használatával.",
+      },
+      {
+        id: "tartaly",
+        left: "Oxigéntartály",
+        right: "Az oxigént folyékony formában tárolja. Kis térfogatban igen nagy mennyiségű oxigént biztosít.",
+      },
+    ],
+  },
+  {
+    id: "apolastan-matching-equipment",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa a betegmegfigyelés eszközeit az általuk mért jellemzővel!",
+    pairs: [
+      { id: "homero", left: "Lázmérő", right: "Testhőmérséklet" },
+      { id: "vernyomasmero", left: "Vérnyomásmérő", right: "Artériás vérnyomás" },
+      { id: "pulzoximeter", left: "Pulzoximéter", right: "Perifériás oxigénszaturáció (SpO₂)" },
+      { id: "vercukormero", left: "Vércukormérő", right: "Vércukorszint" },
+      { id: "merleg", left: "Személymérleg", right: "Testtömeg" },
+      { id: "magassagmero", left: "Testmagasságmérő", right: "Testmagasság" },
+    ],
+  },
+  {
     id: "apolastan-001",
     topicId: "apolastan",
     type: "single_choice",

@@ -4,7 +4,6 @@ export type QuestionType =
   | "true_false"
   | "matching"
   | "ordering"
-  | "underline_select" // todo kiszedni, multiple_choice-ra alakítani ezeket a kérdéseket
   | "fill_in";
 
 export type Topic = {
@@ -65,18 +64,6 @@ export type OrderingQuestion = BaseQuestion & {
   correctOrderIds: string[];
 };
 
-export type UnderlineToken = {
-  id: string;
-  text: string;
-  selectable: boolean;
-};
-
-export type UnderlineSelectQuestion = BaseQuestion & {
-  type: "underline_select";
-  tokens: UnderlineToken[];
-  correctTokenIds: string[];
-};
-
 export type FillInBlank = {
   id: string;
   label: string;
@@ -95,7 +82,6 @@ export type ExamQuestion =
   | TrueFalseQuestion
   | MatchingQuestion
   | OrderingQuestion
-  | UnderlineSelectQuestion
   | FillInQuestion;
 
 export type QuestionAnswer =
@@ -104,5 +90,4 @@ export type QuestionAnswer =
   | { type: "true_false"; value: boolean | null }
   | { type: "matching"; pairs: Record<string, string | null> }
   | { type: "ordering"; orderIds: string[] }
-  | { type: "underline_select"; selectedTokenIds: string[] }
   | { type: "fill_in"; values: Record<string, string> };

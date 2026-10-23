@@ -9,7 +9,7 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion, TrueFalseQuestion } from "./types/question";
+import type { ChoiceQuestion, MatchingQuestion, TrueFalseQuestion } from "./types/question";
 
 const MODULE_QUESTIONS_PER_PRACTICE = 10;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
@@ -21,12 +21,26 @@ const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   tarsadalomtudomanyi_ismeretek: 3,
 };
 type PracticeMode = "exam" | "module";
-type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion;
+type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
   { id: "module" as const, name: "Egy modul gyakorlása" },
 ];
+
+const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
+  { id: "single_choice", name: "Egy helyes válasz" },
+  { id: "multiple_choice", name: "Több helyes válasz" },
+  { id: "true_false", name: "Igaz / hamis" },
+  { id: "matching", name: "Párosítás" },
+];
+const selectedQuestionTypes = ref<PracticeQuestion["type"][]>(questionTypes.map((type) => type.id));
+const allQuestionTypesSelected = computed({
+  get: () => questionTypes.every((type) => selectedQuestionTypes.value.includes(type.id)),
+  set: (selected: boolean) => {
+    selectedQuestionTypes.value = selected ? questionTypes.map((type) => type.id) : [];
+  },
+});
 
 const currentIndex = ref(0);
 const isFinished = ref(false);
@@ -45,9 +59,11 @@ const answers = reactive<Record<string, string | string[] | boolean | null>>(
 const questions = computed<PracticeQuestion[]>(() => {
   const availableQuestions = sampleQuestions.filter(
     (question): question is PracticeQuestion =>
-      question.type === "single_choice" ||
+      (question.type === "single_choice" ||
       question.type === "multiple_choice" ||
-      question.type === "true_false",
+      question.type === "true_false" ||
+      question.type === "matching") &&
+      selectedQuestionTypes.value.includes(question.type),
   );
 
   if (shuffledQuestionIds.value.length === 0) {
@@ -181,6 +197,11 @@ function startExam() {
         shuffle(question.options.map((option) => option.id)),
       ]),
   );
+  for (const question of selectedQuestions) {
+    if (question.type === "matching") {
+      shuffledOptionIds.value[question.id] = shuffle(question.pairs.map((pair) => pair.id));
+    }
+  }
   currentIndex.value = 0;
   isFinished.value = false;
   isStarted.value = true;
@@ -251,6 +272,11 @@ function getQuestionOptions(question: ChoiceQuestion) {
 }
 
 function hasAnswer(question: PracticeQuestion) {
+  if (question.type === "matching") {
+    const selected = question.pairs.map((pair) => answers[getMatchingAnswerKey(question, pair.id)]);
+    return selected.every((id) => typeof id === "string" && question.pairs.some((pair) => pair.id === id))
+      && new Set(selected).size === question.pairs.length;
+  }
   if (question.type === "true_false") {
     return question.statements.every(
       (statement) =>
@@ -271,6 +297,9 @@ function getSelectedOptionIds(question: ChoiceQuestion) {
 }
 
 function areAnswersCorrect(question: PracticeQuestion) {
+  if (question.type === "matching") {
+    return question.pairs.every((pair) => answers[getMatchingAnswerKey(question, pair.id)] === pair.id);
+  }
   if (question.type === "true_false") {
     return question.statements.every(
       (statement) =>
@@ -300,6 +329,7 @@ function restartPractice() {
   isStarted.value = false;
   selectedMode.value = null;
   selectedTopicId.value = null;
+  selectedQuestionTypes.value = questionTypes.map((type) => type.id);
   shuffledQuestionIds.value = [];
   shuffledOptionIds.value = {};
   timeRemaining.value = PRACTICE_TIME_LIMIT_SECONDS;
@@ -308,6 +338,12 @@ function restartPractice() {
 onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: PracticeQuestion) {
+  if (question.type === "matching") {
+    const options = getMatchingOptions(question);
+    return question.pairs.map((pair, index) =>
+      `${index + 1}–${options.find((option) => option.id === pair.id)?.label}: ${pair.left} — ${pair.right}`,
+    ).join("; ");
+  }
   if (question.type === "true_false") {
     return question.statements
       .map(
@@ -321,6 +357,21 @@ function getCorrectAnswerText(question: PracticeQuestion) {
     .filter((option) => question.correctOptionIds.includes(option.id))
     .map((option) => option.text)
     .join(", ");
+}
+
+function getMatchingAnswerKey(question: MatchingQuestion, pairId: string) {
+  return JSON.stringify([question.id, "matching", pairId]);
+}
+
+function getMatchingOptions(question: MatchingQuestion, currentPairId?: string) {
+  const order = shuffledOptionIds.value[question.id] ?? question.pairs.map((pair) => pair.id);
+  return order.map((id, index) => ({
+    id,
+    label: String.fromCharCode(65 + index),
+    text: question.pairs.find((pair) => pair.id === id)!.right,
+    disabled: question.pairs.some((pair) => pair.id !== currentPairId
+      && answers[getMatchingAnswerKey(question, pair.id)] === id),
+  }));
 }
 
 function getTrueFalseAnswerKey(
@@ -348,11 +399,11 @@ function getTrueFalseAnswerKey(
             </p>
 
             <h1 class="mt-1 text-3xl font-bold text-slate-950">
-              Single choice gyakorlás
+              Vizsgakérdések gyakorlása
             </h1>
 
             <p class="mt-2 max-w-2xl text-slate-600">
-              Első lépésben csak egy helyes válaszos kérdéseket kezelünk.
+              Egy és több helyes válaszos, igaz–hamis és párosító feladatok.
             </p>
           </div>
 
@@ -411,9 +462,28 @@ function getTrueFalseAnswerKey(
               class="w-full"
             />
 
+            <fieldset class="rounded-md border border-slate-200 p-4">
+              <legend class="px-1 font-semibold">Kérdésfajták</legend>
+              <label class="mb-3 flex cursor-pointer items-center gap-2">
+                <Checkbox v-model="allQuestionTypesSelected" input-id="question-types-all" binary />
+                <span>Mind (nincs szűrés)</span>
+              </label>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <label v-for="type in questionTypes" :key="type.id" class="flex cursor-pointer items-center gap-2">
+                  <Checkbox v-model="selectedQuestionTypes" :input-id="`question-type-${type.id}`" :value="type.id" />
+                  <span>{{ type.name }}</span>
+                </label>
+              </div>
+            </fieldset>
+
             <p v-if="selectedMode === 'exam'" class="text-sm text-slate-500">
-              A vizsgakör minden témakörből egy kérdést választ.
+              A vizsgakör témakörönként a beállított keretig választ a kijelölt kérdésfajtákból.
             </p>
+
+            <Message v-if="selectedMode && (selectedMode === 'exam' || selectedTopicId) && questions.length === 0"
+              severity="warn" :closable="false">
+              A kiválasztott beállításokkal nincs elérhető kérdés. Válassz más kérdésfajtát vagy modult!
+            </Message>
 
             <Button
               label="Gyakorlás indítása"
@@ -481,6 +551,8 @@ function getTrueFalseAnswerKey(
                 :value="
                   currentQuestion.type === 'true_false'
                     ? 'Igaz / hamis'
+                    : currentQuestion.type === 'matching'
+                      ? 'Párosítás'
                     : currentQuestion.type === 'multiple_choice'
                       ? 'Több helyes válasz'
                       : 'Egy helyes válasz'
@@ -498,7 +570,7 @@ function getTrueFalseAnswerKey(
             </p>
 
             <div
-              v-if="currentQuestion.type !== 'true_false'"
+              v-if="currentQuestion.type === 'single_choice' || currentQuestion.type === 'multiple_choice'"
               class="grid gap-3"
             >
               <label
@@ -525,7 +597,32 @@ function getTrueFalseAnswerKey(
               </label>
             </div>
 
-            <div v-else class="grid gap-3">
+            <div v-else-if="currentQuestion.type === 'matching'" class="grid gap-4">
+              <p class="text-sm text-slate-600">
+                Párosítsd a számozott elemeket a betűjelű válaszokkal! Minden betűt egyszer használhatsz fel.
+              </p>
+              <div class="grid gap-3 rounded-md border border-slate-200 bg-slate-50 p-4">
+                <p v-for="option in getMatchingOptions(currentQuestion)" :key="option.id" class="flex gap-3">
+                  <strong>{{ option.label }}:</strong>
+                  <span>{{ option.text }}</span>
+                </p>
+              </div>
+              <div v-for="(pair, index) in currentQuestion.pairs" :key="pair.id"
+                class="flex flex-wrap items-center justify-between gap-3 rounded-md border border-slate-200 p-3">
+                <label :for="`matching-pair-${index}`" class="flex-1 font-medium">
+                  {{ index + 1 }}. {{ pair.left }}
+                </label>
+                <Select
+                  v-model="answers[getMatchingAnswerKey(currentQuestion, pair.id)]"
+                  :input-id="`matching-pair-${index}`"
+                  :options="getMatchingOptions(currentQuestion, pair.id)"
+                  option-label="label" option-value="id" option-disabled="disabled"
+                  placeholder="Válassz betűt" show-clear class="w-44"
+                />
+              </div>
+            </div>
+
+            <div v-else-if="currentQuestion.type === 'true_false'" class="grid gap-3">
               <div
                 v-for="statement in currentQuestion.statements"
                 :key="statement.id"
@@ -643,7 +740,7 @@ function getTrueFalseAnswerKey(
                   />
                   <Tag
                     :value="
-                      answers[question.id] ? 'Hibás válasz' : 'Hiányos válasz'
+                      hasAnswer(question) ? 'Hibás válasz' : 'Hiányos válasz'
                     "
                     severity="warn"
                   />
