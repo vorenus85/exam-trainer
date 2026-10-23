@@ -2,8 +2,12 @@
 import Button from "primevue/button";
 import ProgressBar from "primevue/progressbar";
 defineProps<{
-  isStarted: boolean; progressPercent: number; timeRemaining: number;
-  formattedTimeRemaining: string; answeredCount: number; totalCount: number;
+  isStarted: boolean;
+  progressPercent: number;
+  timeRemaining: number;
+  formattedTimeRemaining: string;
+  answeredCount: number;
+  totalCount: number;
 }>();
 const emit = defineEmits<{ restart: [] }>();
 </script>
@@ -14,9 +18,7 @@ const emit = defineEmits<{ restart: [] }>();
       class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between"
     >
       <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-wide text-blue-700"
-        >
+        <p class="text-sm font-semibold uppercase tracking-wide text-blue-700">
           Vizsga Tréner
         </p>
 
@@ -25,7 +27,11 @@ const emit = defineEmits<{ restart: [] }>();
         </h1>
 
         <p class="mt-2 max-w-2xl text-slate-600">
-          Választós, igaz–hamis, párosító, csoportosító, sorbarendező és mondatkiegészítő feladatok.
+          Az applikáció segítségével gyakorolhatod a vizsgakérdéseket, és
+          felmérheted a tudásodat. A gyakorlás során a kérdések véletlenszerű
+          sorrendben jelennek meg, és a válaszok rögzítésre kerülnek. A
+          gyakorlás végén részletes eredményeket kapsz, amelyek segítenek az
+          erősségeid és gyengeségeid azonosításában.
         </p>
       </div>
 
