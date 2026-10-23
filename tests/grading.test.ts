@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { calculatePercent, getGrade, getPracticeResult } from "../src/domain/grading.ts";
+import { calculatePercent, getGrade, getGradeRanges, getPracticeResult } from "../src/domain/grading.ts";
 import { cases } from "./fixtures.ts";
 
 for (const [percent, expected] of [
@@ -48,4 +48,17 @@ test("all question types can earn full marks together", () => {
   assert.equal(result.scorePercent, 100);
   assert.equal(result.grade, "jeles");
   assert.deepEqual(result.incorrectQuestions, []);
+});
+
+test("displayed grading ranges use the same thresholds and rounding as the result", () => {
+  for (const total of [1, 2, 7, 30]) {
+    const ranges = getGradeRanges(total);
+    for (let points = 0; points <= total; points += 1) {
+      const actual = ranges.filter((range) => range.minPoints !== null && range.maxPoints !== null
+        && points >= range.minPoints && points <= range.maxPoints);
+      assert.equal(actual.length, 1);
+      assert.equal(actual[0]!.label, getGrade(calculatePercent(points, total)));
+    }
+  }
+  assert.equal(getGradeRanges(30).find(range => range.label === "jeles")?.minPoints, 27);
 });

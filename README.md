@@ -24,7 +24,20 @@ Az `npm test` először típusellenőrzi a teszteket és az üzleti modulokat, m
 - `src/domain/answers.ts`: kérdésenkénti, típusos válaszobjektumok létrehozása. Az igaz–hamis válaszok állításonként, a mondatkiegészítések állításonként és mezőnként tárolódnak. A tárolás nem használ összefűzött kulcsokat, a HTML-azonosítók külön maradnak.
 - `src/utils/shuffle.ts`: a bemenetet megőrző keverés, paraméterezhető véletlenszám-forrással.
 
-Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdéseket, válaszokat és beállításokat paraméterként kapják; az `App.vue` kapcsolja őket a felülethez.
+Ezek a modulok nem függenek a Vue-tól vagy a komponensállapottól. A kérdéseket, válaszokat és beállításokat paraméterként kapják.
+
+## Felület és munkamenet
+
+- `src/App.vue`: a fő komponensek és a munkamenet összekötése.
+- `src/components/PracticeSetup.vue`: gyakorlási mód, modul és kérdésfajták kiválasztása.
+- `src/components/PracticeHeader.vue`: fejléc, idő és előrehaladás.
+- `src/components/QuestionCard.vue`: kérdéskeret, típus szerinti megjelenítés és navigáció.
+- `src/components/questions/`: külön komponens a választós, igaz–hamis, párosító, csoportosító, sorbarendező és mondatkiegészítő feladatokhoz. A komponensek a `v-model` frissítési eseményével adnak vissza új válaszobjektumot.
+- `src/components/PracticeResults.vue`: összesített eredmény és hibás válaszok áttekintése.
+- `src/composables/usePracticeSession.ts`: beállítások, rögzített kérdéssor, válaszok, navigáció, befejezés és újrakezdés.
+- `src/composables/useCountdown.ts`: határidőhöz igazított visszaszámlálás, lejárati esemény és takarítás a Vue-scope megszűnésekor.
+- `src/config/practice.ts`: kérdésszámok, időkeret, gyakorlási módok és osztályzathatárok.
+- `src/config/questionTypes.ts`: a kérdéstípusok közös nevei a szűrőhöz és a kérdéscímkékhez.
 
 ## Tesztek
 
@@ -32,4 +45,6 @@ A tesztek lefedik mind a hét kérdéstípus helyes, hibás és hiányos válasz
 
 A válaszmodell tesztjei ellenőrzik az inicializálást, az új körök és az ismétlődő mezőazonosítók függetlenségét, a reaktív válaszok megőrzését navigációkor, valamint a típusidegen válaszok elutasítását. A `tests/answerTypes.ts` fordítási ellenőrzésekkel védi a válaszobjektumok alakját.
 
-A refaktor megőrzi a korábbi százalékos osztályozást: például 26/30 pont 87%-ra kerekítve „jó”. A felületen szereplő statikus ponthatártáblázat ettől eltér; annak egységesítése külön feladat.
+A munkamenet és az időzítő tesztjei mesterséges időléptetéssel ellenőrzik a lejáratot, a navigációt, az újrakezdést, a rögzített kérdéssor megőrzését és az időzítők felszabadítását.
+
+A refaktor megőrzi a korábbi százalékos osztályozást: például 26/30 pont 87%-ra kerekítve „jó”. A felületen szereplő ponthatártáblázat ugyanebből a szabályból, az aktuális kérdésszámhoz készül; 30 kérdésnél a „jeles” így 27 ponttól kezdődik.

@@ -1,21 +1,10 @@
-import type { ExamQuestion, QuestionType } from "../types/question.ts";
+import type { ExamQuestion } from "../types/question.ts";
 import { shuffle } from "../utils/shuffle.ts";
 
-export const MODULE_QUESTIONS_PER_PRACTICE = 30;
-export const EXAM_QUESTIONS_PER_TOPIC: Readonly<Record<string, number>> = {
-  testmukodes: 9,
-  vitalis: 6,
-  gyogyszerelesi_ismeretek: 3,
-  apolastan: 9,
-  tarsadalomtudomanyi_ismeretek: 3,
-};
-
-export type PracticeMode = "exam" | "module";
-export type PracticeSettings = {
-  mode: PracticeMode | null;
-  topicId: string | null;
-  questionTypes?: readonly QuestionType[];
-};
+import { MODULE_QUESTIONS_PER_PRACTICE, EXAM_QUESTIONS_PER_TOPIC } from "../config/practice.ts";
+import type { PracticeSettings } from "../config/practice.ts";
+export { MODULE_QUESTIONS_PER_PRACTICE, EXAM_QUESTIONS_PER_TOPIC } from "../config/practice.ts";
+export type { PracticeMode, PracticeSettings } from "../config/practice.ts";
 
 export function filterQuestions(questions: readonly ExamQuestion[], settings: PracticeSettings): ExamQuestion[] {
   if (!settings.mode || (settings.mode === "module" && !settings.topicId)) return [];
