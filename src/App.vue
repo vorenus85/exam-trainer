@@ -9,7 +9,7 @@ import RadioButton from "primevue/radiobutton";
 import Select from "primevue/select";
 import Tag from "primevue/tag";
 import { sampleQuestions, topics } from "./data/sampleQuestions";
-import type { ChoiceQuestion, GroupingQuestion, MatchingQuestion, TrueFalseQuestion } from "./types/question";
+import type { ChoiceQuestion, GroupingQuestion, MatchingQuestion, OrderingQuestion, TrueFalseQuestion } from "./types/question";
 
 const MODULE_QUESTIONS_PER_PRACTICE = 30;
 const PRACTICE_TIME_LIMIT_SECONDS = 30 * 60;
@@ -21,7 +21,7 @@ const EXAM_QUESTIONS_PER_TOPIC: Record<string, number> = {
   tarsadalomtudomanyi_ismeretek: 3,
 };
 type PracticeMode = "exam" | "module";
-type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion;
+type PracticeQuestion = ChoiceQuestion | TrueFalseQuestion | MatchingQuestion | GroupingQuestion | OrderingQuestion;
 
 const practiceModes = [
   { id: "exam" as const, name: "Vizsga gyakorlása" },
@@ -34,6 +34,7 @@ const questionTypes: { id: PracticeQuestion["type"]; name: string }[] = [
   { id: "true_false", name: "Igaz / hamis" },
   { id: "matching", name: "Párosítás" },
   { id: "grouping", name: "Csoportosítás" },
+  { id: "ordering", name: "Sorbarendezés" },
 ];
 const selectedQuestionTypes = ref<PracticeQuestion["type"][]>(questionTypes.map((type) => type.id));
 const allQuestionTypesSelected = computed({
@@ -64,7 +65,8 @@ const questions = computed<PracticeQuestion[]>(() => {
       question.type === "multiple_choice" ||
       question.type === "true_false" ||
       question.type === "matching" ||
-      question.type === "grouping") &&
+      question.type === "grouping" ||
+      question.type === "ordering") &&
       selectedQuestionTypes.value.includes(question.type),
   );
 
@@ -203,7 +205,7 @@ function startExam() {
     if (question.type === "matching") {
       shuffledOptionIds.value[question.id] = shuffle(question.pairs.map((pair) => pair.id));
     }
-    if (question.type === "grouping") {
+    if (question.type === "grouping" || question.type === "ordering") {
       shuffledOptionIds.value[question.id] = shuffle(question.items.map((item) => item.id));
     }
   }
@@ -277,6 +279,12 @@ function getQuestionOptions(question: ChoiceQuestion) {
 }
 
 function hasAnswer(question: PracticeQuestion) {
+  if (question.type === "ordering") {
+    const answer = answers[question.id];
+    return Array.isArray(answer) && answer.length === question.items.length
+      && new Set(answer).size === question.items.length
+      && answer.every((id) => question.items.some((item) => item.id === id));
+  }
   if (question.type === "grouping") {
     return question.items.every((item) => question.groups.some(
       (group) => group.id === answers[getGroupingAnswerKey(question, item.id)],
@@ -307,6 +315,11 @@ function getSelectedOptionIds(question: ChoiceQuestion) {
 }
 
 function areAnswersCorrect(question: PracticeQuestion) {
+  if (question.type === "ordering") {
+    const answer = answers[question.id];
+    return hasAnswer(question) && Array.isArray(answer)
+      && answer.every((id, index) => id === question.correctOrderIds[index]);
+  }
   if (question.type === "grouping") {
     return question.items.every((item) => answers[getGroupingAnswerKey(question, item.id)] === item.correctGroupId);
   }
@@ -351,6 +364,11 @@ function restartPractice() {
 onUnmounted(stopTimer);
 
 function getCorrectAnswerText(question: PracticeQuestion) {
+  if (question.type === "ordering") {
+    return question.correctOrderIds.map((id, index) =>
+      `${index + 1}. ${question.items.find((item) => item.id === id)?.text}`,
+    ).join(" → ");
+  }
   if (question.type === "grouping") {
     return question.groups.map((group) =>
       `${group.text}: ${question.items.filter((item) => item.correctGroupId === group.id).map((item) => item.text).join(", ")}`,
@@ -375,6 +393,22 @@ function getCorrectAnswerText(question: PracticeQuestion) {
     .filter((option) => question.correctOptionIds.includes(option.id))
     .map((option) => option.text)
     .join(", ");
+}
+
+function getOrderingItems(question: OrderingQuestion) {
+  const answer = answers[question.id];
+  const order = Array.isArray(answer) ? answer : shuffledOptionIds.value[question.id];
+  if (!order) return question.items;
+  const itemsById = new Map(question.items.map((item) => [item.id, item]));
+  return order.map((id) => itemsById.get(id)!).filter(Boolean);
+}
+
+function moveOrderingItem(question: OrderingQuestion, index: number, direction: -1 | 1) {
+  const order = getOrderingItems(question).map((item) => item.id);
+  const targetIndex = index + direction;
+  if (index < 0 || index >= order.length || targetIndex < 0 || targetIndex >= order.length) return;
+  [order[index], order[targetIndex]] = [order[targetIndex]!, order[index]!];
+  answers[question.id] = order;
 }
 
 function getGroupingAnswerKey(question: GroupingQuestion, itemId: string) {
@@ -431,7 +465,7 @@ function getTrueFalseAnswerKey(
             </h1>
 
             <p class="mt-2 max-w-2xl text-slate-600">
-              Egy és több helyes válaszos, igaz–hamis, párosító és csoportosító feladatok.
+              Egy és több helyes válaszos, igaz–hamis, párosító, csoportosító és sorbarendező feladatok.
             </p>
           </div>
 
@@ -583,6 +617,8 @@ function getTrueFalseAnswerKey(
                       ? 'Párosítás'
                     : currentQuestion.type === 'grouping'
                       ? 'Csoportosítás'
+                    : currentQuestion.type === 'ordering'
+                      ? 'Sorbarendezés'
                     : currentQuestion.type === 'multiple_choice'
                       ? 'Több helyes válasz'
                       : 'Egy helyes válasz'
@@ -650,6 +686,27 @@ function getTrueFalseAnswerKey(
                   placeholder="Válassz betűt" show-clear class="w-44"
                 />
               </div>
+            </div>
+
+            <div v-else-if="currentQuestion.type === 'ordering'" class="grid gap-4">
+              <p class="text-sm text-slate-600">
+                A nyilakkal mozgasd az elemeket a kért sorrendbe! Ha a kezdeti sorrendet szeretnéd megtartani, hagyd jóvá.
+              </p>
+              <ol class="grid gap-3" aria-label="Az elemek jelenlegi sorrendje">
+                <li v-for="(item, index) in getOrderingItems(currentQuestion)" :key="item.id"
+                  class="flex items-center gap-3 rounded-md border border-slate-200 p-3">
+                  <span class="font-semibold tabular-nums">{{ index + 1 }}.</span>
+                  <span class="flex-1">{{ item.text }}</span>
+                  <Button icon="pi pi-arrow-up" severity="secondary" outlined
+                    :aria-label="`${item.text} feljebb mozgatása`" :disabled="index === 0"
+                    @click="moveOrderingItem(currentQuestion, index, -1)" />
+                  <Button icon="pi pi-arrow-down" severity="secondary" outlined
+                    :aria-label="`${item.text} lejjebb mozgatása`" :disabled="index === currentQuestion.items.length - 1"
+                    @click="moveOrderingItem(currentQuestion, index, 1)" />
+                </li>
+              </ol>
+              <Button v-if="!hasAnswer(currentQuestion)" label="Sorrend jóváhagyása" severity="secondary" outlined class="self-start"
+                @click="answers[currentQuestion.id] = getOrderingItems(currentQuestion).map((item) => item.id)" />
             </div>
 
             <div v-else-if="currentQuestion.type === 'grouping'" class="grid gap-4">

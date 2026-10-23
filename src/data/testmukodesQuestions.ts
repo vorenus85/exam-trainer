@@ -2,6 +2,36 @@ import type { ExamQuestion } from "../types/question";
 
 export const testmukodesQuestions: ExamQuestion[] = [
   {
+    id: "testmukodes-ordering-bones",
+    topicId: "testmukodes",
+    type: "ordering",
+    prompt: "Tegye sorrendbe álló emberi testben (lentről felfelé haladva) az alábbi csontokat!",
+    items: [
+      { id: "sarokcsont", text: "Sarokcsont" },
+      { id: "sipcsont", text: "Sípcsont" },
+      { id: "combcsont", text: "Combcsont" },
+      { id: "medencecsont", text: "Medencecsont" },
+      { id: "szegycsont", text: "Szegycsont" },
+      { id: "homlokcsont", text: "Homlokcsont" },
+    ],
+    correctOrderIds: ["sarokcsont", "sipcsont", "combcsont", "medencecsont", "szegycsont", "homlokcsont"],
+    explanation: "A sorrend a láb sarkától a lábszáron, combon és medencén át a mellkasig, majd a koponyáig halad.",
+  },
+  {
+    id: "testmukodes-ordering-digestion",
+    topicId: "testmukodes",
+    type: "ordering",
+    prompt: "Tegye sorrendbe a táplálék útjának alábbi állomásait a szájüregtől kezdve!",
+    items: [
+      { id: "szajureg", text: "Szájüreg" },
+      { id: "garat", text: "Garat" },
+      { id: "nyelocso", text: "Nyelőcső" },
+      { id: "gyomor", text: "Gyomor" },
+      { id: "vekonybel", text: "Vékonybél" },
+    ],
+    correctOrderIds: ["szajureg", "garat", "nyelocso", "gyomor", "vekonybel"],
+  },
+  {
     id: "testmukodes-001",
     topicId: "testmukodes",
     type: "single_choice",
