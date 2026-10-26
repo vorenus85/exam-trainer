@@ -4963,4 +4963,533 @@ export const testmukodesQuestions: ExamQuestion[] = [
       },
     ],
   },
+  {
+    id: "testmukodes-027",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az izmokat az elhelyezkedésük szerint!",
+    groups: [
+      { id: "mellizmok", text: "Mellizmok" },
+      { id: "hatizmok", text: "Hátizmok" },
+    ],
+    items: [
+      {
+        id: "fureszizom",
+        text: "Fűrészizom",
+        correctGroupId: "mellizmok",
+      },
+      {
+        id: "csuklyasizom",
+        text: "Csuklyásizom/trapézizom",
+        correctGroupId: "hatizmok",
+      },
+      {
+        id: "bordakozi-izmok",
+        text: "Külső és belső bordaközti izmok",
+        correctGroupId: "mellizmok",
+      },
+      {
+        id: "rombuszizom",
+        text: "Rombuszizom",
+        correctGroupId: "hatizmok",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-187",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a hormonokat termelődésük helye szerint!",
+    groups: [
+      { id: "hasnyalmirigy", text: "Hasnyálmirigy" },
+      { id: "pajzsmirigy", text: "Pajzsmirigy" },
+      { id: "petefeszek", text: "Petefészek" },
+    ],
+    items: [
+      {
+        id: "progeszteron",
+        text: "progeszteron",
+        correctGroupId: "petefeszek",
+      },
+      {
+        id: "inzulin",
+        text: "inzulin",
+        correctGroupId: "hasnyalmirigy",
+      },
+      {
+        id: "glukagon",
+        text: "glükagon",
+        correctGroupId: "hasnyalmirigy",
+      },
+      {
+        id: "tiroxin",
+        text: "tiroxin",
+        correctGroupId: "pajzsmirigy",
+      },
+      {
+        id: "kalcitonin",
+        text: "kalcitonin",
+        correctGroupId: "pajzsmirigy",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-033",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az izmokat a működésük szerint!",
+    groups: [
+      { id: "hajlito", text: "Hajlító izmok" },
+      { id: "feszito", text: "Feszítő izmok" },
+    ],
+    items: [
+      {
+        id: "negyfeju-combizom",
+        text: "Négyfejű combizom",
+        correctGroupId: "feszito",
+      },
+      {
+        id: "ketfeju-karizom",
+        text: "Kétfejű karizom",
+        correctGroupId: "hajlito",
+      },
+      {
+        id: "haromfeju-karizom",
+        text: "Háromfejű karizom",
+        correctGroupId: "feszito",
+      },
+      {
+        id: "ketfeju-combizom",
+        text: "Kétfejű combizom",
+        correctGroupId: "hajlito",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-047",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a szív üregeihez jellemzőiket!",
+    groups: [
+      { id: "jobb-pitvar", text: "Jobb pitvar jellemzői" },
+      { id: "bal-kamra", text: "Bal kamra jellemzői" },
+    ],
+    items: [
+      {
+        id: "vastag-fal",
+        text: "Fala kb. 15–20 mm vastag",
+        correctGroupId: "bal-kamra",
+      },
+      {
+        id: "vekony-fal",
+        text: "Fala kb. 2 mm vastag",
+        correctGroupId: "jobb-pitvar",
+      },
+      {
+        id: "venas-ver",
+        text: "Vénás vér található benne",
+        correctGroupId: "jobb-pitvar",
+      },
+      {
+        id: "arterias-ver",
+        text: "Artériás vér található benne",
+        correctGroupId: "bal-kamra",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-052",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a vérkörökhöz a hozzájuk tartozó ereket!",
+    groups: [
+      { id: "kisverkor", text: "Kisvérkör erei" },
+      { id: "nagyverkor", text: "Nagyvérkör erei" },
+    ],
+    items: [
+      {
+        id: "arteria-pulmonalis",
+        text: "arteria pulmonalis",
+        correctGroupId: "kisverkor",
+      },
+      {
+        id: "aorta",
+        text: "aorta",
+        correctGroupId: "nagyverkor",
+      },
+      {
+        id: "vena-cava-superior",
+        text: "vena cava superior",
+        correctGroupId: "nagyverkor",
+      },
+      {
+        id: "vena-pulmonalisok",
+        text: "vena pulmonalisok",
+        correctGroupId: "kisverkor",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-062",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi megállapításokat!",
+    groups: [
+      { id: "igaz", text: "Igaz állítás" },
+      { id: "hamis", text: "Hamis állítás" },
+    ],
+    items: [
+      {
+        id: "verraktarak",
+        text: "Az összvérmennyiség egy része a vérraktárakban (lép, máj, tüdő stb.) tárolódik",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "vorosvertest-latin-neve",
+        text: "A vörösvértestek latin megnevezése leukocyta",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "voroscsontvelo",
+        text: "A vöröscsontvelőben képződnek a vörösvértestek, továbbá a fehérvérsejtek egy része is",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "vorosvertest-elettartama",
+        text: "Az érett vörösvértestek élettartama hosszú, kb. 1200 nap",
+        correctGroupId: "hamis",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-063",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi megállapításokat!",
+    groups: [
+      { id: "igaz", text: "Igaz állítás" },
+      { id: "hamis", text: "Hamis állítás" },
+    ],
+    items: [
+      {
+        id: "lymphocytak",
+        text: "A lymphocyták a nyirokszervekben képződnek.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "verlemezkek",
+        text: "A vérlemezkék latin neve monocyta.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "versejtsullyedes",
+        text: "A vérsejtsüllyedés normál értéke 100 mm/óra fölötti.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "hoszabalyozas",
+        text: "A vér részt vesz a szervezet hőszabályozásában.",
+        correctGroupId: "igaz",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-072",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az anatómiai képleteket!",
+    groups: [
+      { id: "felso-legutak", text: "Felső légutakhoz tartozik" },
+      { id: "also-legutak", text: "Alsó légutakhoz tartozik" },
+    ],
+    items: [
+      {
+        id: "garat",
+        text: "garat",
+        correctGroupId: "felso-legutak",
+      },
+      {
+        id: "legcso",
+        text: "légcső",
+        correctGroupId: "also-legutak",
+      },
+      {
+        id: "orr-orrureg",
+        text: "orr, orrüreg",
+        correctGroupId: "felso-legutak",
+      },
+      {
+        id: "orrmellekuregek",
+        text: "orrmelléküregek",
+        correctGroupId: "felso-legutak",
+      },
+      {
+        id: "tudo",
+        text: "tüdő",
+        correctGroupId: "also-legutak",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-094",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi megállapításokat!",
+    groups: [
+      { id: "igaz", text: "Igaz állítás" },
+      { id: "hamis", text: "Hamis állítás" },
+    ],
+    items: [
+      {
+        id: "levego-szajureg",
+        text: "A levegő a szájüregben megszűrődik, felmelegszik és párásodik.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "kannaporcok",
+        text: "A gyűrűporcon helyezkednek el a szabálytalan, háromoldalú, piramis alakú kannaporcok.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "nyelocso",
+        text: "A nyelőcső a gyűrűporchoz szalagosan kapcsolódó kb. 10-12 cm hosszú, C alakú porcokból felépülő, rugalmas falú cső.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "vizholyagok",
+        text: "A hörgőcskék végén találhatóak a vízhólyagok, melyek szőlőfürt szerűen rendeződnek el.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "mellhartya",
+        text: "A mellüregben a tüdők súrlódásmentes elmozdulását a tüdőket, valamint a mellüreg belső falát borító vékony, fénylő mellhártya teszi lehetővé.",
+        correctGroupId: "igaz",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-112",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi enzimeket előfordulási helyük szerint!",
+    groups: [
+      { id: "nyal", text: "Nyál" },
+      { id: "gyomornedv", text: "Gyomornedv" },
+    ],
+    items: [
+      {
+        id: "ptialin",
+        text: "ptialin",
+        correctGroupId: "nyal",
+      },
+      {
+        id: "kimozin",
+        text: "kimozin",
+        correctGroupId: "gyomornedv",
+      },
+      {
+        id: "maltaz",
+        text: "maltáz",
+        correctGroupId: "nyal",
+      },
+      {
+        id: "pepszin",
+        text: "pepszin",
+        correctGroupId: "gyomornedv",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-116",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a jellemzőket a megfelelő szervhez!",
+    groups: [
+      { id: "maj", text: "Máj" },
+      { id: "hasnyalmirigy", text: "Hasnyálmirigy" },
+    ],
+    items: [
+      {
+        id: "magzati-verkepzes",
+        text: "Magzati életben vérképző szerv",
+        correctGroupId: "maj",
+      },
+      {
+        id: "fo-reszek",
+        text: "Fő részei: fej, test, farok",
+        correctGroupId: "hasnyalmirigy",
+      },
+      {
+        id: "inzulintermeles",
+        text: "Belső elválasztású működése során inzulint termel",
+        correctGroupId: "hasnyalmirigy",
+      },
+      {
+        id: "meregtelenites",
+        text: "Egyik fontos feladata a méregtelenítés",
+        correctGroupId: "maj",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-144",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa női nemi szerveket elhelyezkedésük alapján!",
+    groups: [
+      { id: "belso", text: "Belső női nemi szervek" },
+      { id: "kulso", text: "Külső női nemi szervek" },
+    ],
+    items: [
+      {
+        id: "kisajkak",
+        text: "Kisajkak",
+        correctGroupId: "kulso",
+      },
+      {
+        id: "petevezetek",
+        text: "Petevezeték",
+        correctGroupId: "belso",
+      },
+      {
+        id: "huvely",
+        text: "Hüvely",
+        correctGroupId: "belso",
+      },
+      {
+        id: "csiklo",
+        text: "Csikló",
+        correctGroupId: "kulso",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-146",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a férfi nemi szerveket elhelyezkedésük alapján!",
+    groups: [
+      { id: "belso", text: "Belső nemi szervek" },
+      { id: "kulso", text: "Külső nemi szervek" },
+    ],
+    items: [
+      {
+        id: "himvesszo",
+        text: "Hímvessző",
+        correctGroupId: "kulso",
+      },
+      {
+        id: "here",
+        text: "Here",
+        correctGroupId: "belso",
+      },
+      {
+        id: "ondoholyag",
+        text: "Ondóhólyag",
+        correctGroupId: "belso",
+      },
+      {
+        id: "herezacsko",
+        text: "Herezacskó",
+        correctGroupId: "kulso",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-152",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a másodlagos nemi jellegeket!",
+    groups: [
+      { id: "ferfi", text: "Férfiakra jellemző másodlagos nemi jellegek" },
+      { id: "no", text: "Nőkre jellemző másodlagos nemi jellegek" },
+    ],
+    items: [
+      {
+        id: "melyebb-hang",
+        text: "Mélyebb hang",
+        correctGroupId: "ferfi",
+      },
+      {
+        id: "emlomirigy",
+        text: "Emlőmirigy nagyfokú kifejlődése",
+        correctGroupId: "no",
+      },
+      {
+        id: "lekerekitett-testforma",
+        text: "Fejlettebb bőr alatti zsírszövet következtében lekerekített testforma",
+        correctGroupId: "no",
+      },
+      {
+        id: "arcszorzet",
+        text: "Szőrzet az arcon",
+        correctGroupId: "ferfi",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-176",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a vegetatív idegrendszer funkcióit!",
+    groups: [
+      { id: "szimpatikus", text: "A szimpatikus idegrendszer funkciói" },
+      {
+        id: "paraszimpatikus",
+        text: "A paraszimpatikus idegrendszer funkciói",
+      },
+    ],
+    items: [
+      {
+        id: "fokozott-teljesitmeny",
+        text: "Biztosítja a szervezet fokozott teljesítményét.",
+        correctGroupId: "szimpatikus",
+      },
+      {
+        id: "anyagveszteseg-potlasa",
+        text: "Elősegíti a kimerült szövetek anyagveszteségének pótlását.",
+        correctGroupId: "paraszimpatikus",
+      },
+      {
+        id: "tamadas-vedekezes",
+        text: "Veszély esetén elindítja a támadási, vagy védekezési mechanizmusokat.",
+        correctGroupId: "szimpatikus",
+      },
+      {
+        id: "hohaztartas",
+        text: "Szerepe van a hőháztartásban.",
+        correctGroupId: "szimpatikus",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-177",
+    topicId: "testmukodes",
+    type: "grouping",
+    prompt: "Csoportosítsa a vegetatív idegrendszer funkcióit!",
+    groups: [
+      { id: "szimpatikus", text: "A szimpatikus idegrendszer funkciói" },
+      {
+        id: "paraszimpatikus",
+        text: "A paraszimpatikus idegrendszer funkciói",
+      },
+    ],
+    items: [
+      {
+        id: "helyreallito-folyamatok",
+        text: "Szerepe van a helyreállító folyamatokban, a szervezet nyugalmi fázisában.",
+        correctGroupId: "paraszimpatikus",
+      },
+      {
+        id: "keszenleti-funkcio",
+        text: "A készenléti funkciót biztosítja.",
+        correctGroupId: "szimpatikus",
+      },
+      {
+        id: "tapcsatorna-mukodese",
+        text: "Fokozza a tápcsatorna működését.",
+        correctGroupId: "paraszimpatikus",
+      },
+    ],
+  },
 ];
