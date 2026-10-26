@@ -3030,4 +3030,1937 @@ export const testmukodesQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a", "c"],
   },
+  {
+    id: "testmukodes-026",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az izomösszehúzódást kiváltó ingerekkel kapcsolatos mondatokat!",
+    statements: [
+      {
+        id: "gyenge-inger",
+        parts: [
+          "Azt a gyenge ingert, amely nem vált ki összehúzódást, ",
+          {
+            id: "inger",
+            label: "Az összehúzódást nem kiváltó inger neve",
+            options: [
+              { id: "kuszob-alatti", text: "küszöb alatti" },
+              { id: "kuszob", text: "küszöb" },
+              { id: "maximalis", text: "maximális" },
+            ],
+            correctOptionId: "kuszob-alatti",
+          },
+          " ingernek nevezzük.",
+        ],
+      },
+      {
+        id: "minimalis-inger",
+        parts: [
+          "A minimális ingererősség, amelyre az izom összehúzódással válaszol, a ",
+          {
+            id: "inger",
+            label: "Az összehúzódást már kiváltó minimális inger neve",
+            options: [
+              { id: "kuszob-alatti", text: "küszöb alatti" },
+              { id: "kuszob", text: "küszöb" },
+              { id: "maximalis", text: "maximális" },
+            ],
+            correctOptionId: "kuszob",
+          },
+          "inger.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-028",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az izmok elhelyezkedésével kapcsolatos mondatokat!",
+    statements: [
+      {
+        id: "mellureg-hasureg",
+        parts: [
+          "A ",
+          {
+            id: "izom",
+            label: "A mellüreget és a hasüreget határoló izom",
+            options: [
+              { id: "rekeszizom", text: "rekeszizom" },
+              { id: "harant-hasizom", text: "haránt hasizom" },
+              { id: "nagy-mellizom", text: "nagy mellizom" },
+            ],
+            correctOptionId: "rekeszizom",
+          },
+          " a mellüreget és a hasüreget határolja.",
+        ],
+      },
+      {
+        id: "legyezo-alaku-izom",
+        parts: [
+          "A ",
+          {
+            id: "izom",
+            label:
+              "A mellkastól a felső végtag felé húzódó, legyező alakú izom",
+            options: [
+              { id: "rekeszizom", text: "rekeszizom" },
+              { id: "harant-hasizom", text: "haránt hasizom" },
+              { id: "nagy-mellizom", text: "nagy mellizom" },
+            ],
+            correctOptionId: "nagy-mellizom",
+          },
+          " legyező alakú izom, a mellkastól a felső végtag felé húzódik.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-055",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a keringés szervrendszerére vonatkozó mondatot!",
+    statements: [
+      {
+        id: "ingerkepzo-kozpontok",
+        parts: [
+          "A szív ",
+          {
+            id: "elso-pitvar",
+            label: "Az elsődleges ingerképző központot tartalmazó pitvar",
+            options: [
+              { id: "jobb", text: "jobb" },
+              { id: "bal", text: "bal" },
+            ],
+            correctOptionId: "jobb",
+          },
+          " pitvarának falában található az elsődleges ingerképző központ, a ",
+          {
+            id: "elsodleges-kozpont",
+            label: "Az elsődleges ingerképző központ neve",
+            options: [
+              { id: "sinuscsomo", text: "sinuscsomó" },
+              { id: "pitvarkamrai-csomo", text: "pitvarkamrai csomó" },
+            ],
+            correctOptionId: "sinuscsomo",
+          },
+          ", a ",
+          {
+            id: "masodik-pitvar",
+            label: "A másodlagos ingerképző központot tartalmazó pitvar",
+            options: [
+              { id: "bal", text: "bal" },
+              { id: "jobb", text: "jobb" },
+            ],
+            correctOptionId: "jobb",
+          },
+          " pitvarnak a jobb kamrához közeli részében van a másodlagos ingerképző központja, a ",
+          {
+            id: "masodlagos-kozpont",
+            label: "A másodlagos ingerképző központ neve",
+            options: [
+              { id: "sinuscsomo", text: "sinuscsomó" },
+              { id: "pitvarkamrai-csomo", text: "pitvarkamrai csomó" },
+            ],
+            correctOptionId: "pitvarkamrai-csomo",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-056",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a keringés szervrendszerére vonatkozó mondatot!",
+    statements: [
+      {
+        id: "sziv-ingeruletvezetes",
+        parts: [
+          "A szív két ingerképző központjában keletkezett ingerületet a ",
+          {
+            id: "his-koteg",
+            label: "Az ingerületvezető rendszer első képlete",
+            options: [
+              { id: "his-koteg", text: "His-köteg" },
+              { id: "tawara-szarak", text: "Tawara-szárak" },
+              { id: "purkinje-rostok", text: "Purkinje-rostok" },
+            ],
+            correctOptionId: "his-koteg",
+          },
+          ", a ",
+          {
+            id: "tawara-szarak",
+            label: "Az ingerületvezető rendszer második képlete",
+            options: [
+              { id: "his-koteg", text: "His-köteg" },
+              { id: "tawara-szarak", text: "Tawara-szárak" },
+              { id: "purkinje-rostok", text: "Purkinje-rostok" },
+            ],
+            correctOptionId: "tawara-szarak",
+          },
+          " és a ",
+          {
+            id: "purkinje-rostok",
+            label: "Az ingerületvezető rendszer harmadik képlete",
+            options: [
+              { id: "his-koteg", text: "His-köteg" },
+              { id: "tawara-szarak", text: "Tawara-szárak" },
+              { id: "purkinje-rostok", text: "Purkinje-rostok" },
+            ],
+            correctOptionId: "purkinje-rostok",
+          },
+          " továbbítják a kamrák izomzatához.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-057",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a keringés szervrendszerére vonatkozó mondatot!",
+    statements: [
+      {
+        id: "erek-elagazodasa",
+        parts: [
+          "Az ",
+          {
+            id: "erek",
+            label: "A szívtől haladva egyre finomabb ágakra oszló erek",
+            options: [
+              { id: "arteriak", text: "artériák" },
+              { id: "venak", text: "vénák" },
+            ],
+            correctOptionId: "arteriak",
+          },
+          " a szívtől haladva egyre finomabb ágakra oszlanak.",
+        ],
+      },
+      {
+        id: "anyagcsere",
+        parts: [
+          "Vékony falukon át történik a tápanyagok és az oxigén ",
+          {
+            id: "tapanyag-oxigen",
+            label: "A tápanyagok és az oxigén átadásának iránya",
+            options: [
+              { id: "felvetele", text: "felvétele" },
+              { id: "leadasa", text: "leadása" },
+            ],
+            correctOptionId: "leadasa",
+          },
+          ", a bomlástermékek és a szén-dioxid ",
+          {
+            id: "bomlastermek-szendioxid",
+            label: "A bomlástermékek és a szén-dioxid átadásának iránya",
+            options: [
+              { id: "felvetele", text: "felvétele" },
+              { id: "leadasa", text: "leadása" },
+            ],
+            correctOptionId: "felvetele",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-058",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a keringés szervrendszerére vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "arteriak-tagulasa",
+        parts: [
+          "Az artériák ",
+          {
+            id: "sebesseg",
+            label: "Az artériák tágulásának és szűkülésének sebessége",
+            options: [
+              { id: "gyorsan", text: "gyorsan" },
+              { id: "lassan", text: "lassan" },
+            ],
+            correctOptionId: "gyorsan",
+          },
+          " tágulnak és szűkülnek.",
+        ],
+      },
+      {
+        id: "ver-szallitasa",
+        parts: [
+          {
+            id: "erek",
+            label: "A vért a szív felől a periféria felé szállító erek",
+            options: [
+              { id: "arteriak", text: "Az artériák" },
+              { id: "venak", text: "A vénák" },
+            ],
+            correctOptionId: "arteriak",
+          },
+          " a szív felől szállítják a vért a periféria felé.",
+        ],
+      },
+      {
+        id: "aorta",
+        parts: [
+          {
+            id: "erek",
+            label: "Az aortával a szívből induló erek",
+            options: [
+              { id: "veroerek", text: "A verőerek" },
+              { id: "gyujtoerek", text: "A gyűjtőerek" },
+            ],
+            correctOptionId: "veroerek",
+          },
+          " a szívből egy hatalmas törzzsel indulnak, ez az aorta.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-059",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Határozza meg a szívbillentyűk elhelyezkedését!",
+    statements: [
+      {
+        id: "zsebes-billentyuk",
+        parts: [
+          "A zsebes billentyűk ",
+          {
+            id: "elhelyezkedes",
+            label: "A zsebes billentyűk elhelyezkedése",
+            options: [
+              {
+                id: "bal-pitvar-kamra",
+                text: "a bal pitvar és a bal kamra között",
+              },
+              {
+                id: "nagyarteriak-fo-visszerek",
+                text: "a kamrákból kiinduló nagyartériák szájadékában és a fő visszerekben",
+              },
+              {
+                id: "jobb-pitvar-kamra",
+                text: "a jobb pitvar és a jobb kamra között",
+              },
+            ],
+            correctOptionId: "nagyarteriak-fo-visszerek",
+          },
+          " helyezkednek el.",
+        ],
+      },
+      {
+        id: "haromhegyu-vitorlas-billentyu",
+        parts: [
+          "A háromhegyű vitorlás billentyű ",
+          {
+            id: "elhelyezkedes",
+            label: "A háromhegyű vitorlás billentyű elhelyezkedése",
+            options: [
+              {
+                id: "bal-pitvar-kamra",
+                text: "a bal pitvar és a bal kamra között",
+              },
+              {
+                id: "nagyarteriak-fo-visszerek",
+                text: "a kamrákból kiinduló nagyartériák szájadékában és a fő visszerekben",
+              },
+              {
+                id: "jobb-pitvar-kamra",
+                text: "a jobb pitvar és a jobb kamra között",
+              },
+            ],
+            correctOptionId: "jobb-pitvar-kamra",
+          },
+          " helyezkedik el.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-061",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Válassza ki a helyes választ!",
+    statements: [
+      {
+        id: "sinuscsomo-helye",
+        parts: [
+          "Hol található a sinuscsomó? ",
+          {
+            id: "elhelyezkedes",
+            label: "A sinuscsomó elhelyezkedése",
+            options: [
+              { id: "jobb-pitvar", text: "a jobb pitvar falában" },
+              { id: "bal-pitvar", text: "a bal pitvar falában" },
+            ],
+            correctOptionId: "jobb-pitvar",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "jobb-kamra-ere",
+        parts: [
+          "Melyik ér indul ki a jobb kamrából? ",
+          {
+            id: "er",
+            label: "A jobb kamrából kiinduló ér",
+            options: [
+              { id: "arteria-pulmonalis", text: "artéria pulmonalis" },
+              { id: "aorta", text: "aorta" },
+            ],
+            correctOptionId: "arteria-pulmonalis",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-073",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Válassza ki a helyes választ!",
+    statements: [
+      {
+        id: "taplalek-levego-utja",
+        parts: [
+          "Melyik szervben közös a táplálék és a levegő útja? ",
+          {
+            id: "szerv",
+            label: "A táplálék és a levegő közös útjának szerve",
+            options: [
+              { id: "garat", text: "garat" },
+              { id: "gege", text: "gége" },
+            ],
+            correctOptionId: "garat",
+          },
+        ],
+      },
+      {
+        id: "jobb-tudofel-lebenyei",
+        parts: [
+          "Hány lebenyből áll a jobboldali tüdőfél? ",
+          {
+            id: "lebenyek-szama",
+            label: "A jobboldali tüdőfél lebenyeinek száma",
+            options: [
+              { id: "ketto", text: "kettő" },
+              { id: "harom", text: "három" },
+            ],
+            correctOptionId: "harom",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-074",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "garat",
+        parts: [
+          "Az orr és a szájüreg között elhelyezkedő függőleges, izmos falú cső ",
+          {
+            id: "szerv",
+            label: "A függőleges, izmos falú cső neve",
+            options: [
+              { id: "garat", text: "a garat" },
+              { id: "gege", text: "a gége" },
+            ],
+            correctOptionId: "garat",
+          },
+          ". Az orri szakaszban található ",
+          {
+            id: "mandula",
+            label: "A garat orri szakaszában található mandula",
+            options: [
+              { id: "orrmandula", text: "az orrmandula" },
+              { id: "garatmandula", text: "a garatmandula" },
+            ],
+            correctOptionId: "orrmandula",
+          },
+          ", és ide nyílik a fülkürt, mely a ",
+          {
+            id: "fulkurt-kapcsolat",
+            label: "A fülkürt által a dobüreggel összekötött szerv",
+            options: [
+              { id: "garat", text: "garat" },
+              { id: "gege", text: "gége" },
+            ],
+            correctOptionId: "garat",
+          },
+          " orri szakaszát köti össze a dobüreggel.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-075",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "garat-szaji-szakasza",
+        parts: [
+          {
+            id: "szakasz",
+            label: "A garat torkot befogadó szakasza",
+            options: [
+              { id: "szaji", text: "A száji" },
+              { id: "orri", text: "Az orri" },
+            ],
+            correctOptionId: "szaji",
+          },
+          " szakaszba nyílik a torok, itt a levegő és a táplálék útja közös, ebben a szakaszban található ",
+          {
+            id: "mandula",
+            label: "A garat száji szakaszában található mandula",
+            options: [
+              { id: "orrmandula", text: "az orrmandula" },
+              { id: "torokmandula", text: "a torokmandula" },
+            ],
+            correctOptionId: "torokmandula",
+          },
+          ", mely ",
+          {
+            id: "masik-mandula",
+            label:
+              "A torokmandulával együtt a védekező rendszerhez tartozó mandula",
+            options: [
+              { id: "orrmandulaval", text: "az orrmandulával" },
+              { id: "torokmandulaval", text: "a torokmandulával" },
+            ],
+            correctOptionId: "orrmandulaval",
+          },
+          " együtt a szervezet védekező rendszerének része.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-076",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "garat-szakasza",
+        parts: [
+          "A garat ",
+          {
+            id: "szakasz",
+            label: "A garat megfelelő szakasza",
+            options: [
+              { id: "gegei", text: "gégei" },
+              { id: "orri", text: "orri" },
+            ],
+            correctOptionId: "gegei",
+          },
+          " szakaszából indul a gége, amely nyelőcsőben folytatódik.",
+        ],
+      },
+      {
+        id: "tapinthato-szerv",
+        parts: [
+          {
+            id: "szerv",
+            label: "A nyak középső részén tapintható szerv",
+            options: [
+              { id: "gege", text: "A gége" },
+              { id: "garat", text: "A garat" },
+            ],
+            correctOptionId: "gege",
+          },
+          " a nyak középső részén, a nyelvcsont alatt, mint kemény, de rugalmas test tapintható.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-077",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "gege-felepitese",
+        parts: [
+          "A gége ",
+          {
+            id: "gege-resze",
+            label: "A gégefő elhelyezkedése",
+            options: [
+              { id: "felso", text: "felső" },
+              { id: "also", text: "alsó" },
+            ],
+            correctOptionId: "felso",
+          },
+          " része a gégefő, ami a hangadás szerve. A gégét a nyelvcsonthoz széles ",
+          {
+            id: "rogzito-keplet",
+            label: "A gégét a nyelvcsonthoz rögzítő képlet",
+            options: [
+              { id: "szalag", text: "szalag" },
+              { id: "izom", text: "izom" },
+            ],
+            correctOptionId: "szalag",
+          },
+          " rögzíti. A gége üreges, éles határ nélkül folytatódik a ",
+          {
+            id: "folytatas",
+            label: "A gége folytatása",
+            options: [
+              { id: "legcsobe", text: "légcsőbe" },
+              { id: "nyelocsobe", text: "nyelőcsőbe" },
+            ],
+            correctOptionId: "legcsobe",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-078",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "fohorgok",
+        parts: [
+          "A ",
+          {
+            id: "tagabb-fohorgo",
+            label: "A tágabb és meredekebb lefutású főhörgő oldala",
+            options: [
+              { id: "jobb", text: "jobb" },
+              { id: "bal", text: "bal" },
+            ],
+            correctOptionId: "jobb",
+          },
+          " oldali főhörgő tágabb és meredekebb lefutású, mint a ",
+          {
+            id: "masik-fohorgo",
+            label: "A szűkebb és kevésbé meredek lefutású főhörgő oldala",
+            options: [
+              { id: "jobb", text: "jobb" },
+              { id: "bal", text: "bal" },
+            ],
+            correctOptionId: "bal",
+          },
+          ", ezért a gyermekeknél a légutakba került idegen testek legnagyobb része a ",
+          {
+            id: "idegen-test",
+            label: "Az idegen testeket leggyakrabban befogadó főhörgő oldala",
+            options: [
+              { id: "bal", text: "bal" },
+              { id: "jobb", text: "jobb" },
+            ],
+            correctOptionId: "jobb",
+          },
+          " főhörgőbe kerül.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-079",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "leguti-ham",
+        parts: [
+          "A légcső és a hörgők nyálkahártyahámját csillószőrös ",
+          {
+            id: "hamtipus",
+            label: "A légcső és a hörgők hámjának típusa",
+            options: [
+              { id: "lapham", text: "laphám" },
+              { id: "hengerham", text: "hengerhám" },
+            ],
+            correctOptionId: "hengerham",
+          },
+          " alkotja.",
+        ],
+      },
+      {
+        id: "leguti-mirigyek",
+        parts: [
+          "Itt számos ",
+          {
+            id: "mirigytipus",
+            label: "A légutakban található mirigyek típusa",
+            options: [
+              { id: "nyaktermelo", text: "nyáktermelő" },
+              { id: "hormontermelo", text: "hormontermelő" },
+            ],
+            correctOptionId: "nyaktermelo",
+          },
+          " mirigyet találunk.",
+        ],
+      },
+      {
+        id: "fohorgo-agak-es-tudolebenyek",
+        parts: [
+          "A főhörgő a jobb tüdőfélbe ",
+          {
+            id: "jobb-agak",
+            label: "A jobb tüdőfélbe tartó főhörgőágak száma",
+            options: [
+              { id: "3", text: "3" },
+              { id: "2", text: "2" },
+            ],
+            correctOptionId: "3",
+          },
+          ", a bal tüdőfélbe ",
+          {
+            id: "bal-agak",
+            label: "A bal tüdőfélbe tartó főhörgőágak száma",
+            options: [
+              { id: "3", text: "3" },
+              { id: "2", text: "2" },
+            ],
+            correctOptionId: "2",
+          },
+          " ágat ad, ennek megfelelően a jobb oldalon ",
+          {
+            id: "jobb-lebenyek",
+            label: "A jobb oldali tüdőlebenyek száma",
+            options: [
+              { id: "3", text: "3" },
+              { id: "2", text: "2" },
+            ],
+            correctOptionId: "3",
+          },
+          ", a bal oldalon ",
+          {
+            id: "bal-lebenyek",
+            label: "A bal oldali tüdőlebenyek száma",
+            options: [
+              { id: "3", text: "3" },
+              { id: "2", text: "2" },
+            ],
+            correctOptionId: "2",
+          },
+          " tüdőlebeny helyezkedik el.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-080",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "tudofelek-jellemzoi",
+        parts: [
+          "A két tüdőfél nagy kiterjedésű, ",
+          {
+            id: "tapintas",
+            label: "A tüdő tapintása",
+            options: [
+              { id: "szivacsos", text: "szivacsos" },
+              { id: "merev", text: "merev" },
+            ],
+            correctOptionId: "szivacsos",
+          },
+          " tapintású, ",
+          {
+            id: "rugalmassag",
+            label: "A tüdő rugalmassága",
+            options: [
+              { id: "rugalmas", text: "rugalmas" },
+              { id: "rugalmatlan", text: "rugalmatlan" },
+            ],
+            correctOptionId: "rugalmas",
+          },
+          " szerv, a mellüregben, egymástól a ",
+          {
+            id: "elvalaszto-szerv",
+            label: "A két tüdőfelet a nagyerekkel együtt elválasztó szerv",
+            options: [
+              { id: "maj", text: "máj" },
+              { id: "sziv", text: "szív" },
+            ],
+            correctOptionId: "sziv",
+          },
+          " és a nagyerek által elválasztva helyezkednek el.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-081",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "tudo-szine",
+        parts: [
+          "A tüdő gyermekkorban ",
+          {
+            id: "szin",
+            label: "A tüdő színe gyermekkorban",
+            options: [
+              { id: "kekes", text: "kékes" },
+              { id: "rozsaszinu", text: "rózsaszínű" },
+            ],
+            correctOptionId: "rozsaszinu",
+          },
+          ", később a lerakódott por- és koromszemcsék folytán palaszürkévé válik, nagyvárosban, illetve dohányzás hatására feketévé.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-082",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a légzőrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "tudofelek-nagysaga",
+        parts: [
+          "A két tüdőfél ",
+          {
+            id: "nagysag",
+            label: "A két tüdőfél nagyságának összehasonlítása",
+            options: [
+              { id: "nem-egyforma", text: "nem egyforma" },
+              { id: "egyforma", text: "egyforma" },
+            ],
+            correctOptionId: "nem-egyforma",
+          },
+          " nagyságú, mert a mellüreg bal oldalának egy részét a ",
+          {
+            id: "szerv",
+            label: "A mellüreg bal oldalának egy részét elfoglaló szerv",
+            options: [
+              { id: "maj", text: "máj" },
+              { id: "sziv", text: "szív" },
+            ],
+            correctOptionId: "sziv",
+          },
+          " foglalja el.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-127",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a vese szerkezetére vonatkozó mondatot!",
+    statements: [
+      {
+        id: "vese-allomanyai",
+        parts: [
+          "A vese külső, szemcsés részét ",
+          {
+            id: "kulso-resz",
+            label: "A vese külső, szemcsés részének neve",
+            options: [
+              { id: "keregallomany", text: "kéregállománynak" },
+              { id: "veloallomany", text: "velőállománynak" },
+              { id: "vesemedence", text: "vesemedencének" },
+            ],
+            correctOptionId: "keregallomany",
+          },
+          ", belső szélesebb csíkolt részét ",
+          {
+            id: "belso-resz",
+            label: "A vese belső, szélesebb, csíkolt részének neve",
+            options: [
+              { id: "keregallomany", text: "kéregállománynak" },
+              { id: "veloallomany", text: "velőállománynak" },
+              { id: "vesemedence", text: "vesemedencének" },
+            ],
+            correctOptionId: "veloallomany",
+          },
+          " nevezzük.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-133",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a vizeletre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "normal-vizelet",
+        parts: [
+          "A normál vizelet ",
+          {
+            id: "szin",
+            label: "A normál vizelet színe",
+            options: [
+              { id: "szintelen", text: "színtelen" },
+              { id: "szalmasarga", text: "szalmasárga" },
+              { id: "voros", text: "vörös" },
+            ],
+            correctOptionId: "szalmasarga",
+          },
+          " színű, ",
+          {
+            id: "szag",
+            label: "A normál vizelet szaga",
+            options: [
+              { id: "szagtalan", text: "szagtalan" },
+              { id: "szuros-ammonia", text: "szúrós (ammónia)" },
+              { id: "edeskes", text: "édeskés" },
+            ],
+            correctOptionId: "szuros-ammonia",
+          },
+          " szagú, ",
+          {
+            id: "atlatszosag",
+            label: "A normál vizelet átlátszósága",
+            options: [
+              { id: "atlatszo", text: "átlátszó" },
+              { id: "zavaros", text: "zavaros" },
+            ],
+            correctOptionId: "atlatszo",
+          },
+          " folyadék.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-134",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Hasonlítsa össze az elsődleges és a másodlagos vizelet jellemzőit!",
+    statements: [
+      {
+        id: "elsodleges-vizelet",
+        parts: [
+          "Az elsődleges vizelet képzésének helye: ",
+          {
+            id: "kepzes",
+            label: "Az elsődleges vizelet képzésének helye",
+            options: [
+              {
+                id: "malpighi-testek",
+                text: "Malpighi-testek hajszálérgomolyagjai",
+              },
+              { id: "vesecsatornak", text: "vesecsatornák" },
+            ],
+            correctOptionId: "malpighi-testek",
+          },
+          ". Mennyisége: ",
+          {
+            id: "mennyiseg",
+            label: "Az elsődleges vizelet napi mennyisége",
+            options: [
+              { id: "180-liter", text: "180 liter/nap" },
+              { id: "1-1-5-liter", text: "1–1,5 l/nap" },
+            ],
+            correctOptionId: "180-liter",
+          },
+          ". Koncentrációja: ",
+          {
+            id: "koncentracio",
+            label: "Az elsődleges vizelet koncentrációja",
+            options: [
+              { id: "higabb", text: "hígabb" },
+              { id: "tomenyebb", text: "töményebb" },
+            ],
+            correctOptionId: "higabb",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "masodlagos-vizelet",
+        parts: [
+          "A másodlagos vizelet képzésének helye: ",
+          {
+            id: "kepzes",
+            label: "A másodlagos vizelet képzésének helye",
+            options: [
+              {
+                id: "malpighi-testek",
+                text: "Malpighi-testek hajszálérgomolyagjai",
+              },
+              { id: "vesecsatornak", text: "vesecsatornák" },
+            ],
+            correctOptionId: "vesecsatornak",
+          },
+          ". Mennyisége: ",
+          {
+            id: "mennyiseg",
+            label: "A másodlagos vizelet napi mennyisége",
+            options: [
+              { id: "180-liter", text: "180 liter/nap" },
+              { id: "1-1-5-liter", text: "1–1,5 l/nap" },
+            ],
+            correctOptionId: "1-1-5-liter",
+          },
+          ". Koncentrációja: ",
+          {
+            id: "koncentracio",
+            label: "A másodlagos vizelet koncentrációja",
+            options: [
+              { id: "higabb", text: "hígabb" },
+              { id: "tomenyebb", text: "töményebb" },
+            ],
+            correctOptionId: "tomenyebb",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-140",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a férfi nemi szervekkel kapcsolatos mondatokat!",
+    statements: [
+      {
+        id: "herezacsko",
+        parts: [
+          "A ",
+          {
+            id: "szerv",
+            label: "Az erősen pigmentált bőrű szerv neve",
+            options: [
+              { id: "herezacsko", text: "herezacskó" },
+              { id: "himvesszo", text: "hímvessző" },
+              { id: "here", text: "here" },
+            ],
+            correctOptionId: "herezacsko",
+          },
+          " bőre erősen pigmentált, rétegződése a hasfalénak felel meg.",
+        ],
+      },
+      {
+        id: "himvesszo",
+        parts: [
+          "A ",
+          {
+            id: "szerv",
+            label: "A megnyúlt henger alakú szerv neve",
+            options: [
+              { id: "herezacsko", text: "herezacskó" },
+              { id: "himvesszo", text: "hímvessző" },
+              { id: "here", text: "here" },
+            ],
+            correctOptionId: "himvesszo",
+          },
+          " megnyúlt henger alakú szerv, a végén a húgycső külső nyílása található.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-145",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a férfi nemi szervekkel kapcsolatos mondatokat!",
+    statements: [
+      {
+        id: "here",
+        parts: [
+          "A ",
+          {
+            id: "szerv",
+            label: "A galambtojás nagyságú és alakú páros szerv neve",
+            options: [
+              { id: "herezacsko", text: "herezacskó" },
+              { id: "himvesszo", text: "hímvessző" },
+              { id: "here", text: "here" },
+            ],
+            correctOptionId: "here",
+          },
+          " kb. galambtojás nagyságú és alakú páros szerv, amely a hasüregen kívül a ",
+          {
+            id: "elhelyezkedes",
+            label: "A here elhelyezkedése",
+            options: [
+              { id: "herezacskoban", text: "herezacskóban" },
+              { id: "himvesszon", text: "hímvesszőn" },
+              { id: "heren", text: "herén" },
+            ],
+            correctOptionId: "herezacskoban",
+          },
+          " helyezkedik el.",
+        ],
+      },
+      {
+        id: "herezacsko",
+        parts: [
+          "A ",
+          {
+            id: "szerv",
+            label: "Az optimális hőmérsékletet biztosító szerv neve",
+            options: [
+              { id: "herezacsko", text: "herezacskó" },
+              { id: "himvesszo", text: "hímvessző" },
+              { id: "here", text: "here" },
+            ],
+            correctOptionId: "herezacsko",
+          },
+          " feladata a ",
+          {
+            id: "celzott-szerv",
+            label: "Mely szervek működéséhez biztosít optimális hőmérsékletet?",
+            options: [
+              { id: "herezacsko", text: "herezacskó" },
+              { id: "himvesszo", text: "hímvessző" },
+              { id: "herek", text: "herék" },
+            ],
+            correctOptionId: "herek",
+          },
+          " működéséhez szükséges optimális hőmérséklet biztosítása.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-164",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Hasonlítsa össze a vegetatív idegrendszer különböző szervekre irányuló hatását! Válassza ki a megfelelőket!",
+    statements: [
+      {
+        id: "gyomor-hasnyalmirigy",
+        parts: [
+          "Gyomor, hasnyálmirigy – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A gyomor és a hasnyálmirigy szimpatikus hatása",
+            options: [
+              { id: "fokozodik", text: "elválasztó működése fokozódik" },
+              { id: "csokken", text: "elválasztó működése csökken" },
+            ],
+            correctOptionId: "csokken",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A gyomor és a hasnyálmirigy paraszimpatikus hatása",
+            options: [
+              { id: "fokozodik", text: "elválasztó működése fokozódik" },
+              { id: "csokken", text: "elválasztó működése csökken" },
+            ],
+            correctOptionId: "fokozodik",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "belizomzat",
+        parts: [
+          "Bélizomzat – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A bélizomzat szimpatikus hatása",
+            options: [
+              { id: "fokozott", text: "fokozott perisztaltika" },
+              { id: "csokkent", text: "csökkent perisztaltika" },
+            ],
+            correctOptionId: "csokkent",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A bélizomzat paraszimpatikus hatása",
+            options: [
+              { id: "fokozott", text: "fokozott perisztaltika" },
+              { id: "csokkent", text: "csökkent perisztaltika" },
+            ],
+            correctOptionId: "fokozott",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-165",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Hasonlítsa össze a vegetatív idegrendszer különböző szervekre irányuló hatását! Válassza ki a megfelelőket!",
+    statements: [
+      {
+        id: "szem-pupilla",
+        parts: [
+          "Szem (pupilla) – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A pupilla változása szimpatikus hatásra",
+            options: [
+              { id: "tagul", text: "tágul" },
+              { id: "szukul", text: "szűkül" },
+            ],
+            correctOptionId: "tagul",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A pupilla változása paraszimpatikus hatásra",
+            options: [
+              { id: "tagul", text: "tágul" },
+              { id: "szukul", text: "szűkül" },
+            ],
+            correctOptionId: "szukul",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "tudo-horgok",
+        parts: [
+          "Tüdő hörgők – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A hörgők változása szimpatikus hatásra",
+            options: [
+              { id: "szukulnek", text: "szűkülnek" },
+              { id: "tagulnak", text: "tágulnak" },
+            ],
+            correctOptionId: "tagulnak",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A hörgők változása paraszimpatikus hatásra",
+            options: [
+              { id: "szukulnek", text: "szűkülnek" },
+              { id: "tagulnak", text: "tágulnak" },
+            ],
+            correctOptionId: "szukulnek",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-166",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Hasonlítsa össze a vegetatív idegrendszer hatását a megadottak szerint! Válassza ki a helyes választ!",
+    statements: [
+      {
+        id: "legzesszam",
+        parts: [
+          "Légzésszám – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A légzésszám változása szimpatikus hatásra",
+            options: [
+              { id: "no", text: "nő" },
+              { id: "csokken", text: "csökken" },
+            ],
+            correctOptionId: "no",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A légzésszám változása paraszimpatikus hatásra",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "no", text: "nő" },
+            ],
+            correctOptionId: "csokken",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "vazizomzat",
+        parts: [
+          "Vázizomzat – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A vázizomzat változása szimpatikus hatásra",
+            options: [
+              { id: "tonusfokozodas", text: "tónusfokozódás" },
+              { id: "tonuscsokkenes", text: "tónuscsökkenés" },
+            ],
+            correctOptionId: "tonusfokozodas",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A vázizomzat változása paraszimpatikus hatásra",
+            options: [
+              { id: "ellazul", text: "ellazul" },
+              { id: "tonusfokozodas", text: "tónusfokozódás" },
+            ],
+            correctOptionId: "ellazul",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "vercukorszint",
+        parts: [
+          "Vércukorszint – szimpatikus hatás: ",
+          {
+            id: "szimpatikus",
+            label: "A vércukorszint változása szimpatikus hatásra",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "emelkedik", text: "emelkedik" },
+            ],
+            correctOptionId: "emelkedik",
+          },
+          "; paraszimpatikus hatás: ",
+          {
+            id: "paraszimpatikus",
+            label: "A vércukorszint változása paraszimpatikus hatásra",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "no", text: "nő" },
+            ],
+            correctOptionId: "csokken",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-167",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a gerincvelői idegek számával az alábbi táblázatot!",
+    statements: [
+      {
+        id: "nyaki-ideg",
+        parts: [
+          "Nyaki ideg: ",
+          {
+            id: "idegek-szama",
+            label: "A nyaki gerincvelői idegek száma párban",
+            options: [
+              { id: "5", text: "5" },
+              { id: "8", text: "8" },
+              { id: "12", text: "12" },
+            ],
+            correctOptionId: "8",
+          },
+          " pár.",
+        ],
+      },
+      {
+        id: "hati-ideg",
+        parts: [
+          "Háti ideg: ",
+          {
+            id: "idegek-szama",
+            label: "A háti gerincvelői idegek száma párban",
+            options: [
+              { id: "5", text: "5" },
+              { id: "8", text: "8" },
+              { id: "12", text: "12" },
+            ],
+            correctOptionId: "12",
+          },
+          " pár.",
+        ],
+      },
+      {
+        id: "agyeki-ideg",
+        parts: [
+          "Ágyéki ideg: ",
+          {
+            id: "idegek-szama",
+            label: "Az ágyéki gerincvelői idegek száma párban",
+            options: [
+              { id: "5", text: "5" },
+              { id: "8", text: "8" },
+              { id: "12", text: "12" },
+            ],
+            correctOptionId: "5",
+          },
+          " pár.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-168",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az idegrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "idegi-szabalyozas",
+        parts: [
+          "Az idegi szabályozás kiterjed ",
+          {
+            id: "kiterjedes",
+            label: "Mely szerveinkre terjed ki az idegi szabályozás?",
+            options: [
+              { id: "az-osszes", text: "az összes" },
+              { id: "egyes", text: "egyes" },
+            ],
+            correctOptionId: "az-osszes",
+          },
+          " szervünkre. Az idegi szabályozás kiesése vagy működésének megbomlása ",
+          {
+            id: "erintett-szerv",
+            label:
+              "Mely szervek súlyos zavarával jár az idegi szabályozás kiesése?",
+            options: [
+              { id: "minden-szerv", text: "minden szerv" },
+              { id: "a-megfelelo-szerv", text: "a megfelelő szerv" },
+            ],
+            correctOptionId: "a-megfelelo-szerv",
+          },
+          " súlyos zavarával jár.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-169",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az idegrendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "kornyeki-idegrendszer",
+        parts: [
+          "A környéki idegrendszer ",
+          {
+            id: "feladat-jellege",
+            label: "A környéki idegrendszer feladatának jellege",
+            options: [
+              { id: "egyetlen", text: "egyetlen" },
+              { id: "legfontosabb", text: "legfontosabb" },
+            ],
+            correctOptionId: "legfontosabb",
+          },
+          " feladata a külvilág és a szervezet ingereinek ingerületté alakítása és ennek a ",
+          {
+            id: "idegrendszer",
+            label: "Melyik idegrendszerhez jut az ingerület?",
+            options: [
+              { id: "kozponti", text: "központi" },
+              { id: "kornyeki", text: "környéki" },
+            ],
+            correctOptionId: "kozponti",
+          },
+          " idegrendszerhez juttatása.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-170",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az idegrendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "agykamrak",
+        parts: [
+          {
+            id: "agykamrak-szama",
+            label: "Az agykamrák száma",
+            options: [
+              { id: "harom", text: "Három" },
+              { id: "negy", text: "Négy" },
+            ],
+            correctOptionId: "negy",
+          },
+          " agykamrát különböztetünk meg. Az oldalkamrák a ",
+          {
+            id: "kiterjedes",
+            label: "Az oldalkamrák kiterjedése",
+            options: [
+              { id: "legnagyobb", text: "legnagyobb" },
+              { id: "legkisebb", text: "legkisebb" },
+            ],
+            correctOptionId: "legnagyobb",
+          },
+          " kiterjedésűek, a ",
+          {
+            id: "korulvevo-allomany",
+            label: "Az oldalkamrákat körülvevő állomány",
+            options: [
+              { id: "feherallomanytol", text: "fehérállománytól" },
+              { id: "szurkeallomanytol", text: "szürkeállománytól" },
+            ],
+            correctOptionId: "feherallomanytol",
+          },
+          " teljesen körülvéve a féltekékben helyezkednek el.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-184",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Határozza meg az alábbi belső elválasztású mirigyek elhelyezkedését a szervezetben!",
+    statements: [
+      {
+        id: "tobozmirigy",
+        parts: [
+          "Tobozmirigy: ",
+          {
+            id: "elhelyezkedes",
+            label: "A tobozmirigy elhelyezkedése",
+            options: [
+              { id: "koponya", text: "a koponya belsejében" },
+              {
+                id: "toroknyereg",
+                text: "a középső koponyagödörben, a töröknyeregben",
+              },
+              { id: "szegycsont", text: "a szegycsont mögött" },
+            ],
+            correctOptionId: "koponya",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "hipofizis",
+        parts: [
+          "Hipofízis: ",
+          {
+            id: "elhelyezkedes",
+            label: "A hipofízis elhelyezkedése",
+            options: [
+              { id: "koponya", text: "a koponya belsejében" },
+              {
+                id: "toroknyereg",
+                text: "a középső koponyagödörben, a töröknyeregben",
+              },
+              { id: "szegycsont", text: "a szegycsont mögött" },
+            ],
+            correctOptionId: "toroknyereg",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-185",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Határozza meg az alábbi belső elválasztású mirigyek elhelyezkedését a szervezetben!",
+    statements: [
+      {
+        id: "pajzsmirigy",
+        parts: [
+          "Pajzsmirigy: ",
+          {
+            id: "elhelyezkedes",
+            label: "A pajzsmirigy elhelyezkedése",
+            options: [
+              { id: "nyak", text: "a nyak elülső részén, a pajzsporc alatt" },
+              { id: "gator", text: "a gátorüregben, a szegycsont mögött" },
+              {
+                id: "toroknyereg",
+                text: "a középső koponyagödörben, a töröknyeregben",
+              },
+            ],
+            correctOptionId: "nyak",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "mellekpajzsmirigy",
+        parts: [
+          "Mellékpajzsmirigy: ",
+          {
+            id: "elhelyezkedes",
+            label: "A mellékpajzsmirigy elhelyezkedése",
+            options: [
+              { id: "gator", text: "a gátorüregben, a szegycsont mögött" },
+              {
+                id: "hatso-felszin",
+                text: "a pajzsmirigy lebenyeinek hátsó felszíne",
+              },
+              {
+                id: "elulso-felszin",
+                text: "a pajzsmirigy lebenyeinek elülső felszíne",
+              },
+            ],
+            correctOptionId: "hatso-felszin",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-186",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt:
+      "Határozza meg az alábbi belső elválasztású mirigyek elhelyezkedését a szervezetben!",
+    statements: [
+      {
+        id: "csecsemomirigy",
+        parts: [
+          "Csecsemőmirigy: ",
+          {
+            id: "elhelyezkedes",
+            label: "A csecsemőmirigy elhelyezkedése",
+            options: [
+              { id: "nyak", text: "a nyak elülső részén, a pajzsporc alatt" },
+              {
+                id: "toroknyereg",
+                text: "a középső koponyagödörben, a töröknyeregben",
+              },
+              { id: "gator", text: "a gátorüregben, a szegycsont mögött" },
+            ],
+            correctOptionId: "gator",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "hasnyalmirigy",
+        parts: [
+          "Hasnyálmirigy: ",
+          {
+            id: "elhelyezkedes",
+            label: "A hasnyálmirigy elhelyezkedése",
+            options: [
+              {
+                id: "gyomor-gerincoszlop",
+                text: "a hasüregben, a gyomor és a gerincoszlop között",
+              },
+              { id: "gyomor-elott", text: "a hasüregben, a gyomor előtt" },
+              {
+                id: "rekesz-alatt",
+                text: "közvetlenül a rekesz alatt, a jobb oldalon",
+              },
+            ],
+            correctOptionId: "gyomor-gerincoszlop",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-199",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az endokrin rendszerre vonatkozó mondatot!",
+    statements: [
+      {
+        id: "endokrin-rendszer",
+        parts: [
+          "Az endokrin rendszer az ",
+          {
+            id: "kapcsolat",
+            label: "Az endokrin rendszerrel szoros kapcsolatban álló rendszer",
+            options: [
+              { id: "idegrendszer", text: "idegrendszerrel" },
+              { id: "erzekszervek", text: "érzékszervekkel" },
+            ],
+            correctOptionId: "idegrendszer",
+          },
+          " szoros kapcsolatban álló ",
+          {
+            id: "elvalasztas",
+            label: "Az endokrin mirigyek elválasztásának típusa",
+            options: [
+              { id: "kulso", text: "külső" },
+              { id: "belso", text: "belső" },
+            ],
+            correctOptionId: "belso",
+          },
+          " elválasztású mirigyek rendszere.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-200",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki az endokrin rendszerre vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "mirigyek-meghatarozasa",
+        parts: [
+          {
+            id: "elnevezes",
+            label: "Testünk váladéktermelő szerveinek elnevezése",
+            options: [
+              { id: "mirigyek", text: "Mirigyeknek" },
+              { id: "hormonok", text: "Hormonoknak" },
+            ],
+            correctOptionId: "mirigyek",
+          },
+          " testünk váladéktermelő szerveit nevezzük.",
+        ],
+      },
+      {
+        id: "mirigyek-csoportositasa",
+        parts: [
+          "A mirigyeket ",
+          {
+            id: "csoportok-szama",
+            label: "A mirigyek nagy csoportjainak száma",
+            options: [
+              { id: "ket", text: "két" },
+              { id: "harom", text: "három" },
+            ],
+            correctOptionId: "ket",
+          },
+          " nagy csoportra oszthatjuk.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-216",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Határozza meg a nyelv területeit az ízérzékelésnek megfelelően!",
+    statements: [
+      {
+        id: "savanyu-iz",
+        parts: [
+          "A savanyú íz érzékelésének helye: ",
+          {
+            id: "erzekeles-helye",
+            label: "A savanyú íz érzékelésének helye",
+            options: [
+              { id: "oldalso-szelek", text: "a nyelv oldalsó szélei" },
+              { id: "nyelv-hegye", text: "a nyelv hegye" },
+              { id: "nyelvgyok", text: "a nyelvgyök" },
+            ],
+            correctOptionId: "oldalso-szelek",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "edes-iz",
+        parts: [
+          "Az édes íz érzékelésének helye: ",
+          {
+            id: "erzekeles-helye",
+            label: "Az édes íz érzékelésének helye",
+            options: [
+              { id: "oldalso-szelek", text: "a nyelv oldalsó szélei" },
+              { id: "nyelv-hegye", text: "a nyelv hegye" },
+              { id: "nyelvgyok", text: "a nyelvgyök" },
+            ],
+            correctOptionId: "nyelv-hegye",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-217",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Határozza meg a nyelv területeit az ízérzékelésnek megfelelően!",
+    statements: [
+      {
+        id: "sos-iz",
+        parts: [
+          "A sós íz érzékelésének helye: ",
+          {
+            id: "erzekeles-helye",
+            label: "A sós íz érzékelésének helye",
+            options: [
+              { id: "oldalso-szelek", text: "a nyelv oldalsó szélei" },
+              { id: "nyelv-hegye", text: "a nyelv hegye" },
+              { id: "nyelvgyok", text: "a nyelvgyök" },
+            ],
+            correctOptionId: "oldalso-szelek",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "keseru-iz",
+        parts: [
+          "A keserű íz érzékelésének helye: ",
+          {
+            id: "erzekeles-helye",
+            label: "A keserű íz érzékelésének helye",
+            options: [
+              { id: "oldalso-szelek", text: "a nyelv oldalsó szélei" },
+              { id: "nyelv-hegye", text: "a nyelv hegye" },
+              { id: "nyelvgyok", text: "a nyelvgyök" },
+            ],
+            correctOptionId: "nyelvgyok",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-222",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a szaglással kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "ember-szaglasa",
+        parts: [
+          "Az ember ",
+          {
+            id: "szaglas-erossege",
+            label: "Az ember szaglásának erőssége",
+            options: [
+              { id: "gyenge", text: "a gyenge" },
+              { id: "eros", text: "az erős" },
+            ],
+            correctOptionId: "gyenge",
+          },
+          " szaglású élőlények közé tartozik, szaglórendszere ",
+          {
+            id: "faradekonysag",
+            label: "Az ember szaglórendszerének fáradékonysága",
+            options: [
+              { id: "nem-faradekony", text: "nem fáradékony" },
+              { id: "faradekony", text: "fáradékony" },
+            ],
+            correctOptionId: "faradekony",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-223",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a szaglással kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "szaglas",
+        parts: [
+          "Az orron át belélegzett levegőben lévő ",
+          {
+            id: "ingerlo-anyagok",
+            label: "A szaglóreceptorokat ingerlő anyagok",
+            options: [
+              { id: "illoanyagok", text: "illóanyagok" },
+              { id: "szaganyagok", text: "szaganyagok" },
+            ],
+            correctOptionId: "illoanyagok",
+          },
+          " ingerlik a receptorokat, és az innen elinduló ",
+          {
+            id: "agyideg",
+            label: "A szaglóközpontba ingerületet továbbító agyideg",
+            options: [
+              { id: "i-agyideg", text: "I. agyideg" },
+              { id: "iii-agyideg", text: "III. agyideg" },
+            ],
+            correctOptionId: "i-agyideg",
+          },
+          " juttatja el az ingerületet a szaglóközponthoz.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-224",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a szaglással kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "szagloszerv-receptorai",
+        parts: [
+          "A szaglószerv receptorai az orrüreg ",
+          {
+            id: "orrureg-fala",
+            label: "Az orrüreg melyik falán találhatók a szaglóreceptorok?",
+            options: [
+              { id: "also", text: "alsó" },
+              { id: "felso", text: "felső" },
+            ],
+            correctOptionId: "felso",
+          },
+          " falát borító nyálkahártyákon található ",
+          {
+            id: "receptorsejtek",
+            label: "A szaglószerv receptorsejtjeinek neve",
+            options: [
+              { id: "szaglohamsejtek", text: "szaglóhámsejtek" },
+              { id: "szaglo-felham-sejtek", text: "szagló felhám sejtek" },
+            ],
+            correctOptionId: "szaglohamsejtek",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "testmukodes-225",
+    topicId: "testmukodes",
+    type: "fill_in",
+    prompt: "Egészítse ki a szaglással kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "szaglas-reflexek",
+        parts: [
+          "A szaglásra számtalan ",
+          {
+            id: "reflex-tipusa",
+            label: "A szaglásra épülő reflexek típusa",
+            options: [
+              { id: "felteteles", text: "feltételes" },
+              { id: "feltetlen", text: "feltétlen" },
+            ],
+            correctOptionId: "felteteles",
+          },
+          " reflex épül, amelyek ",
+          {
+            id: "befolyas",
+            label: "A reflexek hatása a közérzetre és az étvágyra",
+            options: [
+              { id: "nem-befolyasoljak", text: "nem befolyásolják" },
+              { id: "befolyasoljak", text: "befolyásolják" },
+            ],
+            correctOptionId: "befolyasoljak",
+          },
+          " a közérzetünket, az étvágyunkat.",
+        ],
+      },
+    ],
+  },
 ];
