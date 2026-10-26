@@ -29,7 +29,7 @@ function select(pairId: string, value: string | null) {
       class="flex flex-wrap items-center justify-between gap-3 rounded-md border border-slate-200 p-3">
       <label :for="`${inputId}-${index}`" class="flex-1 font-medium">{{ index + 1 }}. {{ pair.left }}</label>
       <Select :model-value="answer.pairs[pair.id]" :input-id="`${inputId}-${index}`" :options="getOptions(pair.id)"
-        option-label="label" option-value="id" option-disabled="disabled" placeholder="Válassz betűt" show-clear class="w-44"
+        option-label="label" option-value="id" option-disabled="disabled" placeholder="Válassz betűt" show-clear class="w-full sm:w-44"
         @update:model-value="select(pair.id, $event)" />
     </div>
   </div>

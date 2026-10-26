@@ -18,3 +18,53 @@ body {
 #app {
   min-height: 100vh;
 }
+
+/* Keep form controls comfortable to read and tap, including popup options. */
+html .p-select,
+html .p-inputtext,
+html .p-button {
+  min-height: 3rem;
+  font-size: 1.125rem;
+}
+
+html .p-select-label,
+html .p-inputtext,
+html .p-button {
+  padding: 0.75rem 1rem;
+}
+
+html .p-button-icon-only,
+html .p-select-dropdown {
+  min-width: 3rem;
+  flex-shrink: 0;
+}
+
+html .p-select-option {
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 1.125rem;
+}
+
+html .p-checkbox,
+html .p-checkbox-box,
+html .p-radiobutton,
+html .p-radiobutton-box {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+
+label:has(.p-checkbox),
+label:has(.p-radiobutton) {
+  min-height: 3rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 639px) {
+  html .p-select-label {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
