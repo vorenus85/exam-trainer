@@ -2438,4 +2438,596 @@ export const testmukodesQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a", "c"],
   },
+  {
+    id: "testmukodes-034",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az izmokhoz funkciójukat/működésüket!",
+    pairs: [
+      {
+        id: "bordakozti_izmok",
+        left: "külső és belső bordaközti izmok",
+        right: "légzőizmok",
+      },
+      {
+        id: "negyfeju_comb izom",
+        left: "négyfejű combizom",
+        right: "feszítő izom",
+      },
+      {
+        id: "nyakizmok",
+        left: "nyakizmok egy része (nehezített légzés esetén)",
+        right: "légzési segédizmok",
+      },
+      {
+        id: "ketfeju_karizom",
+        left: "kétfejű karizom",
+        right: "hajlító izom",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-036",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt:
+      "Párosítsa a megadott izmokat elhelyezkedésük alapján a megfelelő izomcsoporthoz!",
+    pairs: [
+      {
+        id: "trombitasizom",
+        left: "trombitásizom",
+        right: "arcizmok",
+      },
+      {
+        id: "fureszizom",
+        left: "fűrészizom",
+        right: "mellizmok",
+      },
+      {
+        id: "rombuszizom",
+        left: "rombuszizom",
+        right: "hátizmok",
+      },
+      {
+        id: "nagy_farizom",
+        left: "nagy farizom",
+        right: "csípőizmok",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-048",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a vér egyes alkotórészeit a rájuk jellemző funkciókkal!",
+    pairs: [
+      {
+        id: "vorosversejt",
+        left: "vörösvérsejt (hemoglobin)",
+        right: "oxigén megkötése",
+      },
+      {
+        id: "feherversejt",
+        left: "fehérvérsejt",
+        right: "immunvédekezés",
+      },
+      {
+        id: "verlemezkek",
+        left: "vérlemezkék",
+        right: "véralvadás",
+      },
+      {
+        id: "verplazma",
+        left: "vérplazma",
+        right: "hormonok szállítása",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-060",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a fehérvérsejt formáihoz a megfelelő feladatot!",
+    pairs: [
+      {
+        id: "neutrofil_granulocyta",
+        left: "neutrofil granulocyta",
+        right: "baktériumok elleni védekezés fagocitózissal",
+      },
+      {
+        id: "eosinophil_granulocyta",
+        left: "eosinophil granulocyta",
+        right: "allergiás reakciók",
+      },
+      {
+        id: "t_lymphocyta",
+        left: "T-lymphocyta",
+        right: "celluláris immunválasz",
+      },
+      {
+        id: "b_lymphocyta",
+        left: "B-lymphocyta",
+        right: "humorális immunválasz",
+      },
+      {
+        id: "monocyta",
+        left: "monocyta",
+        right: "fagocitózis és antigén prezentálás",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-064",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Rendezze a jellemzőket, leírásokat a megadottak szerint!",
+    pairs: [
+      {
+        id: "veroerek",
+        left: "Verőerek jellemzői",
+        right: "A vért a szívből a periféria felé juttatják.",
+      },
+      {
+        id: "visszerek",
+        left: "Visszerek jellemzői",
+        right:
+          "A periféria felől, a hajszálér területéről a szív irányába szállítják a vért.",
+      },
+      {
+        id: "hajszalerek",
+        left: "Hajszálerek jellemzői",
+        right: "Faluk rendkívül vékony, csak endothel sejtekből állnak.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-065",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Rendezze a jellemzőket, leírásokat a megadottak szerint!",
+    pairs: [
+      {
+        id: "veroerek",
+        left: "Verőerek jellemzői",
+        right:
+          "Erőteljes összehúzódásra képesek, így továbbítják a vért a periféria felé.",
+      },
+      {
+        id: "hajszalerek",
+        left: "Hajszálerek jellemzői",
+        right:
+          "Itt történik meg az oxigén és a tápanyagok leadása a sejtek felé a sejt közötti térbe, valamint a szén-dioxid és az anyagcseretermékek felvétele.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-096",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a légzéssel kapcsolatos fogalmakat meghatározásaikkal!",
+    pairs: [
+      {
+        id: "kulso_legzes",
+        left: "külső légzés",
+        right:
+          "a léghólyagocskák falában futó erecskékből a szén-dioxid kilép az alveoláris térbe, és az oxigén bediffundál az érbe",
+      },
+      {
+        id: "residualis_levego",
+        left: "residualis levegő",
+        right:
+          "a tüdőben, a teljes kilégzés után visszamaradó kb. 1200 cm³ levegő",
+      },
+      {
+        id: "respiracios_levego",
+        left: "respirációs levegő",
+        right: "nyugodt belégzéskor felnőtt ember 500 cm³ levegőt szív be",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-097",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a légzéssel kapcsolatos fogalmakat meghatározásaikkal!",
+    pairs: [
+      {
+        id: "belso_legzes",
+        left: "belső légzés",
+        right: "a szövetek és a vér közti gázcsere",
+      },
+      {
+        id: "vitalkapacitas",
+        left: "vitálkapacitás",
+        right:
+          "maximális belégzés után maximális kilégzéssel kifújt levegő mennyisége 4500 cm³",
+      },
+      {
+        id: "komplementer_levego",
+        left: "komplementer levegő",
+        right:
+          "mély belégzéskor még további, mintegy 2000 cm³ belélegezhető levegő",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-098",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az anatómiai képleteket jellemzőikkel!",
+    pairs: [
+      {
+        id: "orrmandula",
+        left: "orrmandula",
+        right: "a garatban helyezkedik el",
+      },
+      {
+        id: "gege",
+        left: "gége",
+        right: "a hangadás szerve",
+      },
+      {
+        id: "legcso",
+        left: "légcső",
+        right: "felszínét csillószőrös hengerhám borítja",
+      },
+      {
+        id: "garat",
+        left: "garat",
+        right: "ide nyílik a fülkürt",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-113",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a gyomor mirigyeihez váladékaikat!",
+    pairs: [
+      {
+        id: "fundus-mirigyek",
+        left: "fundus-mirigyek",
+        right: "enzim és sósav",
+      },
+      {
+        id: "pylorus-mirigyek",
+        left: "pylorus-mirigyek",
+        right: "nyák",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-117",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a szervekhez jellemzőiket!",
+    pairs: [
+      {
+        id: "maj",
+        left: "máj",
+        right:
+          "szerepe van a vitaminok képzésében, így A-vitamint, D-vitamint képez",
+      },
+      {
+        id: "hasnyalmirigy",
+        left: "hasnyálmirigy",
+        right: "kettős elválasztású mirigy",
+      },
+      {
+        id: "hashartya",
+        left: "hashártya",
+        right: "része, képződménye a nagycseplesz és a Douglas-üreg is",
+      },
+      {
+        id: "nyelocso",
+        left: "nyelőcső",
+        right: "feladata a táplálék továbbítása a garattól a gyomorba",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-131",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a vese mikroszkópos részeihez jellemzőiket!",
+    pairs: [
+      {
+        id: "juxtaglomerularis-apparatus",
+        left: "juxtaglomeruláris apparátus",
+        right: "a Malpighi-test érpólusánál található",
+      },
+      {
+        id: "henle-kacs",
+        left: "Henle-kacs",
+        right: "az elsődleges kanyarulatos csatorna folytatása",
+      },
+      {
+        id: "vizeleti-polus",
+        left: "vizeleti pólus",
+        right: "a vesetestecske érpólussal szemben lévő része",
+      },
+      {
+        id: "bowman-tok",
+        left: "Bowman-tok",
+        right: "kehelyként veszi körül a hajszálérgomolyagot",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-139",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a női nemi szervekhez jellemzőiket, leírásukat!",
+    pairs: [
+      {
+        id: "meh",
+        left: "méh",
+        right: "Fordított körte alakú, páratlan üreges szerv.",
+      },
+      {
+        id: "petevezetek",
+        left: "petevezeték",
+        right:
+          "Kb. 12 cm hosszú, páros, hullámos lefutású csatorna, a petesejt továbbítására szolgál.",
+      },
+      {
+        id: "nagyajkak",
+        left: "nagyajkak",
+        right:
+          "A hüvelybemenetet két oldalról körülvevő, főként zsírszövetből álló bőrredők.",
+      },
+      {
+        id: "huvely",
+        left: "hüvely",
+        right: "A női genitális csatornának kb. 10 cm hosszú alsó szakasza.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-148",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a férfi nemi szervekhez jellemzőiket!",
+    pairs: [
+      {
+        id: "here",
+        left: "here",
+        right: "A hím ivarsejteket termeli.",
+      },
+      {
+        id: "ondovezetek",
+        left: "ondóvezeték",
+        right:
+          "Erős izomzatú cső, nyálkahártyája hosszanti irányú redőket képez; izomzata a nemi váladék továbbjutását biztosítja.",
+      },
+      {
+        id: "dulmirigy",
+        left: "dülmirigy",
+        right:
+          "Váladéka adja a hím nemi váladék folyékony részének jelentős mennyiségét.",
+      },
+      {
+        id: "mellekhere",
+        left: "mellékhere",
+        right: "A spermiumtároló és -elvezető rendszerhez tartozik.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-163",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az anatómiai képleteket jellemzőikkel!",
+    pairs: [
+      {
+        id: "nyultagy",
+        left: "nyúltagy",
+        right:
+          "A légzés és keringés, valamint a nyelés, hányás, köhögés, tüsszentés szabályozó központjai találhatók itt.",
+      },
+      {
+        id: "hid",
+        left: "híd",
+        right:
+          "A mozgási és felsőbb légzésszabályozási központok találhatóak itt.",
+      },
+      {
+        id: "kozepagy",
+        left: "középagy",
+        right:
+          "A szemmozgásokkal, látással, hallással kapcsolatos reflexek központja.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-171",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az összetartozó fogalmakat!",
+    pairs: [
+      {
+        id: "cerebrospinalis_idegrendszer",
+        left: "cerebrospinalis idegrendszer",
+        right: "Az idegrendszer szomatikus, akaratunktól függő része.",
+      },
+      {
+        id: "vegetativ_idegrendszer",
+        left: "vegetatív idegrendszer",
+        right: "Az idegrendszer autonóm, akaratunktól független része.",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-174",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az agyidegek számát elnevezésükkel!",
+    pairs: [
+      {
+        id: "i_agyideg",
+        left: "I. agyideg",
+        right: "szaglóideg",
+      },
+      {
+        id: "v_agyideg",
+        left: "V. agyideg",
+        right: "háromosztatú ideg",
+      },
+      {
+        id: "viii_agyideg",
+        left: "VIII. agyideg",
+        right: "egyensúlyozó és hallóideg",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-175",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az agyidegek számát elnevezésükkel!",
+    pairs: [
+      {
+        id: "iv_agyideg",
+        left: "IV. agyideg",
+        right: "sodorideg",
+      },
+      {
+        id: "vi_agyideg",
+        left: "VI. agyideg",
+        right: "távolító ideg",
+      },
+      {
+        id: "ix_agyideg",
+        left: "IX. agyideg",
+        right: "nyelv-garat ideg",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-178",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt:
+      "Párosítsa az agyidegek számát elnevezésükkel! Írja a sorszámok mellé a helyes válasz betűjelét!",
+    pairs: [
+      {
+        id: "ii-agyideg",
+        left: "II. agyideg",
+        right: "látóideg",
+      },
+      {
+        id: "x-agyideg",
+        left: "X. agyideg",
+        right: "bolygóideg",
+      },
+      {
+        id: "xii-agyideg",
+        left: "XII. agyideg",
+        right: "nyelv alatti ideg",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-179",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt:
+      "Párosítsa az agyidegek számát elnevezésükkel! Írja a sorszámok mellé a helyes válasz betűjelét!",
+    pairs: [
+      {
+        id: "iii-agyideg",
+        left: "III. agyideg",
+        right: "szemmozgató ideg",
+      },
+      {
+        id: "vii-agyideg",
+        left: "VII. agyideg",
+        right: "arcideg",
+      },
+      {
+        id: "xi-agyideg",
+        left: "XI. agyideg",
+        right: "járulékos ideg",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-182",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa az alábbi hormonokat termelődési helyükkel!",
+    pairs: [
+      {
+        id: "sth",
+        left: "STH",
+        right: "agyalapi mirigy",
+      },
+      {
+        id: "tiroxin",
+        left: "tiroxin",
+        right: "pajzsmirigy",
+      },
+      {
+        id: "parathormon",
+        left: "parathormon",
+        right: "mellékpajzsmirigy",
+      },
+      {
+        id: "osztrogen",
+        left: "ösztrogén",
+        right: "petefészek",
+      },
+      {
+        id: "inzulin",
+        left: "inzulin",
+        right: "hasnyálmirigy",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-214",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a szem alkotórészeihez a feladatukat!",
+    pairs: [
+      {
+        id: "kotohartya",
+        left: "kötőhártya",
+        right: "a szem védőkészüléke",
+      },
+      {
+        id: "sargafolt",
+        left: "sárgafolt",
+        right: "az éleslátás helye",
+      },
+      {
+        id: "szemlencse",
+        left: "szemlencse",
+        right: "a szem fénytörő közege",
+      },
+    ],
+  },
+  {
+    id: "testmukodes-215",
+    topicId: "testmukodes",
+    type: "matching",
+    prompt: "Párosítsa a bőr rétegeit jellemzőikkel!",
+    pairs: [
+      {
+        id: "felham",
+        left: "felhám",
+        right: "többrétegű elszarusodó laphám",
+      },
+      {
+        id: "irha",
+        left: "irha",
+        right: "kötőszöveti rostokból épül fel",
+      },
+      {
+        id: "bor-alatti-kotoszovet",
+        left: "bőr alatti kötőszövet",
+        right: "sok kötőszöveti rostot és zsírt tartalmaz",
+      },
+    ],
+  },
 ];
