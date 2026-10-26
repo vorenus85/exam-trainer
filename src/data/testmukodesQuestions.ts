@@ -1781,4 +1781,661 @@ export const testmukodesQuestions: ExamQuestion[] = [
       "rem",
     ],
   },
+  {
+    id: "testmukodes-029",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a törzs izomzatát alkotó izomcsoportokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "csípőizmok" },
+      { id: "b", text: "hátizmok" },
+      { id: "c", text: "lábszárizmok" },
+      { id: "d", text: "mellizmok" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "testmukodes-031",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül az alsó végtag izomzatához tartozó izmokat, izomcsoportokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "egyenes hasizom" },
+      { id: "b", text: "lábszárizmok" },
+      { id: "c", text: "rombuszizom" },
+      { id: "d", text: "lábizmok" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "testmukodes-032",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a felső végtag izomzatához tartozó izmokat/izomcsoportokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kézizmok" },
+      { id: "b", text: "trapézizom" },
+      { id: "c", text: "kétfejű karizom" },
+      { id: "d", text: "rekeszizom" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-038",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a fejtetőizmokhoz tartozó izmokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "tarkóizom" },
+      { id: "b", text: "szem körüli izmok" },
+      { id: "c", text: "homlokizom" },
+      { id: "d", text: "száj körüli izmok" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-046",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a végartériákra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A felületes-, a mélyvénás-, és az artériás rendszer között létrejövő érösszeköttetés.",
+      },
+      {
+        id: "b",
+        text: "Az egymással szomszédos területet ellátó artériák között nincs összeköttetés.",
+      },
+      {
+        id: "c",
+        text: "Az értörzs felső szakaszát az ér alsó részének ágaival köti össze.",
+      },
+      {
+        id: "d",
+        text: "Ha az artéria elzáródik, az általa ellátott terület elhal.",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "testmukodes-051",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Húzza alá a nagyvérkör ereit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "aorta" },
+      { id: "b", text: "vena cava superior" },
+      { id: "c", text: "arteria pulmonalis" },
+      { id: "d", text: "vena pulmonalis" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-053",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a keringés szervrendszerére vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a vérnyomás értéke a felkaron mérve megegyezik az arteria brachialisban uralkodó nyomással",
+      },
+      { id: "b", text: "a pulzust a vena radialison számoljuk" },
+      {
+        id: "c",
+        text: "a pulzus száma megegyezik a szívösszehúzódások számával",
+      },
+      {
+        id: "d",
+        text: "a nagyvérkör a bal pitvarból indul ki, és a jobb pitvarba érkezik",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-054",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a keringés szervrendszerére vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a kisvérkör a jobb kamrából indul ki, és a bal pitvarba érkezik",
+      },
+      { id: "b", text: "a vénák oxigéndús vért szállítanak" },
+      { id: "c", text: "a vér pH-értéke: 7,34–7,42 között mozog" },
+      { id: "d", text: "a vörösvértestek élettartama 220 nap" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-066",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A vena pulmonalis a szív jobb kamrájából indul ki, majd két ágra oszlik és behatol a tüdőbe.",
+      },
+      {
+        id: "b",
+        text: "A vénák a periféria felől a szív felé szállítják a vért.",
+      },
+      {
+        id: "c",
+        text: "A szívet ellátó saját tápláló erek, a coronariák az arcus aortae kezdeti szakaszából erednek.",
+      },
+      {
+        id: "d",
+        text: "A vér áramlásának sebessége az érrendszer különböző szakaszain más és más.",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "testmukodes-068",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a lép feladatait! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "lymphocyták képzése" },
+      { id: "b", text: "vörösvérsejtek lebontása" },
+      { id: "c", text: "glükogén raktározása" },
+      { id: "d", text: "maltáz termelése" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-069",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a lép feladatait! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "vér raktározása" },
+      { id: "b", text: "C-vitamin tárolása" },
+      { id: "c", text: "méreganyagok kiválasztása" },
+      { id: "d", text: "vérlemezkék lebontása" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "testmukodes-083",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbi felsorolásból az orr feladatait! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a belégzett levegő előmelegítése" },
+      { id: "b", text: "oxigéncsere" },
+      { id: "c", text: "a belégzett levegő párásítása" },
+      { id: "d", text: "hőháztartás fenntartása" },
+      { id: "e", text: "hangok képzése" },
+    ],
+    correctOptionIds: ["a", "c", "e"],
+  },
+  {
+    id: "testmukodes-084",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Fejezze be a mondatot a helyes válaszokkal! (Több válasz is lehetséges!) A légzés ingere:",
+    options: [
+      {
+        id: "a",
+        text: "a légzőközponton áthaladó vér szén-dioxid szintjének növekedése",
+      },
+      {
+        id: "b",
+        text: "a légzőközponton áthaladó vér szén-dioxid szintjének csökkenése",
+      },
+      { id: "c", text: "a vér pH-jának lúgos irányba tolódása" },
+      { id: "d", text: "a vér pH-jának savas irányba tolódása" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "testmukodes-085",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a gátorüregben elhelyezkedő szerveket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "nyelőcső" },
+      { id: "b", text: "máj" },
+      { id: "c", text: "hörgők" },
+      { id: "d", text: "csecsemőmirigy" },
+      { id: "e", text: "tüdők" },
+      { id: "f", text: "szív" },
+    ],
+    correctOptionIds: ["a", "d", "f"],
+  },
+  {
+    id: "testmukodes-086",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az orrmelléküregek feladatait! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a belégzett levegő előmelegítése" },
+      { id: "b", text: "oxigéncsere" },
+      { id: "c", text: "a belégzett levegő párásítása" },
+      { id: "d", text: "hőháztartás fenntartása" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-087",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az orrmelléküregek feladatait! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "hangképzésnél a hangnak egyéni színezetet adnak (rezonátorok)",
+      },
+      { id: "b", text: "a koponya súlyának csökkentése" },
+      { id: "c", text: "légnyomás biztosítása" },
+      { id: "d", text: "a belégzett levegő hűtése" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-095",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be a légzésszámot növelő tényezőket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a légzőközponton áthaladó vér szén-dioxid-nyomásának emelkedése",
+      },
+      { id: "b", text: "a vér vegyhatásának savas irányba tolódása" },
+      { id: "c", text: "a légzés akaratlagos visszatartása" },
+      { id: "d", text: "mély alvás állapota" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-104",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a tápanyagokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "szénhidrátok" },
+      { id: "b", text: "vitaminok" },
+      { id: "c", text: "fehérjék" },
+      { id: "d", text: "ásványi sók" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-118",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a májra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Két egyenlőtlen lebenyből, egy nagyobb jobb és egy kisebb bal lebenyből áll.",
+      },
+      { id: "b", text: "Részben külső, részben belső elválasztású mirigy." },
+      { id: "c", text: "Állandóan termeli a sárgásbarna, híg májepét." },
+      { id: "d", text: "A legmélyebb pontja a Douglas-üreg." },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-120",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a hasnyálmirigyre vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "A-vitamint képez karotinból." },
+      {
+        id: "b",
+        text: "Termelt váladéka a hasnyál, amely fontos fehérje-, szénhidrát- és zsírbontó enzimeket tartalmaz.",
+      },
+      {
+        id: "c",
+        text: "A hasnyálmirigy feje a patkóbél homorulatába illeszkedik.",
+      },
+      { id: "d", text: "Egyik fő feladata a méregtelenítés." },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-121",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a hashártya részeit/képződményeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kiscseplesz" },
+      { id: "b", text: "nagycseplesz" },
+      { id: "c", text: "nagylebeny" },
+      { id: "d", text: "nagygörbület" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-129",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a Malpighi-testecskék részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "nefron" },
+      { id: "b", text: "érgomolyag" },
+      { id: "c", text: "Bowman-tok" },
+      { id: "d", text: "Henle-kacs" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-130",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a nefron csatornarendszerének a részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "Bowman-tok" },
+      { id: "b", text: "elsődleges kanyarulatos csatorna" },
+      { id: "c", text: "Malpighi-féle testek" },
+      { id: "d", text: "Henle-kacs" },
+      { id: "e", text: "vesekelyhek" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "testmukodes-138",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a női belső nemi szerveket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kisajkak" },
+      { id: "b", text: "petefészek" },
+      { id: "c", text: "petevezeték" },
+      { id: "d", text: "szeméremdomb" },
+      { id: "e", text: "gát" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-147",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a férfi belső nemi szerveket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "ondóhólyag" },
+      { id: "b", text: "petefészek" },
+      { id: "c", text: "mellékhere" },
+      { id: "d", text: "hímvessző" },
+      { id: "e", text: "dülmirigy" },
+    ],
+    correctOptionIds: ["a", "c", "e"],
+  },
+  {
+    id: "testmukodes-151",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül azokat, amelyben kifejezésre jut a másodlagos nemi jelleg! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "csontozat és izomzat" },
+      { id: "b", text: "hang" },
+      { id: "c", text: "emlők" },
+      { id: "d", text: "látás" },
+      { id: "e", text: "hajszín" },
+    ],
+    correctOptionIds: ["a", "b", "c"],
+  },
+  {
+    id: "testmukodes-153",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be az agyféltekék lebenyeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "homloklebeny" },
+      { id: "b", text: "ékcsonti lebeny" },
+      { id: "c", text: "fali lebeny" },
+      { id: "d", text: "rostacsonti lebeny" },
+      { id: "e", text: "nyakszirti lebeny" },
+      { id: "f", text: "alsó lebeny" },
+    ],
+    correctOptionIds: ["a", "c", "e"],
+  },
+  {
+    id: "testmukodes-162",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alacsony pulzus lehetséges okait! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a paraszimpatikus idegrendszer aktiválódása" },
+      { id: "b", text: "emelkedett testhőmérséklet" },
+      { id: "c", text: "fekvés, pihenés" },
+      { id: "d", text: "pajzsmirigy-túlműködés" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-183",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be azokat a hormonokat, amelyek a vércukorszintet emelik! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "inzulin" },
+      { id: "b", text: "glükagon" },
+      { id: "c", text: "adrenalin" },
+      { id: "d", text: "szomatosztatin" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-201",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a tiroxin és a trijód-tironin hormonokra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "lassítják az anyagcsere-folyamatokat" },
+      { id: "b", text: "fokozzák az anyagcsere-folyamatokat" },
+      { id: "c", text: "emelik a légzésszámot és fokozzák a szívműködést" },
+      {
+        id: "d",
+        text: "csökkentik a légzésszámot és lassítják a szívműködést",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-202",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a progeszteronra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a petefészekben termelődik" },
+      { id: "b", text: "a herecsatornákban termelődik" },
+      { id: "c", text: "másodlagos férfi nemi jelleg kialakításáért felelős" },
+      {
+        id: "d",
+        text: "a méhnyálkahártyáját készíti elő a megtermékenyített petesejt befogadására",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "testmukodes-203",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a hasnyálmirigyre vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a hasüregben, a máj és a gerincoszlop között helyezkedik el nyílirányban",
+      },
+      {
+        id: "b",
+        text: "a hasüregben, a gyomor és a gerincoszlop között helyezkedik el harántirányban",
+      },
+      { id: "c", text: "belső és külső elválasztású mirigyként is működik" },
+      { id: "d", text: "csak külső elválasztású mirigyként működik" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-204",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül az endokrin rendszerre vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a hasnyálmirigy hormonjai a glükagon, az inzulin és a szomatosztatin",
+      },
+      {
+        id: "b",
+        text: "a pajzsmirigy két lebenyből álló belső elválasztású mirigy",
+      },
+      {
+        id: "c",
+        text: "a külső elválasztású mirigyek váladékait nevezzük hormonoknak",
+      },
+      {
+        id: "d",
+        text: "a vérben a hormonszint növekedése fokozott hormonelválasztást vált ki minden endokrin mirigyben",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-206",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a belsőfül részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "dobüreg" },
+      { id: "b", text: "ívjáratok" },
+      { id: "c", text: "Corti-szerv" },
+      { id: "d", text: "hallócsontok" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "testmukodes-207",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a belsőfül részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "hallóideg" },
+      { id: "b", text: "kengyel" },
+      { id: "c", text: "csiga" },
+      { id: "d", text: "dobhártya" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-208",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a szem részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "szemgolyó" },
+      { id: "b", text: "szemtengely" },
+      { id: "c", text: "szemmozgató izmok" },
+      { id: "d", text: "látótér" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-209",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt: "Jelölje be a szem részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a szem védőkészülékei" },
+      { id: "b", text: "szemcsatorna" },
+      { id: "c", text: "könnykészülék" },
+      { id: "d", text: "pupilla-váz" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "testmukodes-210",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be a szem középső burkának részeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "szivárványhártya" },
+      { id: "b", text: "sugártest" },
+      { id: "c", text: "szaruhártya" },
+      { id: "d", text: "ideghártya" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "testmukodes-211",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a szem fénytörő közegeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "könnykészülék" },
+      { id: "b", text: "sárgafolt" },
+      { id: "c", text: "szemlencse" },
+      { id: "d", text: "üvegtest" },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "testmukodes-227",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be azokat a képleteket, amelyek részt vesznek az egyensúly-érzékelés folyamatában! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "zsákocska" },
+      { id: "b", text: "hártyás ívjárat" },
+      { id: "c", text: "VII. agyideg" },
+      { id: "d", text: "talamusz" },
+    ],
+    correctOptionIds: ["a", "b", "d"],
+  },
+  {
+    id: "testmukodes-228",
+    topicId: "testmukodes",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be azokat a képleteket, amelyek részt vesznek az egyensúly-érzékelés folyamatában! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "tömlőcske" },
+      { id: "b", text: "fülkagyló" },
+      { id: "c", text: "VIII. agyideg" },
+      { id: "d", text: "I. agyideg" },
+      { id: "e", text: "IX. agyideg" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
 ];
