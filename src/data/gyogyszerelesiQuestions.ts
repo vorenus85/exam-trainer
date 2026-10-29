@@ -2,6 +2,190 @@ import type { ExamQuestion } from "../types/question.ts";
 
 export const gyogyszerelesiQuestions: ExamQuestion[] = [
   {
+    id: "gyogyszerelesi-001",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszertani fogalmakat a meghatározásukkal!",
+    pairs: [
+      {
+        id: "toxikologia",
+        left: "toxikológia",
+        right: "Az egyik legfontosabb feladata a gyógyszerek mellékhatásainak vizsgálata.",
+      },
+      {
+        id: "farmacia",
+        left: "farmácia",
+        right: "A gyógyszerek anyagi tulajdonságaival és előállításuk lehetőségeivel foglalkozik.",
+      },
+      {
+        id: "farmakologia",
+        left: "farmakológia",
+        right: "Az élő szervezetek és működésüket befolyásoló anyagok kölcsönhatásával foglalkozó tudomány.",
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-002",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszerformákat a definíciójukkal!",
+    pairs: [
+      { id: "parenteralis", left: "Parenterális készítmények", right: "Közvetlenül a véráramba adagolt, steril, pirogénmentes, oldatos gyógyszerforma." },
+      { id: "tablettak", left: "Tabletták", right: "Préseléssel előállított, meghatározott hatóanyagtartalmú, szilárd gyógyszerforma." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-003",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszerek tárolására előírt körülményeket azok hőmérsékleti értékével!",
+    pairs: [
+      { id: "hutoszekreny", left: "Hűtőszekrényben tartandó", right: "2–8 °C" },
+      { id: "huvos", left: "Hideg, vagy hűvös helyen tartandó", right: "8–15 °C" },
+      { id: "szobahomerseklet", left: "Szobahőmérsékleten tartandó", right: "15–25 °C" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-004",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszerformákat a definíciójukkal!",
+    pairs: [
+      { id: "granulatum", left: "Granulátum", right: "Megfelelő szilárdságú porszemcsék, szilárd, száraz, orális gyógyszerkészítmények." },
+      { id: "klizma", left: "Klizma", right: "Rectalis oldat, mely a végbélbe juttatása után fejti ki terápiás hatását." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-005",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Rendelje a felsorolt gyógyszercsoportokhoz a gyógyszerkészítményeket!",
+    pairs: [
+      { id: "imodium", left: "Imodium 2 mg kemény kapszula", right: "hasmenés elleni szer" },
+      { id: "bila-git", left: "Bila-Git filmtabletta", right: "emésztést könnyítő szer" },
+      { id: "bronchostop", left: "Bronchostop oldat", right: "köhögéscsillapító" },
+      { id: "rubophen", left: "Rubophen 500 mg tabletta", right: "láz és fájdalomcsillapító" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-006",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszerkészítményeket farmakológiai hatásukkal!",
+    pairs: [
+      { id: "neogranormon", left: "Neogranormon kenőcs", right: "bőrregeneráló" },
+      { id: "lipanor", left: "Lipanor 100 mg kapszula", right: "lipidanyagcsere szabályozó" },
+      { id: "canesten", left: "Canesten 10 mg/g krém", right: "gombaellenes szer" },
+      { id: "imodium", left: "Imodium 2 mg kapszula", right: "bélperisztaltika gátló" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-007",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "multiple_choice",
+    prompt: "Válassza ki a felsorolt vitaminok közül a hipervitaminózist okozókat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "C-vitamin" },
+      { id: "b", text: "B₁₂-vitamin" },
+      { id: "c", text: "D-vitamin" },
+      { id: "d", text: "A-vitamin" },
+      { id: "e", text: "K-vitamin" },
+      { id: "f", text: "B₁-vitamin" },
+      { id: "g", text: "Nikotinsav" },
+    ],
+    correctOptionIds: ["c", "d", "e"],
+  },
+  {
+    id: "gyogyszerelesi-008",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a definíciójukkal!",
+    pairs: [
+      { id: "habituacio", left: "Habituáció", right: "Gyógyszermegszokás. A hozzászokás kialakulásának folyamata, olyan pszichés függőség valamely kémiai anyagtól, amelynek folyamatos használata szükséges a jólét érzésének fenntartásához." },
+      { id: "addikcio", left: "Addikció", right: "Gyógyszerhozzászokás. Gyógyszerhez vagy kábítószerhez való pszichés és fizikai függőség, amely a beteget a szer ismételt bevételére készteti." },
+      { id: "kumulacio", left: "Kumuláció", right: "Gyógyszer-felhalmozódás. A gyógyszer a szokásosnál sokkal lassabban ürül ki a szervezetből." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-009",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "single_choice",
+    prompt: "Válassza ki a gyógyszerhatást befolyásoló tényezőket!",
+    options: [
+      { id: "a", text: "életkor" },
+      { id: "b", text: "genetikai tényezők" },
+      { id: "c", text: "gyógyszerhatás időszakos ingadozásai" },
+      { id: "d", text: "mindegyik" },
+    ],
+    correctOptionIds: ["d"],
+  },
+  {
+    id: "gyogyszerelesi-010",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat jelentésükkel!",
+    pairs: [
+      { id: "organikus", left: "Organikus gyógyszer", right: "Első ízben kifejlesztett, új hatóanyagból előállított gyógyszer, amely meghatározott ideig szabadalmi védelem alatt áll." },
+      { id: "generikus", left: "Generikus gyógyszer", right: "Az originális szer szabadalmi védettségének lejárta után gyártott és törzskönyvezett termék. Hatóanyagainak mennyiségi összetétele egyezik a referens készítménnyel." },
+      { id: "placebo", left: "Placebo", right: "Olyan gyógyszerforma, amely nem tartalmaz semmiféle hatóanyagot." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-011",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakhoz leírásukat!",
+    pairs: [
+      { id: "placebo", left: "placebo", right: "Olyan gyógyszerforma, amely nem tartalmaz semmiféle hatóanyagot." },
+      { id: "tolerancia", left: "tolerancia", right: "Egyes gyógyszerek hatása ismételt adagolás után csökken és egyre nagyobb dózis szükséges az azonos terápiás hatás eléréséhez." },
+      { id: "metabolizacio", left: "metabolizáció", right: "A gyógyszer átalakulása a szervezetben." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-012",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "fill_in",
+    prompt: "Egészítse ki a gyógyszer kumuláció létrejöttének folyamatával kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "kumulacio",
+        parts: [
+          "Ha az időegység alatt bevitt gyógyszer mennyisége ",
+          {
+            id: "mennyiseg",
+            label: "A bevitt gyógyszer mennyiségének viszonya az eliminációhoz",
+            options: [
+              { id: "meghaladja", text: "meghaladja" },
+              { id: "nem-eri-el", text: "nem éri el" },
+            ],
+            correctOptionId: "meghaladja",
+          },
+          " az eliminációt, akkor a gyógyszer koncentrációja ",
+          {
+            id: "koncentracio",
+            label: "A gyógyszer koncentrációjának változása",
+            options: [
+              { id: "no", text: "nő" },
+              { id: "csokken", text: "csökken" },
+            ],
+            correctOptionId: "no",
+          },
+          ", a gyógyszer a szervezetben ",
+          {
+            id: "felhalmozodas",
+            label: "A gyógyszer sorsa a szervezetben",
+            options: [
+              { id: "alacsony-koncentracio", text: "alacsony koncentrációt ér el" },
+              { id: "felhalmozodik", text: "felhalmozódik" },
+            ],
+            correctOptionId: "felhalmozodik",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     id: "gyogyszerelesi-013",
     topicId: "gyogyszerelesi_ismeretek",
     type: "true_false",
@@ -28,181 +212,6 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     ],
   },
   {
-    id: "gyogyszerelesi-026",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi állítás igaz-e, vagy hamis!",
-    statements: [
-      {
-        id: "a",
-        text: "A gyógyszer beadásának módja függ a szer tulajdonságaitól és a kívánt hatástól, valamint a páciens fizikai és mentális állapotától.",
-        correct: true,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-046",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A felirat nélküli tárolóedényben gyógyszert tartani tilos.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A gyógyszertároló szekrény hűvös helyen legyen.",
-        correct: true,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-047",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A régebben gyártott gyógyszerek később kerüljenek felhasználásra.",
-        correct: false,
-      },
-      {
-        id: "b",
-        text: "A gyógyszertároló szekrény fényvédett helyen legyen.",
-        correct: true,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-048",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "Az injekciókat külön szekrényben, elzártan kell tárolni.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A kétkeresztes szereket nem szükséges zárható szekrényben tárolni.",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-049",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A kábítószereket biztonsági zárral ellátott külön ládában, a kábítószer kezelési szabályzat szerint kell tárolni.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A gyógyszerszekrényben tárolt gyógyszereket gyári dobozukban tartjuk, de amennyiben szükséges, másik dobozba áttehető.",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-060",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A kúp behelyezése után a csecsemő vagy kisgyermek farpofáit célszerű néhány másodpercre kézzel enyhén összeszorítani, hogy a kúp a kívánt helyen maradjon.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A lázas csecsemőnek hányás esetén szirupot, hasmenés esetén pedig kúpot kell adni.",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-061",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "Az orvos által rendelt, személyre szabott összetételű kúpokat a gyógyszerész készíti el a gyógyszertárban.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A felhasználásig előírásszerűen kell tárolni a kúpokat. Ez általában hűtőszekrényben (nem fagyasztóban) való tárolást jelent.",
-        correct: true,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-062",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A felnőttek és a gyermekek számára készített kúpok nemcsak hatóanyag-tartalmukban, de méretükben is különböznek egymástól.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "A kúp előnye, hogy a vékonybélből felszívódó hatóanyag gyorsan eljut a véráramba.",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-063",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
-    statements: [
-      {
-        id: "a",
-        text: "A kúpok vivőanyaga, a végbélbe juttatáskor feloldódik, a hatóanyag pedig a végbél belső falán lévő, vékony ereken keresztül jut a véráramba.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "Akkor célszerű rectalisan adagolni, ha a beteg nem tudja bevenni tablettát hányinger miatt, nem tud nyelni, vagy nem ehet például műtét után.",
-        correct: true,
-      },
-      {
-        id: "c",
-        text: "A kúp előnye, hogy a vékonybélből felszívódó hatóanyag gyorsan eljut a véráramba.",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-009",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "single_choice",
-    prompt: "Válassza ki a gyógyszerhatást befolyásoló tényezőket!",
-    options: [
-      { id: "a", text: "életkor" },
-      { id: "b", text: "genetikai tényezők" },
-      { id: "c", text: "gyógyszerhatás időszakos ingadozásai" },
-      { id: "d", text: "mindegyik" },
-    ],
-    correctOptionIds: ["d"],
-  },
-  {
     id: "gyogyszerelesi-015",
     topicId: "gyogyszerelesi_ismeretek",
     type: "single_choice",
@@ -215,80 +224,6 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "e", text: "mindegyik" },
     ],
     correctOptionIds: ["e"],
-  },
-  {
-    id: "gyogyszerelesi-019",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "single_choice",
-    prompt: "Válassza ki a lágy halmazállapotú gyógyszerformát! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "emulzió" },
-      { id: "b", text: "kenőcs" },
-      { id: "c", text: "tabletta" },
-      { id: "d", text: "végbélkúp" },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "gyogyszerelesi-032",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "single_choice",
-    prompt: "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!) A gyógyszerelés öt alapszabálya:",
-    options: [
-      { id: "a", text: "megfelelő módon" },
-      { id: "b", text: "megfelelő dózisban" },
-      { id: "c", text: "megfelelő betegnek" },
-      { id: "d", text: "megfelelő gyógyszert" },
-      { id: "e", text: "megfelelő időben" },
-      { id: "f", text: "mindegyik" },
-    ],
-    correctOptionIds: ["f"],
-  },
-  {
-    id: "gyogyszerelesi-033",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "single_choice",
-    prompt: "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!) A gyógyszerelés hármas szabálya:",
-    options: [
-      { id: "a", text: "gyógyszer nevének elolvasása a dobozon, amikor kivesszük a gyógyszerszekrényből" },
-      { id: "b", text: "gyógyszer nevének elolvasása közvetlenül a csomagoláson, miután kivesszük a dobozból" },
-      { id: "c", text: "gyógyszer nevének elolvasása a dobozon, amikor visszatesszük a gyógyszerszekrénybe" },
-      { id: "d", text: "egyik sem" },
-      { id: "e", text: "mindegyik" },
-    ],
-    correctOptionIds: ["e"],
-  },
-  {
-    id: "gyogyszerelesi-035",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "single_choice",
-    prompt: "Válassza ki az injekciós terápia lehetséges szövődményeit!",
-    options: [
-      { id: "a", text: "fertőzés" },
-      { id: "b", text: "allergiás-toxikus reakció" },
-      { id: "c", text: "injekciós tályog" },
-      { id: "d", text: "zsírszövet elhalása" },
-      { id: "e", text: "idegsérülés" },
-      { id: "f", text: "egyik sem" },
-      { id: "g", text: "mindegyik" },
-    ],
-    correctOptionIds: ["g"],
-  },
-  {
-    id: "gyogyszerelesi-007",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "multiple_choice",
-    prompt: "Válassza ki a felsorolt vitaminok közül a hipervitaminózist okozókat! (Több válasz is lehetséges!)",
-    options: [
-      { id: "a", text: "C-vitamin" },
-      { id: "b", text: "B₁₂-vitamin" },
-      { id: "c", text: "D-vitamin" },
-      { id: "d", text: "A-vitamin" },
-      { id: "e", text: "K-vitamin" },
-      { id: "f", text: "B₁-vitamin" },
-      { id: "g", text: "Nikotinsav" },
-    ],
-    correctOptionIds: ["c", "d", "e"],
   },
   {
     id: "gyogyszerelesi-016",
@@ -334,6 +269,19 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     correctOptionIds: ["c", "d"],
   },
   {
+    id: "gyogyszerelesi-019",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "single_choice",
+    prompt: "Válassza ki a lágy halmazállapotú gyógyszerformát! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "emulzió" },
+      { id: "b", text: "kenőcs" },
+      { id: "c", text: "tabletta" },
+      { id: "d", text: "végbélkúp" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
     id: "gyogyszerelesi-020",
     topicId: "gyogyszerelesi_ismeretek",
     type: "multiple_choice",
@@ -345,6 +293,54 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "d", text: "hörgők" },
     ],
     correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "gyogyszerelesi-021",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az aeroszol, mint gyógyszerforma előnyeit és hátrányait!",
+    groups: [
+      { id: "elonyok", text: "Előnyök" },
+      { id: "hatranyok", text: "Hátrányok" },
+    ],
+    items: [
+      {
+        id: "specialis-eszkozok",
+        text: "gyártáshoz, kiszereléshez speciális eszközök, berendezések szükségesek",
+        correctGroupId: "hatranyok",
+      },
+      {
+        id: "zart-rendszer",
+        text: "zárt rendszerű",
+        correctGroupId: "elonyok",
+      },
+      {
+        id: "egyszeru-kezeles",
+        text: "egyszerű a kezelése",
+        correctGroupId: "elonyok",
+      },
+      {
+        id: "tuz-es-robbanasveszely",
+        text: "tűz- és robbanásveszélyes",
+        correctGroupId: "hatranyok",
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-022",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az aeroszol, mint gyógyszerforma előnyeit és hátrányait!",
+    groups: [
+      { id: "elonyok", text: "Előnyök" },
+      { id: "hatranyok", text: "Hátrányok" },
+    ],
+    items: [
+      { id: "erzekenyseg", text: "bőrön érzékenységi reakció jöhet létre", correctGroupId: "hatranyok" },
+      { id: "gazdasagos", text: "gazdaságos", correctGroupId: "elonyok" },
+      { id: "husito", text: "bőrön érezhető hűsítő hatású", correctGroupId: "elonyok" },
+      { id: "irritacio", text: "szembe jutva irritációt okozhat", correctGroupId: "hatranyok" },
+    ],
   },
   {
     id: "gyogyszerelesi-023",
@@ -377,6 +373,65 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     correctOptionIds: ["b", "c", "f"],
   },
   {
+    id: "gyogyszerelesi-025",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi gyógyszeradagolással kapcsolatos kifejezéseket magyar jelentésükkel!",
+    pairs: [
+      { id: "curativa", left: "dosis curativa", right: "gyógyító adag (szokásos, terápiás dózis)" },
+      { id: "maximalis", left: "dosis maximalis", right: "legnagyobb (még kiadható) adag" },
+      { id: "letalis", left: "dosis letalis", right: "halálos adag" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-026",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítás igaz-e, vagy hamis!",
+    statements: [
+      {
+        id: "a",
+        text: "A gyógyszer beadásának módja függ a szer tulajdonságaitól és a kívánt hatástól, valamint a páciens fizikai és mentális állapotától.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-027",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a megadott gyógyszerformákat meghatározásukkal!",
+    pairs: [
+      { id: "por", left: "por", right: "Szilárd gyógyszerforma, csomagolás szerint lehet osztott vagy osztatlan." },
+      { id: "kup", left: "kúp", right: "Alapanyaga zselatinos glicerin és kakaóvaj. Szobahőmérsékleten szilárd, testhőmérsékleten megolvad." },
+      { id: "drazse", left: "drazsé", right: "Cukormázzal, vagy egyéb anyaggal bevont tabletta, amely a vékonybélben oldódik." },
+      { id: "kapszula", left: "kapszula", right: "Orálisan adagolható gyógyszerforma, amelynél a hatóanyagot lágy, vagy kemény zselatinburokba helyezik." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-028",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a drogok alábbi csoportjaihoz leírásukat!",
+    pairs: [
+      { id: "depresszansok", left: "Depresszánsok", right: "Elsődlegesen nyugtató hatású szerek." },
+      { id: "stimulansok", left: "Stimulánsok", right: "Azok a szerek, amelyek elsődlegesen gyorsítják a központi idegrendszer működését." },
+      { id: "hallucinogenek", left: "Hallucinogének", right: "Azok a drogok, amelyek elsődleges hatása a tudati működés, észlelés, a gondolkodási folyamat megváltoztatása és módosult tudatállapotok létrehozása." },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-029",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a megadott gyógyszerformákhoz a meghatározásukat!",
+    pairs: [
+      { id: "gel", left: "gél", right: "Bőrön alkalmazható, átlátszó, könnyen kenhető, vízzel lemosható gyógyszerkészítmény." },
+      { id: "emulzio", left: "emulzió", right: "Egymással nem elegyedő folyadékfázisokból álló gyógyszerkészítmény. Használat előtt fel kell rázni." },
+      { id: "szuszpenzio", left: "szuszpenzió", right: "Folyékony gyógyszerforma, folyékony közegben eloszlatott szilárd halmazállapotú szemcséket tartalmaz. Használat előtt fel kell rázni." },
+      { id: "tapasz", left: "transzdermális tapasz", right: "Bőrön keresztül történő gyógyszerbejuttatást tesz lehetővé, a hatóanyag a felragasztást követően kezd a bőrbe jutni." },
+    ],
+  },
+  {
     id: "gyogyszerelesi-030",
     topicId: "gyogyszerelesi_ismeretek",
     type: "multiple_choice",
@@ -404,6 +459,35 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "b"],
   },
   {
+    id: "gyogyszerelesi-032",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "single_choice",
+    prompt: "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!) A gyógyszerelés öt alapszabálya:",
+    options: [
+      { id: "a", text: "megfelelő módon" },
+      { id: "b", text: "megfelelő dózisban" },
+      { id: "c", text: "megfelelő betegnek" },
+      { id: "d", text: "megfelelő gyógyszert" },
+      { id: "e", text: "megfelelő időben" },
+      { id: "f", text: "mindegyik" },
+    ],
+    correctOptionIds: ["f"],
+  },
+  {
+    id: "gyogyszerelesi-033",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "single_choice",
+    prompt: "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!) A gyógyszerelés hármas szabálya:",
+    options: [
+      { id: "a", text: "gyógyszer nevének elolvasása a dobozon, amikor kivesszük a gyógyszerszekrényből" },
+      { id: "b", text: "gyógyszer nevének elolvasása közvetlenül a csomagoláson, miután kivesszük a dobozból" },
+      { id: "c", text: "gyógyszer nevének elolvasása a dobozon, amikor visszatesszük a gyógyszerszekrénybe" },
+      { id: "d", text: "egyik sem" },
+      { id: "e", text: "mindegyik" },
+    ],
+    correctOptionIds: ["e"],
+  },
+  {
     id: "gyogyszerelesi-034",
     topicId: "gyogyszerelesi_ismeretek",
     type: "multiple_choice",
@@ -417,6 +501,22 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "f", text: "Lehetséges beadási helye az alkar belső oldala." },
     ],
     correctOptionIds: ["b", "c", "e"],
+  },
+  {
+    id: "gyogyszerelesi-035",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "single_choice",
+    prompt: "Válassza ki az injekciós terápia lehetséges szövődményeit!",
+    options: [
+      { id: "a", text: "fertőzés" },
+      { id: "b", text: "allergiás-toxikus reakció" },
+      { id: "c", text: "injekciós tályog" },
+      { id: "d", text: "zsírszövet elhalása" },
+      { id: "e", text: "idegsérülés" },
+      { id: "f", text: "egyik sem" },
+      { id: "g", text: "mindegyik" },
+    ],
+    correctOptionIds: ["g"],
   },
   {
     id: "gyogyszerelesi-036",
@@ -447,6 +547,28 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "f", text: "Lehetséges beadási helye a has bőre." },
     ],
     correctOptionIds: ["b", "c", "e"],
+  },
+  {
+    id: "gyogyszerelesi-038",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az injekció formáit az injekció beadási szögével!",
+    pairs: [
+      { id: "intramuscularis", left: "izomba adandó/intramuscularis injekció", right: "90°" },
+      { id: "subcutan", left: "bőr alá adandó/subcutan injekció", right: "45° vagy 90°" },
+      { id: "intracutan", left: "bőrbe adandó/intracutan injekció", right: "5°–15°" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-039",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az injekció formáit az általában beadott oldat mennyiségével!",
+    pairs: [
+      { id: "intramuscularis", left: "izomba adandó/intramuscularis injekció", right: "kb. 5 ml" },
+      { id: "subcutan", left: "bőr alá adandó/subcutan injekció", right: "1–2 ml" },
+      { id: "intracutan", left: "bőrbe adandó/intracutan injekció", right: "0,01–0,1 ml" },
+    ],
   },
   {
     id: "gyogyszerelesi-040",
@@ -527,6 +649,107 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
     correctOptionIds: ["b", "d"],
   },
   {
+    id: "gyogyszerelesi-046",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A felirat nélküli tárolóedényben gyógyszert tartani tilos.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A gyógyszertároló szekrény hűvös helyen legyen.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-047",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A régebben gyártott gyógyszerek később kerüljenek felhasználásra.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A gyógyszertároló szekrény fényvédett helyen legyen.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-048",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Az injekciókat külön szekrényben, elzártan kell tárolni.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A kétkeresztes szereket nem szükséges zárható szekrényben tárolni.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-049",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A kábítószereket biztonsági zárral ellátott külön ládában, a kábítószer kezelési szabályzat szerint kell tárolni.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A gyógyszerszekrényben tárolt gyógyszereket gyári dobozukban tartjuk, de amennyiben szükséges, másik dobozba áttehető.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-050",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Rendezze a felsorolt gyógyszerformákat halmazállapotuk alapján!",
+    groups: [
+      { id: "szilard", text: "Szilárd" },
+      { id: "lagy", text: "Lágy" },
+      { id: "folyekony", text: "Folyékony" },
+    ],
+    items: [
+      { id: "szemcsepp", text: "szemcsepp", correctGroupId: "folyekony" },
+      { id: "szuszpenzio", text: "szuszpenzió", correctGroupId: "folyekony" },
+      { id: "paszta", text: "paszta", correctGroupId: "lagy" },
+      { id: "drazse", text: "drazsé", correctGroupId: "szilard" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-051",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a gyógyszerformákhoz jellemzőiket!",
+    pairs: [
+      { id: "por", left: "por", right: "Osztatlan vagy osztott csomagolásban kerülnek forgalomba." },
+      { id: "kenocs", left: "kenőcs", right: "Vivőanyaga zsíros alapú, bőrről, nyálkahártyáról könnyen felszívódik." },
+      { id: "kapszula", left: "kapszula", right: "Tokja zselatin, ami védi a hatóanyagot a gyomor sósavtartalmától." },
+      { id: "kup", left: "kúp", right: "Szobahőmérsékleten nem, testhőmérsékleten oldódik. Vivőanyaga: glicerin vagy kakaóvaj." },
+    ],
+  },
+  {
     id: "gyogyszerelesi-052",
     topicId: "gyogyszerelesi_ismeretek",
     type: "multiple_choice",
@@ -554,6 +777,178 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "f", text: "járókeret" },
     ],
     correctOptionIds: ["c", "d", "f"],
+  },
+  {
+    id: "gyogyszerelesi-054",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi gyógyászati segédeszközöket a megadott szempontok szerint!",
+    groups: [
+      { id: "testkozeli", text: "Testközeli gyógyászati segédeszköz" },
+      { id: "testtavoli", text: "Testtávoli gyógyászati segédeszköz" },
+    ],
+    items: [
+      { id: "szoba-wc", text: "szoba WC", correctGroupId: "testtavoli" },
+      { id: "jarogep", text: "járógép", correctGroupId: "testkozeli" },
+      { id: "protezis", text: "protézis", correctGroupId: "testkozeli" },
+      { id: "harisnyafelhuzo", text: "harisnyafelhúzó", correctGroupId: "testtavoli" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-055",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi gyógyászati segédeszközöket a megadott szempontok szerint!",
+    groups: [
+      { id: "testkozeli", text: "Testközeli gyógyászati segédeszköz" },
+      { id: "testtavoli", text: "Testtávoli gyógyászati segédeszköz" },
+    ],
+    items: [
+      { id: "protezis", text: "protézis", correctGroupId: "testkozeli" },
+      { id: "konyokmanko", text: "könyökmankó", correctGroupId: "testtavoli" },
+      { id: "kerekesszek", text: "kerekesszék", correctGroupId: "testtavoli" },
+      { id: "fuzo", text: "fűző", correctGroupId: "testkozeli" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-056",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi eszközöket a megadottak szerint!",
+    groups: [
+      { id: "kenyelem", text: "A beteg kényelmét szolgáló eszközök" },
+      { id: "testtavoli", text: "Testtávoli gyógyászati segédeszköz" },
+    ],
+    items: [
+      { id: "szoba-wc", text: "szoba WC", correctGroupId: "testtavoli" },
+      { id: "kapaszkodo", text: "kapaszkodó", correctGroupId: "kenyelem" },
+      { id: "labtamasz", text: "lábtámasz", correctGroupId: "kenyelem" },
+      { id: "harisnyafelhuzo", text: "harisnyafelhúzó", correctGroupId: "testtavoli" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-057",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi eszközöket a megadottak szerint!",
+    groups: [
+      { id: "testtavoli", text: "Testtávoli gyógyászati segédeszköz" },
+      { id: "kenyelem", text: "A beteg kényelmét szolgáló eszközök" },
+    ],
+    items: [
+      { id: "konyokmanko", text: "könyökmankó", correctGroupId: "testtavoli" },
+      { id: "takarotarto", text: "takarótartó", correctGroupId: "kenyelem" },
+      { id: "betegemelo", text: "betegemelő", correctGroupId: "kenyelem" },
+      { id: "kerekesszek", text: "kerekesszék", correctGroupId: "testtavoli" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-058",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi eszközöket a megadottak szerint!",
+    groups: [
+      { id: "testkozeli", text: "Testközeli gyógyászati segédeszköz" },
+      { id: "kenyelem", text: "A beteg kényelmét szolgáló eszközök" },
+    ],
+    items: [
+      { id: "jarogep", text: "járógép", correctGroupId: "testkozeli" },
+      { id: "protezis", text: "protézis", correctGroupId: "testkozeli" },
+      { id: "szoba-wc", text: "szoba-WC", correctGroupId: "kenyelem" },
+      { id: "paravan", text: "paraván, elhúzható függöny", correctGroupId: "kenyelem" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-059",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "grouping",
+    prompt: "Rendezze az alábbi eszközöket a megadottak szerint!",
+    groups: [
+      { id: "testkozeli", text: "Testközeli gyógyászati segédeszköz" },
+      { id: "kenyelem", text: "A beteg kényelmét szolgáló eszközök" },
+    ],
+    items: [
+      { id: "hivoberendezes", text: "hívóberendezés", correctGroupId: "kenyelem" },
+      { id: "fuzo", text: "fűző", correctGroupId: "testkozeli" },
+      { id: "olvasolampa", text: "olvasólámpa", correctGroupId: "kenyelem" },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-060",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A kúp behelyezése után a csecsemő vagy kisgyermek farpofáit célszerű néhány másodpercre kézzel enyhén összeszorítani, hogy a kúp a kívánt helyen maradjon.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A lázas csecsemőnek hányás esetén szirupot, hasmenés esetén pedig kúpot kell adni.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-061",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Az orvos által rendelt, személyre szabott összetételű kúpokat a gyógyszerész készíti el a gyógyszertárban.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A felhasználásig előírásszerűen kell tárolni a kúpokat. Ez általában hűtőszekrényben (nem fagyasztóban) való tárolást jelent.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-062",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A felnőttek és a gyermekek számára készített kúpok nemcsak hatóanyag-tartalmukban, de méretükben is különböznek egymástól.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A kúp előnye, hogy a vékonybélből felszívódó hatóanyag gyorsan eljut a véráramba.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "gyogyszerelesi-063",
+    topicId: "gyogyszerelesi_ismeretek",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A kúpok vivőanyaga, a végbélbe juttatáskor feloldódik, a hatóanyag pedig a végbél belső falán lévő, vékony ereken keresztül jut a véráramba.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Akkor célszerű rectalisan adagolni, ha a beteg nem tudja bevenni tablettát hányinger miatt, nem tud nyelni, vagy nem ehet például műtét után.",
+        correct: true,
+      },
+      {
+        id: "c",
+        text: "A kúp előnye, hogy a vékonybélből felszívódó hatóanyag gyorsan eljut a véráramba.",
+        correct: false,
+      },
+    ],
   },
   {
     id: "gyogyszerelesi-064",
@@ -606,196 +1001,5 @@ export const gyogyszerelesiQuestions: ExamQuestion[] = [
       { id: "d", text: "a nyelv alá helyezett gyógyszert lenyelni nem szabad, mert akkor nem éri el a kívánt hatást" },
     ],
     correctOptionIds: ["a", "d"],
-  },
-  {
-    id: "gyogyszerelesi-001",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszertani fogalmakat a meghatározásukkal!",
-    pairs: [
-      {
-        id: "toxikologia",
-        left: "toxikológia",
-        right: "Az egyik legfontosabb feladata a gyógyszerek mellékhatásainak vizsgálata.",
-      },
-      {
-        id: "farmacia",
-        left: "farmácia",
-        right: "A gyógyszerek anyagi tulajdonságaival és előállításuk lehetőségeivel foglalkozik.",
-      },
-      {
-        id: "farmakologia",
-        left: "farmakológia",
-        right: "Az élő szervezetek és működésüket befolyásoló anyagok kölcsönhatásával foglalkozó tudomány.",
-      },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-002",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszerformákat a definíciójukkal!",
-    pairs: [
-      { id: "parenteralis", left: "Parenterális készítmények", right: "Közvetlenül a véráramba adagolt, steril, pirogénmentes, oldatos gyógyszerforma." },
-      { id: "tablettak", left: "Tabletták", right: "Préseléssel előállított, meghatározott hatóanyagtartalmú, szilárd gyógyszerforma." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-003",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszerek tárolására előírt körülményeket azok hőmérsékleti értékével!",
-    pairs: [
-      { id: "hutoszekreny", left: "Hűtőszekrényben tartandó", right: "2–8 °C" },
-      { id: "huvos", left: "Hideg, vagy hűvös helyen tartandó", right: "8–15 °C" },
-      { id: "szobahomerseklet", left: "Szobahőmérsékleten tartandó", right: "15–25 °C" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-004",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszerformákat a definíciójukkal!",
-    pairs: [
-      { id: "granulatum", left: "Granulátum", right: "Megfelelő szilárdságú porszemcsék, szilárd, száraz, orális gyógyszerkészítmények." },
-      { id: "klizma", left: "Klizma", right: "Rectalis oldat, mely a végbélbe juttatása után fejti ki terápiás hatását." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-005",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Rendelje a felsorolt gyógyszercsoportokhoz a gyógyszerkészítményeket!",
-    pairs: [
-      { id: "imodium", left: "Imodium 2 mg kemény kapszula", right: "hasmenés elleni szer" },
-      { id: "bila-git", left: "Bila-Git filmtabletta", right: "emésztést könnyítő szer" },
-      { id: "bronchostop", left: "Bronchostop oldat", right: "köhögéscsillapító" },
-      { id: "rubophen", left: "Rubophen 500 mg tabletta", right: "láz és fájdalomcsillapító" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-006",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszerkészítményeket farmakológiai hatásukkal!",
-    pairs: [
-      { id: "neogranormon", left: "Neogranormon kenőcs", right: "bőrregeneráló" },
-      { id: "lipanor", left: "Lipanor 100 mg kapszula", right: "lipidanyagcsere szabályozó" },
-      { id: "canesten", left: "Canesten 10 mg/g krém", right: "gombaellenes szer" },
-      { id: "imodium", left: "Imodium 2 mg kapszula", right: "bélperisztaltika gátló" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-008",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a szakkifejezéseket a definíciójukkal!",
-    pairs: [
-      { id: "habituacio", left: "Habituáció", right: "Gyógyszermegszokás. A hozzászokás kialakulásának folyamata, olyan pszichés függőség valamely kémiai anyagtól, amelynek folyamatos használata szükséges a jólét érzésének fenntartásához." },
-      { id: "addikcio", left: "Addikció", right: "Gyógyszerhozzászokás. Gyógyszerhez vagy kábítószerhez való pszichés és fizikai függőség, amely a beteget a szer ismételt bevételére készteti." },
-      { id: "kumulacio", left: "Kumuláció", right: "Gyógyszer-felhalmozódás. A gyógyszer a szokásosnál sokkal lassabban ürül ki a szervezetből." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-010",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi fogalmakat jelentésükkel!",
-    pairs: [
-      { id: "organikus", left: "Organikus gyógyszer", right: "Első ízben kifejlesztett, új hatóanyagból előállított gyógyszer, amely meghatározott ideig szabadalmi védelem alatt áll." },
-      { id: "generikus", left: "Generikus gyógyszer", right: "Az originális szer szabadalmi védettségének lejárta után gyártott és törzskönyvezett termék. Hatóanyagainak mennyiségi összetétele egyezik a referens készítménnyel." },
-      { id: "placebo", left: "Placebo", right: "Olyan gyógyszerforma, amely nem tartalmaz semmiféle hatóanyagot." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-011",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a fogalmakhoz leírásukat!",
-    pairs: [
-      { id: "placebo", left: "placebo", right: "Olyan gyógyszerforma, amely nem tartalmaz semmiféle hatóanyagot." },
-      { id: "tolerancia", left: "tolerancia", right: "Egyes gyógyszerek hatása ismételt adagolás után csökken és egyre nagyobb dózis szükséges az azonos terápiás hatás eléréséhez." },
-      { id: "metabolizacio", left: "metabolizáció", right: "A gyógyszer átalakulása a szervezetben." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-025",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi gyógyszeradagolással kapcsolatos kifejezéseket magyar jelentésükkel!",
-    pairs: [
-      { id: "curativa", left: "dosis curativa", right: "gyógyító adag (szokásos, terápiás dózis)" },
-      { id: "maximalis", left: "dosis maximalis", right: "legnagyobb (még kiadható) adag" },
-      { id: "letalis", left: "dosis letalis", right: "halálos adag" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-027",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a megadott gyógyszerformákat meghatározásukkal!",
-    pairs: [
-      { id: "por", left: "por", right: "Szilárd gyógyszerforma, csomagolás szerint lehet osztott vagy osztatlan." },
-      { id: "kup", left: "kúp", right: "Alapanyaga zselatinos glicerin és kakaóvaj. Szobahőmérsékleten szilárd, testhőmérsékleten megolvad." },
-      { id: "drazse", left: "drazsé", right: "Cukormázzal, vagy egyéb anyaggal bevont tabletta, amely a vékonybélben oldódik." },
-      { id: "kapszula", left: "kapszula", right: "Orálisan adagolható gyógyszerforma, amelynél a hatóanyagot lágy, vagy kemény zselatinburokba helyezik." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-028",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a drogok alábbi csoportjaihoz leírásukat!",
-    pairs: [
-      { id: "depresszansok", left: "Depresszánsok", right: "Elsődlegesen nyugtató hatású szerek." },
-      { id: "stimulansok", left: "Stimulánsok", right: "Azok a szerek, amelyek elsődlegesen gyorsítják a központi idegrendszer működését." },
-      { id: "hallucinogenek", left: "Hallucinogének", right: "Azok a drogok, amelyek elsődleges hatása a tudati működés, észlelés, a gondolkodási folyamat megváltoztatása és módosult tudatállapotok létrehozása." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-029",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a megadott gyógyszerformákhoz a meghatározásukat!",
-    pairs: [
-      { id: "gel", left: "gél", right: "Bőrön alkalmazható, átlátszó, könnyen kenhető, vízzel lemosható gyógyszerkészítmény." },
-      { id: "emulzio", left: "emulzió", right: "Egymással nem elegyedő folyadékfázisokból álló gyógyszerkészítmény. Használat előtt fel kell rázni." },
-      { id: "szuszpenzio", left: "szuszpenzió", right: "Folyékony gyógyszerforma, folyékony közegben eloszlatott szilárd halmazállapotú szemcséket tartalmaz. Használat előtt fel kell rázni." },
-      { id: "tapasz", left: "transzdermális tapasz", right: "Bőrön keresztül történő gyógyszerbejuttatást tesz lehetővé, a hatóanyag a felragasztást követően kezd a bőrbe jutni." },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-038",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az injekció formáit az injekció beadási szögével!",
-    pairs: [
-      { id: "intramuscularis", left: "izomba adandó/intramuscularis injekció", right: "90°" },
-      { id: "subcutan", left: "bőr alá adandó/subcutan injekció", right: "45° vagy 90°" },
-      { id: "intracutan", left: "bőrbe adandó/intracutan injekció", right: "5°–15°" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-039",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az injekció formáit az általában beadott oldat mennyiségével!",
-    pairs: [
-      { id: "intramuscularis", left: "izomba adandó/intramuscularis injekció", right: "kb. 5 ml" },
-      { id: "subcutan", left: "bőr alá adandó/subcutan injekció", right: "1–2 ml" },
-      { id: "intracutan", left: "bőrbe adandó/intracutan injekció", right: "0,01–0,1 ml" },
-    ],
-  },
-  {
-    id: "gyogyszerelesi-051",
-    topicId: "gyogyszerelesi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a gyógyszerformákhoz jellemzőiket!",
-    pairs: [
-      { id: "por", left: "por", right: "Osztatlan vagy osztott csomagolásban kerülnek forgalomba." },
-      { id: "kenocs", left: "kenőcs", right: "Vivőanyaga zsíros alapú, bőrről, nyálkahártyáról könnyen felszívódik." },
-      { id: "kapszula", left: "kapszula", right: "Tokja zselatin, ami védi a hatóanyagot a gyomor sósavtartalmától." },
-      { id: "kup", left: "kúp", right: "Szobahőmérsékleten nem, testhőmérsékleten oldódik. Vivőanyaga: glicerin vagy kakaóvaj." },
-    ],
   },
 ];
