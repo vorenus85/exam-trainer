@@ -1939,4 +1939,352 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["c", "d"],
   },
+  {
+    id: "tarsadalomtudomanyi-008",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "Versengő típus",
+        right: "egyoldalúan győzni akar",
+      },
+      {
+        id: "problemamegoldo",
+        left: "Problémamegoldó (együttműködő) típus",
+        right: "elfogadja a másik fél érdekeit is",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "Kompromisszumkereső típus",
+        right: "előnyös, ha mindkét fél hatalmi pozíciója egyforma",
+      },
+      {
+        id: "elkerulo",
+        left: "Elkerülő típus",
+        right: "lemond saját és mások érdekeinek érvényesítéséről",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "Alkalmazkodó típus",
+        right: "nem érvényesíti a saját érdekeit, de a másikét hagyja érvényesülni",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-009",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "Versengő típus",
+        right: "kedvezőtlen az emberi kapcsolatokra",
+      },
+      {
+        id: "problemamegoldo",
+        left: "Problémamegoldó (együttműködő) típus",
+        right: "mindkét fél nyertesként kerül ki a konfliktusból",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "Kompromisszumkereső típus",
+        right: "kölcsönösen engednek a másik javára",
+      },
+      {
+        id: "elkerulo",
+        left: "Elkerülő típus",
+        right: "a felek közötti feszültségcsökkentés fontosabb, mint a várható kimenetel",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "Alkalmazkodó típus",
+        right: "előnyös, ha jóindulatunkat akarjuk kimutatni a partner felé",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-012",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a konfliktuskezelés típusait a meghatározásukkal!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "versengő",
+        right: "egyoldalúan győzni akar, ezért mindent elkövet, kedvezőtlen az emberi kapcsolatokra",
+      },
+      {
+        id: "problemamegoldo",
+        left: "problémamegoldó",
+        right: "nem akar győzni mindenáron, elfogadja a másik fél érdekeit is, mindkét fél nyertesként kerül ki a konfliktusból",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "kompromisszumkereső",
+        right: "mindkét fél érdeke érvényesül, mindegyik enged a másik fél javára",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "alkalmazkodó",
+        right: "nem érvényesíti a saját érdekeit, hagyja érvényesülni a másik fél érdekeit",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-014",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
+    pairs: [
+      {
+        id: "jogforras",
+        left: "Jogforrás",
+        right: "Olyan jogi forma, amelyből megismerhetők a jogalanyok jogai és kötelezettségei. Ezek lehetnek maguk a jogalkotó szervek és az általuk meghozott jogszabályok is.",
+      },
+      {
+        id: "jog",
+        left: "Jog",
+        right: "Olyan magatartási szabályok összessége, amelyeket az állam bocsát ki és szankcionálja, vagy pedig valamilyen egyéb eljárást (például népszavazás) jogalkotásként ismer el.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-015",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
+    pairs: [
+      {
+        id: "torveny",
+        left: "Törvény",
+        right: "Az Országgyűlés által elfogadott olyan jogszabály, amely mindenkire nézve kötelező rendelkezéseket tartalmaz.",
+      },
+      {
+        id: "tarsadalmi_norma",
+        left: "Társadalmi norma",
+        right: "Magatartási szabály, amely a lehetséges cselekedetek közül előírja a helyeset, a követendőt.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-021",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Párosítsa az alábbi etikával kapcsolatos fogalmakat meghatározásaikkal!",
+    pairs: [
+      {
+        id: "etika",
+        left: "etika",
+        right: "erkölcstan, a helyes és helytelen magatartás tudománya",
+      },
+      {
+        id: "moral",
+        left: "morál",
+        right: "az egyén által vallott viselkedési normák",
+      },
+      {
+        id: "egeszsegugyi_etika",
+        left: "egészségügyi etika",
+        right: "az általános etika alkalmazása az egészségügyre",
+      },
+      {
+        id: "bioetika",
+        left: "bioetika",
+        right: "a modern gyógyászat által felvetett erkölcsi kérdéseknek racionális megközelítése",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-048",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az összetartozó fogalmakat és meghatározásokat!",
+    pairs: [
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "A beteg szervezetétől minden mikroorganizmus távol tartása, vagyis csíramentes, csíraszegény környezet teremtése.",
+      },
+      {
+        id: "fertotlenites",
+        left: "fertőtlenítés",
+        right: "A kórokozók számának csökkentése azok elpusztításával, szaporodásuk gátlásával, vagy fertőzőképességük megszüntetésével.",
+      },
+      {
+        id: "infekciokontroll",
+        left: "infekciókontroll",
+        right: "Olyan szabályok, eljárások alkalmazása, melyek megakadályozzák a fertőzések átvitelét.",
+      },
+      {
+        id: "higienes_kezfertotlenites",
+        left: "higiénés kézfertőtlenítés",
+        right: "Tranziens flóra elpusztítása.",
+      },
+      {
+        id: "sterilizalas",
+        left: "sterilizálás",
+        right: "Csíramentesítés.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-062",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
+    pairs: [
+      {
+        id: "nosocomialis_infekcio",
+        left: "nosocomialis infekció",
+        right: "Azon egészségügyi ellátással összefüggő fertőzés, amelyet a beteg, az egészségügyi dolgozó, valamint az egészségügyi ellátással kapcsolatba kerülő egyéb személy a fekvőbeteg-szakellátás során szerez, és amely az intézményi felvételkor még lappangó formában sem volt jelen.",
+      },
+      {
+        id: "nosocomialis_surveillance",
+        left: "nosocomialis surveillance",
+        right: "A kórházi fertőzések monitorozása céljából végzett, tudományos bizonyítékokra támaszkodó folyamatos, rendszeres adatgyűjtés, elemzés, értékelés és visszacsatolás.",
+      },
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-063",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
+    pairs: [
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
+      },
+      {
+        id: "sterilizalas",
+        left: "sterilizálás",
+        right: "Antimikrobiális eljárás, amelynek során különböző fizikai, kémiai hatásokkal vagy ezek kombinált alkalmazásával az anyagon, illetve az anyagban elpusztítják a mikroorganizmusokat, valamint ezek összes nyugvó formáját.",
+      },
+      {
+        id: "dezinfekcio",
+        left: "dezinfekció",
+        right: "Minden olyan eljárás, amely a fertőző forrásból a külső környezetbe kikerült kórokozók elpusztítására, illetve inaktiválására irányul.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-085",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a megkezdett mondatot a befejezésével!",
+    pairs: [
+      {
+        id: "megtagadhatja",
+        left: "A munkavállaló megtagadhatja a munkavégzést,",
+        right: "ha azzal a saját testi épségét közvetlenül, vagy súlyosan veszélyezteti.",
+      },
+      {
+        id: "meg_kell_tagadnia",
+        left: "A munkavállalónak meg kell tagadnia a munkavégzést,",
+        right: "ha azzal más testi épségét közvetlenül vagy súlyosan veszélyezteti.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-088",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
+    pairs: [
+      {
+        id: "fokozott_expozicio",
+        left: "Fokozott expozíció",
+        right: "A fizikai, kémiai, biológiai, vagy pszichés tényezők meghaladják a szervezet tűrőképességét.",
+      },
+      {
+        id: "foglalkozasi_betegseg",
+        left: "Foglalkozási betegség",
+        right: "Szubjektív panaszokkal és objektív tünetekkel járó időleges, vagy tartós károsodás, amely a munkahellyel, vagy a végzett munkakörrel ok-okozati összefüggésbe hozható.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-089",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
+    pairs: [
+      {
+        id: "foglalkozasi_baleset",
+        left: "Foglalkozási baleset",
+        right: "Könnyű, súlyos, vagy halálhoz vezető sérülés, amely a dolgozót munkájának végzése, vagy azzal összefüggő tevékenysége közben éri.",
+      },
+      {
+        id: "munkavedelem",
+        left: "Munkavédelem",
+        right: "A munkavállalók egészségének, testi épségének a munkával járó ártalmak elleni intézményes védelme.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-098",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
+    pairs: [
+      {
+        id: "tuzvedelem",
+        left: "A tűzvédelem",
+        right: "A tűzesetek megelőzése, a tűzoltási feladatok ellátása, a tűzvizsgálat, valamint ezek feltételeinek biztosítása.",
+      },
+      {
+        id: "tuzmegelozes",
+        left: "A tűzmegelőzés",
+        right: "A tüzek keletkezésének megelőzése, továbbterjedésének akadályozása, a létesítés és a használat során a tűzvédelmi jogszabályok, szabványok érvényesítése.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-099",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
+    pairs: [
+      {
+        id: "tuzoltas",
+        left: "A tűzoltás",
+        right: "Célja a tűz közvetlen veszélyének elhárítása, személyek, anyagi javak mentése, a tűz terjedésének megakadályozása.",
+      },
+      {
+        id: "tuzvizsgalat",
+        left: "A tűzvizsgálat",
+        right: "A tűzoltóságnak azon szakmai tevékenysége, amely a tűz keletkezése idejének, helyének és okának felderítésére irányul.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-134",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezést a jelentésével!",
+    pairs: [
+      {
+        id: "kohorsz_izolacio",
+        left: "Kohorsz izoláció",
+        right: "Az igazoltan azonos kórokozóval kolonizált/fertőzött betegek egy kórteremben történő elhelyezése abból a célból, hogy ne érintkezzenek fogékony betegekkel, és ápolásuk egy helyre korlátozódjon.",
+      },
+      {
+        id: "egyeni_izolacio",
+        left: "Egyéni izoláció",
+        right: "A kolonizált/fertőzött beteg elhelyezése komfortos (saját fürdővel és WC-vel rendelkező) egyágyas kórteremben, melynek előterében van külön kézmosó és alkoholos kézfertőtlenítő szer adagoló.",
+      },
+    ],
+  },
 ];
