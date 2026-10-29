@@ -16,586 +16,6 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["c"],
   },
   {
-    id: "tarsadalomtudomanyi-017",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Húzza alá az alábbiak közül az egészségügyi dokumentációnak az egészségügyi törvény szerinti meghatározását! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi adat",
-      },
-      {
-        id: "b",
-        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi és személyazonosító adatokat tartalmazó feljegyzés, nyilvántartás vagy bármilyen más módon rögzített adat, függetlenül annak hordozójától vagy formájától",
-      },
-      {
-        id: "c",
-        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi és személyazonosító adatokat tartalmazó feljegyzés",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-029",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Húzza alá a felsorolt betegjogok közül azt, amelyikre az alábbi meghatározás vonatkozik! (Csak egy helyes válasz lehetséges!)\n\nA beteg jogosult arra, hogy a kivizsgálását és kezelését érintő döntésekben részt vegyen. Bármely egészségügyi beavatkozás elvégzésének előfeltétele, hogy ahhoz a beteg tévedésből, megtévesztéstől, fenyegetéstől és kényszertől mentes, megfelelő tájékoztatáson alapuló beleegyezését adja.",
-    options: [
-      { id: "a", text: "Egészségügyi ellátáshoz való jog" },
-      { id: "b", text: "A kapcsolattartás joga" },
-      { id: "c", text: "A tájékoztatáshoz való jog" },
-      { id: "d", text: "Az önrendelkezéshez való jog" },
-    ],
-    correctOptionIds: ["d"],
-  },
-  {
-    id: "tarsadalomtudomanyi-041",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Az egészségügyi szolgáltató köteles a beteget – egészségi állapotától függően – a felvételét követő 30 napon belül, illetőleg az ellátást követően tájékoztatni a betegjogokról, azok érvényesítésének lehetőségeiről, illetve a gyógyintézet házirendjéről.",
-      },
-      {
-        id: "b",
-        text: "Az egészségügyi szolgáltató köteles a beteget – egészségi állapotától függően – a felvételekor, illetőleg az ellátás előtt tájékoztatni a betegjogokról, azok érvényesítésének lehetőségeiről, illetve a gyógyintézet házirendjéről.",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-042",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "A beteg jogosult az egészségügyi ellátással kapcsolatban az egészségügyi szolgáltatónál, illetve fenntartójánál panaszt tenni.",
-      },
-      {
-        id: "b",
-        text: "A beteg az egészségügyi ellátással kapcsolatban kizárólag az egészségügyi szolgáltató fenntartójánál tehet panaszt.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-132",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Részt kell-e venni a munkavédelmi oktatásokon a munkavállalóknak? (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Csak abban az esetben, ha éppen akkor tartják, amikor a munkahelyén tartózkodik.",
-      },
-      {
-        id: "b",
-        text: "A munkavédelmi oktatáson való részvétel nem kötelező.",
-      },
-      {
-        id: "c",
-        text: "A munkavállaló kötelessége a megjelölt időpontban és helyen részt venni a munkavédelmi oktatásokon.",
-      },
-    ],
-    correctOptionIds: ["c"],
-  },
-  {
-    id: "tarsadalomtudomanyi-129",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Az elsősegélynyújtó felszerelést, jól elzárva, védett helyen kell készenlétben tartani.",
-      },
-      {
-        id: "b",
-        text: "Az elsősegélynyújtó felszerelést, jól látható, könnyen és gyorsan elérhető, védett helyen kell készenlétben tartani.",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-043",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki az információbiztonsággal kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Információbiztonság az információ sértetlenségének és rendelkezésre állásának megőrzését jelenti.",
-      },
-      {
-        id: "b",
-        text: "Az információbiztonság alatt kizárólag az elektronikusan kezelt személyes adatok biztonságos megőrzését értjük.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-128",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Minden munkahelyen biztosítani kell elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét.",
-      },
-      {
-        id: "b",
-        text: "Az 50 főnél magasabb létszámú munkahelyen, elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét kell biztosítani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-127",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Minden munkahelyen biztosítani kell elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét.",
-      },
-      {
-        id: "b",
-        text: "Az elsősegélynyújtó felszerelést, jól elzárva, védett helyen kell készenlétben tartani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-126",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Az elsősegélynyújtás alapvető célja az életmentés, valamint az orvosi segítség megérkezéséig a sérült állapotromlásának megakadályozása.",
-      },
-      {
-        id: "b",
-        text: "Az elsősegélynyújtás alapvető célja, hogy az orvosi segítség megérkezéséig a sérült állapotát javítsuk.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-044",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Betegjogi képviselő minden olyan személy lehet, aki egészségügyi végzettséggel rendelkezik.",
-      },
-      {
-        id: "b",
-        text: "A betegjogi képviselő csak olyan személy lehet, aki büntetlen előéletű, nem áll egészségügyi tevékenység gyakorlását kizáró foglalkozástól eltiltás hatálya alatt, felsőfokú végzettséggel rendelkezik.",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-045",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "A betegjogi képviselőt az egészségügyért felelős miniszter által vezetett minisztérium (a betegjogi, ellátottjogi és gyermekjogi képviselőt foglalkoztató szerv) foglalkoztatja.",
-      },
-      {
-        id: "b",
-        text: "A betegjogi képviselőt az egészségügyi szolgáltatók kötelesek munkavégzésre irányuló jogviszonyban foglalkoztatni.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-069",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki azokat az eseteket, amikor betegellátásban higiénés kézfertőtlenítés szükséges!",
-    options: [
-      { id: "a", text: "a beteg érintése előtt" },
-      { id: "b", text: "aszeptikus beavatkozás előtt" },
-      { id: "c", text: "váladékkal történő érintkezés után" },
-      { id: "d", text: "a beteg érintését követően" },
-      { id: "e", text: "a beteg környezetével történő érintkezést követően" },
-      { id: "f", text: "minden esetben" },
-      { id: "g", text: "egyik esetben sem" },
-    ],
-    correctOptionIds: ["f"],
-  },
-  {
-    id: "tarsadalomtudomanyi-074",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes sorrendet! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "kesztyűfelvétel, kézfertőtlenítés, betegellátás, kézfertőtlenítés, kesztyűlevétel",
-      },
-      {
-        id: "b",
-        text: "kézfertőtlenítés, kesztyűfelvétel, betegellátás, kesztyűlevétel, kézfertőtlenítés",
-      },
-      {
-        id: "c",
-        text: "kesztyűfelvétel, betegellátás, kézfertőtlenítés, kesztyűlevétel, kézfertőtlenítés",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-125",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Végezhet-e a munkavállaló önállóan munkát, ha nem részesült előzetesen munkavédelmi oktatásban? (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Nem, csak az oktatást követően." },
-      { id: "b", text: "Nem, csak ha veszélytelen munkát bíznak rá." },
-      { id: "c", text: "Igen, mert azt később is pótolhatja." },
-      { id: "d", text: "Nem kötelező munkavédelmi oktatáson részt venni." },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-124",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "A munkavállaló megtagadhatja-e a munkavégzést, ha azzal saját egészségét veszélyeztetné? (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Igen, minden esetben." },
-      { id: "b", text: "Igen, de csak ha extrém veszélyt jelent rá nézve." },
-      { id: "c", text: "Igen, ha azzal a munkaadója is egyetért." },
-      { id: "d", text: "Nem, mert akkor elveszítheti a munkáját." },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-123",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "A munkavállaló végezhet-e olyan munkát, amivel más testi épségét veszélyeztetné? (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Igen, ha a másik beleegyezik és vállalja a kockázatot.",
-      },
-      { id: "b", text: "Igen, hogyha az csak nagyon rövid ideig tart." },
-      {
-        id: "c",
-        text: "Csak abban az esetben, ha ebből még nem volt probléma.",
-      },
-      { id: "d", text: "Nem, sőt meg is kell tagadni a munkavégzést." },
-    ],
-    correctOptionIds: ["d"],
-  },
-  {
-    id: "tarsadalomtudomanyi-083",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki az alábbi felsorolásból a helyes állítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "A veszélyes hulladékgyűjtő dobozokat a használat alatt le kell fedni – jól alkalmazhatók azok, amelyek fedelén bedobó nyílást vágtak –, megtöltést követően a dobozokat úgy kell lezárni, hogy ne legyenek kinyithatók.",
-      },
-      {
-        id: "b",
-        text: "A veszélyes hulladékgyűjtő dobozokat a használat során nyitva kell tartani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-084",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki az alábbi felsorolásból a helyes állítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "A veszélyes hulladékgyűjtő dobozokat megtöltésük után sem kell véglegesen lezárni, hiszen a hulladékot ki kell tudni üríteni a tárolókból.",
-      },
-      {
-        id: "b",
-        text: "A veszélyes hulladékkal megtelt edényeket és zsákokat a hulladék keletkezésének helyéről történő eltávolításhoz ki nem nyitható módon le kell zárni.",
-      },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-091",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Egészségügyi szolgáltatónál nyílt légtérben csak az egészségügyi szolgáltató területén belül, az egészségügyi szolgáltatást igénybevevők szokásos vagy szükségszerű útvonalától megfelelően elkülönülő, az útvonaltól legalább 10 méter távolságon kívül lehet dohányzóhelyet kialakítani.",
-      },
-      {
-        id: "b",
-        text: "Egészségügyi szolgáltatónál nyílt légtérben csak az egészségügyi szolgáltató területén belül, az egészségügyi szolgáltatást igénybevevők szokásos vagy szükségszerű útvonalától megfelelően elkülönülő, az útvonaltól legalább 5 méter távolságon kívül lehet dohányzóhelyet kialakítani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-096",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "A robbanásveszélyes osztályba tartozó anyagot szállító járművön, valamint a tűzveszélyes osztályba tartozó anyagot szállító jármű rakodóterén dohányozni, nyílt lángot használni nem szabad!",
-      },
-      {
-        id: "b",
-        text: "A robbanásveszélyes osztályba tartozó anyagot szállító járművön, valamint a tűzveszélyes osztályba tartozó anyagot szállító jármű rakodóterén csak külön engedéllyel szabad dohányozni.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-097",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Éghető folyadék csak a folyadék hatásának ellenálló, a folyadékra gyújtási veszélyt nem jelentő, jól zárható edényben tárolható.",
-      },
-      {
-        id: "b",
-        text: "Éghető folyadék csak üveg edényben tárolható.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-113",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes állítást! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Ha a fertőző váladék, vér, testnedv, egyéb fertőző anyag sértetlen bőrre kerül úgy azt azonnal – szükség esetén a ruházat részleges vagy teljes eltávolítása után – bőrfertőtlenítő szerek egyikével kell fertőtleníteni.",
-      },
-      {
-        id: "b",
-        text: "Ha a fertőző váladék, vér, testnedv, egyéb fertőző anyag sértetlen bőrre kerül úgy azt azonnal – szükség esetén a ruházat részleges vagy teljes eltávolítása után – papírvattával le kell törölni.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-114",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Ha a fertőző anyag szembe jutott, úgy mindkét szemet steril fiziológiás konyhasóoldattal – dörzsölést kerülve – ki kell mosni.",
-      },
-      {
-        id: "b",
-        text: "Szembe került fertőző anyagot fertőtlenítőszerrel kell eltávolítani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-115",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Ha a cornea (szaruhártya) sérülése feltételezhető, a szem óvatos kiöblítése után azonnal szemészeti szakellátásban kell a személyt részesíteni.",
-      },
-      {
-        id: "b",
-        text: "Amennyiben a szemből sikerült a fertőző anyagot kimosni, sosem szükséges szemészeti szakellátás.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-116",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      {
-        id: "a",
-        text: "Minden olyan esetet, melynek során fertőző anyaggal kontamináció történt, vagy ennek gyanúja feltételezhető, a dolgozó köteles ezt felettesének azonnal jelenteni.",
-      },
-      {
-        id: "b",
-        text: "Fertőző anyaggal történő kontaminációról csak akkor kell a felettest tájékoztatni, ha azt nem sikerül maradéktalanul eltávolítani.",
-      },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-117",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki, hogy mely esetben kell a munkavállalót munkavédelmi oktatásban részesíteni! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Munkába állás előtt, munkakör változás esetén." },
-      { id: "b", text: "Ha ezt az üzemorvos előírja." },
-      { id: "c", text: "Ha a munkavállaló ezt kéri." },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "tarsadalomtudomanyi-118",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki az alábbiak közül, hogy melyik eset számít munkabalesetnek! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Munkába menet a BKK járművén történt sérülés." },
-      { id: "b", text: "Munkaidő alatt az üzemi étkezdében történt sérülés." },
-      {
-        id: "c",
-        text: "Pihenő napon a munkavállaló otthonában történt sérülés.",
-      },
-      { id: "d", text: "A munkavégzés következtében kialakuló derékfájás." },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-119",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a munkavállaló teendőjét veszélyt jelentő rendellenesség, üzemzavar észlelése esetén! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Nincs teendő, mert ez nem a munkavállaló feladata." },
-      {
-        id: "b",
-        text: "A munkáltatót azonnal tájékoztatni kell, majd ha tudja, megszünteti, vagy ehhez segítséget kér a felettesétől.",
-      },
-      { id: "c", text: "Hívja a rendőrséget." },
-      { id: "d", text: "Lefényképezi, hogy később legyen róla bizonyítéka." },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "tarsadalomtudomanyi-120",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a biztonságos munkavégzéshez szükséges védőeszközök biztosítóját! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "A munkavállaló szerzi be saját magának." },
-      { id: "b", text: "Az, aki legolcsóbban tudja beszerezni." },
-      { id: "c", text: "A munkáltató szerzi be." },
-      { id: "d", text: "A szakszervezet szerzi be." },
-    ],
-    correctOptionIds: ["c"],
-  },
-  {
-    id: "tarsadalomtudomanyi-121",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki az alábbiak közül azt, amelyik NEM védőeszköz! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "füldugó" },
-      { id: "b", text: "védőkesztyű" },
-      { id: "c", text: "hegesztőszemüveg" },
-      { id: "d", text: "sebtapasz" },
-    ],
-    correctOptionIds: ["d"],
-  },
-  {
-    id: "tarsadalomtudomanyi-122",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "single_choice",
-    prompt:
-      "Válassza ki a munkavédelem célját! (Csak egy helyes válasz lehetséges!)",
-    options: [
-      { id: "a", text: "Megfelelő minőségű termékek gyártása." },
-      { id: "b", text: "Védeni a munkahelyeket." },
-      { id: "c", text: "Munkahelyteremtés." },
-      {
-        id: "d",
-        text: "A munkavállaló egészségének és munkavégző képességének megóvása, valamint a megfelelő munkakörülmények biztosítása a munkahelyi balesetek és megbetegedések megelőzése érdekében.",
-      },
-    ],
-    correctOptionIds: ["d"],
-  },
-  {
-    id: "tarsadalomtudomanyi-016",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "ordering",
-    prompt:
-      "Tegye hierarchiájuk szerint sorrendbe a felsorolt jogi szabályozókat a legmagasabb szintűtől a legalacsonyabb szintű felé haladva!",
-    items: [
-      { id: "kormanyrendelet", text: "Kormányrendelet" },
-      { id: "onkormanyzati_rendelet", text: "Önkormányzati rendelet" },
-      { id: "torveny", text: "Törvény" },
-      { id: "miniszteri_rendelet", text: "Miniszteri rendelet" },
-    ],
-    correctOrderIds: [
-      "torveny",
-      "kormanyrendelet",
-      "miniszteri_rendelet",
-      "onkormanyzati_rendelet",
-    ],
-  },
-  {
     id: "tarsadalomtudomanyi-002",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -674,6 +94,221 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "d"],
   },
   {
+    id: "tarsadalomtudomanyi-007",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa a megadott jellemzőket a kommunikáció résztvevőihez!",
+    groups: [
+      { id: "felado", text: "Feladó (adó)" },
+      { id: "vevo", text: "Vevő (címzett)" },
+    ],
+    items: [
+      {
+        id: "uzenet_forrasa",
+        text: "akitől az üzenet származik",
+        correctGroupId: "felado",
+      },
+      {
+        id: "kozlemeny_eszlelese",
+        text: "aki a közleményt észleli",
+        correctGroupId: "vevo",
+      },
+      {
+        id: "informacio_tovabbitasa",
+        text: "aki valamilyen információt kíván továbbítani",
+        correctGroupId: "felado",
+      },
+      {
+        id: "uzenet_cimzettje",
+        text: "akinek a feladó az üzenetet szánja",
+        correctGroupId: "vevo",
+      },
+      {
+        id: "uzenet_megfejtese",
+        text: "aki a kód ismeretében megfejti az üzenetet",
+        correctGroupId: "vevo",
+      },
+      {
+        id: "kodolas",
+        text: "aki az információtovábbítás érdekében kódolást végez",
+        correctGroupId: "felado",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-008",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "Versengő típus",
+        right: "egyoldalúan győzni akar",
+      },
+      {
+        id: "problemamegoldo",
+        left: "Problémamegoldó (együttműködő) típus",
+        right: "elfogadja a másik fél érdekeit is",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "Kompromisszumkereső típus",
+        right: "előnyös, ha mindkét fél hatalmi pozíciója egyforma",
+      },
+      {
+        id: "elkerulo",
+        left: "Elkerülő típus",
+        right: "lemond saját és mások érdekeinek érvényesítéséről",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "Alkalmazkodó típus",
+        right: "nem érvényesíti a saját érdekeit, de a másikét hagyja érvényesülni",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-009",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "Versengő típus",
+        right: "kedvezőtlen az emberi kapcsolatokra",
+      },
+      {
+        id: "problemamegoldo",
+        left: "Problémamegoldó (együttműködő) típus",
+        right: "mindkét fél nyertesként kerül ki a konfliktusból",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "Kompromisszumkereső típus",
+        right: "kölcsönösen engednek a másik javára",
+      },
+      {
+        id: "elkerulo",
+        left: "Elkerülő típus",
+        right: "a felek közötti feszültségcsökkentés fontosabb, mint a várható kimenetel",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "Alkalmazkodó típus",
+        right: "előnyös, ha jóindulatunkat akarjuk kimutatni a partner felé",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-010",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa a kommunikáció típusait az információáramlás iránya szerint!",
+    groups: [
+      { id: "egyiranyu", text: "Egyirányú" },
+      { id: "ketiranyu", text: "Kétirányú" },
+    ],
+    items: [
+      {
+        id: "telefonalas",
+        text: "telefonálás",
+        correctGroupId: "ketiranyu",
+      },
+      {
+        id: "konyvolvasas",
+        text: "könyvolvasás",
+        correctGroupId: "egyiranyu",
+      },
+      {
+        id: "eloadas_tartasa",
+        text: "előadás tartása",
+        correctGroupId: "egyiranyu",
+      },
+      {
+        id: "radiohallgatas",
+        text: "rádióhallgatás",
+        correctGroupId: "egyiranyu",
+      },
+      {
+        id: "beszelgetes",
+        text: "beszélgetés",
+        correctGroupId: "ketiranyu",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-011",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa a kommunikáció típusait az információáramlás iránya szerint!",
+    groups: [
+      { id: "egyiranyu", text: "Egyirányú" },
+      { id: "ketiranyu", text: "Kétirányú" },
+    ],
+    items: [
+      {
+        id: "vitatkozas",
+        text: "vitatkozás",
+        correctGroupId: "ketiranyu",
+      },
+      {
+        id: "filmnezes",
+        text: "filmnézés",
+        correctGroupId: "egyiranyu",
+      },
+      {
+        id: "iskolai_felelet",
+        text: "iskolai felelet",
+        correctGroupId: "ketiranyu",
+      },
+      {
+        id: "szinhazi_eloadas",
+        text: "színházi előadás",
+        correctGroupId: "egyiranyu",
+      },
+      {
+        id: "termekbemutato",
+        text: "termékbemutató",
+        correctGroupId: "ketiranyu",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-012",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a konfliktuskezelés típusait a meghatározásukkal!",
+    pairs: [
+      {
+        id: "versengo",
+        left: "versengő",
+        right: "egyoldalúan győzni akar, ezért mindent elkövet, kedvezőtlen az emberi kapcsolatokra",
+      },
+      {
+        id: "problemamegoldo",
+        left: "problémamegoldó",
+        right: "nem akar győzni mindenáron, elfogadja a másik fél érdekeit is, mindkét fél nyertesként kerül ki a konfliktusból",
+      },
+      {
+        id: "kompromisszumkereso",
+        left: "kompromisszumkereső",
+        right: "mindkét fél érdeke érvényesül, mindegyik enged a másik fél javára",
+      },
+      {
+        id: "alkalmazkodo",
+        left: "alkalmazkodó",
+        right: "nem érvényesíti a saját érdekeit, hagyja érvényesülni a másik fél érdekeit",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-013",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -686,6 +321,83 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       { id: "d", text: "alapító" },
     ],
     correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-014",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
+    pairs: [
+      {
+        id: "jogforras",
+        left: "Jogforrás",
+        right: "Olyan jogi forma, amelyből megismerhetők a jogalanyok jogai és kötelezettségei. Ezek lehetnek maguk a jogalkotó szervek és az általuk meghozott jogszabályok is.",
+      },
+      {
+        id: "jog",
+        left: "Jog",
+        right: "Olyan magatartási szabályok összessége, amelyeket az állam bocsát ki és szankcionálja, vagy pedig valamilyen egyéb eljárást (például népszavazás) jogalkotásként ismer el.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-015",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
+    pairs: [
+      {
+        id: "torveny",
+        left: "Törvény",
+        right: "Az Országgyűlés által elfogadott olyan jogszabály, amely mindenkire nézve kötelező rendelkezéseket tartalmaz.",
+      },
+      {
+        id: "tarsadalmi_norma",
+        left: "Társadalmi norma",
+        right: "Magatartási szabály, amely a lehetséges cselekedetek közül előírja a helyeset, a követendőt.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-016",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "ordering",
+    prompt:
+      "Tegye hierarchiájuk szerint sorrendbe a felsorolt jogi szabályozókat a legmagasabb szintűtől a legalacsonyabb szintű felé haladva!",
+    items: [
+      { id: "kormanyrendelet", text: "Kormányrendelet" },
+      { id: "onkormanyzati_rendelet", text: "Önkormányzati rendelet" },
+      { id: "torveny", text: "Törvény" },
+      { id: "miniszteri_rendelet", text: "Miniszteri rendelet" },
+    ],
+    correctOrderIds: [
+      "torveny",
+      "kormanyrendelet",
+      "miniszteri_rendelet",
+      "onkormanyzati_rendelet",
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-017",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Húzza alá az alábbiak közül az egészségügyi dokumentációnak az egészségügyi törvény szerinti meghatározását! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi adat",
+      },
+      {
+        id: "b",
+        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi és személyazonosító adatokat tartalmazó feljegyzés, nyilvántartás vagy bármilyen más módon rögzített adat, függetlenül annak hordozójától vagy formájától",
+      },
+      {
+        id: "c",
+        text: "az egészségügyi szolgáltatás során az egészségügyi dolgozó tudomására jutó, a beteg kezelésével kapcsolatos egészségügyi és személyazonosító adatokat tartalmazó feljegyzés",
+      },
+    ],
+    correctOptionIds: ["b"],
   },
   {
     id: "tarsadalomtudomanyi-018",
@@ -766,6 +478,35 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["b", "d"],
   },
   {
+    id: "tarsadalomtudomanyi-021",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt:
+      "Párosítsa az alábbi etikával kapcsolatos fogalmakat meghatározásaikkal!",
+    pairs: [
+      {
+        id: "etika",
+        left: "etika",
+        right: "erkölcstan, a helyes és helytelen magatartás tudománya",
+      },
+      {
+        id: "moral",
+        left: "morál",
+        right: "az egyén által vallott viselkedési normák",
+      },
+      {
+        id: "egeszsegugyi_etika",
+        left: "egészségügyi etika",
+        right: "az általános etika alkalmazása az egészségügyre",
+      },
+      {
+        id: "bioetika",
+        left: "bioetika",
+        right: "a modern gyógyászat által felvetett erkölcsi kérdéseknek racionális megközelítése",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-022",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -790,6 +531,82 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-023",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi állításokat a megadott szempontok alapján!",
+    groups: [
+      { id: "igaz", text: "Az állítás igaz" },
+      { id: "hamis", text: "Az állítás hamis" },
+    ],
+    items: [
+      {
+        id: "emberi_meltosag",
+        text: "Az emberi méltóság megőrzése egészségügyi intézményi kötelezettség.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "szobeli_tajekoztatas",
+        text: "A beteg tájékoztatása kizárólag szóban történhet.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "szervek_szovetek_kivetele",
+        text: "A beteg írásban nyilatkozhat szervei, szövetei kivételéről.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "nyilatkozattetelre_jogosultak",
+        text: "A beteg cselekvőképtelensége esetén a nyilatkozattételre jogosult személyeket a törvény sorrendben felsorolja.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "varolista_tajekoztatas",
+        text: "A beteg várólistára helyezése esetén nem szükséges a beteget tájékoztatni a várakozás okáról.",
+        correctGroupId: "hamis",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-024",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi állításokat a megadott szempontok alapján!",
+    groups: [
+      { id: "igaz", text: "Az állítás igaz" },
+      { id: "hamis", text: "Az állítás hamis" },
+    ],
+    items: [
+      {
+        id: "varakoztatas",
+        text: "A beteget csak méltányolható okból és ideig szabad várakoztatni.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "dokumentacio",
+        text: "Az egészségügyi dokumentációval a beteg, az abban szereplő adatokkal az egészségügyi szolgáltató rendelkezik.",
+        correctGroupId: "hamis",
+      },
+      {
+        id: "szulo_no_kiseroje",
+        text: "A szülő nőnek joga van arra, hogy az általa megjelölt nagykorú személy a vajúdás és a szülés alatt folyamatosan vele lehessen.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "tajekoztatas_joga",
+        text: "A tájékoztatás joga a beteget akkor is megilleti, ha beleegyezése egyébként nem feltétele a gyógykezelés megkezdésének.",
+        correctGroupId: "igaz",
+      },
+      {
+        id: "eletmento_beavatkozas_visszautasitasa",
+        text: "A beteg visszautasíthatja az életmentő beavatkozást, ha várandós és előre láthatóan képes a gyermek kihordására.",
+        correctGroupId: "hamis",
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-025",
@@ -873,6 +690,20 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       { id: "d", text: "gyakorolja az egyéni kegyelmezés jogát" },
     ],
     correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-029",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Húzza alá a felsorolt betegjogok közül azt, amelyikre az alábbi meghatározás vonatkozik! (Csak egy helyes válasz lehetséges!)\n\nA beteg jogosult arra, hogy a kivizsgálását és kezelését érintő döntésekben részt vegyen. Bármely egészségügyi beavatkozás elvégzésének előfeltétele, hogy ahhoz a beteg tévedésből, megtévesztéstől, fenyegetéstől és kényszertől mentes, megfelelő tájékoztatáson alapuló beleegyezését adja.",
+    options: [
+      { id: "a", text: "Egészségügyi ellátáshoz való jog" },
+      { id: "b", text: "A kapcsolattartás joga" },
+      { id: "c", text: "A tájékoztatáshoz való jog" },
+      { id: "d", text: "Az önrendelkezéshez való jog" },
+    ],
+    correctOptionIds: ["d"],
   },
   {
     id: "tarsadalomtudomanyi-030",
@@ -1003,6 +834,86 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "d", "e", "h"],
   },
   {
+    id: "tarsadalomtudomanyi-036",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egészségügyi törvény betegek jogai című fejezetéhez tartozó rendelkezéseit a megfelelő alapjoghoz!",
+    groups: [
+      { id: "emberi_meltosag", text: "Emberi méltósághoz való jog" },
+      { id: "gyogyintezmeny_elhagyasa", text: "Gyógyintézmény elhagyásának joga" },
+      {
+        id: "dokumentacio_megismerese",
+        text: "Egészségügyi dokumentáció megismerésének joga",
+      },
+    ],
+    items: [
+      {
+        id: "szukseges_beavatkozasok",
+        text: "A betegen kizárólag az ellátásához szükséges beavatkozások végezhetők el.",
+        correctGroupId: "emberi_meltosag",
+      },
+      {
+        id: "elbocsatas_tajekoztatasa",
+        text: "A beteg gyógyintézetből történő elbocsátásáról a beteget, illetőleg hozzátartozóját előzetesen tájékoztatni kell, lehetőség szerint legalább 24 órával a tervezett elbocsátást megelőzően.",
+        correctGroupId: "gyogyintezmeny_elhagyasa",
+      },
+      {
+        id: "egeszsegugyi_adatok",
+        text: "A betegnek joga van egészségügyi adatairól tájékoztatást kérni.",
+        correctGroupId: "dokumentacio_megismerese",
+      },
+      {
+        id: "tavozasi_szandek",
+        text: "A beteg távozási szándékát a kezelőorvosnak bejelenti.",
+        correctGroupId: "gyogyintezmeny_elhagyasa",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-037",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egészségügyi törvény betegek jogai című fejezetéhez tartozó rendelkezéseit a megfelelő alapjoghoz!",
+    groups: [
+      { id: "egeszsegugyi_ellatas", text: "Egészségügyi ellátáshoz való jog" },
+      { id: "emberi_meltosag", text: "Emberi méltósághoz való jog" },
+      { id: "gyogyintezmeny_elhagyasa", text: "Gyógyintézmény elhagyásának joga" },
+      {
+        id: "dokumentacio_megismerese",
+        text: "Egészségügyi dokumentáció megismerésének joga",
+      },
+    ],
+    items: [
+      {
+        id: "tavozasi_szandek",
+        text: "A beteg távozási szándékát a kezelőorvosnak bejelenti.",
+        correctGroupId: "gyogyintezmeny_elhagyasa",
+      },
+      {
+        id: "fajdalomcsillapitas",
+        text: "Minden betegnek joga van fájdalmának csillapításához és szenvedéseinek csökkentéséhez.",
+        correctGroupId: "egeszsegugyi_ellatas",
+      },
+      {
+        id: "orvosvalasztas",
+        text: "Orvosválasztás joga.",
+        correctGroupId: "egeszsegugyi_ellatas",
+      },
+      {
+        id: "szemeremerzet",
+        text: "A beteg ellátása során szeméremérzetére tekintettel ruházata csak a szükséges időre és a szakmailag indokolt mértékben távolítható el.",
+        correctGroupId: "emberi_meltosag",
+      },
+      {
+        id: "zarojelentes",
+        text: "A betegnek joga van a fekvőbeteg – gyógyintézetből történő elbocsátásakor zárójelentést kapni.",
+        correctGroupId: "dokumentacio_megismerese",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-038",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1051,6 +962,232 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "d", "e", "g"],
   },
   {
+    id: "tarsadalomtudomanyi-041",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az egészségügyi szolgáltató köteles a beteget – egészségi állapotától függően – a felvételét követő 30 napon belül, illetőleg az ellátást követően tájékoztatni a betegjogokról, azok érvényesítésének lehetőségeiről, illetve a gyógyintézet házirendjéről.",
+      },
+      {
+        id: "b",
+        text: "Az egészségügyi szolgáltató köteles a beteget – egészségi állapotától függően – a felvételekor, illetőleg az ellátás előtt tájékoztatni a betegjogokról, azok érvényesítésének lehetőségeiről, illetve a gyógyintézet házirendjéről.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "tarsadalomtudomanyi-042",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A beteg jogosult az egészségügyi ellátással kapcsolatban az egészségügyi szolgáltatónál, illetve fenntartójánál panaszt tenni.",
+      },
+      {
+        id: "b",
+        text: "A beteg az egészségügyi ellátással kapcsolatban kizárólag az egészségügyi szolgáltató fenntartójánál tehet panaszt.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-043",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az információbiztonsággal kapcsolatos helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Információbiztonság az információ sértetlenségének és rendelkezésre állásának megőrzését jelenti.",
+      },
+      {
+        id: "b",
+        text: "Az információbiztonság alatt kizárólag az elektronikusan kezelt személyes adatok biztonságos megőrzését értjük.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-044",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Betegjogi képviselő minden olyan személy lehet, aki egészségügyi végzettséggel rendelkezik.",
+      },
+      {
+        id: "b",
+        text: "A betegjogi képviselő csak olyan személy lehet, aki büntetlen előéletű, nem áll egészségügyi tevékenység gyakorlását kizáró foglalkozástól eltiltás hatálya alatt, felsőfokú végzettséggel rendelkezik.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "tarsadalomtudomanyi-045",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a betegjogok érvényesítésével kapcsolatos helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A betegjogi képviselőt az egészségügyért felelős miniszter által vezetett minisztérium (a betegjogi, ellátottjogi és gyermekjogi képviselőt foglalkoztató szerv) foglalkoztatja.",
+      },
+      {
+        id: "b",
+        text: "A betegjogi képviselőt az egészségügyi szolgáltatók kötelesek munkavégzésre irányuló jogviszonyban foglalkoztatni.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-046",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az egészségügyi dolgozók jogait és kötelezettségeit!",
+    groups: [
+      { id: "jog", text: "Jog" },
+      { id: "kotelezettseg", text: "Kötelezettség" },
+    ],
+    items: [
+      {
+        id: "tajekoztatasi",
+        text: "tájékoztatási",
+        correctGroupId: "kotelezettseg",
+      },
+      {
+        id: "ellatas_megtagadasa",
+        text: "az ellátás megtagadása",
+        correctGroupId: "jog",
+      },
+      {
+        id: "dokumentacios",
+        text: "dokumentációs",
+        correctGroupId: "kotelezettseg",
+      },
+      {
+        id: "titoktartasi",
+        text: "titoktartási",
+        correctGroupId: "kotelezettseg",
+      },
+      {
+        id: "modszerek_megvalasztasa",
+        text: "vizsgálati és terápiás módszerek megválasztása",
+        correctGroupId: "jog",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-047",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "fill_in",
+    prompt: "Egészítse ki az alábbi mondatokat!",
+    statements: [
+      {
+        id: "tevekenyseg_vegzese",
+        parts: [
+          "Az egészségügyi tevékenység ",
+          {
+            id: "vegzes_modja",
+            label: "Az egészségügyi tevékenység végzésének módja",
+            options: [
+              { id: "segitseggel", text: "segítséggel" },
+              { id: "onalloan", text: "önállóan" },
+            ],
+            correctOptionId: "onalloan",
+          },
+          " vagy felügyelet mellett végezhető.",
+        ],
+      },
+      {
+        id: "nyilvantartas",
+        parts: [
+          "Egészségügyi tevékenységet önállóan csak ",
+          {
+            id: "nyilvantartas_tipusa",
+            label: "Az önálló tevékenységhez szükséges nyilvántartás",
+            options: [
+              { id: "egeszsegugyi", text: "az egészségügyi" },
+              { id: "mukodesi", text: "a működési" },
+            ],
+            correctOptionId: "mukodesi",
+          },
+          " nyilvántartásba bejegyzett személy végezhet.",
+        ],
+      },
+      {
+        id: "tovabbkepzes",
+        parts: [
+          "Az egészségügyi szakdolgozónak a továbbképzési időszak ",
+          {
+            id: "kepzes_resze",
+            label: "A továbbképzés teljesítendő része",
+            options: [
+              { id: "gyakorlati", text: "gyakorlati" },
+              { id: "elmeleti", text: "elméleti" },
+            ],
+            correctOptionId: "gyakorlati",
+          },
+          " részének teljesítéséhez minimum ",
+          {
+            id: "evek_szama",
+            label: "A munkakörben eltöltendő évek minimális száma",
+            options: [
+              { id: "harom", text: "3" },
+              { id: "ot", text: "5" },
+            ],
+            correctOptionId: "harom",
+          },
+          " évet hazai vagy külföldi foglalkoztatónál a szakképesítésének (szakmacsoportjának) megfelelő munkakörben kell eltöltenie.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-048",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az összetartozó fogalmakat és meghatározásokat!",
+    pairs: [
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "A beteg szervezetétől minden mikroorganizmus távol tartása, vagyis csíramentes, csíraszegény környezet teremtése.",
+      },
+      {
+        id: "fertotlenites",
+        left: "fertőtlenítés",
+        right: "A kórokozók számának csökkentése azok elpusztításával, szaporodásuk gátlásával, vagy fertőzőképességük megszüntetésével.",
+      },
+      {
+        id: "infekciokontroll",
+        left: "infekciókontroll",
+        right: "Olyan szabályok, eljárások alkalmazása, melyek megakadályozzák a fertőzések átvitelét.",
+      },
+      {
+        id: "higienes_kezfertotlenites",
+        left: "higiénés kézfertőtlenítés",
+        right: "Tranziens flóra elpusztítása.",
+      },
+      {
+        id: "sterilizalas",
+        left: "sterilizálás",
+        right: "Csíramentesítés.",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-049",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1075,6 +1212,45 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["a", "c", "d", "f"],
+  },
+  {
+    id: "tarsadalomtudomanyi-050",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa a nosocomialis fertőzések kialakulását elősegítő tényezőket a megadott szempontok szerint!",
+    groups: [
+      { id: "intrinsic", text: "intrinsic faktor" },
+      { id: "extrinsic", text: "extrinsic faktor" },
+    ],
+    items: [
+      { id: "idoskor", text: "időskor", correctGroupId: "intrinsic" },
+      {
+        id: "korhazi_tartozkodas",
+        text: "hosszan tartó kórházi tartózkodás",
+        correctGroupId: "extrinsic",
+      },
+      {
+        id: "sulyos_betegsegek",
+        text: "súlyos betegségek",
+        correctGroupId: "intrinsic",
+      },
+      {
+        id: "invaziv_beavatkozasok",
+        text: "invazív beavatkozások",
+        correctGroupId: "extrinsic",
+      },
+      {
+        id: "elhuzodo_mutet_kezeles",
+        text: "elhúzódó műtét, kezelés",
+        correctGroupId: "extrinsic",
+      },
+      {
+        id: "immunszuprimalt_allapot",
+        text: "immunszuprimált állapot",
+        correctGroupId: "intrinsic",
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-051",
@@ -1126,6 +1302,80 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "c"],
   },
   {
+    id: "tarsadalomtudomanyi-053",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi hulladékokat a megadott szempontok szerint!",
+    groups: [
+      { id: "telepulesi", text: "Települési hulladék" },
+      { id: "veszelyes", text: "Veszélyes hulladékok" },
+      {
+        id: "fertozo",
+        text: "Különleges kezelést igénylő (fertőző) veszélyes hulladékok",
+      },
+    ],
+    items: [
+      {
+        id: "papirhulladek",
+        text: "papírhulladék",
+        correctGroupId: "telepulesi",
+      },
+      {
+        id: "vegyszerek",
+        text: "veszélyes anyagokat tartalmazó vegyszerek",
+        correctGroupId: "veszelyes",
+      },
+      {
+        id: "szennyezett_kotszerek",
+        text: "váladékkal szennyezett kötszerek",
+        correctGroupId: "fertozo",
+      },
+      {
+        id: "citosztatikus_gyogyszerek",
+        text: "citosztatikus gyógyszerek",
+        correctGroupId: "veszelyes",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-054",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi hulladékokat a megadott szempontok szerint!",
+    groups: [
+      { id: "telepulesi", text: "Települési hulladék" },
+      { id: "veszelyes", text: "Veszélyes hulladékok" },
+      {
+        id: "fertozo",
+        text: "Különleges kezelést igénylő (fertőző) veszélyes hulladékok",
+      },
+    ],
+    items: [
+      {
+        id: "etelmaradek",
+        text: "ételmaradék",
+        correctGroupId: "telepulesi",
+      },
+      {
+        id: "szennyezett_tuk",
+        text: "vérrel szennyezett injekciós tűk",
+        correctGroupId: "fertozo",
+      },
+      {
+        id: "fogaszati_amalgam",
+        text: "fogászati amalgám",
+        correctGroupId: "veszelyes",
+      },
+      {
+        id: "gyogyszeres_ampullak",
+        text: "használt gyógyszeres ampullák",
+        correctGroupId: "fertozo",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-055",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1156,6 +1406,144 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       { id: "f", text: "az átlagosnál több ember érintett" },
     ],
     correctOptionIds: ["a", "d", "f"],
+  },
+  {
+    id: "tarsadalomtudomanyi-057",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi fertőtlenítő és sterilizáló eljárásokat!",
+    groups: [
+      { id: "fertotlenito", text: "Fertőtlenítő eljárások" },
+      { id: "sterilizalo", text: "Sterilizáló eljárások" },
+    ],
+    items: [
+      {
+        id: "formaldehides_gazositas",
+        text: "gázosítás formaldehiddel",
+        correctGroupId: "sterilizalo",
+      },
+      {
+        id: "autoklavozas",
+        text: "autoklávozás",
+        correctGroupId: "sterilizalo",
+      },
+      {
+        id: "elegyites",
+        text: "elegyítés",
+        correctGroupId: "fertotlenito",
+      },
+      {
+        id: "lemosas",
+        text: "lemosás",
+        correctGroupId: "fertotlenito",
+      },
+      {
+        id: "etilen_oxidos_gazositas",
+        text: "gázosítás etilén-oxiddal",
+        correctGroupId: "sterilizalo",
+      },
+      {
+        id: "beaztatas",
+        text: "beáztatás",
+        correctGroupId: "fertotlenito",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-058",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "fill_in",
+    prompt:
+      "Válassza ki az alábbi meghatározások alapján a helyes fogalmat!",
+    statements: [
+      {
+        id: "aszepszis",
+        parts: [
+          "A betegellátás során alkalmazott olyan munkamódszerek, munkafolyamatok, amelyekkel a mikroorganizmusokat a beteg nyitott testszöveteitől, nyálkahártyáitól, testüregeitől távol tarthatjuk. ",
+          {
+            id: "fogalom",
+            label: "A mikroorganizmusok távol tartását jelentő fogalom",
+            options: [
+              { id: "aszepszis", text: "Aszepszis" },
+              { id: "antiszepszis", text: "Antiszepszis" },
+            ],
+            correctOptionId: "aszepszis",
+          },
+        ],
+      },
+      {
+        id: "antiszepszis",
+        parts: [
+          "Vegyszeres eljárások összessége, melynek segítségével a testüregekbe, a sebekbe, az élő szervezetbe bejutó mikroorganizmusokat elölik vagy szaporodásukat gátolják. ",
+          {
+            id: "fogalom",
+            label: "A mikroorganizmusok elölését vagy szaporodásuk gátlását jelentő fogalom",
+            options: [
+              { id: "aszepszis", text: "Aszepszis" },
+              { id: "antiszepszis", text: "Antiszepszis" },
+            ],
+            correctOptionId: "antiszepszis",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-059",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "fill_in",
+    prompt:
+      "Válassza ki az alábbi meghatározások alapján a helyes fogalmat!",
+    statements: [
+      {
+        id: "fertotlenites",
+        parts: [
+          "Minden olyan eljárás, amely a fertőző forrásból a külső környezetbe kikerült kórokozók elpusztítására, illetőleg fertőzőképességük megszüntetésére (inaktiválására) irányul. ",
+          {
+            id: "fogalom",
+            label: "A kórokozók elpusztítására vagy inaktiválására irányuló eljárás",
+            options: [
+              { id: "fertotlenites", text: "Fertőtlenítés" },
+              { id: "sterilizalas", text: "Sterilizálás" },
+              { id: "sterilitas", text: "Sterilitás" },
+            ],
+            correctOptionId: "fertotlenites",
+          },
+        ],
+      },
+      {
+        id: "sterilitas",
+        parts: [
+          "Az anyagok azon mikrobiológiai állapota, amikor mentesek minden mikroorganizmustól, valamint ezek összes nyugvó formáitól (csíramentesség). ",
+          {
+            id: "fogalom",
+            label: "A csíramentes mikrobiológiai állapot neve",
+            options: [
+              { id: "fertotlenites", text: "Fertőtlenítés" },
+              { id: "sterilizalas", text: "Sterilizálás" },
+              { id: "sterilitas", text: "Sterilitás" },
+            ],
+            correctOptionId: "sterilitas",
+          },
+        ],
+      },
+      {
+        id: "sterilizalas",
+        parts: [
+          "Antimikrobiális eljárás, melynek során a különböző fizikai, kémiai hatásokkal, vagy ezek kombinált alkalmazásával a csíramentesítésre kerülő anyagon és anyagban elpusztítjuk, illetve inaktiváljuk a mikroorganizmusokat, valamint ezek összes nyugvó formáit. ",
+          {
+            id: "fogalom",
+            label: "A mikroorganizmusokat és nyugvó formáikat elpusztító eljárás neve",
+            options: [
+              { id: "fertotlenites", text: "Fertőtlenítés" },
+              { id: "sterilizalas", text: "Sterilizálás" },
+              { id: "sterilitas", text: "Sterilitás" },
+            ],
+            correctOptionId: "sterilizalas",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-060",
@@ -1204,6 +1592,120 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-062",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
+    pairs: [
+      {
+        id: "nosocomialis_infekcio",
+        left: "nosocomialis infekció",
+        right: "Azon egészségügyi ellátással összefüggő fertőzés, amelyet a beteg, az egészségügyi dolgozó, valamint az egészségügyi ellátással kapcsolatba kerülő egyéb személy a fekvőbeteg-szakellátás során szerez, és amely az intézményi felvételkor még lappangó formában sem volt jelen.",
+      },
+      {
+        id: "nosocomialis_surveillance",
+        left: "nosocomialis surveillance",
+        right: "A kórházi fertőzések monitorozása céljából végzett, tudományos bizonyítékokra támaszkodó folyamatos, rendszeres adatgyűjtés, elemzés, értékelés és visszacsatolás.",
+      },
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-063",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
+    pairs: [
+      {
+        id: "aszepszis",
+        left: "aszepszis",
+        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
+      },
+      {
+        id: "sterilizalas",
+        left: "sterilizálás",
+        right: "Antimikrobiális eljárás, amelynek során különböző fizikai, kémiai hatásokkal vagy ezek kombinált alkalmazásával az anyagon, illetve az anyagban elpusztítják a mikroorganizmusokat, valamint ezek összes nyugvó formáját.",
+      },
+      {
+        id: "dezinfekcio",
+        left: "dezinfekció",
+        right: "Minden olyan eljárás, amely a fertőző forrásból a külső környezetbe kikerült kórokozók elpusztítására, illetve inaktiválására irányul.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-064",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi sterilizálásra jellemző megállapításokat a megadott szempontoknak megfelelően!",
+    groups: [
+      { id: "autoklav", text: "Autoklávval történő sterilizálásra jellemző" },
+      { id: "holeg", text: "Hőlég-sterilizálásra jellemző" },
+      { id: "etilen_oxid", text: "Etilén-oxid gázsterilizálásra jellemző" },
+      { id: "plazma", text: "Plazmasterilizálásra jellemző" },
+    ],
+    items: [
+      {
+        id: "textiliak_es_eszkozok",
+        text: "Alkalmas többek között textíliák, kötszerek, hőálló gumi- és műanyag eszközök sterilizálására is.",
+        correctGroupId: "autoklav",
+      },
+      {
+        id: "aktiv_szabadgyokok",
+        text: "A sterilizálás alacsony hőmérsékleten (46 ± 4°C) történik, a kórokozókat az eljárás során képződött aktív szabadgyökök pusztítják el.",
+        correctGroupId: "plazma",
+      },
+      {
+        id: "kiszellozesi_ido",
+        text: "Az így sterilizált eszközöket csak a kiszellőzési időt követően lehet felhasználni.",
+        correctGroupId: "etilen_oxid",
+      },
+      {
+        id: "szaraz_forro_levego",
+        text: "Száraz, forró levegővel történik.",
+        correctGroupId: "holeg",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-065",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az alábbi sterilizálásra jellemző megállapításokat a megadott szempontoknak megfelelően!",
+    groups: [
+      { id: "autoklav", text: "Autoklávval történő sterilizálásra jellemző" },
+      { id: "holeg", text: "Hőlég-sterilizálásra jellemző" },
+    ],
+    items: [
+      {
+        id: "szaraz_forro_levego",
+        text: "Száraz, forró levegővel történik.",
+        correctGroupId: "holeg",
+      },
+      {
+        id: "tulnyomasos_vizgoz",
+        text: "Túlnyomásos, telített vízgőzzel történik.",
+        correctGroupId: "autoklav",
+      },
+      {
+        id: "goz_athatolasa",
+        text: "Mikrobapusztító hatásának feltétele, hogy a gőz az eszközök csomagolásán áthatoljon, és a sterilizálandó tárgyakkal a megfelelő behatási ideig érintkezzen.",
+        correctGroupId: "autoklav",
+      },
+      {
+        id: "csomagolas",
+        text: "A sterilizálandó eszközök csomagoláshoz alkalmazható például alumíniumfólia, vagy fémdoboz.",
+        correctGroupId: "holeg",
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-066",
@@ -1286,6 +1788,23 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "c", "e"],
   },
   {
+    id: "tarsadalomtudomanyi-069",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki azokat az eseteket, amikor betegellátásban higiénés kézfertőtlenítés szükséges!",
+    options: [
+      { id: "a", text: "a beteg érintése előtt" },
+      { id: "b", text: "aszeptikus beavatkozás előtt" },
+      { id: "c", text: "váladékkal történő érintkezés után" },
+      { id: "d", text: "a beteg érintését követően" },
+      { id: "e", text: "a beteg környezetével történő érintkezést követően" },
+      { id: "f", text: "minden esetben" },
+      { id: "g", text: "egyik esetben sem" },
+    ],
+    correctOptionIds: ["f"],
+  },
+  {
     id: "tarsadalomtudomanyi-070",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1364,6 +1883,28 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-074",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes sorrendet! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "kesztyűfelvétel, kézfertőtlenítés, betegellátás, kézfertőtlenítés, kesztyűlevétel",
+      },
+      {
+        id: "b",
+        text: "kézfertőtlenítés, kesztyűfelvétel, betegellátás, kesztyűlevétel, kézfertőtlenítés",
+      },
+      {
+        id: "c",
+        text: "kesztyűfelvétel, betegellátás, kézfertőtlenítés, kesztyűlevétel, kézfertőtlenítés",
+      },
+    ],
+    correctOptionIds: ["b"],
   },
   {
     id: "tarsadalomtudomanyi-075",
@@ -1565,6 +2106,60 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "c"],
   },
   {
+    id: "tarsadalomtudomanyi-083",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbi felsorolásból a helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A veszélyes hulladékgyűjtő dobozokat a használat alatt le kell fedni – jól alkalmazhatók azok, amelyek fedelén bedobó nyílást vágtak –, megtöltést követően a dobozokat úgy kell lezárni, hogy ne legyenek kinyithatók.",
+      },
+      {
+        id: "b",
+        text: "A veszélyes hulladékgyűjtő dobozokat a használat során nyitva kell tartani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-084",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbi felsorolásból a helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A veszélyes hulladékgyűjtő dobozokat megtöltésük után sem kell véglegesen lezárni, hiszen a hulladékot ki kell tudni üríteni a tárolókból.",
+      },
+      {
+        id: "b",
+        text: "A veszélyes hulladékkal megtelt edényeket és zsákokat a hulladék keletkezésének helyéről történő eltávolításhoz ki nem nyitható módon le kell zárni.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "tarsadalomtudomanyi-085",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a megkezdett mondatot a befejezésével!",
+    pairs: [
+      {
+        id: "megtagadhatja",
+        left: "A munkavállaló megtagadhatja a munkavégzést,",
+        right: "ha azzal a saját testi épségét közvetlenül, vagy súlyosan veszélyezteti.",
+      },
+      {
+        id: "meg_kell_tagadnia",
+        left: "A munkavállalónak meg kell tagadnia a munkavégzést,",
+        right: "ha azzal más testi épségét közvetlenül vagy súlyosan veszélyezteti.",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-086",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1603,6 +2198,42 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["b", "d", "f"],
   },
   {
+    id: "tarsadalomtudomanyi-088",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
+    pairs: [
+      {
+        id: "fokozott_expozicio",
+        left: "Fokozott expozíció",
+        right: "A fizikai, kémiai, biológiai, vagy pszichés tényezők meghaladják a szervezet tűrőképességét.",
+      },
+      {
+        id: "foglalkozasi_betegseg",
+        left: "Foglalkozási betegség",
+        right: "Szubjektív panaszokkal és objektív tünetekkel járó időleges, vagy tartós károsodás, amely a munkahellyel, vagy a végzett munkakörrel ok-okozati összefüggésbe hozható.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-089",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
+    pairs: [
+      {
+        id: "foglalkozasi_baleset",
+        left: "Foglalkozási baleset",
+        right: "Könnyű, súlyos, vagy halálhoz vezető sérülés, amely a dolgozót munkájának végzése, vagy azzal összefüggő tevékenysége közben éri.",
+      },
+      {
+        id: "munkavedelem",
+        left: "Munkavédelem",
+        right: "A munkavállalók egészségének, testi épségének a munkával járó ártalmak elleni intézményes védelme.",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-090",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1629,6 +2260,130 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["b", "c"],
   },
   {
+    id: "tarsadalomtudomanyi-091",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Egészségügyi szolgáltatónál nyílt légtérben csak az egészségügyi szolgáltató területén belül, az egészségügyi szolgáltatást igénybevevők szokásos vagy szükségszerű útvonalától megfelelően elkülönülő, az útvonaltól legalább 10 méter távolságon kívül lehet dohányzóhelyet kialakítani.",
+      },
+      {
+        id: "b",
+        text: "Egészségügyi szolgáltatónál nyílt légtérben csak az egészségügyi szolgáltató területén belül, az egészségügyi szolgáltatást igénybevevők szokásos vagy szükségszerű útvonalától megfelelően elkülönülő, az útvonaltól legalább 5 méter távolságon kívül lehet dohányzóhelyet kialakítani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-092",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsorolt helyeket a megadott szempontok szerint!",
+    groups: [
+      { id: "kijelolheto", text: "Dohányzóhelynek kijelölhető terület" },
+      { id: "nem_kijelolheto", text: "Dohányzóhelynek nem kijelölhető terület" },
+    ],
+    items: [
+      {
+        id: "buszmegallo",
+        text: "buszmegállótól 5 méterre lévő terület",
+        correctGroupId: "kijelolheto",
+      },
+      {
+        id: "munkahely",
+        text: "munkahely zárt légterű helyisége",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "kozforgalmu_intezmeny",
+        text: "közforgalmú intézmény bejáratától számított öt méterre lévő terület",
+        correctGroupId: "kijelolheto",
+      },
+      {
+        id: "jatszoter",
+        text: "játszótér külső határvonalától öt méterre lévő terület",
+        correctGroupId: "kijelolheto",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-093",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsorolt helyeket a megadott szempontok szerint!",
+    groups: [
+      { id: "kijelolheto", text: "Dohányzóhelynek kijelölhető terület" },
+      { id: "nem_kijelolheto", text: "Dohányzóhelynek nem kijelölhető terület" },
+    ],
+    items: [
+      {
+        id: "penzintezet_elotere",
+        text: "pénzintézet előtere",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "korhaz_bejarata",
+        text: "kórház közforgalom számára nyitva álló bejáratától 10 méterre lévő terület",
+        correctGroupId: "kijelolheto",
+      },
+      {
+        id: "trolibusz_megallo",
+        text: "trolibusz megállójától két méterre lévő terület",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "szallodai_szivarszoba",
+        text: "szállodai szivarszobában, amennyiben hatóság engedélyezte",
+        correctGroupId: "kijelolheto",
+      },
+      {
+        id: "aluljaro",
+        text: "gyalogosforgalom számára használható aluljáró",
+        correctGroupId: "nem_kijelolheto",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-094",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsorolt helyeket a megadott szempontok szerint!",
+    groups: [
+      { id: "kijelolheto", text: "Dohányzóhelynek kijelölhető terület" },
+      { id: "nem_kijelolheto", text: "Dohányzóhelynek nem kijelölhető terület" },
+    ],
+    items: [
+      {
+        id: "dohanyzo_szobak",
+        text: "szállásszolgáltatást nyújtó intézmények kifejezetten dohányzóként kiadott és annak megjelölt, zárt légterű szobái",
+        correctGroupId: "kijelolheto",
+      },
+      {
+        id: "kozoktatasi_helyiseg",
+        text: "közoktatási intézménynek a tanulók által is használt helyisége",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "vonat_kocsija",
+        text: "Budapest és Szeged között közlekedő személyszállító vonat egyik kocsija",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "korhazi_piheno",
+        text: "kórházi osztály személyzeti pihenője",
+        correctGroupId: "nem_kijelolheto",
+      },
+      {
+        id: "munkahely_udvara",
+        text: "munkahely udvara",
+        correctGroupId: "kijelolheto",
+      },
+    ],
+  },
+  {
     id: "tarsadalomtudomanyi-095",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1649,6 +2404,78 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-096",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A robbanásveszélyes osztályba tartozó anyagot szállító járművön, valamint a tűzveszélyes osztályba tartozó anyagot szállító jármű rakodóterén dohányozni, nyílt lángot használni nem szabad!",
+      },
+      {
+        id: "b",
+        text: "A robbanásveszélyes osztályba tartozó anyagot szállító járművön, valamint a tűzveszélyes osztályba tartozó anyagot szállító jármű rakodóterén csak külön engedéllyel szabad dohányozni.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-097",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Éghető folyadék csak a folyadék hatásának ellenálló, a folyadékra gyújtási veszélyt nem jelentő, jól zárható edényben tárolható.",
+      },
+      {
+        id: "b",
+        text: "Éghető folyadék csak üveg edényben tárolható.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-098",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
+    pairs: [
+      {
+        id: "tuzvedelem",
+        left: "A tűzvédelem",
+        right: "A tűzesetek megelőzése, a tűzoltási feladatok ellátása, a tűzvizsgálat, valamint ezek feltételeinek biztosítása.",
+      },
+      {
+        id: "tuzmegelozes",
+        left: "A tűzmegelőzés",
+        right: "A tüzek keletkezésének megelőzése, továbbterjedésének akadályozása, a létesítés és a használat során a tűzvédelmi jogszabályok, szabványok érvényesítése.",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-099",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
+    pairs: [
+      {
+        id: "tuzoltas",
+        left: "A tűzoltás",
+        right: "Célja a tűz közvetlen veszélyének elhárítása, személyek, anyagi javak mentése, a tűz terjedésének megakadályozása.",
+      },
+      {
+        id: "tuzvizsgalat",
+        left: "A tűzvizsgálat",
+        right: "A tűzoltóságnak azon szakmai tevékenysége, amely a tűz keletkezése idejének, helyének és okának felderítésére irányul.",
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-100",
@@ -1684,6 +2511,128 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       { id: "f", text: "a bejelentésre használt telefonkészülék számát" },
     ],
     correctOptionIds: ["b", "d", "f"],
+  },
+  {
+    id: "tarsadalomtudomanyi-102",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egyéni védőeszközökkel és a munkaruhával kapcsolatos megállapításokat!",
+    groups: [
+      { id: "egyeni_vedoeszkoz", text: "Egyéni védőeszköz" },
+      { id: "munkaruha", text: "Munkaruha" },
+    ],
+    items: [
+      {
+        id: "munkaltatoi_intezkedes",
+        text: "juttatása a munkáltató intézkedése alapján történik",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "irasbeli_meghatarozas",
+        text: "juttatását a munkáltató írásban köteles meghatározni, mely munkabiztonsági és munkaegészségügyi tevékenységnek minősül",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+      {
+        id: "kihordasi_ido",
+        text: "kihordási ideje van",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "kotelezo_hasznalat",
+        text: "használata kötelező, használatának elmulasztását a munkáltató szankcionálhatja",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-103",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egyéni védőeszközökkel és a munkaruhával kapcsolatos megállapításokat!",
+    groups: [
+      { id: "egyeni_vedoeszkoz", text: "Egyéni védőeszköz" },
+      { id: "munkaruha", text: "Munkaruha" },
+    ],
+    items: [
+      {
+        id: "munkavedelmi_megfeleloseg",
+        text: "munkavédelmi megfelelősége nincs",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "hasznalat_kotelezove_tetele",
+        text: "használata nem kötelező, de a tevékenység és a munkaterület sajátosságaiból adódóan kötelezővé tehető",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "egyeni_adottsagok",
+        text: "a munkavállaló adottságait, méreteit figyelembe kell venni a kiválasztás és juttatás során",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+      {
+        id: "vedelmi_kepesseg_elvesztese",
+        text: "kihordási ideje nincs, védelmi képességének elvesztése esetén cserélni kell",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-104",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egyéni védőeszközökkel és a munkaruhával kapcsolatos megállapításokat!",
+    groups: [
+      { id: "egyeni_vedoeszkoz", text: "Egyéni védőeszköz" },
+      { id: "munkaruha", text: "Munkaruha" },
+    ],
+    items: [
+      {
+        id: "mosas_tisztitas_karbantartas",
+        text: "mosás, tisztítás, karbantartás a munkáltató kötelezettsége, mert szakszerű végrehajtást igényelhet",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+      {
+        id: "baleseti_vizsgalat",
+        text: "munkahelyi baleset esetén vizsgálat tárgya lehet a megfelelősége és a védelmi képessége is",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "munkaltatoi_biztositas",
+        text: "munkáltató köteles biztosítani a munkavállalónak, ha a munka a ruházat nagymértékű szennyeződésével vagy elhasználódásával jár",
+        correctGroupId: "munkaruha",
+      },
+    ],
+  },
+  {
+    id: "tarsadalomtudomanyi-105",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "grouping",
+    prompt:
+      "Csoportosítsa az egyéni védőeszközökkel és a munkaruhával kapcsolatos megállapításokat!",
+    groups: [
+      { id: "egyeni_vedoeszkoz", text: "Egyéni védőeszköz" },
+      { id: "munkaruha", text: "Munkaruha" },
+    ],
+    items: [
+      {
+        id: "gyakorlas_oktatas",
+        text: "a használat egyes esetekben gyakorlást, oktatást igényel",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+      {
+        id: "biztonsagot_veszelyezteto_ruhazat",
+        text: "használata nem kötelező, de a biztonságot veszélyeztető ruházat viselése akkor is tilos",
+        correctGroupId: "munkaruha",
+      },
+      {
+        id: "szemelyre_kiadott",
+        text: "személyre kiadott, a munkavállaló nem viheti el a munkahelyről, csak a munkáltató külön engedélyével",
+        correctGroupId: "egyeni_vedoeszkoz",
+      },
+    ],
   },
   {
     id: "tarsadalomtudomanyi-106",
@@ -1868,6 +2817,290 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "d"],
   },
   {
+    id: "tarsadalomtudomanyi-113",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Ha a fertőző váladék, vér, testnedv, egyéb fertőző anyag sértetlen bőrre kerül úgy azt azonnal – szükség esetén a ruházat részleges vagy teljes eltávolítása után – bőrfertőtlenítő szerek egyikével kell fertőtleníteni.",
+      },
+      {
+        id: "b",
+        text: "Ha a fertőző váladék, vér, testnedv, egyéb fertőző anyag sértetlen bőrre kerül úgy azt azonnal – szükség esetén a ruházat részleges vagy teljes eltávolítása után – papírvattával le kell törölni.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-114",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Ha a fertőző anyag szembe jutott, úgy mindkét szemet steril fiziológiás konyhasóoldattal – dörzsölést kerülve – ki kell mosni.",
+      },
+      {
+        id: "b",
+        text: "Szembe került fertőző anyagot fertőtlenítőszerrel kell eltávolítani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-115",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Ha a cornea (szaruhártya) sérülése feltételezhető, a szem óvatos kiöblítése után azonnal szemészeti szakellátásban kell a személyt részesíteni.",
+      },
+      {
+        id: "b",
+        text: "Amennyiben a szemből sikerült a fertőző anyagot kimosni, sosem szükséges szemészeti szakellátás.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-116",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes állításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Minden olyan esetet, melynek során fertőző anyaggal kontamináció történt, vagy ennek gyanúja feltételezhető, a dolgozó köteles ezt felettesének azonnal jelenteni.",
+      },
+      {
+        id: "b",
+        text: "Fertőző anyaggal történő kontaminációról csak akkor kell a felettest tájékoztatni, ha azt nem sikerül maradéktalanul eltávolítani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-117",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, hogy mely esetben kell a munkavállalót munkavédelmi oktatásban részesíteni! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Munkába állás előtt, munkakör változás esetén." },
+      { id: "b", text: "Ha ezt az üzemorvos előírja." },
+      { id: "c", text: "Ha a munkavállaló ezt kéri." },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-118",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbiak közül, hogy melyik eset számít munkabalesetnek! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Munkába menet a BKK járművén történt sérülés." },
+      { id: "b", text: "Munkaidő alatt az üzemi étkezdében történt sérülés." },
+      {
+        id: "c",
+        text: "Pihenő napon a munkavállaló otthonában történt sérülés.",
+      },
+      { id: "d", text: "A munkavégzés következtében kialakuló derékfájás." },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "tarsadalomtudomanyi-119",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a munkavállaló teendőjét veszélyt jelentő rendellenesség, üzemzavar észlelése esetén! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Nincs teendő, mert ez nem a munkavállaló feladata." },
+      {
+        id: "b",
+        text: "A munkáltatót azonnal tájékoztatni kell, majd ha tudja, megszünteti, vagy ehhez segítséget kér a felettesétől.",
+      },
+      { id: "c", text: "Hívja a rendőrséget." },
+      { id: "d", text: "Lefényképezi, hogy később legyen róla bizonyítéka." },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "tarsadalomtudomanyi-120",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a biztonságos munkavégzéshez szükséges védőeszközök biztosítóját! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "A munkavállaló szerzi be saját magának." },
+      { id: "b", text: "Az, aki legolcsóbban tudja beszerezni." },
+      { id: "c", text: "A munkáltató szerzi be." },
+      { id: "d", text: "A szakszervezet szerzi be." },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "tarsadalomtudomanyi-121",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbiak közül azt, amelyik NEM védőeszköz! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "füldugó" },
+      { id: "b", text: "védőkesztyű" },
+      { id: "c", text: "hegesztőszemüveg" },
+      { id: "d", text: "sebtapasz" },
+    ],
+    correctOptionIds: ["d"],
+  },
+  {
+    id: "tarsadalomtudomanyi-122",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a munkavédelem célját! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Megfelelő minőségű termékek gyártása." },
+      { id: "b", text: "Védeni a munkahelyeket." },
+      { id: "c", text: "Munkahelyteremtés." },
+      {
+        id: "d",
+        text: "A munkavállaló egészségének és munkavégző képességének megóvása, valamint a megfelelő munkakörülmények biztosítása a munkahelyi balesetek és megbetegedések megelőzése érdekében.",
+      },
+    ],
+    correctOptionIds: ["d"],
+  },
+  {
+    id: "tarsadalomtudomanyi-123",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "A munkavállaló végezhet-e olyan munkát, amivel más testi épségét veszélyeztetné? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Igen, ha a másik beleegyezik és vállalja a kockázatot.",
+      },
+      { id: "b", text: "Igen, hogyha az csak nagyon rövid ideig tart." },
+      {
+        id: "c",
+        text: "Csak abban az esetben, ha ebből még nem volt probléma.",
+      },
+      { id: "d", text: "Nem, sőt meg is kell tagadni a munkavégzést." },
+    ],
+    correctOptionIds: ["d"],
+  },
+  {
+    id: "tarsadalomtudomanyi-124",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "A munkavállaló megtagadhatja-e a munkavégzést, ha azzal saját egészségét veszélyeztetné? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Igen, minden esetben." },
+      { id: "b", text: "Igen, de csak ha extrém veszélyt jelent rá nézve." },
+      { id: "c", text: "Igen, ha azzal a munkaadója is egyetért." },
+      { id: "d", text: "Nem, mert akkor elveszítheti a munkáját." },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-125",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Végezhet-e a munkavállaló önállóan munkát, ha nem részesült előzetesen munkavédelmi oktatásban? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Nem, csak az oktatást követően." },
+      { id: "b", text: "Nem, csak ha veszélytelen munkát bíznak rá." },
+      { id: "c", text: "Igen, mert azt később is pótolhatja." },
+      { id: "d", text: "Nem kötelező munkavédelmi oktatáson részt venni." },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-126",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az elsősegélynyújtás alapvető célja az életmentés, valamint az orvosi segítség megérkezéséig a sérült állapotromlásának megakadályozása.",
+      },
+      {
+        id: "b",
+        text: "Az elsősegélynyújtás alapvető célja, hogy az orvosi segítség megérkezéséig a sérült állapotát javítsuk.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-127",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Minden munkahelyen biztosítani kell elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét.",
+      },
+      {
+        id: "b",
+        text: "Az elsősegélynyújtó felszerelést, jól elzárva, védett helyen kell készenlétben tartani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-128",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Minden munkahelyen biztosítani kell elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét.",
+      },
+      {
+        id: "b",
+        text: "Az 50 főnél magasabb létszámú munkahelyen, elsősegélynyújtó felszerelést (mentődobozt) és a munkavállalók közül kiképzett, elsősegélynyújtásra kijelölt személy jelenlétét kell biztosítani.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "tarsadalomtudomanyi-129",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az elsősegélynyújtó felszerelést, jól elzárva, védett helyen kell készenlétben tartani.",
+      },
+      {
+        id: "b",
+        text: "Az elsősegélynyújtó felszerelést, jól látható, könnyen és gyorsan elérhető, védett helyen kell készenlétben tartani.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
     id: "tarsadalomtudomanyi-130",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1917,6 +3150,28 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
     correctOptionIds: ["a", "c"],
   },
   {
+    id: "tarsadalomtudomanyi-132",
+    topicId: "tarsadalomtudomanyi_ismeretek",
+    type: "single_choice",
+    prompt:
+      "Részt kell-e venni a munkavédelmi oktatásokon a munkavállalóknak? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Csak abban az esetben, ha éppen akkor tartják, amikor a munkahelyén tartózkodik.",
+      },
+      {
+        id: "b",
+        text: "A munkavédelmi oktatáson való részvétel nem kötelező.",
+      },
+      {
+        id: "c",
+        text: "A munkavállaló kötelessége a megjelölt időpontban és helyen részt venni a munkavédelmi oktatásokon.",
+      },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
     id: "tarsadalomtudomanyi-133",
     topicId: "tarsadalomtudomanyi_ismeretek",
     type: "multiple_choice",
@@ -1938,336 +3193,6 @@ export const tarsadalomtudomanyiQuestions: ExamQuestion[] = [
       },
     ],
     correctOptionIds: ["c", "d"],
-  },
-  {
-    id: "tarsadalomtudomanyi-008",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt:
-      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
-    pairs: [
-      {
-        id: "versengo",
-        left: "Versengő típus",
-        right: "egyoldalúan győzni akar",
-      },
-      {
-        id: "problemamegoldo",
-        left: "Problémamegoldó (együttműködő) típus",
-        right: "elfogadja a másik fél érdekeit is",
-      },
-      {
-        id: "kompromisszumkereso",
-        left: "Kompromisszumkereső típus",
-        right: "előnyös, ha mindkét fél hatalmi pozíciója egyforma",
-      },
-      {
-        id: "elkerulo",
-        left: "Elkerülő típus",
-        right: "lemond saját és mások érdekeinek érvényesítéséről",
-      },
-      {
-        id: "alkalmazkodo",
-        left: "Alkalmazkodó típus",
-        right: "nem érvényesíti a saját érdekeit, de a másikét hagyja érvényesülni",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-009",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt:
-      "Rendezze az alábbiakban megadott jellemzőket a konfliktuskezelés típusaihoz!",
-    pairs: [
-      {
-        id: "versengo",
-        left: "Versengő típus",
-        right: "kedvezőtlen az emberi kapcsolatokra",
-      },
-      {
-        id: "problemamegoldo",
-        left: "Problémamegoldó (együttműködő) típus",
-        right: "mindkét fél nyertesként kerül ki a konfliktusból",
-      },
-      {
-        id: "kompromisszumkereso",
-        left: "Kompromisszumkereső típus",
-        right: "kölcsönösen engednek a másik javára",
-      },
-      {
-        id: "elkerulo",
-        left: "Elkerülő típus",
-        right: "a felek közötti feszültségcsökkentés fontosabb, mint a várható kimenetel",
-      },
-      {
-        id: "alkalmazkodo",
-        left: "Alkalmazkodó típus",
-        right: "előnyös, ha jóindulatunkat akarjuk kimutatni a partner felé",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-012",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a konfliktuskezelés típusait a meghatározásukkal!",
-    pairs: [
-      {
-        id: "versengo",
-        left: "versengő",
-        right: "egyoldalúan győzni akar, ezért mindent elkövet, kedvezőtlen az emberi kapcsolatokra",
-      },
-      {
-        id: "problemamegoldo",
-        left: "problémamegoldó",
-        right: "nem akar győzni mindenáron, elfogadja a másik fél érdekeit is, mindkét fél nyertesként kerül ki a konfliktusból",
-      },
-      {
-        id: "kompromisszumkereso",
-        left: "kompromisszumkereső",
-        right: "mindkét fél érdeke érvényesül, mindegyik enged a másik fél javára",
-      },
-      {
-        id: "alkalmazkodo",
-        left: "alkalmazkodó",
-        right: "nem érvényesíti a saját érdekeit, hagyja érvényesülni a másik fél érdekeit",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-014",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
-    pairs: [
-      {
-        id: "jogforras",
-        left: "Jogforrás",
-        right: "Olyan jogi forma, amelyből megismerhetők a jogalanyok jogai és kötelezettségei. Ezek lehetnek maguk a jogalkotó szervek és az általuk meghozott jogszabályok is.",
-      },
-      {
-        id: "jog",
-        left: "Jog",
-        right: "Olyan magatartási szabályok összessége, amelyeket az állam bocsát ki és szankcionálja, vagy pedig valamilyen egyéb eljárást (például népszavazás) jogalkotásként ismer el.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-015",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi kifejezéseket a leírásukkal!",
-    pairs: [
-      {
-        id: "torveny",
-        left: "Törvény",
-        right: "Az Országgyűlés által elfogadott olyan jogszabály, amely mindenkire nézve kötelező rendelkezéseket tartalmaz.",
-      },
-      {
-        id: "tarsadalmi_norma",
-        left: "Társadalmi norma",
-        right: "Magatartási szabály, amely a lehetséges cselekedetek közül előírja a helyeset, a követendőt.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-021",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt:
-      "Párosítsa az alábbi etikával kapcsolatos fogalmakat meghatározásaikkal!",
-    pairs: [
-      {
-        id: "etika",
-        left: "etika",
-        right: "erkölcstan, a helyes és helytelen magatartás tudománya",
-      },
-      {
-        id: "moral",
-        left: "morál",
-        right: "az egyén által vallott viselkedési normák",
-      },
-      {
-        id: "egeszsegugyi_etika",
-        left: "egészségügyi etika",
-        right: "az általános etika alkalmazása az egészségügyre",
-      },
-      {
-        id: "bioetika",
-        left: "bioetika",
-        right: "a modern gyógyászat által felvetett erkölcsi kérdéseknek racionális megközelítése",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-048",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az összetartozó fogalmakat és meghatározásokat!",
-    pairs: [
-      {
-        id: "aszepszis",
-        left: "aszepszis",
-        right: "A beteg szervezetétől minden mikroorganizmus távol tartása, vagyis csíramentes, csíraszegény környezet teremtése.",
-      },
-      {
-        id: "fertotlenites",
-        left: "fertőtlenítés",
-        right: "A kórokozók számának csökkentése azok elpusztításával, szaporodásuk gátlásával, vagy fertőzőképességük megszüntetésével.",
-      },
-      {
-        id: "infekciokontroll",
-        left: "infekciókontroll",
-        right: "Olyan szabályok, eljárások alkalmazása, melyek megakadályozzák a fertőzések átvitelét.",
-      },
-      {
-        id: "higienes_kezfertotlenites",
-        left: "higiénés kézfertőtlenítés",
-        right: "Tranziens flóra elpusztítása.",
-      },
-      {
-        id: "sterilizalas",
-        left: "sterilizálás",
-        right: "Csíramentesítés.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-062",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
-    pairs: [
-      {
-        id: "nosocomialis_infekcio",
-        left: "nosocomialis infekció",
-        right: "Azon egészségügyi ellátással összefüggő fertőzés, amelyet a beteg, az egészségügyi dolgozó, valamint az egészségügyi ellátással kapcsolatba kerülő egyéb személy a fekvőbeteg-szakellátás során szerez, és amely az intézményi felvételkor még lappangó formában sem volt jelen.",
-      },
-      {
-        id: "nosocomialis_surveillance",
-        left: "nosocomialis surveillance",
-        right: "A kórházi fertőzések monitorozása céljából végzett, tudományos bizonyítékokra támaszkodó folyamatos, rendszeres adatgyűjtés, elemzés, értékelés és visszacsatolás.",
-      },
-      {
-        id: "aszepszis",
-        left: "aszepszis",
-        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-063",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa az alábbi fogalmakat a jelentésükkel!",
-    pairs: [
-      {
-        id: "aszepszis",
-        left: "aszepszis",
-        right: "Azoknak a betegellátás során alkalmazott munkamódszereknek, munkafolyamatoknak és magatartásformáknak az összessége, amelyekkel a mikroorganizmusok a beteg szervezetétől, de különösen annak nyitott testszöveteitől, nyálkahártyáitól, testüregeitől, testnyílásaitól távol tarthatók.",
-      },
-      {
-        id: "sterilizalas",
-        left: "sterilizálás",
-        right: "Antimikrobiális eljárás, amelynek során különböző fizikai, kémiai hatásokkal vagy ezek kombinált alkalmazásával az anyagon, illetve az anyagban elpusztítják a mikroorganizmusokat, valamint ezek összes nyugvó formáját.",
-      },
-      {
-        id: "dezinfekcio",
-        left: "dezinfekció",
-        right: "Minden olyan eljárás, amely a fertőző forrásból a külső környezetbe kikerült kórokozók elpusztítására, illetve inaktiválására irányul.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-085",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a megkezdett mondatot a befejezésével!",
-    pairs: [
-      {
-        id: "megtagadhatja",
-        left: "A munkavállaló megtagadhatja a munkavégzést,",
-        right: "ha azzal a saját testi épségét közvetlenül, vagy súlyosan veszélyezteti.",
-      },
-      {
-        id: "meg_kell_tagadnia",
-        left: "A munkavállalónak meg kell tagadnia a munkavégzést,",
-        right: "ha azzal más testi épségét közvetlenül vagy súlyosan veszélyezteti.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-088",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
-    pairs: [
-      {
-        id: "fokozott_expozicio",
-        left: "Fokozott expozíció",
-        right: "A fizikai, kémiai, biológiai, vagy pszichés tényezők meghaladják a szervezet tűrőképességét.",
-      },
-      {
-        id: "foglalkozasi_betegseg",
-        left: "Foglalkozási betegség",
-        right: "Szubjektív panaszokkal és objektív tünetekkel járó időleges, vagy tartós károsodás, amely a munkahellyel, vagy a végzett munkakörrel ok-okozati összefüggésbe hozható.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-089",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a fogalmakat a meghatározásaikkal!",
-    pairs: [
-      {
-        id: "foglalkozasi_baleset",
-        left: "Foglalkozási baleset",
-        right: "Könnyű, súlyos, vagy halálhoz vezető sérülés, amely a dolgozót munkájának végzése, vagy azzal összefüggő tevékenysége közben éri.",
-      },
-      {
-        id: "munkavedelem",
-        left: "Munkavédelem",
-        right: "A munkavállalók egészségének, testi épségének a munkával járó ártalmak elleni intézményes védelme.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-098",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
-    pairs: [
-      {
-        id: "tuzvedelem",
-        left: "A tűzvédelem",
-        right: "A tűzesetek megelőzése, a tűzoltási feladatok ellátása, a tűzvizsgálat, valamint ezek feltételeinek biztosítása.",
-      },
-      {
-        id: "tuzmegelozes",
-        left: "A tűzmegelőzés",
-        right: "A tüzek keletkezésének megelőzése, továbbterjedésének akadályozása, a létesítés és a használat során a tűzvédelmi jogszabályok, szabványok érvényesítése.",
-      },
-    ],
-  },
-  {
-    id: "tarsadalomtudomanyi-099",
-    topicId: "tarsadalomtudomanyi_ismeretek",
-    type: "matching",
-    prompt: "Párosítsa a fogalmakat a meghatározásukkal!",
-    pairs: [
-      {
-        id: "tuzoltas",
-        left: "A tűzoltás",
-        right: "Célja a tűz közvetlen veszélyének elhárítása, személyek, anyagi javak mentése, a tűz terjedésének megakadályozása.",
-      },
-      {
-        id: "tuzvizsgalat",
-        left: "A tűzvizsgálat",
-        right: "A tűzoltóságnak azon szakmai tevékenysége, amely a tűz keletkezése idejének, helyének és okának felderítésére irányul.",
-      },
-    ],
   },
   {
     id: "tarsadalomtudomanyi-134",
