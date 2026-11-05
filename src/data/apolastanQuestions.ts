@@ -64,17 +64,30 @@ export const apolastanQuestions: ExamQuestion[] = [
     type: "true_false",
     statements: [
       { id: "a", text: "Megfelelő nagyságú falatokat adjunk.", correct: true },
-      { id: "b", text: "Étkezés után soha ne adjunk folyadékot.", correct: false },
+      {
+        id: "b",
+        text: "Étkezés után soha ne adjunk folyadékot.",
+        correct: false,
+      },
     ],
-    prompt: "Döntse el, hogy a beteg táplálására vonatkozó megállapítások igazak, vagy hamisak!",
+    prompt:
+      "Döntse el, hogy a beteg táplálására vonatkozó megállapítások igazak, vagy hamisak!",
   },
   {
     id: "apolastan-101",
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Az időseknél elhanyagolható a személyre szabott ápolás.", correct: false },
-      { id: "b", text: "Idősek esetén fokozottan figyelni kell a folyadékbevitelre.", correct: true },
+      {
+        id: "a",
+        text: "Az időseknél elhanyagolható a személyre szabott ápolás.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Idősek esetén fokozottan figyelni kell a folyadékbevitelre.",
+        correct: true,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
   },
@@ -83,8 +96,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "A higiénés szükségletek kielégítése a beteg komfortérzetének biztosítását szolgálja.", correct: true },
-      { id: "b", text: "A higiénés szükségletek kielégítése az ápoló nem önálló döntésének körébe tartozó tevékenység.", correct: false },
+      {
+        id: "a",
+        text: "A higiénés szükségletek kielégítése a beteg komfortérzetének biztosítását szolgálja.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek kielégítése az ápoló nem önálló döntésének körébe tartozó tevékenység.",
+        correct: false,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
   },
@@ -93,8 +114,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Mozgássérültség, vagy mozgáskorlátozottság főbb típusai: agykárosodás következtében kialakult rendellenességek, bénulások, ortopédiai elváltozások, amputációk, végtaghiányos fejlődési rendellenességek.", correct: true },
-      { id: "b", text: "Mozgássérültség vagy mozgáskorlátozottság főbb típusai: mozgásszervi megbetegedések pl. ízületi gyulladás, végtagtörések stb. és az enyhe strukturális elváltozások pl. lúdtalp, gerincferdülés, „X” vagy „O” láb.", correct: false },
+      {
+        id: "a",
+        text: "Mozgássérültség, vagy mozgáskorlátozottság főbb típusai: agykárosodás következtében kialakult rendellenességek, bénulások, ortopédiai elváltozások, amputációk, végtaghiányos fejlődési rendellenességek.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Mozgássérültség vagy mozgáskorlátozottság főbb típusai: mozgásszervi megbetegedések pl. ízületi gyulladás, végtagtörések stb. és az enyhe strukturális elváltozások pl. lúdtalp, gerincferdülés, „X” vagy „O” láb.",
+        correct: false,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
   },
@@ -103,7 +132,11 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "A látászavar aszerint értékelhető, hogy gondot okoz-e az olvasásban, a tájékozódásban, vagy a cselekvésben.", correct: true },
+      {
+        id: "a",
+        text: "A látászavar aszerint értékelhető, hogy gondot okoz-e az olvasásban, a tájékozódásban, vagy a cselekvésben.",
+        correct: true,
+      },
       { id: "b", text: "Vakság a látásélesség teljes hiánya.", correct: true },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
@@ -114,7 +147,11 @@ export const apolastanQuestions: ExamQuestion[] = [
     type: "true_false",
     statements: [
       { id: "a", text: "A normál beszéd hangereje 40 dB.", correct: false },
-      { id: "b", text: "A hallás károsodásának, illetve csökkenésének mértéke alapján beszélhetünk a nagyothallókról és siketekről.", correct: true },
+      {
+        id: "b",
+        text: "A hallás károsodásának, illetve csökkenésének mértéke alapján beszélhetünk a nagyothallókról és siketekről.",
+        correct: true,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
   },
@@ -123,7 +160,11 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Beszédhibák közé tartozik pl. a dadogás és a pöszeség.", correct: true },
+      {
+        id: "a",
+        text: "Beszédhibák közé tartozik pl. a dadogás és a pöszeség.",
+        correct: true,
+      },
       { id: "b", text: "A tartós beszédképtelenség a némaság.", correct: true },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
@@ -133,8 +174,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Az értelmi sérültek két csoportra oszthatók súlyosság szerint: tanulásban akadályozottak és értelmileg akadályozottak.", correct: false },
-      { id: "b", text: "Az értelmi szint csökkenése az IQ-val mérhető.", correct: true },
+      {
+        id: "a",
+        text: "Az értelmi sérültek két csoportra oszthatók súlyosság szerint: tanulásban akadályozottak és értelmileg akadályozottak.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Az értelmi szint csökkenése az IQ-val mérhető.",
+        correct: true,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
   },
@@ -143,8 +192,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Az esélyegyenlőség alapja maga az integrációmentesség.", correct: false },
-      { id: "b", text: "Infokommunikációs akadálynak nevezzük azokat az akadályokat, amelyek gátolják a hallásfogyatékos, látásfogyatékos, illetve intellektuális fogyatékossággal élő emberek megfelelő információhoz jutását.", correct: true },
+      {
+        id: "a",
+        text: "Az esélyegyenlőség alapja maga az integrációmentesség.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Infokommunikációs akadálynak nevezzük azokat az akadályokat, amelyek gátolják a hallásfogyatékos, látásfogyatékos, illetve intellektuális fogyatékossággal élő emberek megfelelő információhoz jutását.",
+        correct: true,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
   },
@@ -153,8 +210,16 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "true_false",
     statements: [
-      { id: "a", text: "Üzemi baleset esetén kiemelt táppénz jár a sérült munkavállalónak.", correct: true },
-      { id: "b", text: "Úti balesetnek nevezzük, de ugyanúgy munkabalesetnek minősül, ha munkába menet, vagy munkából hazafelé éri baleset a sérültet.", correct: false },
+      {
+        id: "a",
+        text: "Üzemi baleset esetén kiemelt táppénz jár a sérült munkavállalónak.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Úti balesetnek nevezzük, de ugyanúgy munkabalesetnek minősül, ha munkába menet, vagy munkából hazafelé éri baleset a sérültet.",
+        correct: false,
+      },
     ],
     prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
   },
@@ -237,7 +302,10 @@ export const apolastanQuestions: ExamQuestion[] = [
     options: [
       { id: "a", text: "a beteg haskörfogatát" },
       { id: "b", text: "a beteg testmagasságát" },
-      { id: "c", text: "az infúziós terápia során bevitt folyadék mennyiségét" },
+      {
+        id: "c",
+        text: "az infúziós terápia során bevitt folyadék mennyiségét",
+      },
     ],
     correctOptionIds: ["c"],
   },
@@ -333,7 +401,10 @@ export const apolastanQuestions: ExamQuestion[] = [
       { id: "a", text: "széklet felülete véres" },
       { id: "b", text: "széklet friss, vagy alvadékos vért tartalmaz" },
       { id: "c", text: "széklet színe fekete (szurokszéklet)" },
-      { id: "d", text: "székletben nem látható vér, de laboratóriumi vizsgálattal kimutatható" },
+      {
+        id: "d",
+        text: "székletben nem látható vér, de laboratóriumi vizsgálattal kimutatható",
+      },
     ],
     correctOptionIds: ["d"],
   },
@@ -344,9 +415,18 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbi felsorolásból a szekunder prevenció jellemzőjét! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Módszerei közé tartozik a szűrés, korai kezelés és a gondozásba vétel." },
-      { id: "b", text: "Fontos célja a krónikus beteg, vagy a végleges károsodást szenvedett betegek számára a megfelelő életminőség biztosítása." },
-      { id: "c", text: "Fontos szerep jut a védőoltásoknak, a rizikóállapotok szűrésének és az egészségfejlesztésnek." },
+      {
+        id: "a",
+        text: "Módszerei közé tartozik a szűrés, korai kezelés és a gondozásba vétel.",
+      },
+      {
+        id: "b",
+        text: "Fontos célja a krónikus beteg, vagy a végleges károsodást szenvedett betegek számára a megfelelő életminőség biztosítása.",
+      },
+      {
+        id: "c",
+        text: "Fontos szerep jut a védőoltásoknak, a rizikóállapotok szűrésének és az egészségfejlesztésnek.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -357,9 +437,18 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbi felsorolásból a szekunder prevenció jellemzőjét! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Fontos célja a krónikus beteg, vagy a végleges károsodást szenvedett betegek számára a megfelelő életminőség biztosítása." },
-      { id: "b", text: "A betegségek korai stádiumban történő felismerését és azonnali gyógykezelését jelenti." },
-      { id: "c", text: "Fontos szerep jut a védőoltásoknak, a rizikóállapotok szűrésének és az egészségfejlesztésnek." },
+      {
+        id: "a",
+        text: "Fontos célja a krónikus beteg, vagy a végleges károsodást szenvedett betegek számára a megfelelő életminőség biztosítása.",
+      },
+      {
+        id: "b",
+        text: "A betegségek korai stádiumban történő felismerését és azonnali gyógykezelését jelenti.",
+      },
+      {
+        id: "c",
+        text: "Fontos szerep jut a védőoltásoknak, a rizikóállapotok szűrésének és az egészségfejlesztésnek.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -370,8 +459,14 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbi felsorolásból a szekunder prevenció jellemzőit! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az egészség megőrzésére, védelmére, és fejlesztésére irányul." },
-      { id: "b", text: "Célja a betegség időtartamának lerövidítése, illetve előrehaladásának, súlyosbodásának) megakadályozása, lassítása." },
+      {
+        id: "a",
+        text: "Az egészség megőrzésére, védelmére, és fejlesztésére irányul.",
+      },
+      {
+        id: "b",
+        text: "Célja a betegség időtartamának lerövidítése, illetve előrehaladásának, súlyosbodásának) megakadályozása, lassítása.",
+      },
       { id: "c", text: "A fogyatékkal élő és rokkant személyekre irányul." },
     ],
     correctOptionIds: ["b"],
@@ -383,9 +478,15 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbi felsorolásból a szekunder prevenció jellemzőit! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az egészség megőrzésére, védelmére, és fejlesztésére irányul." },
+      {
+        id: "a",
+        text: "Az egészség megőrzésére, védelmére, és fejlesztésére irányul.",
+      },
       { id: "b", text: "A fogyatékkal élő és rokkant személyekre irányul." },
-      { id: "c", text: "Olyan egyéneket céloz meg, akiknél jelentős kockázati tényezők állnak fenn, veszélyeztetettek, vagy már a betegség korai stádiumában vannak." },
+      {
+        id: "c",
+        text: "Olyan egyéneket céloz meg, akiknél jelentős kockázati tényezők állnak fenn, veszélyeztetettek, vagy már a betegség korai stádiumában vannak.",
+      },
     ],
     correctOptionIds: ["c"],
   },
@@ -396,9 +497,18 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbiak közül a helyes állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A beteg mosdatásához 2 db törölközőt kell előkészíteni, mert ha az egyik véletlenül leesik, vagy szennyeződik, a másikkal pótolhatjuk." },
-      { id: "b", text: "Azoknál a betegeknél, akik szájon át nem táplálhatók, az ápolónak különös gondot kell fordítania a szájápolásra és a száj állapotának megfigyelésére." },
-      { id: "c", text: "A szennyes ágyneműt az ágyneműcsere végén a földről összegyűjtve az erre kijelölt szennyes ledobókba helyezzük." },
+      {
+        id: "a",
+        text: "A beteg mosdatásához 2 db törölközőt kell előkészíteni, mert ha az egyik véletlenül leesik, vagy szennyeződik, a másikkal pótolhatjuk.",
+      },
+      {
+        id: "b",
+        text: "Azoknál a betegeknél, akik szájon át nem táplálhatók, az ápolónak különös gondot kell fordítania a szájápolásra és a száj állapotának megfigyelésére.",
+      },
+      {
+        id: "c",
+        text: "A szennyes ágyneműt az ágyneműcsere végén a földről összegyűjtve az erre kijelölt szennyes ledobókba helyezzük.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -409,8 +519,14 @@ export const apolastanQuestions: ExamQuestion[] = [
     prompt:
       "Húzza alá az alábbiak közül a helytelen állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A mosdatáshoz használt műanyag eszközöket – ha nincs lehetőség gépi mosásra és fertőtlenítésre – alapos mosószeres, folyóvizes, kefével történő tisztítás után fertőtleníteni kell." },
-      { id: "b", text: "Nyújtott hátfekvés egy olyan fektetési mód, ahol a beteg párna nélkül, vagy lapos párnán fekszik." },
+      {
+        id: "a",
+        text: "A mosdatáshoz használt műanyag eszközöket – ha nincs lehetőség gépi mosásra és fertőtlenítésre – alapos mosószeres, folyóvizes, kefével történő tisztítás után fertőtleníteni kell.",
+      },
+      {
+        id: "b",
+        text: "Nyújtott hátfekvés egy olyan fektetési mód, ahol a beteg párna nélkül, vagy lapos párnán fekszik.",
+      },
       { id: "c", text: "A beteg oldalra fordítását csak két ápoló végezheti." },
     ],
     correctOptionIds: ["c"],
@@ -444,11 +560,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-050",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Jelölje az alábbi, a csökkent nyelési képességű beteg biztonságos étkezését segítő/támogató lehetőségek közül a helytelent! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Jelölje az alábbi, a csökkent nyelési képességű beteg biztonságos étkezését segítő/támogató lehetőségek közül a helytelent! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "a beteget az étkezéshez vízszintes testhelyzetbe segítve" },
-      { id: "b", text: "étkezés előtt a kórteremben lévő zavaró tényezőket kiküszöbölve" },
-      { id: "c", text: "etetéskor az ételt (a falatot) a beteg szájának ép oldalára helyezve" },
+      {
+        id: "a",
+        text: "a beteget az étkezéshez vízszintes testhelyzetbe segítve",
+      },
+      {
+        id: "b",
+        text: "étkezés előtt a kórteremben lévő zavaró tényezőket kiküszöbölve",
+      },
+      {
+        id: "c",
+        text: "etetéskor az ételt (a falatot) a beteg szájának ép oldalára helyezve",
+      },
       { id: "d", text: "nyelési folyamat alatt szóban biztatva" },
     ],
     correctOptionIds: ["a"],
@@ -457,7 +583,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-053",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Jelölje, hogy az alábbiak közül mit szükséges használni mérésre a pontos testsúly megállapításához, amennyiben a páciens nem tud egyedül állni! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Jelölje, hogy az alábbiak közül mit szükséges használni mérésre a pontos testsúly megállapításához, amennyiben a páciens nem tud egyedül állni! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "székmérleg" },
       { id: "b", text: "szobamérleg" },
@@ -468,7 +595,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-054",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Jelölje, hogy mit szükséges használni mérésre a pontos testsúly megállapításához, amennyiben a páciens nem tudja megtartani a testsúlyát! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Jelölje, hogy mit szükséges használni mérésre a pontos testsúly megállapításához, amennyiben a páciens nem tudja megtartani a testsúlyát! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "ágymérleg" },
       { id: "b", text: "szobamérleg" },
@@ -479,10 +607,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-055",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az alábbiak közül a helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az alábbiak közül a helyes állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az e-cigaretta bizonyítottan segíti a dohányzásról leszokást, emellett a kifújt füst, illetve pára mások egészségét nem károsítja." },
-      { id: "b", text: "A vízipipa beszívott füstje kis mennyiségű mérgező anyagot, többek között szén-monoxidot, nehézfémeket és rákkeltő vegyületeket tartalmaz." },
+      {
+        id: "a",
+        text: "Az e-cigaretta bizonyítottan segíti a dohányzásról leszokást, emellett a kifújt füst, illetve pára mások egészségét nem károsítja.",
+      },
+      {
+        id: "b",
+        text: "A vízipipa beszívott füstje kis mennyiségű mérgező anyagot, többek között szén-monoxidot, nehézfémeket és rákkeltő vegyületeket tartalmaz.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -490,11 +625,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-056",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az alábbiak közül a helytelen állítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az alábbiak közül a helytelen állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A szénhidrátok energiaforrásul szolgálnak a szervezet számára." },
-      { id: "b", text: "Túl alacsony zsírbevitel mellett a vitaminellátás is veszélyeztetett, mert hiány alakulhat ki a szervezetben a zsírban oldódó vitaminokból." },
-      { id: "c", text: "A vitaminok a szervezet számára nélkülözhetetlen vegyületek, ezért ezeket nem lehet túladagolni." },
+      {
+        id: "a",
+        text: "A szénhidrátok energiaforrásul szolgálnak a szervezet számára.",
+      },
+      {
+        id: "b",
+        text: "Túl alacsony zsírbevitel mellett a vitaminellátás is veszélyeztetett, mert hiány alakulhat ki a szervezetben a zsírban oldódó vitaminokból.",
+      },
+      {
+        id: "c",
+        text: "A vitaminok a szervezet számára nélkülözhetetlen vegyületek, ezért ezeket nem lehet túladagolni.",
+      },
     ],
     correctOptionIds: ["c"],
   },
@@ -502,11 +647,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-058",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az alábbiak közül a helytelen állítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az alábbiak közül a helytelen állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A cigaretta „csak” szociális és pszichés függőséget okoz, emiatt könnyebb a leszokás, mint az egyéb drogok esetében." },
-      { id: "b", text: "A cigarettafüstben lévő egészségkárosító anyagok többsége átjut a méhlepényen és károsítja a magzatot." },
-      { id: "c", text: "A dohányzás egyik gyakori szövődménye a végtagi artériák szűkülete, főleg az alsó végtagokon." },
+      {
+        id: "a",
+        text: "A cigaretta „csak” szociális és pszichés függőséget okoz, emiatt könnyebb a leszokás, mint az egyéb drogok esetében.",
+      },
+      {
+        id: "b",
+        text: "A cigarettafüstben lévő egészségkárosító anyagok többsége átjut a méhlepényen és károsítja a magzatot.",
+      },
+      {
+        id: "c",
+        text: "A dohányzás egyik gyakori szövődménye a végtagi artériák szűkülete, főleg az alsó végtagokon.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -514,10 +669,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-060",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az alábbiak közül a helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az alábbiak közül a helyes állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az egészségmagatartás lehet preventív, a betegségeket megelőző, vagy kockázati, betegségeket okozó." },
-      { id: "b", text: "Az egészségtudatos magatartás az egyén szemléletének, viselkedésének, tevékenységének összessége annak érdekében, hogy a betegségeket minél hamarabb átvészelje." },
+      {
+        id: "a",
+        text: "Az egészségmagatartás lehet preventív, a betegségeket megelőző, vagy kockázati, betegségeket okozó.",
+      },
+      {
+        id: "b",
+        text: "Az egészségtudatos magatartás az egyén szemléletének, viselkedésének, tevékenységének összessége annak érdekében, hogy a betegségeket minél hamarabb átvészelje.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -525,7 +687,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-062",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a fiziológiai szükségletek után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a fiziológiai szükségletek után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "az önmegvalósítás szükséglete" },
       { id: "b", text: "a szeretet és összetartozás szükséglete" },
@@ -538,7 +701,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-063",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a biztonság és védelem szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a biztonság és védelem szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "az önmegvalósítás szükséglete" },
       { id: "b", text: "a szeretet és összetartozás szükséglete" },
@@ -551,7 +715,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-064",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a szeretet és összetartozás szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik a szeretet és összetartozás szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "az önmegvalósítás szükséglete" },
       { id: "b", text: "a biztonság és védelem szükséglete" },
@@ -564,7 +729,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-065",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik az elismerés (önbecsülés) szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Válassza ki az egymásra épülő emberi szükségletek közül, hogy melyik következik az elismerés (önbecsülés) szükséglete után a Maslow-féle hierarchiában! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "az önmegvalósítás szükséglete" },
       { id: "b", text: "a biztonság és védelem szükséglete" },
@@ -577,11 +743,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-067",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a fogyatékosságra (disability) vonatkozó helyes megállapítást a betegségek lehetséges következményei közül! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a fogyatékosságra (disability) vonatkozó helyes megállapítást a betegségek lehetséges következményei közül! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az élettani, lélektani funkciók, vagy anatómiai szerkezetek bármilyen hiánya vagy károsodása, megrongálása, mely betegség, baleset vagy veleszületett rendellenesség következtében alakult ki." },
-      { id: "b", text: "A károsodás következtében valamilyen emberi tevékenység (járás, fogás, étkezés, stb.) véghezvitelében való korlátozottság, vagy képtelenség." },
-      { id: "c", text: "A károsodás vagy az akadályozottság olyan foka, amely korlátozza vagy megakadályozza az egyént abban, hogy korának, nemének, szocio-, kulturális környezetének megfelelő szerepét a társadalomban betölthesse." },
+      {
+        id: "a",
+        text: "Az élettani, lélektani funkciók, vagy anatómiai szerkezetek bármilyen hiánya vagy károsodása, megrongálása, mely betegség, baleset vagy veleszületett rendellenesség következtében alakult ki.",
+      },
+      {
+        id: "b",
+        text: "A károsodás következtében valamilyen emberi tevékenység (járás, fogás, étkezés, stb.) véghezvitelében való korlátozottság, vagy képtelenség.",
+      },
+      {
+        id: "c",
+        text: "A károsodás vagy az akadályozottság olyan foka, amely korlátozza vagy megakadályozza az egyént abban, hogy korának, nemének, szocio-, kulturális környezetének megfelelő szerepét a társadalomban betölthesse.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -589,10 +765,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-068",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a helyes megállapítást a higiénés szükségletre vonatkozóan! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a helyes megállapítást a higiénés szükségletre vonatkozóan! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése." },
-      { id: "b", text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik." },
+      {
+        id: "a",
+        text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -600,11 +783,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-069",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a helyes megállapítást a higiénés szükségletre vonatkozóan! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a helyes megállapítást a higiénés szükségletre vonatkozóan! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A hosszabb kórházi ápolásra szoruló betegek fürdetése mindig a reggeli időszakban kell, hogy megtörténjen." },
-      { id: "b", text: "Azon páciensek számára, akik hosszabb kórházi ápolásra szorulnak fontos az egyéni, személyre szabott ápolási terv készítése a higiénés szükségletek kielégítése kapcsán is." },
-      { id: "c", text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell." },
+      {
+        id: "a",
+        text: "A hosszabb kórházi ápolásra szoruló betegek fürdetése mindig a reggeli időszakban kell, hogy megtörténjen.",
+      },
+      {
+        id: "b",
+        text: "Azon páciensek számára, akik hosszabb kórházi ápolásra szorulnak fontos az egyéni, személyre szabott ápolási terv készítése a higiénés szükségletek kielégítése kapcsán is.",
+      },
+      {
+        id: "c",
+        text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -612,10 +805,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-070",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a higiénés szükségletre vonatkozó helytelen megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a higiénés szükségletre vonatkozó helytelen megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése." },
-      { id: "b", text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik." },
+      {
+        id: "a",
+        text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -623,10 +823,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-071",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a higiénés szükségletre vonatkozó helytelen megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a higiénés szükségletre vonatkozó helytelen megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Azon páciensek számára, akik hosszabb kórházi ápolásra szorulnak fontos az egyéni, személyre szabott ápolási terv készítése a higiénés szükségletek kielégítése kapcsán is." },
-      { id: "b", text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell." },
+      {
+        id: "a",
+        text: "Azon páciensek számára, akik hosszabb kórházi ápolásra szorulnak fontos az egyéni, személyre szabott ápolási terv készítése a higiénés szükségletek kielégítése kapcsán is.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -634,10 +841,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-072",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése." },
-      { id: "b", text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik." },
+      {
+        id: "a",
+        text: "Az ápolás önálló funkciói közé tartozik a higiénés szükségletek felmérése és ezek szükség szerint történő kielégítése.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -645,11 +859,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-073",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik." },
-      { id: "b", text: "A higiénés szükségletek kielégítése során figyelembe kell venni a páciens tisztálkodással kapcsolatos meglévő szokásait és nézeteit is." },
-      { id: "c", text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell." },
+      {
+        id: "a",
+        text: "A higiénés szükségletek felmérése és kielégítése az ápolás nem önálló funkciói közé tartozik.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek kielégítése során figyelembe kell venni a páciens tisztálkodással kapcsolatos meglévő szokásait és nézeteit is.",
+      },
+      {
+        id: "c",
+        text: "A higiénés szükségletek kielégítése során az adott kórházi osztályon kialakított szokásokat kell követni, a betegnek is alkalmazkodnia kell.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -657,10 +881,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-074",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a higiénés szükségletre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A hosszabb kórházi ápolásra szoruló betegek fürdetése mindig a reggeli időszakban kell, hogy megtörténjen." },
-      { id: "b", text: "A higiénés szükségletek kielégítése során figyelembe kell venni a páciens tisztálkodással kapcsolatos meglévő szokásait és nézeteit is." },
+      {
+        id: "a",
+        text: "A hosszabb kórházi ápolásra szoruló betegek fürdetése mindig a reggeli időszakban kell, hogy megtörténjen.",
+      },
+      {
+        id: "b",
+        text: "A higiénés szükségletek kielégítése során figyelembe kell venni a páciens tisztálkodással kapcsolatos meglévő szokásait és nézeteit is.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -668,10 +899,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-075",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A páciens ágyát minimálisan naponta egyszer tegyük rendbe, valamint szennyeződések esetén az ágynemű azonnali cseréje szükséges a nap bármely szakában." },
-      { id: "b", text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen." },
+      {
+        id: "a",
+        text: "A páciens ágyát minimálisan naponta egyszer tegyük rendbe, valamint szennyeződések esetén az ágynemű azonnali cseréje szükséges a nap bármely szakában.",
+      },
+      {
+        id: "b",
+        text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen.",
+      },
       { id: "c", text: "Ágyazás közben nem szükséges kesztyűt cserélni." },
     ],
     correctOptionIds: ["a"],
@@ -680,12 +918,22 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-076",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen." },
+      {
+        id: "a",
+        text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen.",
+      },
       { id: "b", text: "Az ágyazás közben nem szükséges kesztyűt cserélni." },
-      { id: "c", text: "A kesztyű cseréje szükséges a szennyeződött ágyneművel való érintkezés után." },
-      { id: "d", text: "A szennyes ágyneműt a kórterem ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni." },
+      {
+        id: "c",
+        text: "A kesztyű cseréje szükséges a szennyeződött ágyneművel való érintkezés után.",
+      },
+      {
+        id: "d",
+        text: "A szennyes ágyneműt a kórterem ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni.",
+      },
     ],
     correctOptionIds: ["c"],
   },
@@ -693,11 +941,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-077",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ágyazást minden esetben két ápolónak kell végezni." },
-      { id: "b", text: "Az ágyazás megkezdése előtt biztosítani kell a páciens számára az ürítés szükséglet kielégítését, amennyiben igényli azt a páciens, így elkerülhető a tiszta ágynemű újra szennyeződése." },
-      { id: "c", text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni." },
+      {
+        id: "a",
+        text: "Az ágyazást minden esetben két ápolónak kell végezni.",
+      },
+      {
+        id: "b",
+        text: "Az ágyazás megkezdése előtt biztosítani kell a páciens számára az ürítés szükséglet kielégítését, amennyiben igényli azt a páciens, így elkerülhető a tiszta ágynemű újra szennyeződése.",
+      },
+      {
+        id: "c",
+        text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -705,11 +963,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-078",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A szennyes ágyneműt azonnal rakjuk a szennyestartóba és közben vigyázzunk arra, hogy ne érintkezzen ruhánkkal, illetve más tárgyakkal." },
-      { id: "b", text: "Az ágyazást minden esetben két ápolónak kell végezni." },
-      { id: "c", text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni." },
+      {
+        id: "a",
+        text: "A szennyes ágyneműt azonnal rakjuk a szennyestartóba és közben vigyázzunk arra, hogy ne érintkezzen ruhánkkal, illetve más tárgyakkal.",
+      },
+      {
+        id: "b",
+        text: "Az ágyazást minden esetben két ápolónak kell végezni.",
+      },
+      {
+        id: "c",
+        text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -717,11 +985,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-079",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A kesztyű cseréje szükséges a szennyeződött ágyneművel való érintkezés után." },
-      { id: "b", text: "A szennyes ágyneműt a kórterem ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni." },
-      { id: "c", text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni." },
+      {
+        id: "a",
+        text: "A kesztyű cseréje szükséges a szennyeződött ágyneművel való érintkezés után.",
+      },
+      {
+        id: "b",
+        text: "A szennyes ágyneműt a kórterem ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni.",
+      },
+      {
+        id: "c",
+        text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni.",
+      },
     ],
     correctOptionIds: ["a"],
   },
@@ -729,11 +1007,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-080",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni." },
-      { id: "b", text: "A szennyes ágyneműt azonnal rakjuk a szennyes tartóba és közben vigyázzunk arra, hogy ne érintkezzen ruhánkkal, illetve más tárgyakkal." },
-      { id: "c", text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni." },
+      {
+        id: "a",
+        text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni.",
+      },
+      {
+        id: "b",
+        text: "A szennyes ágyneműt azonnal rakjuk a szennyes tartóba és közben vigyázzunk arra, hogy ne érintkezzen ruhánkkal, illetve más tárgyakkal.",
+      },
+      {
+        id: "c",
+        text: "Fekvő beteg ágyának áthúzásakor a beteget egy másik ágyba kell áthelyezni.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -741,10 +1029,17 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-081",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Gumilepedő alkalmazásakor figyeljünk arra, hogy ne érintkezzen közvetlenül a páciens bőrével, mert a bőr izzadását, irritációját okozhatja." },
-      { id: "b", text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen." },
+      {
+        id: "a",
+        text: "Gumilepedő alkalmazásakor figyeljünk arra, hogy ne érintkezzen közvetlenül a páciens bőrével, mert a bőr izzadását, irritációját okozhatja.",
+      },
+      {
+        id: "b",
+        text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen.",
+      },
       { id: "c", text: "Az ágyazás közben nem szükséges kesztyűt cserélni." },
     ],
     correctOptionIds: ["a"],
@@ -753,11 +1048,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-082",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni." },
-      { id: "b", text: "Gumilepedő alkalmazásakor figyeljünk arra, hogy ne érintkezzen közvetlenül a páciens bőrével, mert a bőr izzadását, irritációját okozhatja." },
-      { id: "c", text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen." },
+      {
+        id: "a",
+        text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni.",
+      },
+      {
+        id: "b",
+        text: "Gumilepedő alkalmazásakor figyeljünk arra, hogy ne érintkezzen közvetlenül a páciens bőrével, mert a bőr izzadását, irritációját okozhatja.",
+      },
+      {
+        id: "c",
+        text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -765,9 +1070,13 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-083",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a fektetés definícióját! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a fektetés definícióját! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "Az ágyban való elhelyezés, amelynek módját mindig az orvos határozza meg" },
+      {
+        id: "a",
+        text: "Az ágyban való elhelyezés, amelynek módját mindig az orvos határozza meg",
+      },
       { id: "b", text: "Az ágyban spontán elfoglalt testhelyzet." },
       { id: "c", text: "Az ágyvég megemelésével kialakított testhelyzet." },
     ],
@@ -777,11 +1086,21 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-084",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az ágyazásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
     options: [
-      { id: "a", text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni." },
-      { id: "b", text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen." },
-      { id: "c", text: "Az ágyazás megkezdése előtt biztosítani kell a páciens számára az ürítés szükséglet kielégítését, amennyiben igényli azt a páciens, így elkerülhető a tiszta ágynemű újra szennyeződése." },
+      {
+        id: "a",
+        text: "A szennyes ágyneműt a betegszoba ajtajához közel, lehetőség szerint a mosdó alatt kell elhelyezni.",
+      },
+      {
+        id: "b",
+        text: "Az ágynemű cseréje minden esetben a reggeli osztályátadás előtt kell, hogy megtörténjen.",
+      },
+      {
+        id: "c",
+        text: "Az ágyazás megkezdése előtt biztosítani kell a páciens számára az ürítés szükséglet kielégítését, amennyiben igényli azt a páciens, így elkerülhető a tiszta ágynemű újra szennyeződése.",
+      },
     ],
     correctOptionIds: ["c"],
   },
@@ -789,10 +1108,14 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-087",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá a lejtőztetésre vonatkozó helyes állítást! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá a lejtőztetésre vonatkozó helyes állítást! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "Így fekszenek a lázas, elesett, legyengült betegek." },
-      { id: "b", text: "Az ágyvég megemelésével kialakított ferde síkú fektetés." },
+      {
+        id: "b",
+        text: "Az ágyvég megemelésével kialakított ferde síkú fektetés.",
+      },
     ],
     correctOptionIds: ["b"],
   },
@@ -800,7 +1123,8 @@ export const apolastanQuestions: ExamQuestion[] = [
     id: "apolastan-115",
     topicId: "apolastan",
     type: "single_choice",
-    prompt: "Húzza alá az alábbiak közül azt az egyet, amelyik NEM tartozik a fizikai akadályok közé! (Csak egy helyes válasz lehetséges!)",
+    prompt:
+      "Húzza alá az alábbiak közül azt az egyet, amelyik NEM tartozik a fizikai akadályok közé! (Csak egy helyes válasz lehetséges!)",
     options: [
       { id: "a", text: "lépcső" },
       { id: "b", text: "rossz út" },
@@ -832,5 +1156,1091 @@ export const apolastanQuestions: ExamQuestion[] = [
       "mellekhere-ondovezetek",
       "herek-korbetapintasa",
     ],
+  },
+  {
+    id: "apolastan-008",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül, mely paramétereket szükséges mérni vizeletgyűjtés során! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a beteg haskörfogatát",
+      },
+      {
+        id: "b",
+        text: "a beteg által bevitt folyadék mennyiségét",
+      },
+      {
+        id: "c",
+        text: "a beteg testsúlyát",
+      },
+      {
+        id: "d",
+        text: "a beteg testmagasságát",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-011",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a nyomási fekély kialakulásához vezető okokat/tényezőket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "bénulás okozta mozdulatlanság",
+      },
+      {
+        id: "b",
+        text: "incontinentia",
+      },
+      {
+        id: "c",
+        text: "normál testsúly",
+      },
+      {
+        id: "d",
+        text: "női nem",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "apolastan-012",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a nyomási fekély kialakulásához vezető okokat/tényezőket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "alultápláltság",
+      },
+      {
+        id: "b",
+        text: "normál testsúly",
+      },
+      {
+        id: "c",
+        text: "fokozott verejtékezés",
+      },
+      {
+        id: "d",
+        text: "férfi nem",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-013",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a széklet kóros anyagait! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "genny",
+      },
+      {
+        id: "b",
+        text: "zsírsav, epesav",
+      },
+      {
+        id: "c",
+        text: "nyálka",
+      },
+      {
+        id: "d",
+        text: "hámsejtek",
+      },
+      {
+        id: "e",
+        text: "víz",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-014",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül, hogy milyen gyakran szükséges az eszméletlen beteg szájápolását elvégezni! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "óránként",
+      },
+      {
+        id: "b",
+        text: "2 óránként",
+      },
+      {
+        id: "c",
+        text: "4 óránként",
+      },
+      {
+        id: "d",
+        text: "szükség szerint",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "apolastan-016",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül az önmegvalósítási szükségleteket a Maslow-féle szükséglet hierarchia alapján! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "bizalom, tisztelet",
+      },
+      {
+        id: "b",
+        text: "hasznosságérzés",
+      },
+      {
+        id: "c",
+        text: "állandóság, kiszámíthatóság",
+      },
+      {
+        id: "d",
+        text: "alkotás iránti vágy",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "apolastan-017",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a tüdőgyulladás kivédésének lehetőségeit fekvő betegnél! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a betegszoba szellőztetési alkalmainak lecsökkentése",
+      },
+      {
+        id: "b",
+        text: "légzőtorna",
+      },
+      {
+        id: "c",
+        text: "a sokáig tartó háton fekvés preferálása",
+      },
+      {
+        id: "d",
+        text: "a légúti váladék kiürítésének segítése",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "apolastan-018",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a subcutan injekciózás leggyakoribb beadási helyeit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a felkar elülső része",
+      },
+      {
+        id: "b",
+        text: "a comb hátsó része",
+      },
+      {
+        id: "c",
+        text: "a köldök körüli 2,5 cm-es terület a hasfalon",
+      },
+      {
+        id: "d",
+        text: "a comb elülső-oldalsó területe",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-019",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje a subcutan injekciózás leggyakoribb beadási helyei közül, a helyteleneket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a felkar elülső része",
+      },
+      {
+        id: "b",
+        text: "a comb hátsó része",
+      },
+      {
+        id: "c",
+        text: "a köldök körüli 2,5 cm-es terület a hasfalon",
+      },
+      {
+        id: "d",
+        text: "a comb elülső-oldalsó területe",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-022",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbi felsorolásból a vitális paraméterek közé tartozókat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "pulzus",
+      },
+      {
+        id: "b",
+        text: "napi vizeletmennyiség",
+      },
+      {
+        id: "c",
+        text: "folyadékegyenleg",
+      },
+      {
+        id: "d",
+        text: "testhőmérséklet",
+      },
+      {
+        id: "e",
+        text: "szemnyomás",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-023",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbi felsorolásból a vitális paramétereket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "napi vizeletmennyiség",
+      },
+      {
+        id: "b",
+        text: "folyadékegyenleg",
+      },
+      {
+        id: "c",
+        text: "légzésszám",
+      },
+      {
+        id: "d",
+        text: "szemnyomás",
+      },
+      {
+        id: "e",
+        text: "vérnyomás",
+      },
+    ],
+    correctOptionIds: ["c", "e"],
+  },
+  {
+    id: "apolastan-024",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a felsorolásból a rosszindulatú daganatok jellemzőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "lassan növekednek",
+      },
+      {
+        id: "b",
+        text: "sejtjeik hasonlítanak a kiinduló szövet sejtjeihez",
+      },
+      {
+        id: "c",
+        text: "a környező szöveteket roncsolják",
+      },
+      {
+        id: "d",
+        text: "áttétet képeznek",
+      },
+      {
+        id: "e",
+        text: "a környező szövetektől elhatárolódnak",
+      },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "apolastan-025",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a felsorolásból a jóindulatú daganatok jellemzőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "lassan növekednek",
+      },
+      {
+        id: "b",
+        text: "sejtjeik hasonlítanak a kiinduló szövet sejtjeihez",
+      },
+      {
+        id: "c",
+        text: "a környező szöveteket roncsolják",
+      },
+      {
+        id: "d",
+        text: "áttétet képeznek",
+      },
+      {
+        id: "e",
+        text: "a környező szövetektől elhatárolódnak",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "apolastan-026",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a felsorolásból a rosszindulatú daganatok jellemzőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "sejtjeik nem hasonlítanak a kiinduló szövet sejtjeihez",
+      },
+      {
+        id: "b",
+        text: "a környező szöveteket roncsolják",
+      },
+      {
+        id: "c",
+        text: "áttétet képeznek",
+      },
+      {
+        id: "d",
+        text: "a környező szövetektől elhatárolódnak",
+      },
+      {
+        id: "e",
+        text: "rendszerint nem képeznek áttétet",
+      },
+    ],
+    correctOptionIds: ["d", "e"],
+  },
+  {
+    id: "apolastan-027",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a felsorolásból a normál széklet összetevőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "féregpeték",
+      },
+      {
+        id: "b",
+        text: "emésztetlen tápanyagok",
+      },
+      {
+        id: "c",
+        text: "víz",
+      },
+      {
+        id: "d",
+        text: "bélbolyhok",
+      },
+      {
+        id: "e",
+        text: "bélférgek",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-035",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az érelmeszesedés rizikófaktorait! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "menopausa (klimax)",
+      },
+      {
+        id: "b",
+        text: "dohányzás",
+      },
+      {
+        id: "c",
+        text: "elhízás",
+      },
+      {
+        id: "d",
+        text: "alacsony fibrinogenszint",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-036",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az érelmeszesedés rizikófaktorait! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "menopausa (klimax)",
+      },
+      {
+        id: "b",
+        text: "mozgásszegény életmód",
+      },
+      {
+        id: "c",
+        text: "cukorbetegség",
+      },
+      {
+        id: "d",
+        text: "alacsony fibrinogenszint",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-037",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az emlőrák rizikótényezőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "gyermekágyi emlőgyulladás",
+      },
+      {
+        id: "b",
+        text: "kései első terhesség (55 éves kor felett)",
+      },
+      {
+        id: "c",
+        text: "a családban előfordult már emlőrák",
+      },
+      {
+        id: "d",
+        text: "várandósság",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-038",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az emlőrák rizikótényezőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "kései menopausa (55 éves kor után)",
+      },
+      {
+        id: "b",
+        text: "alkohol absztinencia",
+      },
+      {
+        id: "c",
+        text: "korai első menstruáció (12 évesnél fiatalabb kor)",
+      },
+      {
+        id: "d",
+        text: "többszöri vetélés",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-039",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az emlőrák rizikótényezőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "rendszeres alkoholfogyasztás, dohányzás",
+      },
+      {
+        id: "b",
+        text: "gyermekágyi emlőgyulladás",
+      },
+      {
+        id: "c",
+        text: "ikerterhesség",
+      },
+      {
+        id: "d",
+        text: "gyermektelenség",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-040",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az emlőrák rizikótényezőit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "emlőrák halmozott családi előfordulása",
+      },
+      {
+        id: "b",
+        text: "alultápláltság",
+      },
+      {
+        id: "c",
+        text: "többszöri vetélés",
+      },
+      {
+        id: "d",
+        text: "hormonális fogamzásgátló szedése",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-046",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a terhesség gyanújeleit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "hányinger, hányás",
+      },
+      {
+        id: "b",
+        text: "menstruáció elmaradása",
+      },
+      {
+        id: "c",
+        text: "ételek megkívánása vagy undorérzés",
+      },
+      {
+        id: "d",
+        text: "magzati szívhangok",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-047",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a terhesség valószínűségi jeleit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "menstruáció elmaradása",
+      },
+      {
+        id: "b",
+        text: "magzatmozgások",
+      },
+      {
+        id: "c",
+        text: "ételek megkívánása vagy undorérzés",
+      },
+      {
+        id: "d",
+        text: "a hüvely szederjes elszíneződése",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-048",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a terhesség biztos jeleit! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "hányinger, hányás",
+      },
+      {
+        id: "b",
+        text: "menstruáció elmaradása",
+      },
+      {
+        id: "c",
+        text: "magzatmozgások",
+      },
+      {
+        id: "d",
+        text: "magzati szívhangok",
+      },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "apolastan-051",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje, hogy az alábbiak közül mely feltételek megléte szükséges a mérés véghezvitelénél a páciens pontos testsúlyának megállapításához! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "lehetőség szerint ugyanannak a mérlegnek a használatával történjen",
+      },
+      {
+        id: "b",
+        text: "lehetőség szerint a napnak eltérő időszakában történjen",
+      },
+      {
+        id: "c",
+        text: "lehetőség szerint vizelet- és székletürítést követően történjen",
+      },
+      {
+        id: "d",
+        text: "a mérés a katéterzsákkal/dréntartállyal együtt történjen",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-052",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje, hogy az alábbiak közül mely feltételek megléte szükséges a páciens pontos testsúlyának megállapításához! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "lehetőség szerint a napnak eltérő időszakában történjen",
+      },
+      {
+        id: "b",
+        text: "megközelítőleg ugyanannyi ruhában történjen",
+      },
+      {
+        id: "c",
+        text: "cipő nélkül, vagy megközelítőleg azonos súlyú cipőben történjen",
+      },
+      {
+        id: "d",
+        text: "a mérés a katéterzsákkal/dréntartállyal együtt történjen",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-057",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbiak közül a helyes állításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A dohányzás egyik gyakori szövődménye a végtagi artériák szűkülete, főleg az alsó végtagokon.",
+      },
+      {
+        id: "b",
+        text: "A cigaretta „csak” szociális és pszichés függőséget okoz, emiatt könnyebb a leszokás, mint az egyéb drogok esetében.",
+      },
+      {
+        id: "c",
+        text: "A cigarettafüstben lévő egészségkárosító anyagok többsége átjut a méhlepényen és károsítja a magzatot.",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-061",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbiak közül a helyes állításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az egyén életmódját a feltételek és lehetőségek is befolyásolják.",
+      },
+      {
+        id: "b",
+        text: "A tercier prevenció a betegségek korai, panaszt még nem okozó stádiumában való felismerését és gyógykezelését jelenti.",
+      },
+      {
+        id: "c",
+        text: "Az egészség a teljes testi, lelki és szociális jólét állapota, nem csupán a betegség és nyomorékság hiánya.",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-088",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a felsoroltak közül a magasabb rendű szükségletekhez tartozókat!",
+    options: [
+      {
+        id: "a",
+        text: "teljes testlemosás igénye",
+      },
+      {
+        id: "b",
+        text: "a tudás és a megértés igénye",
+      },
+      {
+        id: "c",
+        text: "kényelmes ágy igénye",
+      },
+      {
+        id: "d",
+        text: "esztétikai igény",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "apolastan-089",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be a betegmozgatás szabályait! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "mindig folyamatosnak és fokozatosnak kell lenni",
+      },
+      {
+        id: "b",
+        text: "mindig be kell vonni a hozzátartozókat",
+      },
+      {
+        id: "c",
+        text: "figyelni kell a hozzátartozói instrukciókat",
+      },
+      {
+        id: "d",
+        text: "figyelni kell a beteg pulzusát, arcszínét",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-094",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "élettani légzés",
+      },
+      {
+        id: "b",
+        text: "kényelmi eszközök alkalmazása",
+      },
+      {
+        id: "c",
+        text: "betegszállítás",
+      },
+      {
+        id: "d",
+        text: "mozgás és egészséges testhelyzet",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-095",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "betegszállítás",
+      },
+      {
+        id: "b",
+        text: "kényelmi eszközök alkalmazása",
+      },
+      {
+        id: "c",
+        text: "kielégítő étkezés és folyadékfogyasztás",
+      },
+      {
+        id: "d",
+        text: "alvás és pihenés",
+      },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "apolastan-096",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "kommunikáció",
+      },
+      {
+        id: "b",
+        text: "izolálás",
+      },
+      {
+        id: "c",
+        text: "tanulás, felfedezés",
+      },
+      {
+        id: "d",
+        text: "integráció",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "apolastan-097",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "élettani testhőmérséklet",
+      },
+      {
+        id: "b",
+        text: "vallás gyakorlása",
+      },
+      {
+        id: "c",
+        text: "integráció",
+      },
+      {
+        id: "d",
+        text: "gyógyszerelés",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "apolastan-099",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a gyermekápolásra vonatkozó alapelveket! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "szeretetteljes, gyengéd ápolás-gondozás",
+      },
+      {
+        id: "b",
+        text: "a gyermek kiszolgálása",
+      },
+      {
+        id: "c",
+        text: "pozitív diszkrimináció alkalmazása",
+      },
+      {
+        id: "d",
+        text: "a regresszió, a hospitalizáció megelőzése",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "apolastan-119",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással Virginia Henderson ápolási modelljére jellemző megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az önellátás az egyén saját magának nyújtott gondoskodása.",
+      },
+      {
+        id: "b",
+        text: "Tizennégy alapvető szükségletet különít el.",
+      },
+      {
+        id: "c",
+        text: "A modell célkitűzése a szükségletek kielégítésére irányuló önálló cselekvés elősegítése.",
+      },
+      {
+        id: "d",
+        text: "Minden felnőtt joga, de kötelessége is az önellátás.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-120",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki aláhúzással, amelyek Virginia Henderson ápolási modelljére jellemző megállapítások! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az ember független egyéniség, aki rendelkezik alapvető, minden emberre jellemző, egyetemes szükségletekkel.",
+      },
+      {
+        id: "b",
+        text: "Az ápolási tevékenység súlypontja az egészséges, vagy beteg ember segítése az alapszükségletek fenntartásában.",
+      },
+      {
+        id: "c",
+        text: "Ha az önellátási igény és az önellátási képesség egyensúlyban van, akkor létrejön az önellátás.",
+      },
+      {
+        id: "d",
+        text: "Az embert egységes, egész emberi lénynek tekinti, aki állandó kölcsönhatásban van környezetével.",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "apolastan-121",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a Dorothea Orem ápolási modelljére jellemző megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az ember független egyéniség, aki rendelkezik alapvető, minden emberre jellemző, egyetemes szükségletekkel.",
+      },
+      {
+        id: "b",
+        text: "Az önellátás az egyén saját magának nyújtott gondoskodása.",
+      },
+      {
+        id: "c",
+        text: "A modell célkitűzése a szükségletek kielégítésére irányuló önálló cselekvés elősegítése.",
+      },
+      {
+        id: "d",
+        text: "Minden felnőtt joga, de kötelessége is az önellátás.",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "apolastan-122",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá a Dorothea Orem ápolási modelljére jellemző megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az ápolási tevékenység súlypontja az egészséges, vagy beteg ember segítése az alapszükségletek fenntartásában.",
+      },
+      {
+        id: "b",
+        text: "Ha az önellátási igény és az önellátási képesség egyensúlyban van, akkor létrejön az önellátás.",
+      },
+      {
+        id: "c",
+        text: "Segíteni kell a beteget és a családot, hogy gondoskodni tudjanak önmagukról.",
+      },
+      {
+        id: "d",
+        text: "Az embert egységes, egész emberi lénynek tekinti, aki állandó kölcsönhatásban van környezetével.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-123",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbiak közül az ápolási anamnézis eredményességére jellemző megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Ismert lesz a beteg diagnózisa.",
+      },
+      {
+        id: "b",
+        text: "A betegségre vonatkozó tényeket ismerünk meg.",
+      },
+      {
+        id: "c",
+        text: "Lehetőséget ad az ápolás megtervezéséhez.",
+      },
+      {
+        id: "d",
+        text: "Segítséget nyújt a diagnosztikai vizsgálatok kivitelezéséhez.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "apolastan-129",
+    topicId: "apolastan",
+    type: "multiple_choice",
+    prompt:
+      "Jelölje az alábbiak közül a veszélyes hulladékokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "emberi haj",
+      },
+      {
+        id: "b",
+        text: "gyógyszerek",
+      },
+      {
+        id: "c",
+        text: "vérrel szennyezett papírvatta",
+      },
+      {
+        id: "d",
+        text: "ételmaradék",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
   },
 ];
