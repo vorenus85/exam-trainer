@@ -1962,7 +1962,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+      "Válassza ki a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -1988,7 +1988,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+      "Válassza ki a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -2014,7 +2014,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+      "Válassza ki a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -2040,7 +2040,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
+      "Válassza ki a Virginia Henderson-féle alapszükségletek közé tartozókat! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -2092,7 +2092,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással Virginia Henderson ápolási modelljére jellemző megállapításokat! (Több válasz is lehetséges!)",
+      "Válassza ki Virginia Henderson ápolási modelljére jellemző megállapításokat! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -2118,7 +2118,7 @@ export const apolastanQuestions: ExamQuestion[] = [
     topicId: "apolastan",
     type: "multiple_choice",
     prompt:
-      "Válassza ki aláhúzással, amelyek Virginia Henderson ápolási modelljére jellemző megállapítások! (Több válasz is lehetséges!)",
+      "Válassza ki, amelyek Virginia Henderson ápolási modelljére jellemző megállapítások! (Több válasz is lehetséges!)",
     options: [
       {
         id: "a",
@@ -2252,22 +2252,26 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "oxigenpalack",
         left: "oxigénpalack",
-        right: "A beteg nyomáscsökkentő közbeiktatásával tudja belélegezni a szükséges mennyiségű oxigént, áramlásmérő és párásító használatával.",
+        right:
+          "A beteg nyomáscsökkentő közbeiktatásával tudja belélegezni a szükséges mennyiségű oxigént, áramlásmérő és párásító használatával.",
       },
       {
         id: "oxigenkoncentrator",
         left: "oxigénkoncentrátor",
-        right: "Elektromos árammal, a levegő szétválasztása elvén működik. Percenként 5 liter oxigént biztosít.",
+        right:
+          "Elektromos árammal, a levegő szétválasztása elvén működik. Percenként 5 liter oxigént biztosít.",
       },
       {
         id: "oxigentartaly",
         left: "oxigéntartály",
-        right: "Az oxigént folyékony formában tárolja. Kis térfogatban igen nagy mennyiségű oxigént biztosít.",
+        right:
+          "Az oxigént folyékony formában tárolja. Kis térfogatban igen nagy mennyiségű oxigént biztosít.",
       },
       {
         id: "kozponti-oxigenellato",
         left: "központi oxigénellátó berendezés",
-        right: "A tartályban, vagy palackkötegben lévő oxigén kiépített csőrendszeren keresztül jut el a felhasználás helyére.",
+        right:
+          "A tartályban, vagy palackkötegben lévő oxigén kiépített csőrendszeren keresztül jut el a felhasználás helyére.",
       },
     ],
   },
@@ -2280,24 +2284,24 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "szeklet",
         left: "széklet",
-        right: "faeces"
+        right: "faeces",
       },
       {
         id: "vizelet",
         left: "vizelet",
-        right: "urina"
+        right: "urina",
       },
       {
         id: "szekleturites",
         left: "székletürítés",
-        right: "defecatio"
+        right: "defecatio",
       },
       {
         id: "vizeleturites",
         left: "vizeletürítés",
-        right: "uresis"
-      }
-    ]
+        right: "uresis",
+      },
+    ],
   },
   {
     id: "apolastan-042",
@@ -2308,14 +2312,14 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "fedokotes",
         left: "fedőkötés",
-        right: "horzsolás, gyenge vérzés a felkaron"
+        right: "horzsolás, gyenge vérzés a felkaron",
       },
       {
         id: "nyomokotes",
         left: "nyomókötés",
-        right: "erős vérzés az alkaron"
-      }
-    ]
+        right: "erős vérzés az alkaron",
+      },
+    ],
   },
   {
     id: "apolastan-043",
@@ -2326,14 +2330,14 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "parittyakotes",
         left: "parittyakötés",
-        right: "orrvérzés"
+        right: "orrvérzés",
       },
       {
         id: "sapkakotes",
         left: "sapkakötés",
-        right: "a hajas fejbőr sérülése"
-      }
-    ]
+        right: "a hajas fejbőr sérülése",
+      },
+    ],
   },
   {
     id: "apolastan-085",
@@ -2344,32 +2348,35 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "fektetes",
         left: "fektetés",
-        right: "Az ágyban való elhelyezés, amelynek módját mindig az orvos határozza meg"
+        right:
+          "Az ágyban való elhelyezés, amelynek módját mindig az orvos határozza meg",
       },
       {
         id: "lejtoztetes",
         left: "lejtőztetés",
-        right: "Az ágyvég megemelésével kialakított ferde síkú fektetés."
-      }
-    ]
+        right: "Az ágyvég megemelésével kialakított ferde síkú fektetés.",
+      },
+    ],
   },
   {
     id: "apolastan-086",
     topicId: "apolastan",
     type: "matching",
-    prompt: "Párosítsa az alábbi fogalmakat a rájuk jellemző meghatározásokkal!",
+    prompt:
+      "Párosítsa az alábbi fogalmakat a rájuk jellemző meghatározásokkal!",
     pairs: [
       {
         id: "terd-konyok",
         left: "térd-könyök helyzet",
-        right: "Kényelmetlen testhelyzet, fektetési mód, alkalmazását speciális vizsgálat indokolhatja."
+        right:
+          "Kényelmetlen testhelyzet, fektetési mód, alkalmazását speciális vizsgálat indokolhatja.",
       },
       {
         id: "hatfekves",
         left: "hátfekvés",
-        right: "Így fekszenek a lázas, elesett, legyengült betegek."
-      }
-    ]
+        right: "Így fekszenek a lázas, elesett, legyengült betegek.",
+      },
+    ],
   },
   {
     id: "apolastan-112",
@@ -2380,14 +2387,16 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "integracio",
         left: "integráció",
-        right: "Az akadályozott emberek részvételének biztosítását jelenti a társadalmi folyamatokban. Pedagógiai feladatként segíti az akadályozott és ép gyermek tanulását didaktikai és módszertani eszközökkel közös élet- és tanulási térben."
+        right:
+          "Az akadályozott emberek részvételének biztosítását jelenti a társadalmi folyamatokban. Pedagógiai feladatként segíti az akadályozott és ép gyermek tanulását didaktikai és módszertani eszközökkel közös élet- és tanulási térben.",
       },
       {
         id: "eloitelet",
         left: "előítélet",
-        right: "A rossz feltételezése másokról, elegendő információ hiányában, illetve valamely személlyel szemben érzett idegenkedő, vagy ellenséges attitűd."
-      }
-    ]
+        right:
+          "A rossz feltételezése másokról, elegendő információ hiányában, illetve valamely személlyel szemben érzett idegenkedő, vagy ellenséges attitűd.",
+      },
+    ],
   },
   {
     id: "apolastan-113",
@@ -2398,14 +2407,15 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "diszkriminacio",
         left: "diszkrimináció",
-        right: "Közvetlen hátrányos megkülönböztetés."
+        right: "Közvetlen hátrányos megkülönböztetés.",
       },
       {
         id: "stigmatizacio",
         left: "stigmatizáció",
-        right: "Megbélyegzettséget jelent, aminek kirekesztés lehet az eredménye."
-      }
-    ]
+        right:
+          "Megbélyegzettséget jelent, aminek kirekesztés lehet az eredménye.",
+      },
+    ],
   },
   {
     id: "apolastan-117",
@@ -2416,14 +2426,16 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "apolasi-terv",
         left: "ápolási terv",
-        right: "Leírt keret vagy vázlat, amelyben megfogalmazzák a beteg állapotának a problémamegoldás, az egyes beavatkozások és ápolási műveletek eredményeképpen elvárható kimenetelét."
+        right:
+          "Leírt keret vagy vázlat, amelyben megfogalmazzák a beteg állapotának a problémamegoldás, az egyes beavatkozások és ápolási műveletek eredményeképpen elvárható kimenetelét.",
       },
       {
         id: "apolasi-folyamat",
         left: "ápolási folyamat",
-        right: "Szisztematikus problémamegoldó módszer, amelyet az ápoló minden egyes ügyfélre egyéni helyzetének megfelelően alkalmaz."
-      }
-    ]
+        right:
+          "Szisztematikus problémamegoldó módszer, amelyet az ápoló minden egyes ügyfélre egyéni helyzetének megfelelően alkalmaz.",
+      },
+    ],
   },
   {
     id: "apolastan-118",
@@ -2434,43 +2446,49 @@ export const apolastanQuestions: ExamQuestion[] = [
       {
         id: "apolasi-anamnezis",
         left: "ápolási anamnézis",
-        right: "Az ügyfél jelen állapotával, életvitelének és szociokulturális szerepének megváltoztatásával, a betegség által kiváltott érzéseivel és reakcióival összefüggő adatok összegyűjtése."
+        right:
+          "Az ügyfél jelen állapotával, életvitelének és szociokulturális szerepének megváltoztatásával, a betegség által kiváltott érzéseivel és reakcióival összefüggő adatok összegyűjtése.",
       },
       {
         id: "apolasi-diagnozis",
         left: "ápolási diagnózis",
-        right: "Az ápoló által függetlenül és törvényesen ellátható, valós vagy fenyegető egészségügyi probléma írásbeli megfogalmazása."
+        right:
+          "Az ápoló által függetlenül és törvényesen ellátható, valós vagy fenyegető egészségügyi probléma írásbeli megfogalmazása.",
       },
       {
         id: "apolasi-beavatkozas",
         left: "ápolási beavatkozás",
-        right: "A beteg károsodásának megelőzésére vagy lelki, érzelmi, fizikai, vagy szociális működéseinek megjavítására irányuló ápolási tevékenység."
-      }
-    ]
+        right:
+          "A beteg károsodásának megelőzésére vagy lelki, érzelmi, fizikai, vagy szociális működéseinek megjavítására irányuló ápolási tevékenység.",
+      },
+    ],
   },
   {
     id: "apolastan-124",
     topicId: "apolastan",
     type: "matching",
-    prompt: "Párosítsa az ápolási modelleket a rájuk jellemző meghatározásokkal!",
+    prompt:
+      "Párosítsa az ápolási modelleket a rájuk jellemző meghatározásokkal!",
     pairs: [
       {
         id: "dorothea-orem",
         left: "Dorothea Orem",
-        right: "a beteg önellátással kapcsolatos szükségleteit hangsúlyozó modell"
+        right:
+          "a beteg önellátással kapcsolatos szükségleteit hangsúlyozó modell",
       },
       {
         id: "nancy-roper",
         left: "Nancy Roper",
-        right: "az élettevékenységeken alapuló modell fejlesztője"
-      }
-    ]
+        right: "az élettevékenységeken alapuló modell fejlesztője",
+      },
+    ],
   },
   {
     id: "apolastan-066",
     topicId: "apolastan",
     type: "grouping",
-    prompt: "Csoportosítsa a felsorolt eszközöket a megadott szempontok szerint!",
+    prompt:
+      "Csoportosítsa a felsorolt eszközöket a megadott szempontok szerint!",
     groups: [
       { id: "szemelyi", text: "Személyi akadálymentesítés eszközei" },
       { id: "intezmenyi", text: "Intézményi akadálymentesítés eszközei" },
@@ -2495,6 +2513,435 @@ export const apolastanQuestions: ExamQuestion[] = [
         id: "lepcsokuli",
         text: "lépcsőkuli",
         correctGroupId: "szemelyi",
+      },
+    ],
+  },
+  {
+    id: "apolastan-098",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Válassza ki a felsorolt szakkifejezések jelentését az alábbiak közül!",
+    statements: [
+      {
+        id: "diszkriminacio",
+        parts: [
+          "Diszkrimináció: ",
+          {
+            id: "jelentes",
+            label: "A diszkrimináció jelentése",
+            options: [
+              {
+                id: "kozvetlen-megkulonboztetes",
+                text: "közvetlen megkülönböztetés",
+              },
+              {
+                id: "kozvetlen-hatranyos-megkulonboztetes",
+                text: "közvetlen hátrányos megkülönböztetés",
+              },
+            ],
+            correctOptionId: "kozvetlen-megkulonboztetes",
+          },
+        ],
+      },
+      {
+        id: "szegregacio",
+        parts: [
+          "Szegregáció: ",
+          {
+            id: "jelentes",
+            label: "A szegregáció jelentése",
+            options: [
+              { id: "beepules", text: "beépülés" },
+              { id: "elkulonules", text: "elkülönülés" },
+              { id: "elkerules", text: "elkerülés" },
+            ],
+            correctOptionId: "elkulonules",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-100",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt: "Egészítse ki az alábbi mondatokat!",
+    statements: [
+      {
+        id: "korosztalyok",
+        parts: [
+          "A 45-59 éves korosztályt ",
+          {
+            id: "kozepkoruak",
+            label: "A 45-59 éves korosztály megnevezése",
+            options: [
+              { id: "kozepkoruaknak", text: "középkorúaknak" },
+              { id: "idosodoknek", text: "idősödőknek" },
+            ],
+            correctOptionId: "kozepkoruaknak",
+          },
+          " nevezzük. A ",
+          {
+            id: "szaz-ev-felett",
+            label: "A 100. életévtől kezdődő kor megnevezése",
+            options: [
+              { id: "matuzsalemi-kor", text: "matuzsálemi kor" },
+              { id: "idos-kor", text: "idős kor" },
+            ],
+            correctOptionId: "matuzsalemi-kor",
+          },
+          " a 100. életévtől kezdődik.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-103",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki a fogyatékossággal/akadályozottsággal kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "fogyatekossag",
+        parts: [
+          "Fogyatékossággal élő az a személy, aki tartósan, vagy ",
+          {
+            id: "idotartam",
+            label: "A károsodás fennállásának időtartama",
+            options: [
+              { id: "veglegesen", text: "véglegesen" },
+              { id: "atmenetileg", text: "átmenetileg" },
+            ],
+            correctOptionId: "veglegesen",
+          },
+          " olyan érzékszervi, kommunikációs, fizikai, értelmi, pszichoszociális károsodással – illetve ezek halmozódásával – él, amely egyéni társadalmi részvételét korlátozza, vagy gátolja. A sérülés fennállása alapján a fogyatékosság lehet ",
+          {
+            id: "eredet",
+            label: "A fogyatékosság típusa a sérülés fennállása alapján",
+            options: [
+              { id: "veleszuletett", text: "veleszületett" },
+              { id: "atmeneti", text: "átmeneti" },
+            ],
+            correctOptionId: "veleszuletett",
+          },
+          ", vagy szerzett.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-109",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alábbi, értelmi fogyatékossággal kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "tobb-fogyatekossag",
+        parts: [
+          "Több fogyatékosság együttes jelenléténél, ha a fogyatékosságok egymástól függetlenek, ",
+          {
+            id: "szakkifejezes",
+            label:
+              "Az egymástól független fogyatékosságok együttes jelenlétének megnevezése",
+            options: [
+              {
+                id: "autizmus-spektrumzavar",
+                text: "autizmus spektrumzavarról",
+              },
+              {
+                id: "halmozott-fogyatekossag",
+                text: "halmozott fogyatékosságról",
+              },
+              {
+                id: "elsodleges-masodlagos-fogyatekossag",
+                text: "elsődleges és másodlagos fogyatékosságról",
+              },
+            ],
+            correctOptionId: "halmozott-fogyatekossag",
+          },
+          " beszélünk.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-110",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alábbi értelmi fogyatékosokkal kapcsolatos mondatot!",
+    statements: [
+      {
+        id: "egymas-kovetkezmenye",
+        parts: [
+          "Több fogyatékosság együttes jelenléténél, ha az egyik a másik következménye, ",
+          {
+            id: "szakkifejezes",
+            label:
+              "Az egymás következményeként jelen lévő fogyatékosságok megnevezése",
+            options: [
+              {
+                id: "autizmus-spektrumzavar",
+                text: "autizmus spektrumzavarról",
+              },
+              {
+                id: "halmozott-fogyatekossag",
+                text: "halmozott fogyatékosságról",
+              },
+              {
+                id: "elsodleges-masodlagos-fogyatekossag",
+                text: "elsődleges és másodlagos fogyatékosságról",
+              },
+            ],
+            correctOptionId: "elsodleges-masodlagos-fogyatekossag",
+          },
+          " beszélünk.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-111",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt: "Válassza ki a tanulási zavarok latin megfelelőit!",
+    statements: [
+      {
+        id: "olvasasi-zavar",
+        parts: [
+          "Olvasási zavar: ",
+          {
+            id: "latin-megfelelo",
+            label: "Az olvasási zavar latin megfelelője",
+            options: [
+              { id: "dyslexia", text: "dyslexia" },
+              { id: "dysgraphia", text: "dysgraphia" },
+              { id: "dyscalculia", text: "dyscalculia" },
+            ],
+            correctOptionId: "dyslexia",
+          },
+        ],
+      },
+      {
+        id: "szamolasi-zavar",
+        parts: [
+          "Számolási zavar: ",
+          {
+            id: "latin-megfelelo",
+            label: "A számolási zavar latin megfelelője",
+            options: [
+              { id: "dyslexia", text: "dyslexia" },
+              { id: "dysgraphia", text: "dysgraphia" },
+              { id: "dyscalculia", text: "dyscalculia" },
+            ],
+            correctOptionId: "dyscalculia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-116",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az egyetemes tervezéssel kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "egyetemes-tervezes",
+        parts: [
+          "Egyetemes tervezés az a tervezési stratégia, amely már a folyamat kezdetén figyelembe veszi a használók ",
+          {
+            id: "hasznalok",
+            label: "A használók figyelembe vett jellemzője",
+            options: [
+              { id: "szemelyes-kivansagok", text: "személyes kívánságainak" },
+              { id: "kepessegek", text: "képességeinek" },
+            ],
+            correctOptionId: "kepessegek",
+          },
+          " különbözőségét és olyan termékek vagy szolgáltatások jönnek létre, melyek különleges megoldások és adaptáció nélkül biztosítják a lehető legtöbb ember számára a legteljesebb és legönállóbb használhatóságot. Célja, hogy a tervezők ne ",
+          {
+            id: "tervezok",
+            label: "A tervezés során elkerülendő hatás",
+            options: [
+              { id: "integraljak", text: "integrálják" },
+              { id: "stigmatizaljak", text: "stigmatizálják" },
+            ],
+            correctOptionId: "stigmatizaljak",
+          },
+          " az átlagtól eltérő igényű felhasználókat azzal, hogy speciális eszközök használatára kényszerítik őket.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-125",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Nevezze meg az alábbi, táp- és építőanyagokkal kapcsolatos fogalmakat a megadott jellemzők alapján!",
+    statements: [
+      {
+        id: "enzimek",
+        parts: [
+          "Szerves katalizátorok, biokémiai folyamatokat megindítanak, meggyorsítanak, és a folyamat végén változatlan formában találhatók meg: ",
+          {
+            id: "fogalom",
+            label: "A szerves katalizátorok megnevezése",
+            options: [
+              { id: "enzimek", text: "enzimek" },
+              { id: "vitaminok", text: "vitaminok" },
+              { id: "szenhidratok", text: "szénhidrátok" },
+            ],
+            correctOptionId: "enzimek",
+          },
+        ],
+      },
+      {
+        id: "vitaminok",
+        parts: [
+          "Életfontos sejtépítő anyagok, melyek energiát nem szolgáltatnak, de a szervezet normális működéséhez nélkülözhetetlenek: ",
+          {
+            id: "fogalom",
+            label:
+              "Az energiát nem szolgáltató, nélkülözhetetlen anyagok megnevezése",
+            options: [
+              { id: "enzimek", text: "enzimek" },
+              { id: "vitaminok", text: "vitaminok" },
+              { id: "szenhidratok", text: "szénhidrátok" },
+            ],
+            correctOptionId: "vitaminok",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-126",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Nevezze meg az alábbi, táp- és építőanyagokkal kapcsolatos fogalmakat a megadott jellemzők alapján!",
+    statements: [
+      {
+        id: "feherjek",
+        parts: [
+          "Nitrogéntartalmú szerves vegyületek, építőköveik az aminosavak: ",
+          {
+            id: "fogalom",
+            label: "Az aminosavakból felépülő vegyületek megnevezése",
+            options: [
+              { id: "feherjek", text: "fehérjék" },
+              { id: "szenhidratok", text: "szénhidrátok" },
+              { id: "zsirok", text: "zsírok" },
+            ],
+            correctOptionId: "feherjek",
+          },
+        ],
+      },
+      {
+        id: "szenhidratok",
+        parts: [
+          "Szervezet glikogén formában raktározza: ",
+          {
+            id: "fogalom",
+            label: "A glikogén formájában raktározott tápanyagok megnevezése",
+            options: [
+              { id: "feherjek", text: "fehérjék" },
+              { id: "szenhidratok", text: "szénhidrátok" },
+              { id: "zsirok", text: "zsírok" },
+            ],
+            correctOptionId: "szenhidratok",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "apolastan-127",
+    topicId: "apolastan",
+    type: "fill_in",
+    prompt:
+      "Határozza meg a fiziológiás pulzusszámot a megadott életkoronként! Egészítse ki a táblázatot!",
+    statements: [
+      {
+        id: "ujszulott",
+        parts: [
+          "újszülött – pulzusszám (percenként): ",
+          {
+            id: "pulzusszam",
+            label: "Pulzusszám (újszülött, percenként)",
+            options: [
+              {
+                id: "120-160",
+                text: "120-160",
+              },
+              {
+                id: "80-130",
+                text: "80-130",
+              },
+              {
+                id: "75-110",
+                text: "75-110",
+              },
+            ],
+            correctOptionId: "120-160",
+          },
+        ],
+      },
+      {
+        id: "1-2-ev",
+        parts: [
+          "1-2 év – pulzusszám (percenként): ",
+          {
+            id: "pulzusszam",
+            label: "Pulzusszám (1-2 év, percenként)",
+            options: [
+              {
+                id: "120-160",
+                text: "120-160",
+              },
+              {
+                id: "80-130",
+                text: "80-130",
+              },
+              {
+                id: "75-110",
+                text: "75-110",
+              },
+            ],
+            correctOptionId: "80-130",
+          },
+        ],
+      },
+      {
+        id: "7-12-ev",
+        parts: [
+          "7-12 év – pulzusszám (percenként): ",
+          {
+            id: "pulzusszam",
+            label: "Pulzusszám (7-12 év, percenként)",
+            options: [
+              {
+                id: "120-160",
+                text: "120-160",
+              },
+              {
+                id: "80-130",
+                text: "80-130",
+              },
+              {
+                id: "75-110",
+                text: "75-110",
+              },
+            ],
+            correctOptionId: "75-110",
+          },
+        ],
       },
     ],
   },
