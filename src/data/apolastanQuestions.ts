@@ -2466,4 +2466,36 @@ export const apolastanQuestions: ExamQuestion[] = [
       }
     ]
   },
+  {
+    id: "apolastan-066",
+    topicId: "apolastan",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsorolt eszközöket a megadott szempontok szerint!",
+    groups: [
+      { id: "szemelyi", text: "Személyi akadálymentesítés eszközei" },
+      { id: "intezmenyi", text: "Intézményi akadálymentesítés eszközei" },
+    ],
+    items: [
+      {
+        id: "hernyotalpas-lepcson-jaro",
+        text: "hernyótalpas lépcsőn járó",
+        correctGroupId: "szemelyi",
+      },
+      {
+        id: "korlatlift",
+        text: "korlátlift",
+        correctGroupId: "intezmenyi",
+      },
+      {
+        id: "emelolap",
+        text: "emelőlap",
+        correctGroupId: "intezmenyi",
+      },
+      {
+        id: "lepcsokuli",
+        text: "lépcsőkuli",
+        correctGroupId: "szemelyi",
+      },
+    ],
+  },
 ];
