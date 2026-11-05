@@ -2243,4 +2243,227 @@ export const apolastanQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["b", "c"],
   },
+  {
+    id: "apolastan-001",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az oxigénforrásokat jellemzőikkel!",
+    pairs: [
+      {
+        id: "oxigenpalack",
+        left: "oxigénpalack",
+        right: "A beteg nyomáscsökkentő közbeiktatásával tudja belélegezni a szükséges mennyiségű oxigént, áramlásmérő és párásító használatával.",
+      },
+      {
+        id: "oxigenkoncentrator",
+        left: "oxigénkoncentrátor",
+        right: "Elektromos árammal, a levegő szétválasztása elvén működik. Percenként 5 liter oxigént biztosít.",
+      },
+      {
+        id: "oxigentartaly",
+        left: "oxigéntartály",
+        right: "Az oxigént folyékony formában tárolja. Kis térfogatban igen nagy mennyiségű oxigént biztosít.",
+      },
+      {
+        id: "kozponti-oxigenellato",
+        left: "központi oxigénellátó berendezés",
+        right: "A tartályban, vagy palackkötegben lévő oxigén kiépített csőrendszeren keresztül jut el a felhasználás helyére.",
+      },
+    ],
+  },
+  {
+    id: "apolastan-020",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az az alábbi kifejezések latin és magyar megfelelőit!",
+    pairs: [
+      {
+        id: "szeklet",
+        left: "széklet",
+        right: "faeces"
+      },
+      {
+        id: "vizelet",
+        left: "vizelet",
+        right: "urina"
+      },
+      {
+        id: "szekleturites",
+        left: "székletürítés",
+        right: "defecatio"
+      },
+      {
+        id: "vizeleturites",
+        left: "vizeletürítés",
+        right: "uresis"
+      }
+    ]
+  },
+  {
+    id: "apolastan-042",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az alkalmazható kötéstípusokat a sérülésekhez!",
+    pairs: [
+      {
+        id: "fedokotes",
+        left: "fedőkötés",
+        right: "horzsolás, gyenge vérzés a felkaron"
+      },
+      {
+        id: "nyomokotes",
+        left: "nyomókötés",
+        right: "erős vérzés az alkaron"
+      }
+    ]
+  },
+  {
+    id: "apolastan-043",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az alkalmazható kötéstípusokat a sérülésekhez!",
+    pairs: [
+      {
+        id: "parittyakotes",
+        left: "parittyakötés",
+        right: "orrvérzés"
+      },
+      {
+        id: "sapkakotes",
+        left: "sapkakötés",
+        right: "a hajas fejbőr sérülése"
+      }
+    ]
+  },
+  {
+    id: "apolastan-085",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a rájuk jellemző meghatározással!",
+    pairs: [
+      {
+        id: "fektetes",
+        left: "fektetés",
+        right: "Az ágyban való elhelyezés, amelynek módját mindig az orvos határozza meg"
+      },
+      {
+        id: "lejtoztetes",
+        left: "lejtőztetés",
+        right: "Az ágyvég megemelésével kialakított ferde síkú fektetés."
+      }
+    ]
+  },
+  {
+    id: "apolastan-086",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az alábbi fogalmakat a rájuk jellemző meghatározásokkal!",
+    pairs: [
+      {
+        id: "terd-konyok",
+        left: "térd-könyök helyzet",
+        right: "Kényelmetlen testhelyzet, fektetési mód, alkalmazását speciális vizsgálat indokolhatja."
+      },
+      {
+        id: "hatfekves",
+        left: "hátfekvés",
+        right: "Így fekszenek a lázas, elesett, legyengült betegek."
+      }
+    ]
+  },
+  {
+    id: "apolastan-112",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a jelentésükkel!",
+    pairs: [
+      {
+        id: "integracio",
+        left: "integráció",
+        right: "Az akadályozott emberek részvételének biztosítását jelenti a társadalmi folyamatokban. Pedagógiai feladatként segíti az akadályozott és ép gyermek tanulását didaktikai és módszertani eszközökkel közös élet- és tanulási térben."
+      },
+      {
+        id: "eloitelet",
+        left: "előítélet",
+        right: "A rossz feltételezése másokról, elegendő információ hiányában, illetve valamely személlyel szemben érzett idegenkedő, vagy ellenséges attitűd."
+      }
+    ]
+  },
+  {
+    id: "apolastan-113",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a jelentésükkel!",
+    pairs: [
+      {
+        id: "diszkriminacio",
+        left: "diszkrimináció",
+        right: "Közvetlen hátrányos megkülönböztetés."
+      },
+      {
+        id: "stigmatizacio",
+        left: "stigmatizáció",
+        right: "Megbélyegzettséget jelent, aminek kirekesztés lehet az eredménye."
+      }
+    ]
+  },
+  {
+    id: "apolastan-117",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az ápolási terv egyes részeihez azok leírását!",
+    pairs: [
+      {
+        id: "apolasi-terv",
+        left: "ápolási terv",
+        right: "Leírt keret vagy vázlat, amelyben megfogalmazzák a beteg állapotának a problémamegoldás, az egyes beavatkozások és ápolási műveletek eredményeképpen elvárható kimenetelét."
+      },
+      {
+        id: "apolasi-folyamat",
+        left: "ápolási folyamat",
+        right: "Szisztematikus problémamegoldó módszer, amelyet az ápoló minden egyes ügyfélre egyéni helyzetének megfelelően alkalmaz."
+      }
+    ]
+  },
+  {
+    id: "apolastan-118",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az ápolási terv egyes részeihez azok leírását!",
+    pairs: [
+      {
+        id: "apolasi-anamnezis",
+        left: "ápolási anamnézis",
+        right: "Az ügyfél jelen állapotával, életvitelének és szociokulturális szerepének megváltoztatásával, a betegség által kiváltott érzéseivel és reakcióival összefüggő adatok összegyűjtése."
+      },
+      {
+        id: "apolasi-diagnozis",
+        left: "ápolási diagnózis",
+        right: "Az ápoló által függetlenül és törvényesen ellátható, valós vagy fenyegető egészségügyi probléma írásbeli megfogalmazása."
+      },
+      {
+        id: "apolasi-beavatkozas",
+        left: "ápolási beavatkozás",
+        right: "A beteg károsodásának megelőzésére vagy lelki, érzelmi, fizikai, vagy szociális működéseinek megjavítására irányuló ápolási tevékenység."
+      }
+    ]
+  },
+  {
+    id: "apolastan-124",
+    topicId: "apolastan",
+    type: "matching",
+    prompt: "Párosítsa az ápolási modelleket a rájuk jellemző meghatározásokkal!",
+    pairs: [
+      {
+        id: "dorothea-orem",
+        left: "Dorothea Orem",
+        right: "a beteg önellátással kapcsolatos szükségleteit hangsúlyozó modell"
+      },
+      {
+        id: "nancy-roper",
+        left: "Nancy Roper",
+        right: "az élettevékenységeken alapuló modell fejlesztője"
+      }
+    ]
+  },
 ];
