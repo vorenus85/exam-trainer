@@ -808,4 +808,29 @@ export const apolastanQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["c"],
   },
+  {
+    id: "apolastan-059",
+    topicId: "apolastan",
+    type: "ordering",
+    prompt: "Tegye sorrendbe a here önvizsgálatának egyes lépéseit!",
+    items: [
+      {
+        id: "suly-vizsgalata",
+        text: "A tenyérre helyezett herezacskót óvatosan megemelve meg kell vizsgálni a súlyát, egyszerre csak az egyik herét.",
+      },
+      {
+        id: "mellekhere-ondovezetek",
+        text: "Ezt követi a mellékherék és az ondóvezeték vizsgálata, amelyhez a heréket a pénisz töve felé kell tapintani.",
+      },
+      {
+        id: "herek-korbetapintasa",
+        text: "A hüvelyk és mutatóujj segítségével óvatosan körbe kell tapogatni mindkét herét, ellenőrizve, hogy nem nagyobbodtak-e meg, vagy nem tapintható-e rajtuk csomó.",
+      },
+    ],
+    correctOrderIds: [
+      "suly-vizsgalata",
+      "mellekhere-ondovezetek",
+      "herek-korbetapintasa",
+    ],
+  },
 ];
