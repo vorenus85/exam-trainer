@@ -882,4 +882,630 @@ export const vitalisQuestions: ExamQuestion[] = [
       },
     ],
   },
+  {
+    id: "vitalis-016",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbiak közül azt, amelyik NEM Hippokratész által meghatározott alkattípus! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "szangvinikus" },
+      { id: "b", text: "kolerikus" },
+      { id: "c", text: "piknikus" },
+      { id: "d", text: "flegmatikus" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-046",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Jelölje be az alábbiak közül azt az eszközt, amelyik NEM alkalmas a széklet felfogására és vizsgálatra küldésére! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "F-tartály" },
+      { id: "b", text: "celofán csík" },
+      { id: "c", text: "pipetta" },
+      { id: "d", text: "pelenka" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-067",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a felnőttek alultápláltsági állapotának megfelelő Body Mass Index (BMI) értékét! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "16 – 18" },
+      { id: "b", text: "20 – 25" },
+      { id: "c", text: "30 <" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-111",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a kontaktusteremtésre vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "a sérültet csak verbális ingerrel (megszólítás) kell megpróbálni kontaktusba vonni",
+      },
+      {
+        id: "b",
+        text: "a sérültet fizikai és verbális ingerrel is meg kell próbálni kontaktusba vonni",
+      },
+      { id: "c", text: "elegendő, ha csak odalépünk a sérülthöz" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-112",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, mit vizsgálunk a „hármas észleléssel”! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "légzés" },
+      { id: "b", text: "pupillareakció" },
+      { id: "c", text: "ébreszthetőség" },
+      { id: "d", text: "tudat" },
+      { id: "e", text: "szívműködés" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-113",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, mi a teendő ájulás esetén! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "vigyük az egyént hűvös helyre és mielőbb fektessük le",
+      },
+      { id: "b", text: "mindenképpen tartsuk a beteget álló testhelyzetben" },
+      {
+        id: "c",
+        text: "fektessük félig ülő helyzetbe a beteget, 40-60 fokban megemelt felsőtesttel",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-115",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a Wallace-féle 9-es szabályra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "felnőtt esetében a törzs elöl 36%" },
+      { id: "b", text: "felnőtt esetében a gáttájék 2%" },
+      { id: "c", text: "felnőtt esetében a jobb alsó végtag 18%" },
+      { id: "d", text: "gyermek esetében a bal alsó végtag 24%" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-116",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a mentési lánc elemeinek helyes sorrendjét! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "felismerés, elsősegély, segélyhívás, mentő ellátás, kórházi ellátás",
+      },
+      {
+        id: "b",
+        text: "felismerés, segélyhívás, elsősegély, mentő ellátás, kórházi ellátás",
+      },
+      {
+        id: "c",
+        text: "felismerés, segélyhívás, mentő ellátás, elsősegély, kórházi ellátás",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-118",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A nem reagáló beteg légzésvizsgálatát 10 másodpercig kell hármas érzékeléssel vizsgálni, és ez idő alatt legalább két légzőmozgást kell tapasztalni.",
+      },
+      {
+        id: "b",
+        text: "A nem reagáló beteg légzésvizsgálatát 20 másodpercig kell hármas érzékeléssel vizsgálni, és ez idő alatt legalább egy légző mozgást kell tapasztalni.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-119",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az Esmarch-féle műfogás alkalmazása során törekedni kell arra, hogy a felső fogsor az alsó elé kerüljön.",
+      },
+      {
+        id: "b",
+        text: "Az Esmarch-féle műfogás alkalmazása során törekedni kell arra, hogy az alsó fogsor a felső elé kerüljön.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-120",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A tálcafogás gerinc- és/vagy medencesérült kimentésére szolgál, amely optimális esetben négy segélynyújtó összehangolt munkáját igényli.",
+      },
+      {
+        id: "b",
+        text: "Amennyiben a beteg nem reagál a külső ingerekre, akkor az elsősegélynyújtó számára halottnak minősül.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-121",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az égésre/fagyásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Elsőfokú égés esetén a bőr rétegei közül a hám és az irha érintett.",
+      },
+      {
+        id: "b",
+        text: "Elsőfokú fagyás esetén a bőr színe eleinte sápadt, márványozott, a későbbiekben lilás, kékes.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-154",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Égési sérülést okozhat lánghatás, forró folyadék, forró fém, súrlódás.",
+      },
+      {
+        id: "b",
+        text: "A sebbe égett ruhát egy határozott mozdulattal el kell távolítani.",
+      },
+      {
+        id: "c",
+        text: "Égési sérülésre közvetlenül jeget kell helyezni, azzal kell hűteni.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-173",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Légúti idegentest eltávolítása esetén, mely területen végezzük a háti ütéseket? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "a lapockák között" },
+      { id: "b", text: "a lapockák alatt" },
+      { id: "c", text: "a lapockáktól felfelé" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-174",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Légúti idegentest eltávolítása esetén maximum hány háti ütést javasolt alkalmazni? (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "3" },
+      { id: "b", text: "4" },
+      { id: "c", text: "5" },
+      { id: "d", text: "6" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-176",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, hogy milyen frekvenciával kell végezni újraélesztés során a mellkas lenyomásokat felnőtteknél! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "80-90/perc" },
+      { id: "b", text: "100-120/perc" },
+      { id: "c", text: "120-140/perc" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-177",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az elsőfokú égés nem tipikus tünetét! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "feszes bőr" },
+      { id: "b", text: "bőrpír" },
+      { id: "c", text: "piszkos szürke sebfelület" },
+      { id: "d", text: "fájdalom" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-178",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az egységes európai segélyhívószámot! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "104" },
+      { id: "b", text: "112" },
+      { id: "c", text: "105" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-179",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, hogy mennyi ideig kell végezni a légzésvizsgálatnál alkalmazott hármas érzékelést! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Maximum 5 másodperc" },
+      { id: "b", text: "Maximum 10 másodperc" },
+      { id: "c", text: "Maximum 15 másodperc" },
+      { id: "d", text: "Maximum 30 másodperc" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-180",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki, hány mellkaskompressziót kell végezni felnőttek újraélesztésekor! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "5" },
+      { id: "b", text: "10" },
+      { id: "c", text: "15" },
+      { id: "d", text: "30" },
+    ],
+    correctOptionIds: ["d"],
+  },
+  {
+    id: "vitalis-181",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a hármas érzékelés jelentését! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "Érzem, tapintom, hallom." },
+      { id: "b", text: "Tapintom, látom, hallom." },
+      { id: "c", text: "Érzem, látom, hallom." },
+      { id: "d", text: "Látom, hallom, tapintom." },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-192",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az égési sérülés fokát, ha a bőr piros és rajta hólyagok láthatóak! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "I. fokú" },
+      { id: "b", text: "II. fokú" },
+      { id: "c", text: "III. fokú" },
+      { id: "d", text: "IV. fokú" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-107",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Állítsa a helyes sorrendbe az egyfázisú fertőtlenítés lépéseit!",
+    items: [
+      { id: "elomosas", text: "előmosás erős vízsugárral" },
+      { id: "oblites", text: "öblítés" },
+      { id: "fertotlenites", text: "fertőtlenítés" },
+      { id: "szaritas", text: "szárítás" },
+      { id: "gyujtes", text: "kontaminálódott eszközök gyűjtése" },
+    ],
+    correctOrderIds: [
+      "gyujtes",
+      "elomosas",
+      "fertotlenites",
+      "oblites",
+      "szaritas",
+    ],
+  },
+  {
+    id: "vitalis-109",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Állítsa helyes sorrendbe a fertőtlenítő mosogatás fázisait!",
+    items: [
+      { id: "fertotlenites", text: "fertőtlenítés" },
+      { id: "mosogatas", text: "mosogatás" },
+      { id: "eloaztatas", text: "előáztatás" },
+      { id: "oblites", text: "öblítés" },
+      { id: "szaritas", text: "szárítás" },
+      { id: "utooblites", text: "utóöblítés" },
+    ],
+    correctOrderIds: [
+      "eloaztatas",
+      "mosogatas",
+      "oblites",
+      "fertotlenites",
+      "utooblites",
+      "szaritas",
+    ],
+  },
+  {
+    id: "vitalis-117",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Tegye helyes sorrendbe a mentési lánc elemeit!",
+    items: [
+      { id: "elsosegelynyujtas", text: "elsősegélynyújtás" },
+      { id: "intezeti-ellatas", text: "intézeti ellátás" },
+      { id: "szallitas", text: "szállítás" },
+      { id: "felismeres", text: "felismerés" },
+      { id: "mentoellatas", text: "mentőellátás" },
+      { id: "segelykeres", text: "segélykérés" },
+    ],
+    correctOrderIds: [
+      "felismeres",
+      "segelykeres",
+      "elsosegelynyujtas",
+      "mentoellatas",
+      "szallitas",
+      "intezeti-ellatas",
+    ],
+  },
+  {
+    id: "vitalis-135",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt:
+      "Állítsa helyes sorrendbe az alapfokú újraélesztéshez kapcsolódó, a földön fekvő sérült vizsgálatára vonatkozó mondatokat!",
+    items: [
+      {
+        id: "segitseghivas",
+        text: "segítséghívás, amennyiben a sérült nem reagál, nem vonható kontaktusba",
+      },
+      { id: "legzesvizsgalat", text: "10 másodpercig légzés vizsgálat" },
+      { id: "reakciokeszseg", text: "az eszmélet/reakciókészség vizsgálata" },
+      { id: "legutak", text: "a légutak felszabadítása/szabaddá tétele" },
+      { id: "biztonsag", text: "biztonságos környezet megteremtése" },
+    ],
+    correctOrderIds: [
+      "biztonsag",
+      "reakciokeszseg",
+      "segitseghivas",
+      "legutak",
+      "legzesvizsgalat",
+    ],
+  },
+  {
+    id: "vitalis-169",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Állítsa sorrendbe a sebellátás menetét!",
+    items: [
+      { id: "fertotlenites", text: "a sebszélek fertőtlenítése" },
+      {
+        id: "nyugalom",
+        text: "a sérült nyugalomba helyezése (szükség esetén a végtag felemelése)",
+      },
+      { id: "fedes", text: "a seb steril fedése, a kötés rögzítése" },
+      { id: "tisztitas", text: "a seb környékének megtisztítása" },
+    ],
+    correctOrderIds: ["nyugalom", "tisztitas", "fertotlenites", "fedes"],
+  },
+  {
+    id: "vitalis-172",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt:
+      "Állítsa sorrendbe a légúti idegentest esetén javasolt ellátás lépéseit!",
+    items: [
+      {
+        id: "hasi-lokesek",
+        text: "hasi lökések (Heimlich-féle műfogás) alkalmazása",
+      },
+      { id: "kohoges", text: "köhögésre biztatás" },
+      { id: "biztonsag", text: "biztonságos környezet kialakítása" },
+      { id: "hati-utesek", text: "háti ütések alkalmazása" },
+      { id: "megnyugtatas", text: "az illető megnyugtatása" },
+    ],
+    correctOrderIds: [
+      "biztonsag",
+      "megnyugtatas",
+      "kohoges",
+      "hati-utesek",
+      "hasi-lokesek",
+    ],
+  },
+  {
+    id: "vitalis-205",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt:
+      "Tegye helyes sorrendbe a katasztrófák elleni védekezés szakaszait!",
+    items: [
+      { id: "helyreallitas", text: "Helyreállítás" },
+      { id: "megelozes", text: "Megelőzés" },
+      { id: "vedekezes", text: "Védekezés" },
+    ],
+    correctOrderIds: ["megelozes", "vedekezes", "helyreallitas"],
+  },
+  {
+    id: "vitalis-167",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Tegye helyes sorrendbe a BLS lépéseit!",
+    items: [
+      { id: "kompresszio", text: "30 mellkaskompresszió" },
+      { id: "biztonsag", text: "a helyszín biztonságának felmérése" },
+      { id: "legzesvizsgalat", text: "légzésvizsgálat" },
+      {
+        id: "reakciokeszseg",
+        text: "a beteg reakciókészségének felmérése megszólítással, két vállának óvatos megrázásával",
+      },
+      { id: "mentohivas", text: "mentőhívás" },
+      { id: "legeztetes", text: "2 befúvásos lélegeztetés" },
+    ],
+    correctOrderIds: [
+      "biztonsag",
+      "reakciokeszseg",
+      "legzesvizsgalat",
+      "mentohivas",
+      "kompresszio",
+      "legeztetes",
+    ],
+  },
+  {
+    id: "vitalis-193",
+    topicId: "vitalis",
+    type: "ordering",
+    prompt: "Állítsa sorrendbe súlyos sérült esetében a teendőket!",
+    items: [
+      { id: "biztonsag", text: "biztonság megteremtése" },
+      { id: "serules", text: "súlyos sérülés feltételezése" },
+      { id: "tamogatas", text: "beteg mellett maradva, pszichés támogatás" },
+      { id: "mechanizmus", text: "baleseti mechanizmus értékelése, elemzése" },
+      { id: "kitamasztas", text: "oldalról kitámasztás" },
+    ],
+    correctOrderIds: [
+      "biztonsag",
+      "mechanizmus",
+      "serules",
+      "kitamasztas",
+      "tamogatas",
+    ],
+  },
+  {
+    id: "vitalis-066",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a felnőttek normál tápláltsági állapotának megfelelő Body Mass Index (BMI) értékét! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "16 – 18" },
+      { id: "b", text: "20 – 25" },
+      { id: "c", text: "25 – 40" },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-068",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Jelölje be az alábbiak közül a felnőttek súlyos túlsúlyos állapotának megfelelő Body Mass Index (BMI) értékét! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "16 – 18" },
+      { id: "b", text: "20 – 25" },
+      { id: "c", text: "30 <" },
+    ],
+    correctOptionIds: ["c"],
+  },
+  {
+    id: "vitalis-114",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az epilepszia meghatározását! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "a görcsrohammal járó eszméletvesztések egyik formája" },
+      { id: "b", text: "tartós eszméletvesztéssel járó kórkép" },
+      { id: "c", text: "rövid időtartamú eszméletzavar" },
+      { id: "d", text: "egyik sem" },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-122",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki az égésre/fagyásra vonatkozó helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Harmadfokú égés esetén a bőr piszkosszürke vagy fehéres szürke színű, megnyílt hólyagok láthatók.",
+      },
+      {
+        id: "b",
+        text: "Fagyási sérülés esetén azonnal meg kell kezdeni a sérült területet közvetlenül melegíteni, dörzsöléssel vagy meleg vízzel.",
+      },
+    ],
+    correctOptionIds: ["a"],
+  },
+  {
+    id: "vitalis-146",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a helyes megállapítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Nagy kiterjedésű égésnél a felület fedésére tiszta, vasalt lepedő használata.",
+      },
+      {
+        id: "b",
+        text: "Krém vagy sebhintőpor alkalmazása a sebben a fertőzés megelőzésére, a sebgyógyulás elősegítésére.",
+      },
+    ],
+    correctOptionIds: ["b"],
+  },
+  {
+    id: "vitalis-198",
+    topicId: "vitalis",
+    type: "single_choice",
+    prompt:
+      "Válassza ki a hamis állítást! (Csak egy helyes válasz lehetséges!)",
+    options: [
+      { id: "a", text: "súlyos sérült esetében fontos a nyaki gerinc védelme" },
+      { id: "b", text: "súlyos sérült mozgatására alkalmas a tálcafogás" },
+      { id: "c", text: "súlyos sérült lehetőség esetén tilos mozgatni" },
+      {
+        id: "d",
+        text: "súlyos sérült biztonságos mozgatására alkalmazható a Rautek-féle műfogás",
+      },
+    ],
+    correctOptionIds: ["d"],
+  },
 ];
