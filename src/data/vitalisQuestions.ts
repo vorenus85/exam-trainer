@@ -3297,4 +3297,326 @@ export const vitalisQuestions: ExamQuestion[] = [
       },
     ],
   },
+  {
+    id: "vitalis-003",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsoroltakat a kommunikáció formái szerint!",
+    groups: [
+      { id: "direkt", text: "direkt kommunikáció" },
+      { id: "indirekt", text: "indirekt kommunikáció" },
+    ],
+    items: [
+      {
+        id: "betegtol",
+        text: "betegtől származó információ",
+        correctGroupId: "direkt",
+      },
+      {
+        id: "korlap",
+        text: "kórlap",
+        correctGroupId: "indirekt",
+      },
+      {
+        id: "zarojelentes",
+        text: "zárójelentés",
+        correctGroupId: "indirekt",
+      },
+      {
+        id: "dolgozotol",
+        text: "egészségügyi dolgozótól származó információ",
+        correctGroupId: "direkt",
+      },
+    ],
+  },
+  {
+    id: "vitalis-013",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
+    groups: [
+      { id: "latas", text: "látás" },
+      { id: "hallas", text: "hallás" },
+    ],
+    items: [
+      {
+        id: "borszin",
+        text: "bőrszín",
+        correctGroupId: "latas",
+      },
+      {
+        id: "jaras",
+        text: "járás",
+        correctGroupId: "latas",
+      },
+      {
+        id: "beszednehezseg",
+        text: "beszédnehézség",
+        correctGroupId: "hallas",
+      },
+    ],
+  },
+  {
+    id: "vitalis-018",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa az alábbi testalkatokat a megadottak szerint!",
+    groups: [
+      { id: "noi", text: "Jellegzetes női testalkatok" },
+      { id: "ferfi", text: "Jellegzetes férfi testalkatok" },
+    ],
+    items: [
+      {
+        id: "alma",
+        text: "alma",
+        correctGroupId: "noi",
+      },
+      {
+        id: "szogletes",
+        text: "szögletes",
+        correctGroupId: "ferfi",
+      },
+      {
+        id: "haromszog",
+        text: "háromszög",
+        correctGroupId: "ferfi",
+      },
+      {
+        id: "homokora",
+        text: "homokóra",
+        correctGroupId: "noi",
+      },
+    ],
+  },
+  {
+    id: "vitalis-053",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a folyadékegyenleg összetevőit!",
+    groups: [
+      { id: "bevitt", text: "Bevitt folyadék" },
+      { id: "uritett", text: "Ürített folyadék" },
+    ],
+    items: [
+      {
+        id: "kave",
+        text: "kávé",
+        correctGroupId: "bevitt",
+      },
+      {
+        id: "gyumolcs",
+        text: "gyümölcs",
+        correctGroupId: "bevitt",
+      },
+      {
+        id: "hanyas",
+        text: "hányás",
+        correctGroupId: "uritett",
+      },
+      {
+        id: "sebvaladek",
+        text: "sebváladék",
+        correctGroupId: "uritett",
+      },
+    ],
+  },
+  {
+    id: "vitalis-054",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a folyadékegyenleg összetevőit!",
+    groups: [
+      { id: "bevitt", text: "Bevitt folyadék" },
+      { id: "uritett", text: "Ürített folyadék" },
+    ],
+    items: [
+      {
+        id: "izzadas",
+        text: "izzadás",
+        correctGroupId: "uritett",
+      },
+      {
+        id: "leves",
+        text: "leves",
+        correctGroupId: "bevitt",
+      },
+      {
+        id: "hasmenes",
+        text: "hasmenés",
+        correctGroupId: "uritett",
+      },
+      {
+        id: "fagylalt",
+        text: "fagylalt",
+        correctGroupId: "bevitt",
+      },
+    ],
+  },
+  {
+    id: "vitalis-126",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a rándulás és a ficam felsorolt tüneteit!",
+    groups: [
+      { id: "randulas", text: "Rándulás tünetei" },
+      { id: "ficam", text: "Ficam tünetei" },
+    ],
+    items: [
+      {
+        id: "alakvaltozas",
+        text: "alakváltozás",
+        correctGroupId: "ficam",
+      },
+      {
+        id: "duzzanat",
+        text: "duzzanat",
+        correctGroupId: "randulas",
+      },
+      {
+        id: "elszinezodes",
+        text: "kékes elszíneződés a bőrön",
+        correctGroupId: "randulas",
+      },
+    ],
+  },
+  {
+    id: "vitalis-127",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a rándulás és a ficam felsorolt tüneteit!",
+    groups: [
+      { id: "randulas", text: "Rándulás tünetei" },
+      { id: "ficam", text: "Ficam tünetei" },
+    ],
+    items: [
+      {
+        id: "mozgaskepetlenseg",
+        text: "az ízület működése megszűnik/mozgásképtelenség",
+        correctGroupId: "ficam",
+      },
+      {
+        id: "korlatozott-mozgas",
+        text: "az ízület mozgása korlátozott",
+        correctGroupId: "randulas",
+      },
+      {
+        id: "izuleti-fej",
+        text: "az ízületi fej az ízületen kívül tapintható",
+        correctGroupId: "ficam",
+      },
+    ],
+  },
+  {
+    id: "vitalis-138",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
+    groups: [
+      { id: "ficam", text: "Ficam" },
+      { id: "randulas", text: "Rándulás" },
+    ],
+    items: [
+      {
+        id: "visszateres",
+        text: "Erőbehatás megszűnése után az ízületi fej visszatér az ízületi árokba.",
+        correctGroupId: "randulas",
+      },
+      {
+        id: "sulyosabb",
+        text: "Az ízületi sérülések súlyosabb formája.",
+        correctGroupId: "ficam",
+      },
+      {
+        id: "fajdalom",
+        text: "A fájdalom a behatás pillanatában rendkívül erős és folyamatosan fennáll.",
+        correctGroupId: "ficam",
+      },
+    ],
+  },
+  {
+    id: "vitalis-139",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
+    groups: [
+      { id: "ficam", text: "Ficam" },
+      { id: "randulas", text: "Rándulás" },
+    ],
+    items: [
+      {
+        id: "fajdalom",
+        text: "A behatás pillanatában jelentkező fájdalom átmenetileg csökken, majd ismét visszatér.",
+        correctGroupId: "randulas",
+      },
+      {
+        id: "rogzites",
+        text: "A feszülő ízületi tok rendellenes helyzetben rögzíti a végtagot.",
+        correctGroupId: "ficam",
+      },
+      {
+        id: "duzzanat",
+        text: "Néhány óra alatt az ízület erősen megduzzad, lilásan elszíneződik.",
+        correctGroupId: "randulas",
+      },
+    ],
+  },
+  {
+    id: "vitalis-202",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a katasztrófákat eredetük szerint!",
+    groups: [
+      { id: "termeszeti", text: "Természeti eredetű" },
+      { id: "civilizacios", text: "Civilizációs eredetű" },
+    ],
+    items: [
+      {
+        id: "haboru",
+        text: "háború",
+        correctGroupId: "civilizacios",
+      },
+      {
+        id: "foldcsuszamlas",
+        text: "földcsuszamlás",
+        correctGroupId: "termeszeti",
+      },
+      {
+        id: "arviz",
+        text: "árvíz",
+        correctGroupId: "termeszeti",
+      },
+    ],
+  },
+  {
+    id: "vitalis-203",
+    topicId: "vitalis",
+    type: "grouping",
+    prompt: "Csoportosítsa a katasztrófákat eredetük szerint!",
+    groups: [
+      { id: "termeszeti", text: "Természeti eredetű" },
+      { id: "civilizacios", text: "Civilizációs eredetű" },
+    ],
+    items: [
+      {
+        id: "jarvany",
+        text: "járvány",
+        correctGroupId: "civilizacios",
+      },
+      {
+        id: "tajfun",
+        text: "tájfun",
+        correctGroupId: "termeszeti",
+      },
+      {
+        id: "sugarbaleset",
+        text: "sugárbaleset",
+        correctGroupId: "civilizacios",
+      },
+      {
+        id: "vorosiszap",
+        text: "vörösiszap árvíz",
+        correctGroupId: "civilizacios",
+      },
+    ],
+  },
 ];
