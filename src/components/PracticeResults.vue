@@ -14,15 +14,32 @@ import { hasAnswer as evaluateHasAnswer } from "../domain/questionEvaluation";
 import { getCorrectAnswerText as formatCorrectAnswer } from "../domain/answerFormatting";
 
 const props = defineProps<{
-  mode: PracticeMode | null; result: PracticeResult; totalCount: number; timeRemaining: number;
-  answers: AnswerStore; optionOrders: Record<string, string[]>; topics: Topic[];
+  mode: PracticeMode | null;
+  result: PracticeResult;
+  totalCount: number;
+  timeRemaining: number;
+  answers: AnswerStore;
+  optionOrders: Record<string, string[]>;
+  topics: Topic[];
 }>();
 const emit = defineEmits<{ restart: [] }>();
-const gradeClass = computed(() => GRADING_SCALE.find((grade) => grade.label === props.result.grade)?.className);
+const gradeClass = computed(
+  () =>
+    GRADING_SCALE.find((grade) => grade.label === props.result.grade)
+      ?.className,
+);
 const gradeRanges = computed(() => getGradeRanges(props.totalCount));
-function getTopicName(id: string) { return props.topics.find((topic) => topic.id === id)?.name ?? "Ismeretlen témakör"; }
-function hasAnswer(question: ExamQuestion) { return evaluateHasAnswer(question, props.answers); }
-function getCorrectAnswerText(question: ExamQuestion) { return formatCorrectAnswer(question, props.optionOrders[question.id]); }
+function getTopicName(id: string) {
+  return (
+    props.topics.find((topic) => topic.id === id)?.name ?? "Ismeretlen témakör"
+  );
+}
+function hasAnswer(question: ExamQuestion) {
+  return evaluateHasAnswer(question, props.answers);
+}
+function getCorrectAnswerText(question: ExamQuestion) {
+  return formatCorrectAnswer(question, props.optionOrders[question.id]);
+}
 </script>
 
 <template>
@@ -42,27 +59,23 @@ function getCorrectAnswerText(question: ExamQuestion) { return formatCorrectAnsw
           <ul class="mt-3 grid gap-1 text-sm text-slate-700">
             <li v-for="range in gradeRanges" :key="range.label">
               {{ range.maxPercent }}–{{ range.minPercent }}% — {{ range.label }}
-              <span v-if="range.minPoints !== null">({{ range.maxPoints }}–{{ range.minPoints }} pont)</span>
+              <span v-if="range.minPoints !== null"
+                >({{ range.maxPoints }}–{{ range.minPoints }} pont)</span
+              >
             </li>
           </ul>
         </div>
         <template v-if="mode === 'module'">
           <h2 class="text-xl font-bold">Értékelés</h2>
           <Message
-            :severity="
-              result.correctCount === totalCount ? 'success' : 'warn'
-            "
+            :severity="result.correctCount === totalCount ? 'success' : 'warn'"
             :closable="false"
           >
             {{ result.correctCount }} / {{ totalCount }} helyes válasz
           </Message>
         </template>
 
-        <Message
-          v-if="timeRemaining === 0"
-          severity="warn"
-          :closable="false"
-        >
+        <Message v-if="timeRemaining === 0" severity="warn" :closable="false">
           Az idő lejárt, a meg nem válaszolt kérdések hiányosnak számítanak.
         </Message>
 
@@ -77,14 +90,10 @@ function getCorrectAnswerText(question: ExamQuestion) { return formatCorrectAnsw
             class="rounded-lg border border-amber-200 bg-amber-50 p-4"
           >
             <div class="mb-2 flex flex-wrap gap-2">
+              <Tag :value="getTopicName(question.topicId)" severity="info" />
+              <Tag :value="`${question.id}. kérdés`" severity="secondary" />
               <Tag
-                :value="getTopicName(question.topicId)"
-                severity="info"
-              />
-              <Tag
-                :value="
-                  hasAnswer(question) ? 'Hibás válasz' : 'Hiányos válasz'
-                "
+                :value="hasAnswer(question) ? 'Hibás válasz' : 'Hiányos válasz'"
                 severity="warn"
               />
             </div>
@@ -98,10 +107,7 @@ function getCorrectAnswerText(question: ExamQuestion) { return formatCorrectAnsw
               {{ getCorrectAnswerText(question) }}
             </p>
 
-            <p
-              v-if="question.explanation"
-              class="mt-2 text-sm text-slate-600"
-            >
+            <p v-if="question.explanation" class="mt-2 text-sm text-slate-600">
               {{ question.explanation }}
             </p>
           </article>
