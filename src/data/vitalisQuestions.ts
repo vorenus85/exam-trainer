@@ -4,414 +4,882 @@ export const vitalisQuestions: ExamQuestion[] = [
   {
     id: "vitalis-001",
     topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Melyik tevékenység tartozik az alapvető higiénés szabályok közé?",
-    options: [
-      { id: "a", text: "Kézfertőtlenítés betegellátás előtt és után" },
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítás igaz-e vagy hamis!",
+    statements: [
+      {
+        id: "a",
+        text: "A betegmegfigyelés az ápolói munka része.",
+        correct: true,
+      },
       {
         id: "b",
-        text: "Védőkesztyű használata minden helyzetben kézmosás helyett",
+        text: "A betegmegfigyelés az ápoló önálló feladatai közé tartozik.",
+        correct: true,
       },
-      {
-        id: "c",
-        text: "Szennyezett eszközök tárolása tiszta eszközök mellett",
-      },
-      { id: "d", text: "Kézmosás elhagyása, ha gyorsan dolgozunk" },
     ],
-    correctOptionIds: ["a"],
   },
   {
     id: "vitalis-002",
     topicId: "vitalis",
-    type: "single_choice",
-    prompt:
-      "Melyik érték tekinthető általában normális nyugalmi felnőtt pulzusnak?",
-    options: [
-      { id: "a", text: "20-40/perc" },
-      { id: "b", text: "60-100/perc" },
-      { id: "c", text: "120-160/perc" },
-      { id: "d", text: "180-220/perc" },
-    ],
-    correctOptionIds: ["b"],
-    explanation:
-      "Felnőtteknél a nyugalmi pulzus általában 60-100/perc közötti.",
-  },
-  {
-    id: "vitalis-003",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Melyik eszközzel mérjük leggyakrabban a vérnyomást?",
-    options: [
-      { id: "a", text: "Lázmérővel" },
-      { id: "b", text: "Fonendoszkóppal és vérnyomásmérővel" },
-      { id: "c", text: "Pulzoximéterrel" },
-      { id: "d", text: "Vizeletgyűjtő edénnyel" },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "vitalis-004",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mit jelezhet a testhőmérséklet emelkedése?",
-    options: [
-      { id: "a", text: "Fertőzés vagy gyulladás lehetőségét" },
-      { id: "b", text: "Mindig normális állapotot" },
-      { id: "c", text: "Csak éhséget" },
-      { id: "d", text: "A légzés teljes leállását" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-005",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt:
-      "Melyik vitális paraméterhez kapcsolódik a percenkénti légzésszám megfigyelése?",
-    options: [
-      { id: "a", text: "Pulzus" },
-      { id: "b", text: "Légzés" },
-      { id: "c", text: "Vérnyomás" },
-      { id: "d", text: "Testtömeg" },
-    ],
-    correctOptionIds: ["b"],
-  },
-  {
-    id: "vitalis-006",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mit mér a pulzoximéter?",
-    options: [
-      { id: "a", text: "A vér oxigéntelítettségét és gyakran a pulzust" },
-      { id: "b", text: "A testmagasságot" },
-      { id: "c", text: "A vizelet fajsúlyát" },
-      { id: "d", text: "A vércukorszintet minden esetben" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-007",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Miért fontos a vitális paraméterek rendszeres dokumentálása?",
-    options: [
-      { id: "a", text: "Mert segít követni a beteg állapotának változásait" },
-      { id: "b", text: "Mert helyettesíti az orvosi vizsgálatot" },
-      { id: "c", text: "Mert így nem kell kommunikálni a beteggel" },
-      { id: "d", text: "Mert csak adminisztratív formalitás" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-008",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt:
-      "Melyik állapot igényelhet fokozott figyelmet a betegmegfigyelés során?",
-    options: [
-      { id: "a", text: "Hirtelen kialakuló nehézlégzés" },
-      { id: "b", text: "Jó étvágy változatlan közérzettel" },
-      { id: "c", text: "Nyugodt alvás panasz nélkül" },
-      { id: "d", text: "Normális testhőmérséklet" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-009",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt:
-      "Melyik megfigyelés kapcsolódik közvetlenül a keringés állapotához?",
-    options: [
-      { id: "a", text: "Pulzus tapintása és értékelése" },
-      { id: "b", text: "Hajszín megfigyelése" },
-      { id: "c", text: "Ruhaméret feljegyzése" },
-      { id: "d", text: "Cipőméret megkérdezése" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-010",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt:
-      "Mit kell tenni, ha a mért vitális paraméter jelentősen eltér a megszokottól?",
-    options: [
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítás igaz-e vagy hamis!",
+    statements: [
       {
         id: "a",
-        text: "Jelezni kell az illetékes egészségügyi szakembernek és dokumentálni kell",
+        text: "A betegmegfigyelés nem része az életveszélyes helyzetek megítélésének.",
+        correct: false,
       },
-      { id: "b", text: "El kell hallgatni, ha a beteg nem panaszkodik" },
-      { id: "c", text: "A mérési eredményt ki kell törölni" },
-      { id: "d", text: "Csak a műszak végén szabad foglalkozni vele" },
     ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-011",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Hogyan készítsük elő a beteget vérnyomásméréshez?",
-    options: [
-      { id: "a", text: "Nyugalomban, megtámasztott karral és megfelelő méretű mandzsettával" },
-      { id: "b", text: "Közvetlenül intenzív testmozgás után" },
-      { id: "c", text: "A mandzsettát ruhán keresztül felhelyezve" },
-      { id: "d", text: "Álló helyzetben, a kart lelógatva" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-012",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mennyi ideig célszerű számolni a légzésszámot, ha a légzés szabálytalan?",
-    options: [
-      { id: "a", text: "Egy teljes percig" },
-      { id: "b", text: "Tíz másodpercig, számolás nélkül" },
-      { id: "c", text: "Csak egy légzésig" },
-      { id: "d", text: "A mérést nem kell elvégezni" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-013",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mit jelezhet az oxigéntelítettség jelentős csökkenése?",
-    options: [
-      { id: "a", text: "A beteg légzésének fokozott megfigyelése és jelzési szükségletét" },
-      { id: "b", text: "Mindig hibátlan működést" },
-      { id: "c", text: "Kizárólag a beteg testmagasságát" },
-      { id: "d", text: "A vércukorszint biztos emelkedését" },
-    ],
-    correctOptionIds: ["a"],
-  },
-  {
-    id: "vitalis-014",
-    topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mit érdemes megfigyelni a pulzus tapintásakor?",
-    options: [
-      { id: "a", text: "A frekvenciát, a ritmust és a pulzus teltségét" },
-      { id: "b", text: "Csak a beteg testmagasságát" },
-      { id: "c", text: "Kizárólag a bőr színét" },
-      { id: "d", text: "A beteg hallásélességét" },
-    ],
-    correctOptionIds: ["a"],
   },
   {
     id: "vitalis-015",
     topicId: "vitalis",
-    type: "single_choice",
-    prompt: "Mit kell tenni, ha a beteg légzése hirtelen nehezítetté válik?",
-    options: [
-      { id: "a", text: "Azonnal jelezni kell az illetékes szakembernek és megfigyelni kell a beteget" },
-      { id: "b", text: "Meg kell várni a következő műszakot" },
-      { id: "c", text: "A beteget egyedül kell hagyni pihenni" },
-      { id: "d", text: "A változást nem kell dokumentálni" },
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A testalkat az egyén öröklött és szerzett szomatikus tulajdonságainak az összessége.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A testalkatot csak a genetikai tényezők határozzák meg, a környezeti hatások nem befolyásolják.",
+        correct: false,
+      },
     ],
-    correctOptionIds: ["a"],
   },
   {
-    id: "vitalis-mc-001",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mely tényezők befolyásolhatják a pulzust? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "Fizikai aktivitás" },
-      { id: "b", text: "Láz" },
-      { id: "c", text: "Érzelmi stressz" },
-      { id: "d", text: "A beteg cipőmérete önmagában" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-    explanation:
-      "A terhelés, a láz és a stressz is módosíthatja a pulzus frekvenciáját.",
-  },
-  {
-    id: "vitalis-mc-002",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Melyek szükségesek a pontos vérnyomásméréshez? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "A beteg néhány percig nyugalomban legyen" },
-      { id: "b", text: "A mandzsetta mérete illeszkedjen a karhoz" },
-      { id: "c", text: "A kar legyen megfelelően megtámasztva" },
-      { id: "d", text: "A mandzsettát mindig vastag ruhára kell helyezni" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-  },
-  {
-    id: "vitalis-mc-003",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mely jellemzőket kell megfigyelni a légzés vizsgálatakor? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "A légzésszámot" },
-      { id: "b", text: "A légzés ritmusát" },
-      { id: "c", text: "A légzés mélységét és jellegét" },
-      { id: "d", text: "Kizárólag a beteg testmagasságát" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-    explanation:
-      "A légzés megfigyelésekor a gyakoriság, a ritmus, a mélység és a jelleg egyaránt fontos.",
-  },
-  {
-    id: "vitalis-mc-004",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mely tényezők okozhatnak pontatlan pulzoximéteres mérést? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "Hideg végtag" },
-      { id: "b", text: "Körömlakk vagy műköröm" },
-      { id: "c", text: "Mozgás mérés közben" },
-      { id: "d", text: "A beteg csendben, mozdulatlanul ül" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-  },
-  {
-    id: "vitalis-mc-005",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mit kell tenni jelentősen eltérő vitális paraméter észlelésekor? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "Ellenőrizni kell a mérés körülményeit és szükség esetén megismételni" },
-      { id: "b", text: "Meg kell figyelni a beteg általános állapotát" },
-      { id: "c", text: "Jelezni kell az illetékes egészségügyi szakembernek" },
-      { id: "d", text: "Az eredményt dokumentálás nélkül figyelmen kívül kell hagyni" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-    explanation:
-      "A jelentős eltérést ellenőrizni, dokumentálni és a beteg állapotával együtt értékelni kell.",
-  },
-  {
-    id: "vitalis-mc-006",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mely tényezők befolyásolhatják a testhőmérsékletet? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "Fertőzés vagy gyulladás" },
-      { id: "b", text: "Fizikai aktivitás" },
-      { id: "c", text: "A környezet hőmérséklete" },
-      { id: "d", text: "A beteg kedvenc színe önmagában" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-  },
-  {
-    id: "vitalis-mc-007",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Milyen adatokat célszerű rögzíteni a vitális paraméterek mérésekor? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "A mért értéket és a mért paramétert" },
-      { id: "b", text: "A mérés időpontját" },
-      { id: "c", text: "A beteg állapotával kapcsolatos lényeges megfigyeléseket" },
-      { id: "d", text: "Csak azt, hogy történt-e mérés" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-    explanation:
-      "A pontos dokumentáció lehetővé teszi az értékek nyomon követését és az állapotváltozások felismerését.",
-  },
-  {
-    id: "vitalis-mc-008",
-    topicId: "vitalis",
-    type: "multiple_choice",
-    prompt: "Mely jelek utalhatnak a beteg állapotának romlására? (Több válasz is helyes.)",
-    options: [
-      { id: "a", text: "Hirtelen nehezített légzés" },
-      { id: "b", text: "Szokatlan tudatzavar vagy zavartság" },
-      { id: "c", text: "Jelentősen eltérő vérnyomás vagy pulzus" },
-      { id: "d", text: "A beteg panaszmentes, változatlan állapota" },
-    ],
-    correctOptionIds: ["a", "b", "c"],
-    explanation:
-      "Az ilyen eltéréseket komolyan kell venni, a beteget megfigyelni és az illetékes szakembernek jelezni kell.",
-  },
-  {
-    id: "vitalis-tf-001",
+    id: "vitalis-033",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A pulzus frekvenciája nyugalomban is mérhető.", correct: true },
-      { id: "b", text: "A pulzus ritmusát nem szükséges megfigyelni.", correct: false },
-      { id: "c", text: "A pulzus tapintásakor a teltség is értékelhető.", correct: true },
+      {
+        id: "a",
+        text: "Nem minden váladékot tekintünk fertőzöttnek, ami a betegtől származik.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Az emberi szervezet működése során különböző összetételű salakanyagot termel.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-002",
+    id: "vitalis-034",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A vérnyomásmérés előtt célszerű a beteget nyugalomban hagyni.", correct: true },
-      { id: "b", text: "A mandzsetta mérete nem befolyásolhatja a mérés eredményét.", correct: false },
-      { id: "c", text: "A vérnyomásméréskor a kart megfelelően meg kell támasztani.", correct: true },
+      {
+        id: "a",
+        text: "A váladékok ürítésének módjának változása nem segíti a diagnózis felállítását.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A betegtől származó váladékok tárolásánál be kell tartani az aszepszis szabályait.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-003",
+    id: "vitalis-035",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "Szabálytalan légzés esetén célszerű egy teljes percig számolni a légzésszámot.", correct: true },
-      { id: "b", text: "A légzés ritmusát és mélységét nem kell megfigyelni.", correct: false },
-      { id: "c", text: "A hirtelen nehezített légzést jelezni kell az illetékes szakembernek.", correct: true },
+      {
+        id: "a",
+        text: "A széklet az emésztési folyamat végtermékeként kialakuló salakanyag.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A széklet színét az urokróm adja.",
+        correct: false,
+      },
+      {
+        id: "c",
+        text: "Naponta egyszer, maximum kétszer ürül széklet normál körülmények között.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-004",
+    id: "vitalis-036",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A pulzoximéter a vér oxigéntelítettségének becslésére használható.", correct: true },
-      { id: "b", text: "Mozgás közben minden pulzoximéteres mérés biztosan pontos.", correct: false },
-      { id: "c", text: "A hideg végtag befolyásolhatja a pulzoximéteres mérés eredményét.", correct: true },
+      {
+        id: "a",
+        text: "A székletürítést nem befolyásolja az életkor és a testmozgás.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A széklet tartalmaz baktériumokat is.",
+        correct: true,
+      },
+      {
+        id: "c",
+        text: "Normál körülmények között naponta egyszer, maximum kétszer ürül széklet.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-005",
+    id: "vitalis-047",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A testhőmérséklet mérési helye hatással lehet a mért értékre.", correct: true },
-      { id: "b", text: "A láz minden esetben a mérőeszköz hibáját jelenti.", correct: false },
-      { id: "c", text: "A testhőmérséklet változását a beteg általános állapotával együtt kell értékelni.", correct: true },
+      {
+        id: "a",
+        text: "A vizelet normál élettani körülmények között mindig tartalmaz fehérjét.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A vizelet normál esetben nem tartalmaz cukrokat.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-006",
+    id: "vitalis-048",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A vitális paraméterek mérési eredményeit dokumentálni kell.", correct: true },
-      { id: "b", text: "A mérés időpontja nem fontos adat a dokumentációban.", correct: false },
-      { id: "c", text: "Jelentős eltérés esetén a beteg állapotát és a mérés körülményeit is ellenőrizni kell.", correct: true },
+      {
+        id: "a",
+        text: "A vizeletürítést nem befolyásolják a gyógyszerek, a terhesség és az éghajlati viszonyok.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Normál körülmények között a vizelet enyhén savanyú vegyhatású.",
+        correct: true,
+      },
     ],
   },
   {
-    id: "vitalis-tf-007",
+    id: "vitalis-049",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A fizikai aktivitás befolyásolhatja a pulzus értékét.", correct: true },
-      { id: "b", text: "A stressz semmilyen körülmények között nem hat a pulzusra.", correct: false },
-      { id: "c", text: "A láz is okozhat pulzusszám-emelkedést.", correct: true },
+      {
+        id: "a",
+        text: "A napi ürített vizelet mennyisége élettani körülmények között a folyadékbevitelhez igazodik.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A vizelet színét nem befolyásolják a gyógyszerek.",
+        correct: false,
+      },
     ],
   },
   {
-    id: "vitalis-tf-008",
+    id: "vitalis-050",
     topicId: "vitalis",
     type: "true_false",
-    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
     statements: [
-      { id: "a", text: "A vitális paraméterek változásait a beteg panaszaival együtt kell értékelni.", correct: true },
-      { id: "b", text: "A jelentősen eltérő értéket dokumentálás nélkül figyelmen kívül lehet hagyni.", correct: false },
-      { id: "c", text: "Állapotromlás gyanúja esetén értesíteni kell az illetékes szakembert.", correct: true },
+      {
+        id: "a",
+        text: "A vizelet normál esetben fehéres-sárga színű.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Az állott vizelet erős ammóniaszagú.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-056",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Egészséges körülmények között a vizelet fajsúlya 1010-1020 g/ml között megfelelő.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A magas fajsúly hígított vizeletre utal.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-059",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A köpet normál esetben színtelen és enyhén bűzös.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Tüdővizenyő esetén a köpet fehér habos.",
+        correct: true,
+      },
+      {
+        id: "c",
+        text: "A köpet tartalmazhat nyákot, vért, gennyet, de férgeket nem.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-060",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Vérzés esetén a köpet színe sárgás-zöldes.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "TBC-s betege köpete véres, élénkpiros.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-061",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A köpőcsésze használata zavart beteg esetén nem javasolt!",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A véres köpetet „H”-val kell jelölni a lázlapon.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-063",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Döntse el, hogy az alábbi időskorral kapcsolatos állítások igazak-e, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Időskorban a bőr veszít víztartalmából és csökken a rugalmassága.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Az izmok összehúzódó képessége nő, a mozgás beszűkül.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-064",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Döntse el, hogy az alábbi időskorral kapcsolatos állítások igazak-e, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A fogakat támasztó szövetek sorvadnak, viszont a rágóképesség nem csökken.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Gyakrabban fordul elő székrekedés és éjszakai vizelés.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-069",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi állítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A testtömegmérést kórházi körülmények között általában naponta végzik.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Vízhajtó adásakor a testtömegmérést gyógyszer bevétele előtt és 24 óra múlva végzik.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-071",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A testmagasság és a testkörfogat értékével együtt meghatározható a testtömeg-index.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A leggyakoribb testkörfogat mérési helyek: has, derék, csípő, comb, lábszár, újszülött és csecsemőkorban fejkörfogat.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-082",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A tachycardia nem minden esetben kóros.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A pulzusszámot nem befolyásolhatják érzelmi hatások.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-083",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A pulzusszámot kizárólag tapintással tudjuk meghatározni.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A 100/perc feletti pulzusszámot tachycardiának nevezzük.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-084",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A 70/perc alatti pulzusszámot bradycardiának nevezzük.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A fájdalom növeli a pulzusszámot.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-085",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A láz emeli a pulzusszámot.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Fizikai aktivitás soha nem emeli 100/perc fölé a pulzusszámot.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-086",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Az arteria carotison centrális, míg az arteria radialison perifériás pulzust tapinthatunk",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-090",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzésszámolás akkor pontos, ha a beteggel együtt végezzük.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A légzésszám élettani körülmények között függ az életkortól, az idegrendszer állapotától, izommunkától, a levegő páratartalmától.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-091",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzés a férfiaknál inkább mellkasi, a nőknél inkább hasi típusú.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Az egészséges felnőtt percenként 12-16-ot lélegzik.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-092",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzésszámot a hideghatás csökkenti, az alvás növeli.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A testhőfok emelkedésekor, a légző felület csökkenésekor a légzésszám fokozódik.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-093",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Altatószer- és Morphin-mérgezésben csökken a légzésszám.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A légzőközpont tartós működészavara esetén a légzésszám nő.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-094",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzés az oxigén és szén-dioxid kicserélődése a vér és a légköri levegő, illetve a vér és a szövetek között.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A légzésszámolás csak akkor pontos, ha előtte a beteget figyelmeztetjük a szabályos légvételre.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-095",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzésszámolás legalább három percig tart.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A be- és kilégzés szabályos váltakozását a nyúltvelőben lévő légzőközpont szabályozza.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-096",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzésszámolás csak akkor pontos, ha a beteg nem veszi észre, ezért a pulzusméréssel együtt végezzük.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Alvás közben a légzésszám szapora és felületes.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-097",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Normális körülmények között a ki- és belégzések szabályosan követik egymást, és a légvételek mélysége és időtartama egyforma.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A légvételek kiváltásának kémiai ingere a vérben felszaporodó oxigén, mely a légzőközpontot ingerli.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-101",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A vérnyomás értéke nem változik a szívciklus során a systole és a diastole alatt.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A vérnyomásértékek fiziológiás szint alá süllyedésekor hypotoniaról beszélünk.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-102",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A vérnyomás a keringő vér által az erek rugalmas falára kifejtett nyomás.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A vérnyomásértékek fiziológiás szint alá süllyedésekor hypertoniaról beszélünk.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-103",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A systolés és diastolés vérnyomásérték különbségét perfúziós nyomásnak nevezzük.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A systolés és diastolés vérnyomásérték különbségét pulzusnyomásnak nevezzük.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-104",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Döntse el, hogy az alábbi megállapítások igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A vérnyomásmérő mandzsettáját a meztelen felkar közepére helyezzük fel.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A vérnyomásmérés előtt 5 perccel már ne fogyasszon koffeines és alkoholos italt, ne dohányozzon a páciens.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-182",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztésre vonatkozó kijelentések igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A segélynyújtónak legelőször gondoskodnia kell a biztonságos környezet megteremtéséről.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A segélynyújtónak legelőször a segítséghívásról kell gondoskodnia.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-183",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztésre vonatkozó kijelentések igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A mellkaskompresszió – befúvás aránya 15 : 2",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A félautomata defibrillátor használata előtt 5 percig újraélesztést kell végezni",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-184",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A légzés vizsgálatot 10 másodpercig kell végezni.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A légzés vizsgálatot 20 másodpercig kell végezni.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-185",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A mellkaskompresszió – befúvás arány 30:2.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A mellkaskompresszió – befúvás arány 2:15.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-186",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Amennyiben a beteg eszméletlen és normál légzést tapasztalunk, akkor hanyatt fekve kell elhelyezni és folyamatosan ellenőrizni kell a légzését.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Amennyiben a beteg eszméletlen és normál légzést tapasztalunk, akkor stabil oldalfekvésben kell elhelyezni és folyamatosan ellenőrizni kell a légzését.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-187",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Amennyiben az elsősegélynyújtó tanult újraélesztést, a mellkaskompressziókat célszerű szájból - szájba történő lélegeztetéssel is kiegészíteni.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Amennyiben az elsősegélynyújtó tanult újraélesztést, sok esetben elegendő a szájból - szájba történő lélegeztetés hatékony végzése.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-188",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Mellkaskompressziót felnőttek esetén körülbelül 5-6 cm mélységben, 100-120/perces frekvenciával kell végezni.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Mellkaskompressziót felnőttek esetén körülbelül 4-5 cm mélységben, 100-120/perces frekvenciával kell végezni.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-189",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Mellkaskompressziót felnőttek esetén körülbelül 5-6 cm mélységben, 90-100/perces frekvenciával kell végezni.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "A kompresszió és lélegeztetés aránya 15:1.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-190",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "A kompresszió és lélegeztetés aránya 30:2.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "A kompresszió és lélegeztetés aránya 30:5.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: "vitalis-191",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt:
+      "Válassza ki, hogy az alapfokú újraélesztéshez kapcsolódó mondatok igazak, vagy hamisak!",
+    statements: [
+      {
+        id: "a",
+        text: "Újraélesztéskor a mellkaskompressziónál a mellkas lenyomási mélysége kb. 3-4 cm.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Újraélesztéskor a mellkaskompressziónál a mellkas lenyomási mélysége kb. 5-6 cm.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-196",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Válassza ki, hogy igazak, vagy hamisak az alábbi állítások!",
+    statements: [
+      {
+        id: "a",
+        text: "Súlyos sérülés esetén csak két segélynyújtó mozgathatja a beteget.",
+        correct: false,
+      },
+      {
+        id: "b",
+        text: "Súlyos sérülés lehetőségét feltételezhetjük a baleseti mechanizmusból.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: "vitalis-197",
+    topicId: "vitalis",
+    type: "true_false",
+    prompt: "Válassza ki, hogy igazak, vagy hamisak az alábbi állítások!",
+    statements: [
+      {
+        id: "a",
+        text: "Súlyos sérülést kell feltételezni magasból esést követően.",
+        correct: true,
+      },
+      {
+        id: "b",
+        text: "Eszméletén lévő súlyos sérültet stabil oldalfektetésbe kell helyezni.",
+        correct: false,
+      },
     ],
   },
 ];
