@@ -1508,4 +1508,703 @@ export const vitalisQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["d"],
   },
+  {
+    id: "vitalis-006",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Válassza ki az objektív tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "láz" },
+      { id: "b", text: "szédülés" },
+      { id: "c", text: "rossz közérzet" },
+      { id: "d", text: "hidegrázás" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-007",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Válassza ki az objektív tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "hányinger" },
+      { id: "b", text: "vadászkutya-fekvés" },
+      { id: "c", text: "dobverőujj" },
+      { id: "d", text: "rossz közérzet" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-008",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Válassza ki a szubjektív tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "hányinger" },
+      { id: "b", text: "láz" },
+      { id: "c", text: "dobverőujj" },
+      { id: "d", text: "vadászkutya-fekvés" },
+      { id: "e", text: "rossz közérzet" },
+      { id: "f", text: "levertség" },
+    ],
+    correctOptionIds: ["a", "e", "f"],
+  },
+  {
+    id: "vitalis-011",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Válassza ki a vitális paramétereket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "légzés" },
+      { id: "b", text: "vércukorszint" },
+      { id: "c", text: "vérnyomás" },
+      { id: "d", text: "tudatállapot" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-012",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt: "Válassza ki a vitális paramétereket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "pulzus" },
+      { id: "b", text: "hőmérséklet" },
+      { id: "c", text: "vérkép" },
+      { id: "d", text: "vizeletürítés" },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "vitalis-017",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki Hippokratész által meghatározott alkattípusokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kolerikus" },
+      { id: "b", text: "piknikus" },
+      { id: "c", text: "atlétikus" },
+      { id: "d", text: "melankolikus" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-022",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a krónikus fájdalomra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "A fájdalom fennállása több mint három hónap." },
+      { id: "b", text: "A fájdalom rövid ideig tart és nem tér vissza." },
+      { id: "c", text: "A beteg életminőségét befolyásolja." },
+      { id: "d", text: "A fájdalom fennállása kevesebb, mint három hónap." },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-070",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a testmagassággal és mérésével kapcsolatos helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A végleges testmagasságot a nők 18 éves korukra a férfiak 23 éves korukra érik el.",
+      },
+      {
+        id: "b",
+        text: "Testmagasságot függőleges felület mellett egyenes testtartással, a sarkak összeérintésével mérjük.",
+      },
+      {
+        id: "c",
+        text: "Testmagasságot függőleges felület mellett egyenes testtartással, vállszéles terpeszállásban állva mérjük.",
+      },
+      {
+        id: "d",
+        text: "A végleges testmagasságot 20-22 éves kor között éri el az ember.",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-072",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a hypothermia tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "szapora légzés" },
+      { id: "b", text: "pulzus csökkenése" },
+      { id: "c", text: "légzésszám csökkenése" },
+      { id: "d", text: "fejfájás" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-073",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a hyperthermia tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "hűvös bőr" },
+      { id: "b", text: "kipirult, meleg bőr" },
+      { id: "c", text: "szapora légzés" },
+      { id: "d", text: "enyhe didergés" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-074",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a hyperthermia tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "étvágytalanság" },
+      { id: "b", text: "légzésszám csökkenése" },
+      { id: "c", text: "fejfájás" },
+      { id: "d", text: "pulzusszám emelkedése" },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "vitalis-075",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a testhőmérséklettel kapcsolatos helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "A testhőmérséklet napi ingadozása normál körülmények között nem haladhat meg a 0,5°C-t.",
+      },
+      {
+        id: "b",
+        text: "A normális, fiziológiás testhőmérséklet 36-37°C között van.",
+      },
+      {
+        id: "c",
+        text: "A hőmérséklet dokumentálható lázlapon (színes lázgörbével) vagy a megfigyelőlapon arab számokkal felírva.",
+      },
+      {
+        id: "d",
+        text: "Az orálisan mért hőmérsékletnél 0,3°-t, a rectálisan mért hőmérsékletnél 0,3° kell a mért értékhez hozzáadni.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-080",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a pulzusmérés lehetséges helyeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "arteria carotis communis" },
+      { id: "b", text: "aorta ascendens" },
+      { id: "c", text: "truncus pulmonalis" },
+      { id: "d", text: "arteria radialis" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-081",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a pulzusmérés lehetséges helyeit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "arteria coronaria dextra" },
+      { id: "b", text: "arteria temporalis" },
+      { id: "c", text: "ramus circumflexus" },
+      { id: "d", text: "arteria femoralis" },
+      { id: "e", text: "arteria poplitea" },
+    ],
+    correctOptionIds: ["b", "d", "e"],
+  },
+  {
+    id: "vitalis-110",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki azokat az eseteket, amikor a balesetet szenvedő motoros fejéről a bukósisakot le kell venni! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "nem lélegzik a sérült" },
+      { id: "b", text: "gerincsérülése van" },
+      { id: "c", text: "nyílt hasi sérülése van" },
+      { id: "d", text: "a sérült eszméletlen és hány" },
+      { id: "e", text: "combcsonttörése van" },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-123",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az égésre/fagyásra vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Elsőfokú égés esetén legalább 2 percig hideg vízzel kell hűteni a területet.",
+      },
+      {
+        id: "b",
+        text: "Elsőfokú fagyás tünete a zsibbadás, tűszúrásszerű érzés, viszketés.",
+      },
+      {
+        id: "c",
+        text: "Másodfokú égés esetén a bőr rétegei közül hám és az irha érintett.",
+      },
+      {
+        id: "d",
+        text: "Az égés kiterjedésének megállapítására a Wallace-féle 5-ös szabályt alkalmazzuk.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-124",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Húzza alá az alábbiak közül a rándulás, a ficam vagy a törés biztos jeleit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "duzzanat" },
+      { id: "b", text: "alakváltozás" },
+      { id: "c", text: "haematoma" },
+      { id: "d", text: "akadályozott mozgás" },
+      { id: "e", text: "kilátszó csontvég" },
+    ],
+    correctOptionIds: ["b", "e"],
+  },
+  {
+    id: "vitalis-136",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki, szabályos mentőhíváskor mely lényeges információkat kell közölni a mentésirányítóval! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "A telefonáló életkora" },
+      { id: "b", text: "Mi történt (rövid ismertetés)" },
+      { id: "c", text: "Hol történt (pontos cím)" },
+      { id: "d", text: "Hány autó van összesen a helyszínen" },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-137",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki, szabályos mentőhíváskor mely lényeges információkat kell közölni a mentésirányítóval! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "Hány sérült van" },
+      { id: "b", text: "Állapotuk súlyossága" },
+      { id: "c", text: "Milyen a helyszínen az időjárás" },
+      { id: "d", text: "Műszaki mentés szükséges-e" },
+      { id: "e", text: "A sérült neme" },
+      { id: "f", text: "A sérült életkora" },
+    ],
+    correctOptionIds: ["a", "b", "d"],
+  },
+  {
+    id: "vitalis-144",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki, hogy az alábbiak közül mely esetekben kell a beteget/sérültet félig ülő helyzetbe helyezni! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "Eszméleténél lévő mellkasi sérült esetében." },
+      { id: "b", text: "Fedett hasi sérülés esetén." },
+      { id: "c", text: "Erősen vérző arckoponyasérültnél." },
+      { id: "d", text: "Tüdőasztma miatt kialakuló nehézlégzésnél." },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-145",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki azokat a tevékenységeket, amelyeket tilos alkalmazni az elsősegélynyújtónak égési sérült ellátása esetén! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Az égett testfelület szabaddá tétele, amennyiben lehetséges.",
+      },
+      { id: "b", text: "A bőrbe égett ruha kitépése a sebből." },
+      {
+        id: "c",
+        text: "Az égett bőrfelület hideg, folyóvízzel történő hűtése legalább 15-20 percig.",
+      },
+      { id: "d", text: "Szükség esetén a sérülés jéggel történő hűtése." },
+      {
+        id: "e",
+        text: "Hűtés után az égett felületre laza, steril fedőkötés felhelyezése.",
+      },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-147",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Elsősegélynyújtás során a légzés vizsgálata 1 percig tart.",
+      },
+      {
+        id: "b",
+        text: "Gerincsérülés gyanúja esetén a fej mozgatása helyett az áll előreemelésével lehet a szabad légutat biztosítani.",
+      },
+      { id: "c", text: "Hármas értékeléssel vizsgáljuk a légzés meglétét." },
+      {
+        id: "d",
+        text: "Magyarországon a 107-es vagy az egységes európai 112-es hívószámon lehet a mentőket riasztani.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-148",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Magyarországon a 107-es vagy az egységes európai 112-es hívószámon lehet a mentőket riasztani.",
+      },
+      {
+        id: "b",
+        text: "Mentőhívás során adja meg a segélykérő a telefonszámát, mert fontos lehet, ha további információ szükséges.",
+      },
+      {
+        id: "c",
+        text: "Életveszélyes állapotra utal a szürkéssápadt-fakófehér verejtékes arc, a szapora pulzus.",
+      },
+      {
+        id: "d",
+        text: "A bukósisakot minél hamarabb eltávolítjuk a motoros sérült fejéről, mert csak így tudjuk megállapítani, hogy van-e légzése.",
+      },
+    ],
+    correctOptionIds: ["b", "c"],
+  },
+  {
+    id: "vitalis-151",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a mérgezésekkel kapcsolatos helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Marószer mérgezés esetén a lenyelt, gyomorba került marószert tilos kihánytatni.",
+      },
+      {
+        id: "b",
+        text: "A savmérgezés a bőrön és nyálkahártyákon pörkképződést okoz.",
+      },
+      {
+        id: "c",
+        text: "Gyógyszermérgezés esetén az eszméletlen beteget meghánytatjuk.",
+      },
+      {
+        id: "d",
+        text: "Szén-monoxid-mérgezésnél a gázmérgezettet minden körülmények között azonnal ki kell mentenie az elsősegélynyújtónak.",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "vitalis-152",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a mérgezésekkel kapcsolatos helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Marószer mérgezés esetén a lenyelt, gyomorba került marószert tilos kihánytatni.",
+      },
+      {
+        id: "b",
+        text: "Szén-monoxid-mérgezésnél a gázmérgezettet minden körülmények között azonnal ki kell mentenie az elsősegélynyújtónak.",
+      },
+      {
+        id: "c",
+        text: "A gombamérgezések lappangási ideje 48–72 óra között van.",
+      },
+      {
+        id: "d",
+        text: "Klórgáz-mérgezésnél helyi nyálkahártya-izgalom, a gégefedő, a hörgők görcse és tüdővizenyő alakulhat ki.",
+      },
+    ],
+    correctOptionIds: ["a", "d"],
+  },
+  {
+    id: "vitalis-153",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbiak közül a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "Defibrilláláshoz a beteg száraz alapon feküdjön, mellkasa legyen száraz.",
+      },
+      {
+        id: "b",
+        text: "A sebellátás legfontosabb célja a további vérvesztés megakadályozása.",
+      },
+      {
+        id: "c",
+        text: "Orrvérzés esetén a beteg nyugalomba helyezése után hajtsa hátra a fejét.",
+      },
+      {
+        id: "d",
+        text: "Hasi sérülés esetén az eszméletlen beteget stabil oldalfekvésbe kell helyezni.",
+      },
+    ],
+    correctOptionIds: ["a", "b"],
+  },
+  {
+    id: "vitalis-155",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a súlyos állapotra utaló riasztó jeleket, tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "légzés hiánya" },
+      { id: "b", text: "horzsolt seb mindkét alkaron" },
+      { id: "c", text: "eszméletlenség" },
+      { id: "d", text: "két lábujj amputációja" },
+      { id: "e", text: "görcsroham" },
+    ],
+    correctOptionIds: ["a", "c", "e"],
+  },
+  {
+    id: "vitalis-156",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a súlyos állapotra utaló riasztó jeleket, tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "igen nagyfokú fájdalom" },
+      { id: "b", text: "horzsolt seb mindkét alkaron" },
+      { id: "c", text: "igen magas láz" },
+      { id: "d", text: "erős vérzés" },
+      { id: "e", text: "zúzott seb a fejen" },
+    ],
+    correctOptionIds: ["a", "c", "d"],
+  },
+  {
+    id: "vitalis-157",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a súlyos állapotra utaló riasztó jeleket, tüneteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "zúzott seb a fejen" },
+      { id: "b", text: "gyér vagy szapora, könnyen elnyomható pulzus" },
+      { id: "c", text: "pulzus 90-100/min" },
+      { id: "d", text: "sápadt, beesett arc, szederjes ajkak" },
+      { id: "e", text: "hányinger, hányás" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-163",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alábbi felsorolásból a gerincsérülés lehetséges tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "heves hasi fájdalom" },
+      {
+        id: "b",
+        text: "fülből vagy az orrból világos, agyvízzel kevert vér ürül",
+      },
+      { id: "c", text: "a gerinc deformitása" },
+      { id: "d", text: "fájdalom a gerinc vonalában" },
+    ],
+    correctOptionIds: ["c", "d"],
+  },
+  {
+    id: "vitalis-164",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az ájulás lehetséges tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kipirult arc" },
+      { id: "b", text: "szédülés" },
+      { id: "c", text: "hidegrázás" },
+      { id: "d", text: "sápadtság" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-165",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "AED használattal megvalósítható a korai defibrillálás még a mentő kiérkezése előtt.",
+      },
+      {
+        id: "b",
+        text: "AED-t a mentő kiérkezése előtt laikus önállóan nem, csak a mentésirányító utasítására használhat.",
+      },
+      {
+        id: "c",
+        text: "Az AED megérkezéséig folytatni kell az újraélesztést, de amint megérkezett az AED, azt azonnal használni kell.",
+      },
+      {
+        id: "d",
+        text: "Ha van a közelben AED, akkor az újraélesztést csak az elektródák felhelyezését követően szabad megkezdeni.",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-166",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "AED használattal megvalósítható a korai defibrillálás még a mentő kiérkezése előtt.",
+      },
+      {
+        id: "b",
+        text: "AED-t a mentő kiérkezése előtt laikus önállóan nem, csak a mentésirányító utasítására használhat.",
+      },
+      {
+        id: "c",
+        text: "Fontos, hogy a segélynyújtók figyeljenek az AED hangutasításaira és azokra azonnal reagáljanak (különösen fontos a mellkaskompresszió újrakezdése).",
+      },
+      {
+        id: "d",
+        text: "Az AED hangutasításait csak akkor kell figyelembe venni, ha az újraélesztést végző tud rá figyelni.",
+      },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-170",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alacsony vércukorszint jellemző tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "kiszáradt száj" },
+      { id: "b", text: "émelygő éhségérzet" },
+      { id: "c", text: "szomjúság érzet" },
+      { id: "d", text: "sápadtság, hideg verejtékezés" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-171",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az alacsony vércukorszint jellemző tüneteit! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "szomjúság érzet" },
+      { id: "b", text: "remegés" },
+      { id: "c", text: "gyakori vizelés" },
+      { id: "d", text: "szédülés" },
+    ],
+    correctOptionIds: ["b", "d"],
+  },
+  {
+    id: "vitalis-175",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki, hogy az égett területek felmérésére szolgáló 9-es szabály szerint melyek felelnek meg 9%-nak felnőttek esetén! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "a fej" },
+      { id: "b", text: "a gáttájék" },
+      { id: "c", text: "egy felső végtag" },
+      { id: "d", text: "a mellkas" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-199",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az egészségügyi katasztrófahelyzetre vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "az ellátandók igényei és az ellátók kapacitási képességei között várhatóan tartós, nagyfokú aránytalanság áll fenn",
+      },
+      {
+        id: "b",
+        text: "az ellátók kapacitási képességei arányosak az ellátandók igényeivel",
+      },
+      {
+        id: "c",
+        text: "az esemény kiterjedése miatt rendkívüli erőforrások mozgósítását igényli",
+      },
+      { id: "d", text: "az áldozatok száma csekély, de a sérüléseik súlyosak" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-200",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki az egészségügyi katasztrófahelyzetre vonatkozó helyes megállapításokat! (Több válasz is lehetséges!)",
+    options: [
+      {
+        id: "a",
+        text: "az ellátandók igényei és az ellátók kapacitási képességei között várhatóan tartós, nagyfokú aránytalanság áll fenn",
+      },
+      {
+        id: "b",
+        text: "az ellátók kapacitási képességei arányosak az ellátandók igényeivel",
+      },
+      {
+        id: "c",
+        text: "az áldozatok száma, elhelyezkedése, a sérüléseik típusa vagy súlyossága miatt rendkívüli erőforrások mozgósítását igényli",
+      },
+      { id: "d", text: "az áldozatok száma csekély, de a sérüléseik súlyosak" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
+  {
+    id: "vitalis-201",
+    topicId: "vitalis",
+    type: "multiple_choice",
+    prompt:
+      "Válassza ki a feltehetően tömeges eseményt jelentő eseteket! (Több válasz is lehetséges!)",
+    options: [
+      { id: "a", text: "öt gépkocsi ütközött össze" },
+      { id: "b", text: "motoros kerékpárossal ütközött" },
+      { id: "c", text: "turistabusz szakadékba zuhan" },
+      { id: "d", text: "gyalogosgázolás" },
+    ],
+    correctOptionIds: ["a", "c"],
+  },
 ];
