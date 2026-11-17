@@ -2221,7 +2221,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "b",
         left: "Objektív tünet",
-        right: "A megfigyelést végző is észlelni tudja, akár megfigyelés, akár vizsgálat útján.",
+        right:
+          "A megfigyelést végző is észlelni tudja, akár megfigyelés, akár vizsgálat útján.",
       },
       {
         id: "c",
@@ -2239,17 +2240,20 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "tünetszegény a betegség",
-        right: "A betegség nem okoz jellemző szubjektív, vagy objektív tüneteket.",
+        right:
+          "A betegség nem okoz jellemző szubjektív, vagy objektív tüneteket.",
       },
       {
         id: "b",
         left: "atípusos tünetek",
-        right: "A betegség nem a megszokott tünetekkel, hanem azoktól részben, vagy egészben eltérő módon jelentkezik.",
+        right:
+          "A betegség nem a megszokott tünetekkel, hanem azoktól részben, vagy egészben eltérő módon jelentkezik.",
       },
       {
         id: "c",
         left: "tünetmentesség",
-        right: "Előfordulhat, hogy a betegség egy egész élet folyamán nem okoz panaszt.",
+        right:
+          "Előfordulhat, hogy a betegség egy egész élet folyamán nem okoz panaszt.",
       },
     ],
   },
@@ -2257,7 +2261,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-014",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
+    prompt:
+      "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
     pairs: [
       {
         id: "a",
@@ -2280,7 +2285,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "cyanosis",
-        right: "szederjesség (a bőr/nyálkahártya/körömágy kékesvörös elszíneződése a hypoxia következtében)",
+        right:
+          "szederjesség (a bőr/nyálkahártya/körömágy kékesvörös elszíneződése a hypoxia következtében)",
       },
       {
         id: "b",
@@ -2334,17 +2340,20 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-026",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
+    prompt:
+      "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
     pairs: [
       {
         id: "a",
         left: "epeköves roham",
-        right: "A jobb bordaív alatt kezdődik, a jobb lapocka és a jobb váll irányába sugárzó erős fájdalom.",
+        right:
+          "A jobb bordaív alatt kezdődik, a jobb lapocka és a jobb váll irányába sugárzó erős fájdalom.",
       },
       {
         id: "b",
         left: "veseköves roham",
-        right: "Igen erős, a deréktájról induló fájdalom, az alhasba és a combok belső felszíne felé sugárzik.",
+        right:
+          "Igen erős, a deréktájról induló fájdalom, az alhasba és a combok belső felszíne felé sugárzik.",
       },
     ],
   },
@@ -2352,17 +2361,20 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-027",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
+    prompt:
+      "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
     pairs: [
       {
         id: "a",
         left: "angina pectoris",
-        right: "Hirtelen heves fájdalom a szegycsont mögött, a bal váll és a nyak bal oldalába sugárzik.",
+        right:
+          "Hirtelen heves fájdalom a szegycsont mögött, a bal váll és a nyak bal oldalába sugárzik.",
       },
       {
         id: "b",
         left: "hashártyagyulladás",
-        right: "Igen erős, a teljes hasra kiterjedő fájdalom, a has kemény, feszes.",
+        right:
+          "Igen erős, a teljes hasra kiterjedő fájdalom, a has kemény, feszes.",
       },
     ],
   },
@@ -2370,7 +2382,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-028",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
+    prompt:
+      "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
     pairs: [
       {
         id: "a",
@@ -2380,12 +2393,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "b",
         left: "vakbélgyulladás",
-        right: "Általában a gyomortájon kezdődő, majd típusos esetben a jobb alhasra lokalizálódó fájdalom, amelyet gyakran hányás és láz kísér.",
+        right:
+          "Általában a gyomortájon kezdődő, majd típusos esetben a jobb alhasra lokalizálódó fájdalom, amelyet gyakran hányás és láz kísér.",
       },
       {
         id: "c",
         left: "tüdőembólia",
-        right: "Hirtelen jelentkező, szúró, légzésre fokozódó mellkasi fájdalom, amelyet felületes légzés, dyspnoe, haemoptoe kísér.",
+        right:
+          "Hirtelen jelentkező, szúró, légzésre fokozódó mellkasi fájdalom, amelyet felületes légzés, dyspnoe, haemoptoe kísér.",
       },
     ],
   },
@@ -2393,7 +2408,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-029",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
+    prompt:
+      "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
     pairs: [
       {
         id: "a",
@@ -2408,7 +2424,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "c",
         left: "méhen kívüli terhesség",
-        right: "Hasi fájdalom, amit hányás, hányinger, vérnyomásesés, eszméletvesztés kísérhet.",
+        right:
+          "Hasi fájdalom, amit hányás, hányinger, vérnyomásesés, eszméletvesztés kísérhet.",
       },
     ],
   },
@@ -2421,12 +2438,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "apátia",
-        right: "A beteg mozdulatlanul fekszik, a feltett kérdésekre válaszol, de lassan. A környezetével szemben érdektelen.",
+        right:
+          "A beteg mozdulatlanul fekszik, a feltett kérdésekre válaszol, de lassan. A környezetével szemben érdektelen.",
       },
       {
         id: "b",
         left: "eufória",
-        right: "Az addig elesett, súlyos beteg hirtelen jókedvűvé, mozgékonnyá válik.",
+        right:
+          "Az addig elesett, súlyos beteg hirtelen jókedvűvé, mozgékonnyá válik.",
       },
     ],
   },
@@ -2439,12 +2458,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "delírium",
-        right: "A beteg nyugtalan, kiabál, kóborol, hallucinál. Magas láz, központi idegrendszeri izgalom következménye lehet.",
+        right:
+          "A beteg nyugtalan, kiabál, kóborol, hallucinál. Magas láz, központi idegrendszeri izgalom következménye lehet.",
       },
       {
         id: "b",
         left: "térbeli és időbeli tájékozatlanság",
-        right: "Főleg agyi keringési elégtelenségben szenvedő betegnél fordul elő. A beteg nem tudja, hol van, nem tudja megmondani a hónapot, napot.",
+        right:
+          "Főleg agyi keringési elégtelenségben szenvedő betegnél fordul elő. A beteg nem tudja, hol van, nem tudja megmondani a hónapot, napot.",
       },
     ],
   },
@@ -2457,17 +2478,20 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "somnolentia",
-        right: "A beteg aluszékony, szinte az egész idejét félálomban tölti, de felébreszthető.",
+        right:
+          "A beteg aluszékony, szinte az egész idejét félálomban tölti, de felébreszthető.",
       },
       {
         id: "b",
         left: "sopor",
-        right: "Igen mély alvás, amelyből a beteg csak erős ingerekkel ébreszthető fel.",
+        right:
+          "Igen mély alvás, amelyből a beteg csak erős ingerekkel ébreszthető fel.",
       },
       {
         id: "c",
         left: "coma",
-        right: "Mély kábultság, a beteg semmiféle ingerrel nem ébreszthető fel.",
+        right:
+          "Mély kábultság, a beteg semmiféle ingerrel nem ébreszthető fel.",
       },
     ],
   },
@@ -2511,7 +2535,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-039",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
+    prompt:
+      "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
     pairs: [
       {
         id: "a",
@@ -2534,7 +2559,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-040",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
+    prompt:
+      "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
     pairs: [
       {
         id: "a",
@@ -2575,7 +2601,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "okkult vérzés",
-        right: "a vér szabad szemmel nem látható, csak laboratóriumi vizsgálattal mutatható ki",
+        right:
+          "a vér szabad szemmel nem látható, csak laboratóriumi vizsgálattal mutatható ki",
       },
       {
         id: "b",
@@ -2660,7 +2687,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-055",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa a vizelet színének elváltozásaihoz a kórképeket/kórállapotokat!",
+    prompt:
+      "Párosítsa a vizelet színének elváltozásaihoz a kórképeket/kórállapotokat!",
     pairs: [
       {
         id: "a",
@@ -2729,7 +2757,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-062",
     topicId: "vitalis",
     type: "matching",
-    prompt: "Párosítsa a testváladékokat a vizsgálatra küldésükre használt eszközökkel!",
+    prompt:
+      "Párosítsa a testváladékokat a vizsgálatra küldésükre használt eszközökkel!",
     pairs: [
       {
         id: "a",
@@ -2905,7 +2934,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "b",
         left: "permetezés",
-        right: "a fertőtlenítő oldatot mechanikus porlasztással juttatjuk a felületre",
+        right:
+          "a fertőtlenítő oldatot mechanikus porlasztással juttatjuk a felületre",
       },
       {
         id: "c",
@@ -2928,12 +2958,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "ízületi ficam",
-        right: "Az ízületet alkotó csontvégek erőhatás következtében elmozdulnak, majd kóros helyzetben rögzülnek.",
+        right:
+          "Az ízületet alkotó csontvégek erőhatás következtében elmozdulnak, majd kóros helyzetben rögzülnek.",
       },
       {
         id: "b",
         left: "ízületi rándulás",
-        right: "Az ízületet alkotó csontvégek erőbehatásra eltávolodnak egymástól, de az erőbehatás megszűnésekor visszatérnek eredeti helyzetükbe.",
+        right:
+          "Az ízületet alkotó csontvégek erőbehatásra eltávolodnak egymástól, de az erőbehatás megszűnésekor visszatérnek eredeti helyzetükbe.",
       },
     ],
   },
@@ -2951,12 +2983,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "b",
         left: "Szúrt seb",
-        right: "A szúrcsatorna mélysége feltárás nélkül nem állapítható meg, a sérülés lehet behatoló és áthatoló.",
+        right:
+          "A szúrcsatorna mélysége feltárás nélkül nem állapítható meg, a sérülés lehet behatoló és áthatoló.",
       },
       {
         id: "c",
         left: "Szakított seb",
-        right: "Egyenetlen, nagy tátongó sebszélek, bőséges vérzés, csontok, idegek is sérülhetnek.",
+        right:
+          "Egyenetlen, nagy tátongó sebszélek, bőséges vérzés, csontok, idegek is sérülhetnek.",
       },
     ],
   },
@@ -2969,12 +3003,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "Harapott seb",
-        right: "Látható fognyomok, roncsolt sebszélek, esetleg lágyrész hiány, mélysége változó.",
+        right:
+          "Látható fognyomok, roncsolt sebszélek, esetleg lágyrész hiány, mélysége változó.",
       },
       {
         id: "b",
         left: "Lőtt seb",
-        right: "Lehet behatoló, vagy áthatoló, bemeneti nyílás mindig van, kimeneti nyílás, ha van mindig nagyobb.",
+        right:
+          "Lehet behatoló, vagy áthatoló, bemeneti nyílás mindig van, kimeneti nyílás, ha van mindig nagyobb.",
       },
       {
         id: "c",
@@ -3048,17 +3084,20 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "Rautek-féle műfogás",
-        right: "Eszméletlen, mozgásképtelen sérült biztonságos kimentésére alkalmazzuk.",
+        right:
+          "Eszméletlen, mozgásképtelen sérült biztonságos kimentésére alkalmazzuk.",
       },
       {
         id: "b",
         left: "tálcafogás",
-        right: "Súlyos sérülés gyanúja esetén alkalmazzuk, ha a sérültet el kell távolítani a veszélyzónából.",
+        right:
+          "Súlyos sérülés gyanúja esetén alkalmazzuk, ha a sérültet el kell távolítani a veszélyzónából.",
       },
       {
         id: "c",
         left: "stabil oldalfekvés",
-        right: "Célja a légutak szabaddá tételével és szabadon tartásával a sérültet megvédeni a fulladástól.",
+        right:
+          "Célja a légutak szabaddá tételével és szabadon tartásával a sérültet megvédeni a fulladástól.",
       },
     ],
   },
@@ -3094,7 +3133,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "Artériás vérzés",
-        right: "Élénkpiros, a szív összehúzódásának megfelelően pulzálva, spriccelve ürül.",
+        right:
+          "Élénkpiros, a szív összehúzódásának megfelelően pulzálva, spriccelve ürül.",
       },
       {
         id: "b",
@@ -3104,7 +3144,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "c",
         left: "Kapilláris vérzés",
-        right: "Speciális vérzéscsillapításra nincs szükség, a sebellátás elegendő.",
+        right:
+          "Speciális vérzéscsillapításra nincs szükség, a sebellátás elegendő.",
       },
     ],
   },
@@ -3117,7 +3158,8 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "Artériás vérzés",
-        right: "Általában mélyebben fekvő ér sérül, melyből nagy nyomással ürül a vér.",
+        right:
+          "Általában mélyebben fekvő ér sérül, melyből nagy nyomással ürül a vér.",
       },
       {
         id: "b",
@@ -3191,12 +3233,14 @@ export const vitalisQuestions: ExamQuestion[] = [
       {
         id: "a",
         left: "Vágott seb",
-        right: "Éles eszköz a testre merőlegesen hatva okozza a sebet, melynek szélei egyenesek, minimális környéki szövetroncsolódás jellemzi. Általában erős vérzés kíséri.",
+        right:
+          "Éles eszköz a testre merőlegesen hatva okozza a sebet, melynek szélei egyenesek, minimális környéki szövetroncsolódás jellemzi. Általában erős vérzés kíséri.",
       },
       {
         id: "b",
         left: "Horzsolt seb",
-        right: "Az egyik leggyakoribb sebtípus, melyet a bőr felületével párhuzamos, mechanikai hatás okoz.",
+        right:
+          "Az egyik leggyakoribb sebtípus, melyet a bőr felületével párhuzamos, mechanikai hatás okoz.",
       },
     ],
   },
@@ -3333,7 +3377,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-013",
     topicId: "vitalis",
     type: "grouping",
-    prompt: "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
+    prompt:
+      "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
     groups: [
       { id: "latas", text: "látás" },
       { id: "hallas", text: "hallás" },
@@ -3510,7 +3555,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-138",
     topicId: "vitalis",
     type: "grouping",
-    prompt: "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
+    prompt:
+      "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
     groups: [
       { id: "ficam", text: "Ficam" },
       { id: "randulas", text: "Rándulás" },
@@ -3537,7 +3583,8 @@ export const vitalisQuestions: ExamQuestion[] = [
     id: "vitalis-139",
     topicId: "vitalis",
     type: "grouping",
-    prompt: "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
+    prompt:
+      "Csoportosítsa a ficamra illetve a rándulásra vonatkozó leírásokat!",
     groups: [
       { id: "ficam", text: "Ficam" },
       { id: "randulas", text: "Rándulás" },
@@ -3616,6 +3663,894 @@ export const vitalisQuestions: ExamQuestion[] = [
         id: "vorosiszap",
         text: "vörösiszap árvíz",
         correctGroupId: "civilizacios",
+      },
+    ],
+  },
+  {
+    id: "vitalis-004",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a tünetek fajtáival kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "szubjektiv",
+        parts: [
+          "Szubjektív tünetek melyek szemmel ",
+          {
+            id: "valasz",
+            label: "Szubjektív tünetek melyek szemmel",
+            options: [
+              { id: "lathatok", text: "láthatók" },
+              { id: "nem-lathatok", text: "nem láthatók" },
+              { id: "merhetok", text: "mérhetők" },
+            ],
+            correctOptionId: "nem-lathatok",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "objektiv",
+        parts: [
+          "Objektív tünetek a ",
+          {
+            id: "valasz",
+            label: "Objektív tünetek a",
+            options: [
+              { id: "nem-lathato", text: "nem látható" },
+              { id: "merheto", text: "mérhető" },
+              { id: "nem-erzekelheto", text: "nem érzékelhető" },
+            ],
+            correctOptionId: "merheto",
+          },
+          " tünetek.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-009",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Válassza ki az alábbi szakkifejezések magyar jelentését!",
+    statements: [
+      {
+        id: "symptoma",
+        parts: [
+          "symptoma: ",
+          {
+            id: "valasz",
+            label: "symptoma:",
+            options: [
+              { id: "tunet", text: "tünet" },
+              { id: "megfigyeles", text: "megfigyelés" },
+              { id: "betegseg", text: "betegség" },
+            ],
+            correctOptionId: "tunet",
+          },
+          "",
+        ],
+      },
+      {
+        id: "syndroma",
+        parts: [
+          "syndroma: ",
+          {
+            id: "valasz",
+            label: "syndroma:",
+            options: [
+              { id: "betegseg", text: "betegség" },
+              { id: "tunetegyuttes", text: "tünetegyüttes" },
+              { id: "megfigyeles", text: "megfigyelés" },
+            ],
+            correctOptionId: "tunetegyuttes",
+          },
+          "",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-019",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a bőrrel kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "borfelulet",
+        parts: [
+          "A felnőtt ember bőrfelülete kb. ",
+          {
+            id: "valasz",
+            label: "A felnőtt ember bőrfelülete kb.",
+            options: [
+              { id: "0-3-0-5", text: "0.3-0.5" },
+              { id: "1-5-1-8", text: "1,5-1,8" },
+              { id: "4-2-4-5", text: "4,2-4,5" },
+            ],
+            correctOptionId: "1-5-1-8",
+          },
+          " m², feladata a szervezet külső hatásoktól való védelme.",
+        ],
+      },
+      {
+        id: "felham",
+        parts: [
+          "A felhám feladata a bőr ",
+          {
+            id: "valasz",
+            label: "A felhám feladata a bőr",
+            options: [
+              { id: "legalso", text: "legalsó" },
+              { id: "kozepso", text: "középső" },
+              { id: "legfelso", text: "legfelső" },
+            ],
+            correctOptionId: "legfelso",
+          },
+          " rétegének fenntartása.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-020",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a bőrrel kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "arnyalat",
+        parts: [
+          "A bőr árnyalatáért a ",
+          {
+            id: "valasz",
+            label: "A bőr árnyalatáért a",
+            options: [
+              { id: "melanin", text: "melanin" },
+              { id: "bilirubin", text: "bilirubin" },
+              { id: "karotinoid", text: "karotinoid" },
+            ],
+            correctOptionId: "melanin",
+          },
+          " a felelős.",
+        ],
+      },
+      {
+        id: "idoskor",
+        parts: [
+          "A bőr idős korban is ",
+          {
+            id: "valasz",
+            label: "A bőr idős korban is",
+            options: [
+              { id: "feszes", text: "feszes" },
+              {
+                id: "konnyen-rancba-szedheto",
+                text: "könnyen ráncba szedhető",
+              },
+              { id: "rugalmas", text: "rugalmas" },
+            ],
+            correctOptionId: "konnyen-rancba-szedheto",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-025",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki a Visual Analóg Skála (fájdalomskála) értékeivel az alábbi táblázatot!",
+    statements: [
+      {
+        id: "enyhe",
+        parts: [
+          "Enyhe fájdalom: ",
+          {
+            id: "valasz",
+            label: "Enyhe fájdalom:",
+            options: [
+              { id: "0", text: "0" },
+              { id: "1-3", text: "1-3" },
+              { id: "4-6", text: "4-6" },
+              { id: "7-9", text: "7-9" },
+              { id: "10", text: "10" },
+            ],
+            correctOptionId: "1-3",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "kozepes",
+        parts: [
+          "Közepes fájdalom: ",
+          {
+            id: "valasz",
+            label: "Közepes fájdalom:",
+            options: [
+              { id: "0", text: "0" },
+              { id: "1-3", text: "1-3" },
+              { id: "4-6", text: "4-6" },
+              { id: "7-9", text: "7-9" },
+              { id: "10", text: "10" },
+            ],
+            correctOptionId: "4-6",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "eros",
+        parts: [
+          "Erős fájdalom: ",
+          {
+            id: "valasz",
+            label: "Erős fájdalom:",
+            options: [
+              { id: "0", text: "0" },
+              { id: "1-3", text: "1-3" },
+              { id: "4-6", text: "4-6" },
+              { id: "7-9", text: "7-9" },
+              { id: "10", text: "10" },
+            ],
+            correctOptionId: "7-9",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "turhetetlen",
+        parts: [
+          "Tűrhetetlen, elviselhetetlen fájdalom: ",
+          {
+            id: "valasz",
+            label: "Tűrhetetlen, elviselhetetlen fájdalom:",
+            options: [
+              { id: "0", text: "0" },
+              { id: "1-3", text: "1-3" },
+              { id: "4-6", text: "4-6" },
+              { id: "7-9", text: "7-9" },
+              { id: "10", text: "10" },
+            ],
+            correctOptionId: "10",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-045",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a széklet szagával kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "rothadas",
+        parts: [
+          "Rothadásos bűzös szagú széklet ",
+          {
+            id: "valasz",
+            label: "Rothadásos bűzös szagú széklet",
+            options: [
+              { id: "feherje", text: "fehérje" },
+              { id: "zsir", text: "zsír" },
+              { id: "szenhidrat", text: "szénhidrát" },
+            ],
+            correctOptionId: "feherje",
+          },
+          " emésztési zavarra utal.",
+        ],
+      },
+      {
+        id: "erjedes",
+        parts: [
+          "Erjedéses, savanykás szagú széklet ",
+          {
+            id: "valasz",
+            label: "Erjedéses, savanykás szagú széklet",
+            options: [
+              { id: "feherje", text: "fehérje" },
+              { id: "zsir", text: "zsír" },
+              { id: "szenhidrat", text: "szénhidrát" },
+            ],
+            correctOptionId: "szenhidrat",
+          },
+          " emésztési zavarra utal.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-065",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Válassza ki a szervek felépítését és működését érintő időskori változásokat!",
+    statements: [
+      {
+        id: "viztartalom",
+        parts: [
+          "A bőr víztartalma ",
+          {
+            id: "valasz",
+            label: "A bőr víztartalma",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "no", text: "nő" },
+            ],
+            correctOptionId: "csokken",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "izmok",
+        parts: [
+          "Az izmok összehúzódó képessége ",
+          {
+            id: "valasz",
+            label: "Az izmok összehúzódó képessége",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "no", text: "nő" },
+            ],
+            correctOptionId: "csokken",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "emesztes",
+        parts: [
+          "Az emésztés és a felszívódás ",
+          {
+            id: "valasz",
+            label: "Az emésztés és a felszívódás",
+            options: [
+              { id: "csokken", text: "csökken" },
+              { id: "no", text: "nő" },
+            ],
+            correctOptionId: "csokken",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-077",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Válassza ki az alábbi meghatározás alapján a láztípusok magyar megfelelőjét!",
+    statements: [
+      {
+        id: "elso",
+        parts: [
+          "A napi ingadozás 1°C-nál nagyobb, nincs láztalan állapot: ",
+          {
+            id: "valasz",
+            label: "A napi ingadozás 1°C-nál nagyobb, nincs láztalan állapot:",
+            options: [
+              { id: "visszatero-laz", text: "visszatérő láz" },
+              { id: "ingadozo-laz", text: "ingadozó láz" },
+              { id: "ugralo-laz", text: "ugráló láz" },
+            ],
+            correctOptionId: "ingadozo-laz",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "masodik",
+        parts: [
+          "A napi ingadozás 1°C-nál nagyobb, reggel láztalanság is lehet: ",
+          {
+            id: "valasz",
+            label:
+              "A napi ingadozás 1°C-nál nagyobb, reggel láztalanság is lehet:",
+            options: [
+              { id: "visszatero-laz", text: "visszatérő láz" },
+              { id: "ingadozo-laz", text: "ingadozó láz" },
+              { id: "ugralo-laz", text: "ugráló láz" },
+            ],
+            correctOptionId: "ugralo-laz",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-087",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Válassza ki az alábbi meghatározás alapján a pulzus ritmusbeli változásainak legmegfelelőjét!",
+    statements: [
+      {
+        id: "potutes",
+        parts: [
+          "„Pótütés” a ritmus rendszeresen vagy rendszertelenül működik, szívkihagyás érzése, idő előtti systole: ",
+          {
+            id: "valasz",
+            label:
+              "„Pótütés” a ritmus rendszeresen vagy rendszertelenül működik, szívkihagyás érzése, idő előtti systole:",
+            options: [
+              { id: "arrythmia", text: "arrythmia" },
+              { id: "extrasystolia", text: "extrasystolia" },
+              { id: "trigeminia", text: "trigeminia" },
+            ],
+            correctOptionId: "extrasystolia",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "szabalytalan",
+        parts: [
+          "A tapintható lüktetések szabálytalanul követik egymást: ",
+          {
+            id: "valasz",
+            label: "A tapintható lüktetések szabálytalanul követik egymást:",
+            options: [
+              { id: "arrythmia", text: "arrythmia" },
+              { id: "extrasystolia", text: "extrasystolia" },
+              { id: "trigeminia", text: "trigeminia" },
+            ],
+            correctOptionId: "arrythmia",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-088",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a pulzus vizsgálattal kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "ujjak",
+        parts: [
+          "A pulzus vizsgálata a megfelelő helyen, ",
+          {
+            id: "valasz",
+            label: "A pulzus vizsgálata a megfelelő helyen,",
+            options: [
+              { id: "3-ujjal", text: "3 ujjal" },
+              { id: "huvelykujjal", text: "hüvelykujjal" },
+              { id: "2-ujjal", text: "2 ujjal" },
+            ],
+            correctOptionId: "3-ujjal",
+          },
+          " tapintva, enyhén a csontos alaphoz nyomva, 1 percig történik.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-089",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a pulzus vizsgálattal kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "jeloles",
+        parts: [
+          "A lázlapra vonaldiagrammal ",
+          {
+            id: "valasz",
+            label: "A lázlapra vonaldiagrammal",
+            options: [
+              { id: "zold-szinnel", text: "zöld színnel" },
+              {
+                id: "a-homerseklettol-eltero-szinnel",
+                text: "a hőmérséklettől eltérő színnel",
+              },
+            ],
+            correctOptionId: "a-homerseklettol-eltero-szinnel",
+          },
+          " vagy a dekruzslapon számmal kell feltüntetni.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-105",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki a vérnyomásméréssel kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "systoles",
+        parts: [
+          "Az első hallható hang a Korotkov I. fázis, a IV. fázisban kezd el halkulni, és a legutolsó hallható hang a Korotkov V. fázis. Az ",
+          {
+            id: "valasz",
+            label:
+              "Az első hallható hang a Korotkov I. fázis, a IV. fázisban kezd el halkulni, és a legutolsó hallható hang a Korotkov V. fázis. Az",
+            options: [
+              { id: "ii-fazis", text: "II. fázis" },
+              { id: "iii-fazis", text: "III. fázis" },
+              { id: "i-fazis", text: "I. fázis" },
+            ],
+            correctOptionId: "i-fazis",
+          },
+          " felel meg a systolés nyomásnak, és az ",
+          {
+            id: "masodik-valasz",
+            label: "Második válasz",
+            options: [
+              { id: "iv-fazis", text: "IV. fázis" },
+              { id: "v-fazis", text: "V. fázis" },
+              { id: "iii-fazis", text: "III. fázis" },
+            ],
+            correctOptionId: "v-fazis",
+          },
+          " adja a diastolés értéket.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-106",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki a hagyományos (aneroid) vérnyomásmérővel történő méréssel kapcsolatos alábbi mondatokat!",
+    statements: [
+      {
+        id: "felpumpalas",
+        parts: [
+          "A vérnyomásmérő mandzsettáját fel kell pumpálni a várt ",
+          {
+            id: "valasz",
+            label: "A vérnyomásmérő mandzsettáját fel kell pumpálni a várt",
+            options: [
+              { id: "diastoles", text: "diastolés" },
+              { id: "systoles", text: "systolés" },
+            ],
+            correctOptionId: "systoles",
+          },
+          " érték fölé, és a fonendoszkóp membránját a könyökhajlatba kell helyezni.",
+        ],
+      },
+      {
+        id: "leengedes",
+        parts: [
+          {
+            id: "valasz",
+            label: "Gyorsan, hirtelen",
+            options: [
+              { id: "gyorsan-hirtelen", text: "Gyorsan, hirtelen" },
+              { id: "lassan-egyenletesen", text: "Lassan, egyenletesen" },
+              { id: "szaggatottan", text: "Szaggatottan" },
+            ],
+            correctOptionId: "lassan-egyenletesen",
+          },
+          " engedjük le a nyomást a mandzsettából, és a fonendoszkópon keresztül hallgatjuk a hangot (Korotkov-hangok).",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-128",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Válassza ki mellkaskompressziónál a mellkas lenyomási mélységét cm-ben kifejezve!",
+    statements: [
+      {
+        id: "melyseg",
+        parts: [
+          "Mellkaskompressziónál a mellkas lenyomási mélysége kb. ",
+          {
+            id: "valasz",
+            label: "Mellkaskompressziónál a mellkas lenyomási mélysége kb.",
+            options: [
+              { id: "3-4-cm", text: "3-4 cm" },
+              { id: "4-5-cm", text: "4-5 cm" },
+              { id: "5-6-cm", text: "5-6 cm" },
+              { id: "6-7-cm", text: "6-7 cm" },
+            ],
+            correctOptionId: "5-6-cm",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-129",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Egészítse ki az alábbi mondatot!",
+    statements: [
+      {
+        id: "beavatkozas",
+        parts: [
+          "Az elsősegélynyújtás ",
+          {
+            id: "valasz",
+            label: "Az elsősegélynyújtás",
+            options: [
+              { id: "halasztott", text: "halasztott" },
+              { id: "azonnali", text: "azonnali" },
+            ],
+            correctOptionId: "azonnali",
+          },
+          " beavatkozás, sérülés, rosszullét esetén a ",
+          {
+            id: "masodik-valasz",
+            label: "Második válasz",
+            options: [
+              { id: "vegleges", text: "végleges" },
+              { id: "masodlagos", text: "másodlagos" },
+            ],
+            correctOptionId: "masodlagos",
+          },
+          " szakellátás megkezdése előtt.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-130",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt: "Válassza ki a leírás alapján a sérülés fajtáját!",
+    statements: [
+      {
+        id: "randulas",
+        parts: [
+          "Külső erő hatására az ízfelszínek eltávolodnak egymástól, de az erőbehatás megszűntekor az ízületi fej visszatér az ízületi árokba: ",
+          {
+            id: "valasz",
+            label:
+              "Külső erő hatására az ízfelszínek eltávolodnak egymástól, de az erőbehatás megszűntekor az ízületi fej visszatér az ízületi árokba:",
+            options: [
+              { id: "randulas", text: "rándulás" },
+              { id: "ficam", text: "ficam" },
+            ],
+            correctOptionId: "randulas",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "ficam",
+        parts: [
+          "Erő hatására kimozdul az ízületi fej az ízületi árokból és az erőbehatás megszűnte után nem tér vissza oda: ",
+          {
+            id: "valasz",
+            label:
+              "Erő hatására kimozdul az ízületi fej az ízületi árokból és az erőbehatás megszűnte után nem tér vissza oda:",
+            options: [
+              { id: "ficam", text: "ficam" },
+              { id: "randulas", text: "rándulás" },
+            ],
+            correctOptionId: "ficam",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-131",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alapfokú újraélesztéshez kapcsolódóan a földön fekvő sérült vizsgálatára vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "elso",
+        parts: [
+          "A segélynyújtónak legelőször gondoskodnia kell a ",
+          {
+            id: "valasz",
+            label: "A segélynyújtónak legelőször gondoskodnia kell a",
+            options: [
+              { id: "mentohivasrol", text: "mentőhívásról" },
+              {
+                id: "biztonsagos-kornyezet-megteremteserol",
+                text: "biztonságos környezet megteremtéséről",
+              },
+            ],
+            correctOptionId: "biztonsagos-kornyezet-megteremteserol",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "masodik",
+        parts: [
+          "Ez után az első lépés ",
+          {
+            id: "valasz",
+            label: "Ez után az első lépés",
+            options: [
+              {
+                id: "az-eszmelet-reakciokeszseg-vizsgalata",
+                text: "az eszmélet/reakciókészség vizsgálata",
+              },
+              { id: "a-beteg-megnyugtatasa", text: "a beteg megnyugtatása" },
+              {
+                id: "a-biztonsagos-kornyezet-megteremtese",
+                text: "a biztonságos környezet megteremtése",
+              },
+            ],
+            correctOptionId: "az-eszmelet-reakciokeszseg-vizsgalata",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-132",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alapfokú újraélesztéshez kapcsolódóan a földön fekvő sérült vizsgálatára vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "segitseg",
+        parts: [
+          "Amennyiben a sérült nem reagál, nem vonható kontaktusba, akkor azonnal ",
+          {
+            id: "valasz",
+            label:
+              "Amennyiben a sérült nem reagál, nem vonható kontaktusba, akkor azonnal",
+            options: [
+              {
+                id: "segitseget-kell-hivnunk",
+                text: "segítséget kell hívnunk",
+              },
+              {
+                id: "meg-kell-kezdeni-az-ujraelesztest",
+                text: "meg kell kezdeni az újraélesztést",
+              },
+            ],
+            correctOptionId: "segitseget-kell-hivnunk",
+          },
+          ".",
+        ],
+      },
+      {
+        id: "legutak",
+        parts: [
+          "A következő teendő ",
+          {
+            id: "valasz",
+            label: "A következő teendő",
+            options: [
+              {
+                id: "a-legutak-felszabaditasa-szabadda-tetele",
+                text: "a légutak felszabadítása-szabaddá tétele",
+              },
+              {
+                id: "a-legzesvizsgalat-elvegzese",
+                text: "a légzésvizsgálat elvégzése",
+              },
+            ],
+            correctOptionId: "a-legutak-felszabaditasa-szabadda-tetele",
+          },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-133",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alapfokú újraélesztéshez kapcsolódóan a földön fekvő sérült vizsgálatára vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "legzes",
+        parts: [
+          "A légzés vizsgálatot ",
+          {
+            id: "valasz",
+            label: "A légzés vizsgálatot",
+            options: [
+              { id: "5", text: "5" },
+              { id: "10", text: "10" },
+              { id: "15", text: "15" },
+              { id: "20", text: "20" },
+            ],
+            correctOptionId: "10",
+          },
+          " másodpercig kell végezni.",
+        ],
+      },
+      {
+        id: "normalis",
+        parts: [
+          "Amennyiben normál légzést tapasztalunk, akkor a sérültet ",
+          {
+            id: "valasz",
+            label: "Amennyiben normál légzést tapasztalunk, akkor a sérültet",
+            options: [
+              { id: "stabil-oldalfekvesben", text: "stabil oldalfekvésben" },
+              { id: "hanyatt-fektetve", text: "hanyatt fektetve" },
+            ],
+            correctOptionId: "stabil-oldalfekvesben",
+          },
+          " kell elhelyezni és folyamatosan ellenőrizni kell a ",
+          {
+            id: "masodik-valasz",
+            label: "Második válasz",
+            options: [
+              { id: "legzeset", text: "légzését" },
+              { id: "pulzusat", text: "pulzusát" },
+            ],
+            correctOptionId: "legzeset",
+          },
+          " a mentő megérkezéséig.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vitalis-134",
+    topicId: "vitalis",
+    type: "fill_in",
+    prompt:
+      "Egészítse ki az alapfokú újraélesztéshez kapcsolódóan a földön fekvő sérült vizsgálatára vonatkozó mondatokat!",
+    statements: [
+      {
+        id: "befuvas",
+        parts: [
+          "Amennyiben az elsősegélynyújtó tanult újraélesztést, a mellkaskompressziókat célszerű ",
+          {
+            id: "valasz",
+            label:
+              "Amennyiben az elsősegélynyújtó tanult újraélesztést, a mellkaskompressziókat célszerű",
+            options: [
+              { id: "szajbol-orrba", text: "szájból orrba" },
+              { id: "szajbol-szajba", text: "szájból szájba" },
+            ],
+            correctOptionId: "szajbol-szajba",
+          },
+          " történő lélegeztetéssel is kiegészíteni.",
+        ],
+      },
+      {
+        id: "melyseg",
+        parts: [
+          "Mellkaskompressziót felnőttek esetén körülbelül ",
+          {
+            id: "valasz",
+            label: "Mellkaskompressziót felnőttek esetén körülbelül",
+            options: [
+              { id: "3-4", text: "3-4" },
+              { id: "5-6", text: "5-6" },
+              { id: "6-7", text: "6-7" },
+            ],
+            correctOptionId: "5-6",
+          },
+          " cm mélységben, ",
+          {
+            id: "masodik-valasz",
+            label: "Második válasz",
+            options: [
+              { id: "90-100", text: "90-100" },
+              { id: "100-120", text: "100-120" },
+              { id: "120-130", text: "120-130" },
+            ],
+            correctOptionId: "100-120",
+          },
+          " perces frekvenciával kell végezni.",
+        ],
       },
     ],
   },
