@@ -2207,4 +2207,1094 @@ export const vitalisQuestions: ExamQuestion[] = [
     ],
     correctOptionIds: ["a", "c"],
   },
+  {
+    id: "vitalis-005",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "Szubjektív tünet",
+        right: "A panaszt csak a beteg észleli.",
+      },
+      {
+        id: "b",
+        left: "Objektív tünet",
+        right: "A megfigyelést végző is észlelni tudja, akár megfigyelés, akár vizsgálat útján.",
+      },
+      {
+        id: "c",
+        left: "Szindróma",
+        right: "A meghatározott kórképekre jellemző tünetek együttese.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-010",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "tünetszegény a betegség",
+        right: "A betegség nem okoz jellemző szubjektív, vagy objektív tüneteket.",
+      },
+      {
+        id: "b",
+        left: "atípusos tünetek",
+        right: "A betegség nem a megszokott tünetekkel, hanem azoktól részben, vagy egészben eltérő módon jelentkezik.",
+      },
+      {
+        id: "c",
+        left: "tünetmentesség",
+        right: "Előfordulhat, hogy a betegség egy egész élet folyamán nem okoz panaszt.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-014",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Csoportosítsa a felsoroltakat aszerint, hogy milyen módon érzékeljük azokat!",
+    pairs: [
+      {
+        id: "a",
+        left: "vizelet színe",
+        right: "látás",
+      },
+      {
+        id: "b",
+        left: "köhögés",
+        right: "hallás",
+      },
+    ],
+  },
+  {
+    id: "vitalis-021",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "cyanosis",
+        right: "szederjesség (a bőr/nyálkahártya/körömágy kékesvörös elszíneződése a hypoxia következtében)",
+      },
+      {
+        id: "b",
+        left: "oedema",
+        right: "vizenyő",
+      },
+      {
+        id: "c",
+        left: "ascites",
+        right: "hasüregben felszaporodó folyadékgyülem",
+      },
+    ],
+  },
+  {
+    id: "vitalis-023",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fájdalom jellegéhez a meghatározásukat!",
+    pairs: [
+      {
+        id: "a",
+        left: "szomatikus",
+        right: "egy-egy sérülés, heveny betegség tünete",
+      },
+      {
+        id: "b",
+        left: "zsigeri, vagy visceralis",
+        right: "belső szervek betegségét kíséri",
+      },
+    ],
+  },
+  {
+    id: "vitalis-024",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fájdalom jellegéhez a meghatározásukat!",
+    pairs: [
+      {
+        id: "a",
+        left: "neuropátiás",
+        right: "az érző tevékenység hibájára vezethető vissza",
+      },
+      {
+        id: "b",
+        left: "neuralgiás",
+        right: "a környéki ideg ellátási területén jelentkezik",
+      },
+    ],
+  },
+  {
+    id: "vitalis-026",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
+    pairs: [
+      {
+        id: "a",
+        left: "epeköves roham",
+        right: "A jobb bordaív alatt kezdődik, a jobb lapocka és a jobb váll irányába sugárzó erős fájdalom.",
+      },
+      {
+        id: "b",
+        left: "veseköves roham",
+        right: "Igen erős, a deréktájról induló fájdalom, az alhasba és a combok belső felszíne felé sugárzik.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-027",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi betegségekhez a rájuk jellemző fájdalomtípusokat!",
+    pairs: [
+      {
+        id: "a",
+        left: "angina pectoris",
+        right: "Hirtelen heves fájdalom a szegycsont mögött, a bal váll és a nyak bal oldalába sugárzik.",
+      },
+      {
+        id: "b",
+        left: "hashártyagyulladás",
+        right: "Igen erős, a teljes hasra kiterjedő fájdalom, a has kemény, feszes.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-028",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "nyombélfekély",
+        right: "Erős gyomortáji fájdalom, amely éhgyomorra jelentkezik.",
+      },
+      {
+        id: "b",
+        left: "vakbélgyulladás",
+        right: "Általában a gyomortájon kezdődő, majd típusos esetben a jobb alhasra lokalizálódó fájdalom, amelyet gyakran hányás és láz kísér.",
+      },
+      {
+        id: "c",
+        left: "tüdőembólia",
+        right: "Hirtelen jelentkező, szúró, légzésre fokozódó mellkasi fájdalom, amelyet felületes légzés, dyspnoe, haemoptoe kísér.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-029",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi jellegzetes fájdalmakat a fájdalmat kiváltó kórképekkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "szívroham",
+        right: "Szegycsont mögött jelentkező, tűrhetetlen fájdalom.",
+      },
+      {
+        id: "b",
+        left: "gyomorfekély",
+        right: "Éhgyomorra jelentkező fájdalom, hányinger kísérheti.",
+      },
+      {
+        id: "c",
+        left: "méhen kívüli terhesség",
+        right: "Hasi fájdalom, amit hányás, hányinger, vérnyomásesés, eszméletvesztés kísérhet.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-030",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi tudatállapotokat jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "apátia",
+        right: "A beteg mozdulatlanul fekszik, a feltett kérdésekre válaszol, de lassan. A környezetével szemben érdektelen.",
+      },
+      {
+        id: "b",
+        left: "eufória",
+        right: "Az addig elesett, súlyos beteg hirtelen jókedvűvé, mozgékonnyá válik.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-031",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi tudatállapotokat jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "delírium",
+        right: "A beteg nyugtalan, kiabál, kóborol, hallucinál. Magas láz, központi idegrendszeri izgalom következménye lehet.",
+      },
+      {
+        id: "b",
+        left: "térbeli és időbeli tájékozatlanság",
+        right: "Főleg agyi keringési elégtelenségben szenvedő betegnél fordul elő. A beteg nem tudja, hol van, nem tudja megmondani a hónapot, napot.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-032",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a felsorolt kóros tudatállapotokat jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "somnolentia",
+        right: "A beteg aluszékony, szinte az egész idejét félálomban tölti, de felébreszthető.",
+      },
+      {
+        id: "b",
+        left: "sopor",
+        right: "Igen mély alvás, amelyből a beteg csak erős ingerekkel ébreszthető fel.",
+      },
+      {
+        id: "c",
+        left: "coma",
+        right: "Mély kábultság, a beteg semmiféle ingerrel nem ébreszthető fel.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-037",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a kifejezéseket a rájuk jellemző állításokkal!",
+    pairs: [
+      {
+        id: "a",
+        left: "normál székelés",
+        right: "naponta egyszer, maximum kétszer ürülő széklet",
+      },
+      {
+        id: "b",
+        left: "székrekedés",
+        right: "2-3 napnál ritkább székletürítés",
+      },
+    ],
+  },
+  {
+    id: "vitalis-038",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a kifejezéseket a rájuk jellemző állításokkal!",
+    pairs: [
+      {
+        id: "a",
+        left: "hasmenés",
+        right: "naponta többszöri, híg széklet",
+      },
+      {
+        id: "b",
+        left: "széklet beékelődés",
+        right: "megkeményedett székletgyülem, ami beékelődött a végbélben",
+      },
+    ],
+  },
+  {
+    id: "vitalis-039",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "világos, agyagszerű (acholiás) széklet",
+        right: "epeút-elzáródás",
+      },
+      {
+        id: "b",
+        left: "szurokszéklet",
+        right: "nyelőcső- vagy gyomorvérzés",
+      },
+      {
+        id: "c",
+        left: "fekete, formált széklet",
+        right: "vastartalmú gyógyszerek alkalmazása",
+      },
+    ],
+  },
+  {
+    id: "vitalis-040",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi jellegzetes székletelváltozásokat az azok hátterében húzódó kórképekkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "véres, hasmenéses széklet",
+        right: "fekélyes vastagbélgyulladás",
+      },
+      {
+        id: "b",
+        left: "vércsík a széklet felszínén",
+        right: "aranyeresség",
+      },
+    ],
+  },
+  {
+    id: "vitalis-041",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a véres széklet kiváltó okait azok főbb jellemzőivel!",
+    pairs: [
+      {
+        id: "a",
+        left: "fekete széklet (melaena)",
+        right: "a széklet emésztett vért tartalmaz",
+      },
+      {
+        id: "b",
+        left: "széklet felülete véres",
+        right: "a vér az aranyeres csomók megrepedéséből származik",
+      },
+    ],
+  },
+  {
+    id: "vitalis-042",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a véres széklet kiváltó okait azok főbb jellemzőivel!",
+    pairs: [
+      {
+        id: "a",
+        left: "okkult vérzés",
+        right: "a vér szabad szemmel nem látható, csak laboratóriumi vizsgálattal mutatható ki",
+      },
+      {
+        id: "b",
+        left: "friss, vagy alvadékos vér",
+        right: "a vér az alsóbb béltraktusból származik",
+      },
+    ],
+  },
+  {
+    id: "vitalis-043",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi állapotokat a széklet állagával!",
+    pairs: [
+      {
+        id: "a",
+        left: "székrekedés",
+        right: "kemény, bogyós széklet",
+      },
+      {
+        id: "b",
+        left: "felszívódási zavar",
+        right: "pépes széklet",
+      },
+    ],
+  },
+  {
+    id: "vitalis-044",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi állapotokat a széklet állagával!",
+    pairs: [
+      {
+        id: "a",
+        left: "hasmenés",
+        right: "híg állagú széklet",
+      },
+      {
+        id: "b",
+        left: "nem fertőzéses bélgyulladás",
+        right: "véres-nyákos széklet",
+      },
+    ],
+  },
+  {
+    id: "vitalis-051",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a tüneteket jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "bő vizelés",
+        right: "A vizelet napi mennyisége meghaladja a 2500 ml-t.",
+      },
+      {
+        id: "b",
+        left: "a vizelet mennyiségének csökkenése",
+        right: "A vizelet napi mennyisége 100-400 ml között mozog.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-052",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a tüneteket jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "a vizeletkiválasztás szünetelése",
+        right: "A napi vizelet mennyisége 100 ml alatt van.",
+      },
+      {
+        id: "b",
+        left: "éjszakai vizeletürítés",
+        right: "Nagy mennyiségű, gyakori éjszakai vizeletürítés.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-055",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a vizelet színének elváltozásaihoz a kórképeket/kórállapotokat!",
+    pairs: [
+      {
+        id: "a",
+        left: "sárgásbarna színű",
+        right: "májbetegség",
+      },
+      {
+        id: "b",
+        left: "véres",
+        right: "veséből és a húgyutakból származó vérzés",
+      },
+      {
+        id: "c",
+        left: "fehéres-sárga színű",
+        right: "gennyvizelés",
+      },
+    ],
+  },
+  {
+    id: "vitalis-057",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a köhögés formáihoz jellemzőiket!",
+    pairs: [
+      {
+        id: "a",
+        left: "produktív köhögés",
+        right: "szörcsölő hang kísérheti",
+      },
+      {
+        id: "b",
+        left: "inproduktív köhögés",
+        right: "száraz köhögés",
+      },
+      {
+        id: "c",
+        left: "ugató jellegű köhögés",
+        right: "be- és kilégzés nehezített",
+      },
+    ],
+  },
+  {
+    id: "vitalis-058",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a köpeteket jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "nyálkás köpet",
+        right: "híg, színtelen nyálka",
+      },
+      {
+        id: "b",
+        left: "nyálkás-gennyes köpet",
+        right: "a nyálkán kívül színes, átlátszatlan gennyet is tartalmaz",
+      },
+      {
+        id: "c",
+        left: "véres köpet",
+        right: "világospiros, habos vagy alvadt vércsomókat tartalmaz",
+      },
+    ],
+  },
+  {
+    id: "vitalis-062",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a testváladékokat a vizsgálatra küldésükre használt eszközökkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "széklet",
+        right: "F-tartály",
+      },
+      {
+        id: "b",
+        left: "hüvelyváladék",
+        right: "Tárgylemez",
+      },
+      {
+        id: "c",
+        left: "köpet",
+        right: "Dy-tartály",
+      },
+      {
+        id: "d",
+        left: "liquor",
+        right: "steril kémcső",
+      },
+    ],
+  },
+  {
+    id: "vitalis-076",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a láztípusok magyar és latin megnevezéseit!",
+    pairs: [
+      {
+        id: "a",
+        left: "állandó láz",
+        right: "febris continua",
+      },
+      {
+        id: "b",
+        left: "ingadozó láz",
+        right: "febris remittens",
+      },
+      {
+        id: "c",
+        left: "ugráló vagy változó láz",
+        right: "febris intermittens",
+      },
+      {
+        id: "d",
+        left: "váltóláz",
+        right: "febris undulans",
+      },
+    ],
+  },
+  {
+    id: "vitalis-078",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "pulsus filiformis",
+        right: "szapora, elnyomható pulzus",
+      },
+      {
+        id: "b",
+        left: "hyperpyrexia",
+        right: "igen magas láz",
+      },
+      {
+        id: "c",
+        left: "subfebrilitas",
+        right: "hőemelkedés",
+      },
+    ],
+  },
+  {
+    id: "vitalis-079",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a szakkifejezéseket a jelentésükkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "bradypnoe",
+        right: "ritmusos, alacsony légzésszám",
+      },
+      {
+        id: "b",
+        left: "hyperventillatio",
+        right: "ritmusos, szapora, erőltetett, mély légzés",
+      },
+      {
+        id: "c",
+        left: "tachypnoe",
+        right: "ritmusos, szapora, felületes légzés",
+      },
+    ],
+  },
+  {
+    id: "vitalis-098",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a nekik megfelelő jellemzőkkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "bradypnoe",
+        right: "alacsony légzésszám",
+      },
+      {
+        id: "b",
+        left: "tachypnoe",
+        right: "magas légzésszám",
+      },
+      {
+        id: "c",
+        left: "hiperventilláció",
+        right: "szapora légvétel kis volumennel",
+      },
+    ],
+  },
+  {
+    id: "vitalis-099",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmakat a nekik megfelelő jellemzőkkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "dyspnoe",
+        right: "nehézlégzés",
+      },
+      {
+        id: "b",
+        left: "Kussmaul-légzés",
+        right: "nagy frekvenciával nagy volumenű légvétel",
+      },
+    ],
+  },
+  {
+    id: "vitalis-100",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a betegségekhez a rájuk jellemző lehelet szagát!",
+    pairs: [
+      {
+        id: "a",
+        left: "cukorbetegség",
+        right: "acetonszagú lehelet",
+      },
+      {
+        id: "b",
+        left: "veseelégtelenség",
+        right: "vizeletszagú lehelet",
+      },
+      {
+        id: "c",
+        left: "májkóma",
+        right: "májszagú lehelet",
+      },
+    ],
+  },
+  {
+    id: "vitalis-108",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a kémiai fertőtlenítés módjaihoz leírásukat!",
+    pairs: [
+      {
+        id: "a",
+        left: "lemosás",
+        right: "a módszert az egybefüggő vízálló felületeken alkalmazzuk",
+      },
+      {
+        id: "b",
+        left: "permetezés",
+        right: "a fertőtlenítő oldatot mechanikus porlasztással juttatjuk a felületre",
+      },
+      {
+        id: "c",
+        left: "átkefélés",
+        right: "ágybetétek, ruházatok fertőtlenítésére használjuk",
+      },
+      {
+        id: "d",
+        left: "beáztatás",
+        right: "az eszközt, anyagot a fertőtlenítőszer oldatába helyezzük",
+      },
+    ],
+  },
+  {
+    id: "vitalis-125",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a sérülést a leírásával!",
+    pairs: [
+      {
+        id: "a",
+        left: "ízületi ficam",
+        right: "Az ízületet alkotó csontvégek erőhatás következtében elmozdulnak, majd kóros helyzetben rögzülnek.",
+      },
+      {
+        id: "b",
+        left: "ízületi rándulás",
+        right: "Az ízületet alkotó csontvégek erőbehatásra eltávolodnak egymástól, de az erőbehatás megszűnésekor visszatérnek eredeti helyzetükbe.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-140",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az egyes sebtípusokat a jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "Zúzott seb",
+        right: "Zegzugos, tátongó sebszél, sokszor szennyezett.",
+      },
+      {
+        id: "b",
+        left: "Szúrt seb",
+        right: "A szúrcsatorna mélysége feltárás nélkül nem állapítható meg, a sérülés lehet behatoló és áthatoló.",
+      },
+      {
+        id: "c",
+        left: "Szakított seb",
+        right: "Egyenetlen, nagy tátongó sebszélek, bőséges vérzés, csontok, idegek is sérülhetnek.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-141",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az egyes sebtípusokat a jellemzőikkel!",
+    pairs: [
+      {
+        id: "a",
+        left: "Harapott seb",
+        right: "Látható fognyomok, roncsolt sebszélek, esetleg lágyrész hiány, mélysége változó.",
+      },
+      {
+        id: "b",
+        left: "Lőtt seb",
+        right: "Lehet behatoló, vagy áthatoló, bemeneti nyílás mindig van, kimeneti nyílás, ha van mindig nagyobb.",
+      },
+      {
+        id: "c",
+        left: "Horzsolt seb",
+        right: "A bőr hámrétege sérül.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-142",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Írja az égés fokozataihoz a rájuk jellemző tünetek sorszámát!",
+    pairs: [
+      {
+        id: "a",
+        left: "I. fokú égés",
+        right: "Pár nap alatt spontán gyógyul.",
+      },
+      {
+        id: "b",
+        left: "II. fokú égés",
+        right: "Savóval teli bullák jelennek meg.",
+      },
+      {
+        id: "c",
+        left: "III. fokú égés",
+        right: "Folyamatos váladékozás.",
+      },
+      {
+        id: "d",
+        left: "IV. fokú égés",
+        right: "Elszenesedés.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-143",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Írja az égés fokozataihoz a rájuk jellemző tünetek sorszámát!",
+    pairs: [
+      {
+        id: "a",
+        left: "I. fokú égés",
+        right: "A bőr nyálkahártyája kipirult, duzzadt és fájdalmas.",
+      },
+      {
+        id: "b",
+        left: "II. fokú égés",
+        right: "Lehet egy nagyobb, de akár több bulla is.",
+      },
+      {
+        id: "c",
+        left: "III. fokú égés",
+        right: "A bőr színe piszkosszürke.",
+      },
+      {
+        id: "d",
+        left: "IV. fokú égés",
+        right: "Mélyebb szövetek zsugorodnak (csont, izom).",
+      },
+    ],
+  },
+  {
+    id: "vitalis-149",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmat a hozzá tartozó meghatározással!",
+    pairs: [
+      {
+        id: "a",
+        left: "Rautek-féle műfogás",
+        right: "Eszméletlen, mozgásképtelen sérült biztonságos kimentésére alkalmazzuk.",
+      },
+      {
+        id: "b",
+        left: "tálcafogás",
+        right: "Súlyos sérülés gyanúja esetén alkalmazzuk, ha a sérültet el kell távolítani a veszélyzónából.",
+      },
+      {
+        id: "c",
+        left: "stabil oldalfekvés",
+        right: "Célja a légutak szabaddá tételével és szabadon tartásával a sérültet megvédeni a fulladástól.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-150",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a fogalmat a hozzá tartozó meghatározással!",
+    pairs: [
+      {
+        id: "a",
+        left: "ALS",
+        right: "Eszközös, emelt szintű újraélesztés.",
+      },
+      {
+        id: "b",
+        left: "félig ülő helyzet",
+        right: "A felsőtestet 40-60°-ra kell megemelni.",
+      },
+      {
+        id: "c",
+        left: "AED",
+        right: "Külső automata defibrillátor.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-158",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Csoportosítsa az alábbi jellemzőket az egyes vérzés típusokhoz!",
+    pairs: [
+      {
+        id: "a",
+        left: "Artériás vérzés",
+        right: "Élénkpiros, a szív összehúzódásának megfelelően pulzálva, spriccelve ürül.",
+      },
+      {
+        id: "b",
+        left: "Vénás vérzés",
+        right: "Vörös (sötétvörös), egyenletesen folyó vérzés.",
+      },
+      {
+        id: "c",
+        left: "Kapilláris vérzés",
+        right: "Speciális vérzéscsillapításra nincs szükség, a sebellátás elegendő.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-159",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Csoportosítsa az alábbi jellemzőket az egyes vérzés típusokhoz!",
+    pairs: [
+      {
+        id: "a",
+        left: "Artériás vérzés",
+        right: "Általában mélyebben fekvő ér sérül, melyből nagy nyomással ürül a vér.",
+      },
+      {
+        id: "b",
+        left: "Vénás vérzés",
+        right: "Felszínesen futó ér sérülése okozza, lehet erős vérzés is.",
+      },
+      {
+        id: "c",
+        left: "Kapilláris vérzés",
+        right: "Szivárgó, enyhe vérzés.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-160",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az égési sérülések jellemzőit fokozataikkal!",
+    pairs: [
+      {
+        id: "a",
+        left: "Az összes bőrréteg átégett, és az égés elérte a mélyebben fekvő szöveteket.",
+        right: "Harmadfokú",
+      },
+      {
+        id: "b",
+        left: "A sérülés csak a bőr felső rétegét érinti, ilyen sérülések gyakran napozás vagy túlzásba vitt szoláriumozás esetén is keletkezhetnek.",
+        right: "Elsőfokú",
+      },
+      {
+        id: "c",
+        left: "A szövetek elszenesednek, és az égés egészen az izmokig, idegekig és csontokig terjed.",
+        right: "Negyedfokú",
+      },
+      {
+        id: "d",
+        left: "Erős fájdalommal jár, duzzanatok, hólyagok jelenhetnek meg a bőrön. Az égés a bőr második rétegét is érinti.",
+        right: "Másodfokú",
+      },
+    ],
+  },
+  {
+    id: "vitalis-161",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az égési sérülések jellemzőit fokozataikkal!",
+    pairs: [
+      {
+        id: "a",
+        left: "Erős fájdalommal jár, duzzanatok, hólyagok jelenhetnek meg a bőrön. Az égés a bőr második rétegét is érinti.",
+        right: "Másodfokú",
+      },
+      {
+        id: "b",
+        left: "A leggyakoribb és legenyhébb égési sérülés. Az égett területen a bőr piros és rendkívül érzékeny.",
+        right: "Elsőfokú",
+      },
+      {
+        id: "c",
+        left: "A hólyagok megnyíltak, az égési felszín piszkosszürke vagy halvány, viaszos hatású, maga a seb sok esetben nem fáj az idegek elhalása következtében.",
+        right: "Harmadfokú",
+      },
+    ],
+  },
+  {
+    id: "vitalis-162",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a sebtípust a hozzá illő leírással!",
+    pairs: [
+      {
+        id: "a",
+        left: "Vágott seb",
+        right: "Éles eszköz a testre merőlegesen hatva okozza a sebet, melynek szélei egyenesek, minimális környéki szövetroncsolódás jellemzi. Általában erős vérzés kíséri.",
+      },
+      {
+        id: "b",
+        left: "Horzsolt seb",
+        right: "Az egyik leggyakoribb sebtípus, melyet a bőr felületével párhuzamos, mechanikai hatás okoz.",
+      },
+    ],
+  },
+  {
+    id: "vitalis-168",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa az alábbi sérüléseket az alkalmazható kötéstípussal!",
+    pairs: [
+      {
+        id: "a",
+        left: "erős vérzés az alkaron",
+        right: "nyomókötés",
+      },
+      {
+        id: "b",
+        left: "orrvérzés",
+        right: "parittyakötés",
+      },
+      {
+        id: "c",
+        left: "a hajas fejbőr sérülése",
+        right: "sapkakötés",
+      },
+      {
+        id: "d",
+        left: "horzsolás, gyenge vérzés a felkaron",
+        right: "fedőkötés",
+      },
+    ],
+  },
+  {
+    id: "vitalis-194",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a megjelölt fektetési módokat az indikációval!",
+    pairs: [
+      {
+        id: "a",
+        left: "félig ülő helyzet",
+        right: "mellkassérült",
+      },
+      {
+        id: "b",
+        left: "hanyatt fekvés, enyhén megemelt felsőtest",
+        right: "eszméletén lévő fejsérült",
+      },
+      {
+        id: "c",
+        left: "stabil oldalfektetés",
+        right: "eszméletlen, lélegző beteg",
+      },
+    ],
+  },
+  {
+    id: "vitalis-195",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a megjelölt fektetési módokat az indikációval!",
+    pairs: [
+      {
+        id: "a",
+        left: "hanyatt fekvés térdben felhúzott alsó végtagokkal, enyhén emelt fejjel",
+        right: "hasi sérült",
+      },
+      {
+        id: "b",
+        left: "talált helyzetben rögzítés",
+        right: "súlyos sérült",
+      },
+    ],
+  },
+  {
+    id: "vitalis-204",
+    topicId: "vitalis",
+    type: "matching",
+    prompt: "Párosítsa a katasztrófákat hely szerint!",
+    pairs: [
+      {
+        id: "a",
+        left: "gázszivárgás egy 10 emeletes épületben",
+        right: "helyi",
+      },
+      {
+        id: "b",
+        left: "vörösiszap árvíz",
+        right: "térségi",
+      },
+      {
+        id: "c",
+        left: "dunai árvíz",
+        right: "országos",
+      },
+      {
+        id: "d",
+        left: "a Földközi tengeren két tartályhajó összeütközik",
+        right: "nemzetközi",
+      },
+    ],
+  },
 ];
