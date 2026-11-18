@@ -4,7 +4,7 @@ import Button from "primevue/button";
 import Card from "primevue/card";
 import Tag from "primevue/tag";
 import type { ExamQuestion, QuestionAnswer } from "../types/question";
-import { QUESTION_TYPE_LABELS } from "../config/questionTypes";
+// import { QUESTION_TYPE_LABELS } from "../config/questionTypes";
 import { hasAnswer } from "../domain/questionEvaluation";
 import ChoiceQuestion from "./questions/ChoiceQuestion.vue";
 import TrueFalseQuestion from "./questions/TrueFalseQuestion.vue";
