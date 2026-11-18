@@ -1910,25 +1910,6 @@ export const apolastanQuestions: ExamQuestion[] = [
       "Döntse el, hogy a beteg táplálására vonatkozó megállapítások igazak, vagy hamisak!",
   },
   {
-    id: "apolastan-090",
-    topicId: "apolastan",
-    type: "true_false",
-    statements: [
-      {
-        id: "a",
-        text: "A beteg környezetének rendbetétele mindig kötelező étkezés előtt.",
-        correct: true,
-      },
-      {
-        id: "b",
-        text: "Étkezéshez helyezzük kényelmes helyzetbe a beteget.",
-        correct: true,
-      },
-    ],
-    prompt:
-      "Döntse el, hogy a beteg táplálására vonatkozó megállapítások igazak, vagy hamisak!",
-  },
-  {
     id: "apolastan-091",
     topicId: "apolastan",
     type: "true_false",
